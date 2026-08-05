@@ -69,8 +69,11 @@ SOURCES = [
     {
         "name": "RAND Corporation",
         "name_cn": "兰德公司",
-        "url": "https://www.rand.org/news/rss.xml",
+        # RAND 新闻 RSS (/news/rss.xml) 只含新闻稿不含研究报告
+        # RAND 无专门出版物 RSS，通过 Google News 间接获取研究报告/评论/新闻
+        "url": "https://news.google.com/rss/search?q=site:rand.org+AI+OR+%22artificial+intelligence%22&hl=en-US&gl=US&ceid=US:en",
         "category": "think_tank",
+        "source_type": "google_news",
     },
     {
         "name": "Brookings Institution",
@@ -186,8 +189,12 @@ SOURCES = [
     {
         "name": "UN News",
         "name_cn": "联合国新闻",
-        "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
+        # 原 RSS (news.un.org) 仅含世界新闻报道（加沙/乌克兰/埃博拉），不含AI出版物。
+        # 联合国通过 UNESCO/ITU/UNDP/高级AI咨询机构等发布大量AI政策报告/标准/建议，
+        # 切换为 Google News 以捕获 site:un.org 的AI相关研究出版物。
+        "url": "https://news.google.com/rss/search?q=site:un.org+AI+OR+%22artificial+intelligence%22&hl=en-US&gl=US&ceid=US:en",
         "category": "intl_org",
+        "source_type": "google_news",
     },
     {
         "name": "IEEE Spectrum",
@@ -230,14 +237,20 @@ SOURCES = [
     {
         "name": "NTIA",
         "name_cn": "国家电信与信息管理局",
-        "url": "https://www.ntia.gov/rss.xml",
+        # 原 RSS (ntia.gov/rss.xml) 近乎空（仅1条FAQ），不含AI政策报告/频谱政策出版物。
+        # 切换为 Google News 以捕获 site:ntia.gov 的AI/电信/半导体相关政策出版物。
+        "url": "https://news.google.com/rss/search?q=site:ntia.gov+AI+OR+%22artificial+intelligence%22+OR+semiconductor+OR+telecom&hl=en-US&gl=US&ceid=US:en",
         "category": "us_gov",
+        "source_type": "google_news",
     },
     {
         "name": "DARPA",
         "name_cn": "国防高级研究计划局",
-        "url": "https://www.darpa.mil/rss.xml",
+        # 原 RSS (darpa.mil/rss.xml) 仅含新闻 (darpa.mil/news/) 文章，不含 Broad Agency Announcement、
+        # 项目技术文档等正式研究出版物。切换为 Google News 以捕获更多AI研究相关内容。
+        "url": "https://news.google.com/rss/search?q=site:darpa.mil+AI+OR+%22artificial+intelligence%22&hl=en-US&gl=US&ceid=US:en",
         "category": "us_gov",
+        "source_type": "google_news",
     },
 
     # ---- 白宫 ----
