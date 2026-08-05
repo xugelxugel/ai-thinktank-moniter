@@ -50,7 +50,8 @@ def generate_enhanced_briefing(items, llm_analyses, stats, days):
         analysis = llm_analyses.get(item["link"], {})
         enriched.append({
             **item,
-            "llm_summary": analysis.get("summary_cn", item.get("summary_cn", "")),
+            "title_cn": analysis.get("title_cn", item["title"]),
+            "llm_summary": analysis.get("summary_cn", ""),
             "importance_score": analysis.get("importance_score", 3),
             "score_reason": analysis.get("score_reason", ""),
             "china_relevance": analysis.get("china_relevance", "低"),

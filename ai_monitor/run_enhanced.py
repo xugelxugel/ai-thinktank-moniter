@@ -56,9 +56,7 @@ def run_step1(days):
     for item in items:
         output.append({
             "title": item["title"],
-            "title_cn": item.get("title_cn", ""),
             "summary": item["summary"],
-            "summary_cn": item.get("summary_cn", ""),
             "link": item["link"],
             "source_name": item["source_name"],
             "source_name_cn": item["source_name_cn"],
@@ -117,7 +115,7 @@ def run_step3(items, stats, analyses, days):
         analysis = analyses.get(item["link"], {})
         enriched.append({
             "score": analysis.get("importance_score", 0),
-            "title_cn": item.get("title_cn", item["title"]),
+            "title_cn": analysis.get("title_cn", item["title"]),
             "source": item["source_name"],
             "china_rel": analysis.get("china_relevance", "低"),
         })

@@ -18,7 +18,6 @@ import json
 import os
 import re
 import sys
-import time
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from urllib.parse import urlparse
@@ -27,7 +26,6 @@ import feedparser
 import requests
 import urllib3
 from bs4 import BeautifulSoup
-from deep_translator import GoogleTranslator
 
 # 禁用 SSL 警告（部分政府网站证书链不完整）
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -228,65 +226,6 @@ def is_publication(title, link):
 
 
 # ============================================================
-# 中文翻译
-# ============================================================
-
-# AI 缩写词预处理：在翻译前替换为完整英文，
-# 避免 Google 翻译将 LLM 误译为"法学硕士"等
-AI_ABBREVIATIONS = [
-    (r'\bLLMs\b', 'Large Language Models'),
-    (r'\bLLM\b', 'Large Language Model'),
-    (r'\bGenAI\b', 'Generative AI'),
-    (r'\bNLP\b', 'Natural Language Processing'),
-    (r'\bAGI\b', 'Artificial General Intelligence'),
-    (r'\bGPT-4\b', 'GPT-4'),
-    (r'\bGPT\b', 'GPT'),
-    (r'\bChatGPT\b', 'ChatGPT'),
-]
-
-# 翻译器实例（复用连接）
-_translator = None
-
-
-def get_translator():
-    """懒加载翻译器实例。"""
-    global _translator
-    if _translator is None:
-        _translator = GoogleTranslator(source='en', target='zh-CN')
-    return _translator
-
-
-def preprocess_for_translation(text):
-    """翻译前预处理：替换 AI 缩写词为完整英文，避免误译。"""
-    if not text:
-        return text
-    for pattern, replacement in AI_ABBREVIATIONS:
-        text = re.sub(pattern, replacement, text, flags=re.IGNORECASE)
-    return text
-
-
-def translate_to_chinese(text):
-    """将英文文本翻译为中文。翻译失败时返回原文。
-    
-    对 AI 专业术语做了预处理，避免常见误译：
-    - LLM → Large Language Model（避免误译为"法学硕士"）
-    - GenAI → Generative AI
-    - NLP → Natural Language Processing
-    - AGI → Artificial General Intelligence
-    """
-    if not text or not text.strip():
-        return text
-    try:
-        processed = preprocess_for_translation(text)
-        result = get_translator().translate(processed)
-        if result:
-            return result
-    except Exception as e:
-        print(f"  [翻译失败] {str(e)[:60]} | 原文: {text[:50]}...")
-    return text
-
-
-# ============================================================
 # 核心监测流程
 # ============================================================
 
@@ -387,20 +326,8 @@ def run_monitor(days=3):
         reverse=True,
     )
 
-    # 翻译标题和摘要为中文
-    if all_items:
-        print(f"\n正在翻译 {len(all_items)} 条内容...")
-        for idx, item in enumerate(all_items, 1):
-            item["title_cn"] = translate_to_chinese(item["title"])
-            if item["summary"]:
-                item["summary_cn"] = translate_to_chinese(item["summary"])
-            else:
-                item["summary_cn"] = ""
-            # 翻译速率控制，避免被 Google 翻译限流
-            if idx % 10 == 0:
-                time.sleep(0.5)
-            print(f"  [{idx}/{len(all_items)}] {item['title_cn'][:40]}")
-        print(f"翻译完成。")
+    # 翻译和深度摘要由 LLM 在后续步骤中统一完成
+    # 此处只输出英文原始数据到 items_for_llm.json
 
     stats = {
         "total_sources": len(SOURCES),
@@ -450,10 +377,8 @@ def generate_html_briefing(items, stats, days):
         cards_html += f'<h2 class="section-title">{CATEGORY_LABELS[cat]} <span class="badge">{len(cat_items)}</span></h2>\n'
 
         for item in cat_items:
-            title_cn_esc = html.escape(item.get("title_cn") or item["title"])
-            title_en_esc = html.escape(item["title"])
-            summary_cn_esc = html.escape(item.get("summary_cn") or item["summary"])
-            summary_en_esc = html.escape(item["summary"])
+            title_esc = html.escape(item["title"])
+            summary_esc = html.escape(item["summary"])
             link_esc = html.escape(item["link"])
             source_esc = html.escape(item["source_name"])
 
@@ -467,19 +392,11 @@ def generate_html_briefing(items, stats, days):
 
             domain = urlparse(item["link"]).netloc or source_esc
 
-            # 摘要部分：有中文翻译时显示中文+英文原文，否则只显示原文
             summary_html = ""
-            if summary_cn_esc and summary_cn_esc != summary_en_esc:
-                summary_html = f'<p class="card-summary">{summary_cn_esc}</p>\n'
-                if summary_en_esc:
-                    summary_html += f'<p class="card-summary-en">{summary_en_esc}</p>\n'
-            elif summary_en_esc:
-                summary_html = f'<p class="card-summary">{summary_en_esc}</p>\n'
+            if summary_esc:
+                summary_html = f'<p class="card-summary">{summary_esc}</p>\n'
 
-            # 标题部分：中文翻译为主，英文原文为辅
-            title_html = f'<h3 class="card-title">{title_cn_esc}</h3>\n'
-            if title_cn_esc != title_en_esc:
-                title_html += f'<p class="card-title-en">{title_en_esc}</p>\n'
+            title_html = f'<h3 class="card-title">{title_esc}</h3>\n'
 
             cards_html += f"""
             <div class="card">
@@ -626,22 +543,14 @@ def generate_markdown_briefing(items, stats, days):
             if item["pub_date"]:
                 d = item["pub_date"].astimezone(timezone(timedelta(hours=8)))
                 date_display = d.strftime("%Y-%m-%d")
-            title_cn = item.get("title_cn") or item["title"]
-            title_en = item["title"]
-            summary_cn = item.get("summary_cn") or item["summary"]
-            summary_en = item["summary"]
+            title = item["title"]
+            summary = item["summary"]
 
-            md += f"### {title_cn}\n\n"
-            if title_cn != title_en:
-                md += f"*{title_en}*\n\n"
+            md += f"### {title}\n\n"
             md += f"- **来源**: {item['source_name']} ({item['source_name_cn']})\n"
             md += f"- **日期**: {date_display}\n"
-            if summary_cn and summary_cn != summary_en:
-                md += f"- **摘要**: {summary_cn}\n"
-                if summary_en:
-                    md += f"- *原文摘要*: {summary_en}\n"
-            elif summary_en:
-                md += f"- **摘要**: {summary_en}\n"
+            if summary:
+                md += f"- **摘要**: {summary}\n"
             md += f"- **链接**: {item['link']}\n\n"
         md += "---\n\n"
 
@@ -683,14 +592,13 @@ def main():
         f.write(md_content)
 
     # 输出 items JSON 供大模型分析（增强版简报使用）
+    # 只输出英文原始数据，中文翻译和深度摘要由 LLM 在分析步骤中统一生成
     items_json_path = os.path.join(OUTPUT_DIR, "items_for_llm.json")
     items_json = []
     for item in items:
         items_json.append({
             "title": item["title"],
-            "title_cn": item.get("title_cn", ""),
             "summary": item["summary"],
-            "summary_cn": item.get("summary_cn", ""),
             "link": item["link"],
             "source_name": item["source_name"],
             "source_name_cn": item["source_name_cn"],

@@ -1,7 +1,8 @@
 # AI 海外动态监测系统
 
 每日自动监测海外智库、国际组织、美国政府的 AI 相关报告、观点与政策，
-生成结构化简报（含日期、来源网站、主要内容、链接），标题和摘要自动翻译为中文。
+生成结构化简报（含日期、来源网站、主要内容、链接）。
+标题翻译和深度摘要由大模型（LLM）统一完成，按中美AI竞争重要性排序。
 
 ## 快速使用
 
@@ -16,31 +17,31 @@ python monitor.py --days 7
 python monitor.py --days 1
 ```
 
-简报输出至 `output/` 目录，同时生成 HTML 和 Markdown 两种格式。
-HTML 简报中中文标题/摘要为主，英文原文为辅（灰色小字）。
+简报输出至 `output/` 目录，同时生成 HTML 和 Markdown 两种格式（英文原始内容）。
+增强版简报由 LLM 生成中文标题翻译和深度摘要，按中美AI竞争重要性排序。
 
 ## 文件结构
 
 ```
 ai_monitor/
-├── config.py              # 数据源、关键词、过滤规则配置（增删源只需改此文件）
-├── monitor.py             # 核心监测脚本（抓取→过滤→翻译→生成简报）
-├── llm_enhance.py         # 增强版简报生成（大模型摘要+中美AI竞争重要性排序）
-├── llm_analysis_data.py   # LLM分析数据结构定义
-├── run_enhanced.py         # 增强版运行入口（监测→LLM分析→生成增强HTML）
-├── output/                # 生成的简报存放目录
-│   ├── briefing_2026-08-05.html          # 基础版简报
-│   ├── briefing_enhanced_2026-08-05.html # 增强版简报（含LLM深度摘要+排序）
-│   ├── items_for_llm.json                # 待分析内容
-│   └── llm_analysis.json                 # LLM分析结果
-└── README.md              # 本说明文件
+├── config.py                   # 数据源、关键词、过滤规则配置（增删源只需改此文件）
+├── monitor.py                  # 核心监测脚本（抓取→过滤→生成基础简报+items JSON）
+├── llm_enhance.py              # 增强版简报生成（LLM中文标题+深度摘要+重要性排序）
+├── gen_enhanced_from_json.py   # 从JSON加载生成增强简报（自动化用，不重新抓取RSS）
+├── run_enhanced.py             # 手动运行入口（抓取→LLM分析→生成增强HTML）
+├── output/                     # 生成的简报存放目录
+│   ├── briefing_2026-08-05.html          # 基础版简报（英文原始内容）
+│   ├── briefing_enhanced_2026-08-05.html # 增强版简报（含LLM中文摘要+排序）
+│   ├── items_for_llm.json                # 待分析内容（英文原始数据）
+│   └── llm_analysis.json                 # LLM分析结果（含title_cn、summary_cn等）
+└── README.md                   # 本说明文件
 ```
 
-## 数据源（40 个，全部经过实际验证）
+## 数据源（42 个，全部经过实际验证）
 
-> 21 个源使用 Google News RSS（当网站无 RSS、RSS 失效或仅含新闻不含出版物时使用），19 个使用原始 RSS。
+> 22 个源使用 Google News RSS（当网站无 RSS、RSS 失效或仅含新闻不含出版物时使用），20 个使用原始 RSS/Atom。
 
-### 海外智库（19 个）
+### 海外智库（20 个）
 - CSIS 战略与国际研究中心（Google News RSS）
 - Hoover Institution 胡佛研究所
 - ITIF 信息技术与创新基金会（Google News RSS）
@@ -60,17 +61,19 @@ ai_monitor/
 - Lawfare 法律事务（Google News RSS）
 - Stanford HAI 斯坦福以人为本AI研究院（Google News RSS）
 - AI Now Institute AI现在研究所
+- UK AI Safety Institute 英国AI安全研究所
 
 ### 金融机构（3 个）
 - Goldman Sachs 高盛（Google News RSS）
 - Citi 花旗银行（Google News RSS，自动排除招聘页面）
 - JPMorgan Chase 摩根大通（Google News RSS）
 
-### 国际组织（4 个）
+### 国际组织（5 个）
 - UN News 联合国新闻（Google News RSS）
 - IEEE Spectrum IEEE科技纵览
 - OECD 经合组织（Google News RSS）
 - World Economic Forum 世界经济论坛（Google News RSS）
+- World Bank 世界银行（Google News RSS）
 
 ### 美国政府（14 个）
 **科研与监管机构：**
@@ -120,28 +123,28 @@ ai_monitor/
 - **AI 安全前沿**：frontier AI
 - **出口管制与对华政策**：export control、foreign adversary、critical software
 
-## 中英双语翻译
+## 中文翻译与深度摘要
 
-简报中的标题和摘要自动翻译为中文，同时保留英文原文。
+标题翻译和深度摘要由大模型（LLM）统一完成，不再使用 Google 翻译。
 
-- 翻译引擎：`deep-translator`（Google 翻译免费接口，无需 API Key）
-- **AI 术语预处理**：翻译前自动替换缩写词为完整英文，避免误译：
-  - `LLM` → `Large Language Model`（否则会被误译为"法学硕士"）
-  - `GenAI` → `Generative AI`
-  - `NLP` → `Natural Language Processing`
-  - `AGI` → `Artificial General Intelligence`
-- 翻译失败时自动回退到英文原文，不会丢失内容
-- 缩写词预处理表在 `monitor.py` 的 `AI_ABBREVIATIONS` 列表中，可随时添加
+- **monitor.py** 只做 RSS 抓取和过滤，输出英文原始数据到 `items_for_llm.json`
+- **LLM 分析步骤** 读取 JSON 后，为每条内容生成：
+  - `title_cn`：中文标题翻译（保留 AI/LLM/GPT 等缩写，不展开）
+  - `summary_cn`：2-3句深度中文摘要（非简单翻译，包含分析视角）
+  - `importance_score`：中美AI竞争重要性评分（1-10分）
+  - `china_relevance`：对华相关性（高/中/低）
+- LLM 翻译质量优于 Google 翻译，不会出现"LLM→法学硕士"等误译
+- 增强版简报中的标题和摘要全部来自 LLM 分析结果
 
 ## 每日定时自动化（增强版）
 
 已配置 WorkBuddy 自动化任务，每天早上 7:00 自动执行 6 步流程：
 
-1. **监测抓取**：运行 `monitor.py --days 1` 抓取当天 AI 相关动态，生成 `items_for_llm.json`
+1. **监测抓取**：运行 `monitor.py --days 1` 抓取当天 AI 相关动态，生成 `items_for_llm.json`（只含英文原始数据，不做翻译）
 2. **读取待分析内容**：读取 `items_for_llm.json` 获取当日捕获的 AI 相关条目
-3. **LLM 深度分析**：对每条内容生成中文深度摘要，按中美 AI 竞争重要性评分（1-10 分），评估对华关联度
-4. **写入分析结果**：生成 `llm_analysis.json`（含 summary_cn、importance_score、score_reason、china_relevance）
-5. **生成增强版简报**：调用 `llm_enhance.py` 生成按重要性排序的增强版 HTML 简报（北京时间日期命名）
+3. **LLM 深度分析**：对每条内容生成中文标题翻译（title_cn）、中文深度摘要（summary_cn）、中美AI竞争重要性评分（1-10分）、对华关联度
+4. **写入分析结果**：生成 `llm_analysis.json`（含 title_cn、summary_cn、importance_score、score_reason、china_relevance）
+5. **生成增强版简报**：运行 `gen_enhanced_from_json.py` 从 JSON 加载数据生成增强版 HTML 简报（不重新抓取 RSS，避免重复网络请求）
 6. **发送邮件**：通过智能体邮箱（`jenr0181@agent.qq.com`）将增强版 HTML 作为邮件正文发送到 `xugelxugel@outlook.com`
 
 - 脚本运行失败时仍会发送通知邮件，不会静默失败
@@ -203,7 +206,7 @@ ai_monitor/
 ## 依赖安装
 
 ```bash
-pip install feedparser requests beautifulsoup4 lxml deep-translator
+pip install feedparser requests beautifulsoup4 lxml
 ```
 
 运行环境：Python 3.13（虚拟环境路径：`C:\Users\xugel\.workbuddy\binaries\python\envs\default`）

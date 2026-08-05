@@ -155,6 +155,14 @@ SOURCES = [
         "url": "https://ainowinstitute.org/feed/",
         "category": "think_tank",
     },
+    {
+        "name": "UK AI Safety Institute",
+        "name_cn": "英国AI安全研究所",
+        # UK AISI 是英国政府下属AI安全研究机构，专注前沿AI安全评估和国际合作
+        # 内容包括国际AI安全报告、AI评估平台、UK-US/UK-Canada双边AI安全合作
+        "url": "https://www.gov.uk/government/organisations/ai-safety-institute.atom",
+        "category": "think_tank",
+    },
 
     # ---- 金融机构 ----
     {
@@ -215,6 +223,15 @@ SOURCES = [
         "name_cn": "世界经济论坛",
         # WEF 网站 403 封锁，通过 Google News 间接获取
         "url": "https://news.google.com/rss/search?q=site:weforum.org+AI+OR+%22artificial+intelligence%22&hl=en-US&gl=US&ceid=US:en",
+        "category": "intl_org",
+        "source_type": "google_news",
+    },
+    {
+        "name": "World Bank",
+        "name_cn": "世界银行",
+        # 世界银行无直接 RSS，通过 Google News 间接获取
+        # WDR 2026 主题为AI，涵盖AI与发展中经济体、AI与就业、AI治理、AI教育等
+        "url": "https://news.google.com/rss/search?q=site:worldbank.org+AI+OR+%22artificial+intelligence%22&hl=en-US&gl=US&ceid=US:en",
         "category": "intl_org",
         "source_type": "google_news",
     },
