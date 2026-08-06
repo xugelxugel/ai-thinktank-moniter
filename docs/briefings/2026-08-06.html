@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年08月06日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年08月06日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">9</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">0</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">1</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">8</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-medium">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Lawfare</span>
+                    <span class="card-date">08-06 03:10</span>
+                </div>
+                <h3 class="card-title">移民：行政AI治理的试金石</h3>
+                <p class="card-title-en">Immigration as a Test Case for Executive AI Governance</p>
+                <p class="card-llm-summary">本文以移民执法为切入案例，考察美国行政机关在运用AI决策工具时的治理边界与问责机制。作者认为移民领域的AI应用暴露了行政自由裁量权扩大与程序正义缺失之间的张力，为评估AI治理框架的有效性提供了具体场景。该案例折射出美国国内AI监管的法治困境，但对中美竞争格局无直接影响。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及美国行政机构AI治理与问责议题，属AI治理范畴但未直接触及中美竞争核心</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, AI governance</span>
+                    <a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxOU0FQQW1FeUg0VmNEQWp6S1EwbGJnSlI1WGlrenItaU9mTW1IRUlUUGJiQlRVZlZTbUNBNlBwczBqUV9hb2VoQWJTSmlralppTk5KWXlxcnpFVWNIdXFYZk9ZQm1MUWFfa3FJM1NtcFNUOFJrMWR2M2J4ckhUTXljTW5uM0JqUmtsVjgyNUxJaUJqRkR2OFE?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Goldman Sachs</span>
+                    <span class="card-date">08-06 14:56</span>
+                </div>
+                <h3 class="card-title">How AI Debt Is Reshaping Credit Markets</h3>
+                <p class="card-title-en">How AI Debt Is Reshaping Credit Markets</p>
+                <p class="card-llm-summary"></p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNY0NVTjR3anNRcVNlTXVSc0wxY0xWUXNoUHdJSzI3RUlDWW5rU1l4UmpXZGpOU3RuWE5BLS1YZmxLZHRvcjBKV0JxeE96S3ZmRDdNWVhQQlJnaGVoaXhUN295ZEJCX19wSnp1WUhqYkNlZ1NLT013VVZFZUllUWRSRlA2bGJFa3VRWV8tT0hWLVM4TGJzdEUzTS1ReFYwaUV4U1p6TVJXYw?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">JPMorgan Chase</span>
+                    <span class="card-date">08-06 02:43</span>
+                </div>
+                <h3 class="card-title">JTEK: Artificial Intelligence (AI) and technology&#x27;s expanding role in investment strategies</h3>
+                <p class="card-title-en">JTEK: Artificial Intelligence (AI) and technology&#x27;s expanding role in investment strategies</p>
+                <p class="card-llm-summary"></p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: artificial intelligence, AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiigJBVV95cUxOeDFsY3hfeDlGc0hpMU9hWmdYdzhSeG1rOU95cmpISFJPcHFWLXg2Q1ZjVEZYb0ZJRlhtZ3RCbG1kR2ViX2FjQkJLdXI2ZC1DeFlfWkZmRzBRRVlaeWZvamQ2WGNOb3kyWDlJbVlZU2tud2RFTmstd180bTdTaDR5bEV1bC1zWWZRd2hvRE5idWtYcFVJYl9OejFLdmdZZnJfbW5rdWtEWnJ4clU1MmYtdVAyOEQyX0VBYmVvMGdyLTgyd1hMdHlyWXRLRF9VWXdiNjdsVjdrU2JFUm5fcjBzZHdjYjYxUVItNUFCVXM5anZvOE9FdWM5cTA4OFJuWW96Skx4NEhCOWVPQQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">IEEE Spectrum</span>
+                    <span class="card-date">08-06 02:00</span>
+                </div>
+                <h3 class="card-title">IEEE推出课程：如何用AI实现电网现代化</h3>
+                <p class="card-title-en">IEEE Course Teaches How to Use AI to Modernize Power Grids</p>
+                <p class="card-llm-summary">美国电网因工业快速增长、极端天气频发和用电量激增已逼近运行极限。IEEE开设专门课程，教授利用AI技术优化电网调度、提升可靠性与韧性，以应对现代电力系统日益复杂的运行挑战。该课程反映AI在美国关键基础设施领域的落地应用，与中美竞争核心议题相距较远。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：AI在关键基础设施（电网）领域的应用属间接相关议题，未涉及中美竞争核心</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://spectrum.ieee.org/ieee-course-ai-power-grids" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#5</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">JPMorgan Chase</span>
+                    <span class="card-date">08-06 00:48</span>
+                </div>
+                <h3 class="card-title">Can credit markets absorb the AI buildout?</h3>
+                <p class="card-title-en">Can credit markets absorb the AI buildout?</p>
+                <p class="card-llm-summary"></p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMi8AFBVV95cUxONVVSQXNWaVQtMWt6V0VyYnVYbG53SndMZ3ktbzl3Mmh4VEFrYTR4S0paNnZJQXZNeWhOVUpIak5PWW50R0I4QzdPaF9GdmhaUWZwUFdfT295WTFUeVQyNzFSMEJNNk1xdmdtYzZJR3ExSUxNNkY1WkM1VDBLM25YV1FWVXVlWHpnNmNhOUpSdWVLZVJZVHMzeTk0MFdtQUlwcWRiSDAyT2dYT25vWjdpSzNadU1oYUpDSUlpbU1wLThxMXJxOENSY2FJczc2YnhYZHRuVFBvaDZ3VXB0M0IxajFONmZrUUNiNml5cDBpNXU?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#6</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">UN News</span>
+                    <span class="card-date">08-05 19:56</span>
+                </div>
+                <h3 class="card-title">Prioritize Equitable Capacity, Safety, Sustainability So Everyone Benefits from AI Revolution, Secretary-General Tells World Artificial Intelligence Conference</h3>
+                <p class="card-title-en">Prioritize Equitable Capacity, Safety, Sustainability So Everyone Benefits from AI Revolution, Secretary-General Tells World Artificial Intelligence Conference</p>
+                <p class="card-llm-summary"></p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: artificial intelligence, AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9aaG0tcUVyajVqZFJRaFQyU1M4Z09fXzYtVHJXZmN3aEs3blI0V29KbUF2MTRnZEM2OUhSdDkxM1B1YXV2Y3FzWEp2TFZZRlJqTE1jVVI1Qmd0dw?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#7</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Carnegie Endowment</span>
+                    <span class="card-date">08-06 02:06</span>
+                </div>
+                <h3 class="card-title">使命高于模式：AI对卡内基这类组织意味着什么</h3>
+                <p class="card-title-en">Mission over Model: What Might AI Mean for an Organization Like Carnegie?</p>
+                <p class="card-llm-summary">卡内基国际和平基金会反思AI变革对智库类知识型组织的冲击，主张以机构使命而非技术工具为导向来应对AI时代。文章探讨组织应如何利用AI强化研究能力的同时保持核心价值定位，属于机构转型层面的战略思考，与中美AI竞争无直接关联。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：属组织管理与机构转型议题，与中美AI竞争关系较远</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPTjQ5S3BPMmxTZV8tZEk5VGZBRzhRcTBVaTVjTU5tN2IwMkNRZ2FtbjA3S3BiSy1fR1I0b3Nqa3V2UmNLNUxMTzlIZGU5dWk4UmcyYWd1R3R3Y3pfWC1zTVFxbGFNcl95cmIyWVRRc0NhRVU4dmVrU2M1cmlIQ0ZmV2FpT0oyb1NGRmhrWERWY3FsRy1raGFlRXpiNTVHOVZtLUV2TE5iang?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#8</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">RAND Corporation</span>
+                    <span class="card-date">08-06 00:58</span>
+                </div>
+                <h3 class="card-title">AI能否改变我们应对灾害的方式</h3>
+                <p class="card-title-en">Can AI Change How We Deal with Disasters?</p>
+                <p class="card-llm-summary">兰德公司探讨AI技术在灾害预测、应急响应与灾后恢复中的应用潜力，分析机器学习模型如何帮助政府与救援机构更早预警、更精准调配资源。文章属于AI社会应用类议题，展示AI在公共服务领域的价值，但未涉及地缘政治与竞争格局。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：AI在灾害管理领域的应用议题，与中美AI竞争关系较远</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxPZ1N5LTgzOVJFX0RmYmdlRGpMUTR3SWlHT2U5MXE1eDFSckNhdFdsczZhMmwtMkVfOXY0YU83eHFWcmc3bk94dzNVN2JmQ1RfM3dhUVp3cjM2QkxFRDMtem5mTlh3VGFmc2g2S1g2cHhlUDNiODNKREJKRng1Vm41eUZIQ0M5M3VjbDFtd013R0RqYmZzYm0yeXh1eFdGZXRm?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#9</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">UN News</span>
+                    <span class="card-date">08-05 22:41</span>
+                </div>
+                <h3 class="card-title">哥伦比亚大学SIPA/UNITAR课程：AI时代的谈判</h3>
+                <p class="card-title-en">Columbia SIPA/UNITAR course | Negotiation in the Age of AI</p>
+                <p class="card-llm-summary">联合国新闻推介哥伦比亚大学国际与公共事务学院（SIPA）与联合国训练研究所（UNITAR）联合开设的课程，聚焦AI时代国际谈判面临的新挑战与新技能。该课程面向外交与公共事务从业者，属于教育培训类信息，对中美AI竞争格局无实质影响。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：属教育培训类信息，与中美AI竞争核心议题无关</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPQm0yemI1d0hxbm1udXl2VUktSU9RQWJ2cUtFWHJxLUdSSEhTM25CeW1QSzN4UEtiVXBnVjRQMWIyVmJBZzk3dFZnLTMzdjQtN1oxR1JDZnR1WkZqQmhGTG1vWl9sY3Foc1Rid2FDcWdYT2ZFZHB3eVFFTTJQT3loM29UVTJKb1RocUMyU3RqYmJFUQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-08-06 09:55 UTC
+    </div>
+</body>
+</html>

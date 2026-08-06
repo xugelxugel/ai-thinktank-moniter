@@ -7,10 +7,10 @@
   步骤1: monitor.py --days 1          抓取 RSS + 过滤，生成 items_for_llm.json
   步骤2: llm_analyze.py               调用免费 LLM API 生成 llm_analysis.json
   步骤3: gen_enhanced_from_json.py    生成增强版 HTML 简报
-  步骤4: send_email.py                通过 Outlook SMTP 发送邮件
+  步骤4: publish_pages.py             发布到 docs/（GitHub Pages）+ 微信提醒
 
-任一步失败都会尝试发送"运行失败"通知邮件（不静默失败），退出码 1。
-所有配置走环境变量（LLM_API_KEY / SMTP_USER / SMTP_PASS 等），见 .env.example。
+任一步失败都会通过微信发送"运行失败"提醒（不静默失败），退出码 1。
+所有配置走环境变量（LLM_API_KEY / WECHAT_NOTIFY_KEY 等），见 .env.example。
 
 用法:
   python run_daily.py
@@ -27,7 +27,7 @@ STEPS = [
     ("步骤1/4 抓取监测", [sys.executable, "monitor.py", "--days", "1"]),
     ("步骤2/4 LLM 深度分析", [sys.executable, "llm_analyze.py"]),
     ("步骤3/4 生成增强简报", [sys.executable, "gen_enhanced_from_json.py"]),
-    ("步骤4/4 发送邮件", [sys.executable, "send_email.py"]),
+    ("步骤4/4 发布 Pages+微信提醒", [sys.executable, "publish_pages.py"]),
 ]
 
 
@@ -49,22 +49,22 @@ def run_step(name, cmd):
 
 
 def notify_failure(failed_steps, logs):
-    """发送失败通知邮件（需要 SMTP 配置可用；失败则仅打印）。"""
+    """通过微信发送失败通知（未配置 WECHAT_NOTIFY_KEY 时仅打印）。"""
     try:
         sys.path.insert(0, BASE_DIR)
-        import send_email
+        import wechat_notify
         now = bj_now_str()
-        html = (
-            "<h2>AI 海外动态监测 · 运行失败</h2>"
-            f"<p>时间：{now}</p>"
-            f"<p>失败步骤：{'、'.join(failed_steps)}</p>"
-            "<p>请在 GitHub Actions 运行日志中查看详细报错。</p>"
+        content = (
+            f"<b>AI 海外动态监测 · 运行失败</b><br>"
+            f"时间：{now}<br>"
+            f"失败步骤：{'、'.join(failed_steps)}<br>"
+            "请在 GitHub Actions 运行日志中查看详细报错。"
         )
-        send_email.send_email(
-            f"【AI海外动态】运行失败 {now}", html)
-        print("\n[通知] 失败通知邮件已发送。")
+        wechat_notify.send_wechat(
+            f"【AI海外动态】运行失败 {now}", content)
+        print("\n[通知] 失败提醒已通过微信发送。")
     except Exception as e:
-        print(f"\n[警告] 失败通知邮件发送失败（不影响退出码）: {e}")
+        print(f"\n[警告] 失败提醒发送失败（不影响退出码）: {e}")
 
 
 def main():
@@ -86,7 +86,7 @@ def main():
         return 1
 
     print(f"\n{'=' * 60}")
-    print("  全部步骤成功，简报已发送 ✓")
+    print("  全部步骤成功，简报已发布 ✓")
     print(f"{'=' * 60}")
     return 0
 

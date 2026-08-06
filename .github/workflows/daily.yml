@@ -1,10 +1,13 @@
 # AI 海外动态监测 · 每日云端流水线
 # 每天 23:00 UTC（北京时间次日 07:00）自动运行：
-#   monitor.py 抓取 → llm_analyze.py LLM分析 → gen_enhanced_from_json.py 生成简报 → send_email.py 发邮件
+#   monitor.py 抓取 → llm_analyze.py LLM分析 → gen_enhanced_from_json.py 生成简报
+#   → publish_pages.py 发布到 docs/（GitHub Pages）+ 微信提醒
+#
+# GitHub Pages 启用（一次性）：仓库 Settings → Pages → Deploy from a branch → main + /docs
 #
 # 首次配置：仓库 Settings → Secrets and variables → Actions → New repository secret
-#   必填：LLM_API_KEY（Gemini 免费 Key）、SMTP_USER（Outlook 邮箱）、SMTP_PASS（16 位应用密码）
-#   可选：LLM_FALLBACK_API_KEY（智谱 GLM 备用）、MAIL_TO（收件邮箱，默认=发件邮箱）
+#   必填：LLM_API_KEY（Gemini 免费 Key）、WECHAT_NOTIFY_KEY（Server酱 SENDKEY 或 PushPlus token）
+#   可选：LLM_FALLBACK_API_KEY（智谱 GLM 备用）、WECHAT_NOTIFY_TYPE（默认 serverchan）
 # 手动测试：仓库 Actions 页面 → 本工作流 → Run workflow
 
 name: AI Monitor Daily Briefing
@@ -41,18 +44,18 @@ jobs:
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_FALLBACK_API_KEY: ${{ secrets.LLM_FALLBACK_API_KEY }}
-          SMTP_USER: ${{ secrets.SMTP_USER }}
-          SMTP_PASS: ${{ secrets.SMTP_PASS }}
-          MAIL_TO: ${{ secrets.MAIL_TO }}
+          WECHAT_NOTIFY_TYPE: ${{ secrets.WECHAT_NOTIFY_TYPE }}
+          WECHAT_NOTIFY_KEY: ${{ secrets.WECHAT_NOTIFY_KEY }}
         run: python ai_monitor/run_daily.py
 
-      # 保活：GitHub 会在仓库 60 天无活动时自动暂停定时任务，
-      # 这里每天提交一次时间戳，保证仓库永远活跃、任务永不暂停。
-      - name: Keep repository active
+      # 保活 + 发布：把 docs/（每日简报网页）和 .keepalive 时间戳一起提交推送。
+      # GitHub Pages 会从 /docs 自动发布；同时仓库保持活跃，
+      # 防止 GitHub 因 60 天无活动自动暂停定时任务。
+      - name: Publish pages and keep repository active
         run: |
           echo "last_run: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > .keepalive
           git config user.name "ai-monitor-bot"
           git config user.email "actions@github.com"
-          git add .keepalive
-          git commit -m "chore: keepalive $(date -u '+%Y-%m-%d')" || echo "no changes to commit"
+          git add docs/ .keepalive
+          git commit -m "chore: publish briefing $(date -u '+%Y-%m-%d')" || echo "no changes to commit"
           git push
