@@ -106,6 +106,11 @@ a:hover {{ background: #f0f7ff; }}
     os.makedirs(DOCS_DIR, exist_ok=True)
     with open(os.path.join(DOCS_DIR, "index.html"), "w", encoding="utf-8") as f:
         f.write(index)
+    # .nojekyll：跳过 Jekyll 构建，纯静态文件直接发布（避免构建失败）
+    nojekyll = os.path.join(DOCS_DIR, ".nojekyll")
+    if not os.path.exists(nojekyll):
+        with open(nojekyll, "w", encoding="utf-8") as f:
+            f.write("")
     return len(entries)
 
 
