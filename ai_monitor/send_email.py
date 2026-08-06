@@ -1,19 +1,22 @@
 # -*- coding: utf-8 -*-
 """
-Outlook SMTP 发信脚本（云端版）
-================================
+SMTP 发信脚本（云端版）
+========================
 读取 output/ 下最新的增强版简报 HTML（briefing_enhanced_*.html），
-通过 Outlook SMTP（smtp.office365.com:587 STARTTLS + 应用密码）作为邮件正文发送。
-替代原自动化流程中的 agent-mail 连接器。
+通过 SMTP 作为邮件正文发送，替代原自动化流程中的 agent-mail 连接器。
 
-注意：微软禁止第三方客户端使用邮箱登录密码直连 SMTP，
-必须先在 account.microsoft.com 开启两步验证，再生成 16 位"应用密码"。
+默认使用 QQ 邮箱（smtp.qq.com:465 SSL + 授权码），
+也可配置为 Outlook（smtp.office365.com:587 STARTTLS + 应用密码），
+端口 465 自动走 SSL，端口 587 自动走 STARTTLS。
+
+QQ 邮箱授权码：QQ邮箱 → 设置 → 账户 → 开启 POP3/SMTP 服务 → 生成 16 位授权码
+（授权码不是 QQ 密码！）
 
 环境变量:
-  SMTP_HOST   SMTP 服务器（默认 smtp.office365.com）
-  SMTP_PORT   端口（默认 587）
-  SMTP_USER   发件 Outlook 邮箱（必填）
-  SMTP_PASS   16 位应用密码（必填）
+  SMTP_HOST   SMTP 服务器（默认 smtp.qq.com）
+  SMTP_PORT   端口（默认 465；465=SSL，587=STARTTLS）
+  SMTP_USER   发件邮箱（必填）
+  SMTP_PASS   授权码/应用密码（必填）
   MAIL_TO     收件邮箱（默认与 SMTP_USER 相同，即自己发给自己）
 
 用法:
@@ -46,9 +49,11 @@ def latest_enhanced_html():
 
 def send_email(subject, html_body, to=None, smtp_user=None, smtp_pass=None,
                smtp_host=None, smtp_port=None):
-    """通过 Outlook SMTP 发送一封 HTML 邮件。返回收件地址。"""
-    smtp_host = smtp_host or os.environ.get("SMTP_HOST", "smtp.office365.com")
-    smtp_port = int(smtp_port or os.environ.get("SMTP_PORT", "587"))
+    """通过 SMTP 发送一封 HTML 邮件。返回收件地址。
+    端口 465 使用 SSL（QQ 邮箱），端口 587 使用 STARTTLS（Outlook 等）。
+    """
+    smtp_host = smtp_host or os.environ.get("SMTP_HOST", "smtp.qq.com")
+    smtp_port = int(smtp_port or os.environ.get("SMTP_PORT", "465"))
     smtp_user = smtp_user or os.environ["SMTP_USER"]
     smtp_pass = smtp_pass or os.environ["SMTP_PASS"]
     to = to or os.environ.get("MAIL_TO", smtp_user)
@@ -61,10 +66,12 @@ def send_email(subject, html_body, to=None, smtp_user=None, smtp_pass=None,
     msg.set_content("本邮件包含 HTML 内容，请使用支持 HTML 的邮件客户端查看。")
     msg.add_alternative(html_body, subtype="html")
 
-    with smtplib.SMTP(smtp_host, smtp_port, timeout=60) as server:
-        server.ehlo()
-        server.starttls()
-        server.ehlo()
+    server_cls = smtplib.SMTP_SSL if smtp_port == 465 else smtplib.SMTP
+    with server_cls(smtp_host, smtp_port, timeout=60) as server:
+        if smtp_port != 465:
+            server.ehlo()
+            server.starttls()
+            server.ehlo()
         server.login(smtp_user, smtp_pass)
         server.send_message(msg)
     return to
@@ -83,7 +90,7 @@ def default_subject_from_file(path):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Outlook SMTP 发送增强版简报")
+    parser = argparse.ArgumentParser(description="SMTP 发送增强版简报")
     parser.add_argument("--file", help="指定 HTML 文件路径（默认取最新）")
     parser.add_argument("--subject", help="自定义邮件主题")
     args = parser.parse_args()

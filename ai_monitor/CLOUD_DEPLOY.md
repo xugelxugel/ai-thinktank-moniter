@@ -4,7 +4,7 @@
 
 - **调度执行**：GitHub Actions（私有仓库每月 2000 分钟免费，每天约跑 5-15 分钟）
 - **LLM 分析**：Google Gemini 免费档（约 1500 次请求/天），智谱 GLM-4-Flash 备用
-- **发信**：Outlook SMTP（免费，应用密码）
+- **发信**：QQ 邮箱 SMTP（免费，授权码）
 
 ## 一、代码已就绪
 
@@ -13,7 +13,7 @@
 | 文件 | 作用 |
 |---|---|
 | `ai_monitor/llm_analyze.py` | 替代智能体步骤：调用 LLM API 生成 `llm_analysis.json`（含 title_cn/summary_cn/importance_score 等 5 字段），多供应商自动切换 |
-| `ai_monitor/send_email.py` | 替代 agent-mail：Outlook SMTP 发送增强版简报 |
+| `ai_monitor/send_email.py` | 替代 agent-mail：QQ 邮箱 SMTP 发送增强版简报（465 SSL，也兼容 Outlook 587） |
 | `ai_monitor/run_daily.py` | 编排：monitor → llm_analyze → gen_enhanced → send_email，失败自动发通知 |
 | `ai_monitor/requirements.txt` | 依赖清单 |
 | `ai_monitor/.env.example` | 环境变量模板（含全部说明） |
@@ -28,11 +28,11 @@
    - 打开 https://aistudio.google.com/apikey ，用 Google 账号登录
    - 点 **Create API key** 生成，复制保存（免费档足够每日用量）
    - 可选备用：智谱 https://open.bigmodel.cn 注册后创建 API Key（GLM-4-Flash 免费）
-3. **Outlook 应用密码**（发信，必填）：
-   - 登录 https://account.microsoft.com → 安全 → 高级安全选项
-   - **先开启两步验证**（没开启则无"应用密码"入口）
-   - 安全 → 应用密码 → 生成 16 位密码（形如 `abcd efgh ijkl mnop`）
-   - ⚠️ 不能用邮箱登录密码，必须是应用密码
+3. **QQ 邮箱授权码**（发信，必填）：
+   - 登录 QQ 邮箱网页版 → 设置 → 账户
+   - 找到 **POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV 服务** → 开启 **POP3/SMTP 服务**
+   - 按提示用手机发短信验证 → 生成 16 位授权码（形如 `abcd efgh ijkl mnop`）
+   - ⚠️ 授权码不是 QQ 密码！
 
 ## 三、推送代码到 GitHub
 
@@ -55,8 +55,8 @@ git push -u origin main
 |---|---|---|
 | `LLM_API_KEY` | ✅ | Gemini API Key |
 | `LLM_FALLBACK_API_KEY` | 可选 | 智谱 API Key（建议配置，双保险） |
-| `SMTP_USER` | ✅ | 发件 Outlook 邮箱 |
-| `SMTP_PASS` | ✅ | 16 位应用密码 |
+| `SMTP_USER` | ✅ | 发件 QQ 邮箱 |
+| `SMTP_PASS` | ✅ | 16 位 QQ 邮箱授权码 |
 | `MAIL_TO` | 可选 | 收件邮箱，默认=发件邮箱（即自己发给自己） |
 
 ## 五、手动触发验证
@@ -64,7 +64,7 @@ git push -u origin main
 1. 仓库 → **Actions** → 左侧 **AI Monitor Daily Briefing** → **Run workflow** → 运行
 2. 等 3-10 分钟，绿色对勾 = 成功
 3. 检查收件箱（含垃圾邮件）是否收到 `【AI海外动态】智能增强简报` 邮件
-4. 失败时查看运行日志，常见原因：Key 填错、应用密码带了空格
+4. 失败时查看运行日志，常见原因：Key 填错、授权码带了空格、授权码不是 QQ 密码
 
 ## 六、验证稳定后停用本地自动化
 
@@ -86,12 +86,13 @@ git push -u origin main
 | GitHub Actions | 2000 分钟/月（私有仓库） | 约 150-450 分钟/月 |
 | Gemini Flash | 约 1500 次请求/天 | 每天约 10-30 次 |
 | GLM-4-Flash | 完全免费 | 备用 |
-| Outlook SMTP | 约 300 封/天 | 每天 1 封 |
+| QQ 邮箱 SMTP | 免费（普通账户每天约 500 封） | 每天 1 封 |
 
 **总计：¥0/年。**
 
 ## 九、常见问题
 
 - **429 限流**：Gemini 免费档并发高会限流，脚本已内置重试，并在连续失败后自动切到备用供应商
-- **邮件进垃圾箱**：outlook 发 outlook 同域一般不会，若出现请把发件地址加入白名单
+- **邮件进垃圾箱**：QQ 邮箱发往 Outlook 属跨域投递，首次可能进垃圾箱，把发件地址加入白名单或点一次"这不是垃圾邮件"即可
+- **想换回 Outlook 发信**：无需改代码，把 Secrets 里的 `SMTP_HOST`/`SMTP_PORT` 改掉即可（脚本已支持 465 SSL 与 587 STARTTLS 两种模式；注意 workflow 目前只传了 SMTP_USER/SMTP_PASS，如需自定义 host/port 请在 daily.yml 中补充对应 env）
 - **想换模型**：不用改代码，改 Secrets 里的 `LLM_MODEL`（需在 workflow 中暴露该变量），或直接编辑 `llm_analyze.py` 顶部默认值；OpenRouter 用户可把 base_url/model 换成任意模型
