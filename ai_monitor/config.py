@@ -117,9 +117,10 @@ SOURCES = [
     {
         "name": "Bruegel",
         "name_cn": "布鲁盖尔智库",
-        # Bruegel 是布鲁塞尔经济政策智库，提供出版物专用 RSS（不含活动日程）
-        "url": "https://www.bruegel.org/feed/publications-feed.xml",
+        # Bruegel 网站 403 封锁直接 RSS 请求，通过 Google News 间接获取
+        "url": "https://news.google.com/rss/search?q=site:bruegel.org+AI+OR+%22artificial+intelligence%22&hl=en-US&gl=US&ceid=US:en",
         "category": "think_tank",
+        "source_type": "google_news",
     },
     {
         "name": "Chatham House",

@@ -121,7 +121,7 @@ def call_chat(provider, messages, timeout):
         "model": provider["model"],
         "messages": messages,
         "temperature": 0.3,
-        "max_tokens": 800,
+        "max_tokens": 2000,
     }
     resp = requests.post(url, json=payload, headers=headers, timeout=timeout)
     if resp.status_code == 429:
@@ -132,18 +132,39 @@ def call_chat(provider, messages, timeout):
             f"HTTP {resp.status_code}（{provider['name']}）: {resp.text[:300]}")
     data = resp.json()
     try:
-        return data["choices"][0]["message"]["content"]
+        content = data["choices"][0]["message"]["content"]
     except (KeyError, IndexError, TypeError) as e:
         raise RuntimeError(f"响应格式异常（{provider['name']}）: {data}") from e
+    # 检测截断：finish_reason=length 表示输出被 max_tokens 截断
+    finish_reason = data.get("choices", [{}])[0].get("finish_reason", "")
+    if finish_reason == "length":
+        print(f"  [截断] {provider['name']} 输出被 max_tokens 截断（finish_reason=length）")
+    return content
 
 
 def extract_json(text):
-    """从模型输出中提取 JSON 对象。"""
+    """从模型输出中提取 JSON 对象。支持修复被 max_tokens 截断的输出。"""
     start = text.find("{")
-    end = text.rfind("}")
-    if start == -1 or end == -1 or end <= start:
+    if start == -1:
         raise ValueError(f"输出中未找到 JSON: {text[:200]}")
-    return json.loads(text[start:end + 1])
+    end = text.rfind("}")
+    if end > start:
+        try:
+            return json.loads(text[start:end + 1])
+        except json.JSONDecodeError:
+            pass  # 完整 } 存在但 JSON 仍有语法错误，继续尝试修复
+    # 尝试修复截断的 JSON：在最后一个逗号处截断（保留已完成的 key-value 对）
+    snippet = text[start:]
+    last_comma = snippet.rfind(",")
+    if last_comma > 0:
+        candidate = snippet[:last_comma].rstrip() + "}"
+        try:
+            result = json.loads(candidate)
+            print(f"  [修复] JSON 被截断，已提取已完成字段: {list(result.keys())}")
+            return result
+        except json.JSONDecodeError:
+            pass
+    raise ValueError(f"输出中未找到有效 JSON（可能被截断）: {text[:200]}")
 
 
 def normalize_analysis(parsed, fallback_title):
