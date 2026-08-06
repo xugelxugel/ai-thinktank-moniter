@@ -48,6 +48,10 @@ ANALYSIS_JSON = os.path.join(OUTPUT_DIR, "llm_analysis.json")
 FAILOVER_THRESHOLD = 3   # 主供应商连续失败 N 次后切换到备用
 MAX_RETRIES = 2          # 单条内容在单个供应商上的额外重试次数
 
+
+class RateLimitError(RuntimeError):
+    """供应商限流（HTTP 429），应等待更长时间后重试。"""
+
 SYSTEM_PROMPT = (
     "你是中美AI竞争情报分析师，擅长从英文研究报告与政策文章中提炼关键情报，"
     "并用简体中文输出。"
@@ -121,8 +125,11 @@ def call_chat(provider, messages, timeout):
     }
     resp = requests.post(url, json=payload, headers=headers, timeout=timeout)
     if resp.status_code == 429:
-        raise RuntimeError(f"429 限流（{provider['name']}）")
-    resp.raise_for_status()
+        raise RateLimitError(
+            f"429 限流（{provider['name']}）: {resp.text[:200]}")
+    if resp.status_code >= 400:
+        raise RuntimeError(
+            f"HTTP {resp.status_code}（{provider['name']}）: {resp.text[:300]}")
     data = resp.json()
     try:
         return data["choices"][0]["message"]["content"]
@@ -183,6 +190,13 @@ def analyze_item(item, pool, timeout):
             analysis = normalize_analysis(parsed, item["title"])
             pool.on_success()
             return {item["link"]: analysis}
+        except RateLimitError as e:
+            # 限流：等待更久再重试（免费档并发高极易触发）
+            last_err = e
+            pool.on_failure()
+            wait = 5 * (attempt + 1)
+            print(f"  [限流] {str(e)[:80]} 等待 {wait}s 后重试")
+            time.sleep(wait)
         except Exception as e:
             last_err = e
             pool.on_failure()
@@ -254,7 +268,9 @@ def main():
         items = items[:args.max_items]
     print(f"待分析条目: {len(items)} 条")
 
-    concurrency = int(os.environ.get("LLM_CONCURRENCY", "4"))
+    # 免费档限速严格（Gemini 约 10-15 次/分钟），默认并发 1 最稳妥，
+    # 需要提速可设环境变量 LLM_CONCURRENCY
+    concurrency = int(os.environ.get("LLM_CONCURRENCY", "1"))
     timeout = int(os.environ.get("LLM_TIMEOUT", "60"))
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -287,6 +303,12 @@ def main():
 
     covered = len(results)
     print(f"分析完成: 成功 {covered}/{len(items)}")
+    if covered == 0:
+        # 全部失败：返回码 2 表示"LLM 降级"，run_daily 会继续发布兜底简报
+        # 并额外发送微信警告，让用户知晓
+        print("[严重] LLM 分析全部失败，简报将使用英文原文兜底（请检查 API Key / 限流）")
+        print(f"输出: {ANALYSIS_JSON}")
+        return 2
     if covered < len(items):
         print(f"[警告] {len(items) - covered} 条分析失败，简报中将以原文标题兜底")
     print(f"输出: {ANALYSIS_JSON}")

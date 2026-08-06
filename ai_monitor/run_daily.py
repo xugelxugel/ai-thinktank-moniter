@@ -67,14 +67,37 @@ def notify_failure(failed_steps, logs):
         print(f"\n[警告] 失败提醒发送失败（不影响退出码）: {e}")
 
 
+def notify_degraded():
+    """LLM 分析全部失败（返回码 2）时发送微信警告，简报仍会发布兜底版。"""
+    try:
+        sys.path.insert(0, BASE_DIR)
+        import wechat_notify
+        now = bj_now_str()
+        wechat_notify.send_wechat(
+            f"【AI海外动态】LLM 分析失败 {now}",
+            "<b>LLM 分析全部失败，今日简报为英文兜底版</b><br>"
+            "可能原因：Gemini API Key 无效 / 免费档限流。<br>"
+            "请查看 Actions 日志中『步骤2/4 LLM 深度分析』的输出，"
+            "并在 CLOUD_DEPLOY.md 常见问题中排查。")
+        print("\n[通知] LLM 降级警告已通过微信发送。")
+    except Exception as e:
+        print(f"\n[警告] LLM 降级警告发送失败: {e}")
+
+
 def main():
     print(f"AI 海外动态监测 · 云端流水线启动 · {bj_now_str()}")
     failed_steps = []
+    degraded = False
     logs = []
 
     for name, cmd in STEPS:
         rc, output = run_step(name, cmd)
         logs.append(output)
+        if "LLM 深度分析" in name and rc == 2:
+            # LLM 全部失败：不中断流水线（简报仍会以英文兜底发布），
+            # 但记录降级标志，最后发送微信警告
+            degraded = True
+            rc = 0
         if rc != 0:
             failed_steps.append(name)
 
@@ -84,6 +107,13 @@ def main():
         print(f"{'=' * 60}")
         notify_failure(failed_steps, logs)
         return 1
+
+    if degraded:
+        print(f"\n{'=' * 60}")
+        print("  流水线完成，但 LLM 分析全部失败（简报为英文兜底版）")
+        print(f"{'=' * 60}")
+        notify_degraded()
+        return 0
 
     print(f"\n{'=' * 60}")
     print("  全部步骤成功，简报已发布 ✓")
