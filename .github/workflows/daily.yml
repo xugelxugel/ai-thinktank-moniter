@@ -1,9 +1,10 @@
 # AI 海外动态监测 · 每日云端流水线
 # 每天 23:00 UTC（北京时间次日 07:00）自动运行：
 #   monitor.py 抓取 → llm_analyze.py LLM分析 → gen_enhanced_from_json.py 生成简报
-#   → publish_pages.py 发布到 docs/（GitHub Pages）+ 微信提醒
+#   → publish_pages.py 发布到 docs/（GitHub Pages）+ 微信提醒 → 工作流方式部署 Pages
 #
-# GitHub Pages 启用（一次性）：仓库 Settings → Pages → Deploy from a branch → main + /docs
+# GitHub Pages 启用（一次性）：仓库 Settings → Pages → Source 选 "GitHub Actions"
+#   （v1.4.6 起改用官方 deploy-pages 工作流部署，绕开 branch 构建器超时问题）
 #
 # 首次配置：仓库 Settings → Secrets and variables → Actions → New repository secret
 #   必填：LLM_API_KEY（Gemini 免费 Key）、WECHAT_NOTIFY_KEY（Server酱 SENDKEY 或 PushPlus token）
@@ -19,6 +20,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: ai-monitor-daily
@@ -48,14 +51,28 @@ jobs:
           WECHAT_NOTIFY_KEY: ${{ secrets.WECHAT_NOTIFY_KEY }}
         run: python ai_monitor/run_daily.py
 
-      # 保活 + 发布：把 docs/（每日简报网页）和 .keepalive 时间戳一起提交推送。
-      # GitHub Pages 会从 /docs 自动发布；同时仓库保持活跃，
-      # 防止 GitHub 因 60 天无活动自动暂停定时任务。
-      - name: Publish pages and keep repository active
+      # 保活：把 .keepalive 时间戳提交推送，防止 GitHub 因仓库 60 天
+      # 无活动自动暂停定时任务。docs/ 新简报由下面的工作流部署上传，
+      # 无需 commit（避免 push 触发 branch 构建器再次超时）。
+      - name: Keep repository active
         run: |
           echo "last_run: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > .keepalive
           git config user.name "ai-monitor-bot"
           git config user.email "actions@github.com"
-          git add docs/ .keepalive
-          git commit -m "chore: publish briefing $(date -u '+%Y-%m-%d')" || echo "no changes to commit"
+          git add .keepalive
+          git commit -m "chore: keepalive $(date -u '+%Y-%m-%d')" || echo "no changes to commit"
           git push
+
+      # ---- GitHub Pages 工作流部署（官方推荐，纯文件上传，无构建超时）----
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: docs
+          include-hidden-files: true
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
