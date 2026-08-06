@@ -1,0 +1,58 @@
+# AI 海外动态监测 · 每日云端流水线
+# 每天 23:00 UTC（北京时间次日 07:00）自动运行：
+#   monitor.py 抓取 → llm_analyze.py LLM分析 → gen_enhanced_from_json.py 生成简报 → send_email.py 发邮件
+#
+# 首次配置：仓库 Settings → Secrets and variables → Actions → New repository secret
+#   必填：LLM_API_KEY（Gemini 免费 Key）、SMTP_USER（Outlook 邮箱）、SMTP_PASS（16 位应用密码）
+#   可选：LLM_FALLBACK_API_KEY（智谱 GLM 备用）、MAIL_TO（收件邮箱，默认=发件邮箱）
+# 手动测试：仓库 Actions 页面 → 本工作流 → Run workflow
+
+name: AI Monitor Daily Briefing
+
+on:
+  schedule:
+    - cron: "0 23 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-monitor-daily
+  cancel-in-progress: false
+
+jobs:
+  daily-briefing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r ai_monitor/requirements.txt
+
+      - name: Run daily briefing pipeline
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_FALLBACK_API_KEY: ${{ secrets.LLM_FALLBACK_API_KEY }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: python ai_monitor/run_daily.py
+
+      # 保活：GitHub 会在仓库 60 天无活动时自动暂停定时任务，
+      # 这里每天提交一次时间戳，保证仓库永远活跃、任务永不暂停。
+      - name: Keep repository active
+        run: |
+          echo "last_run: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > .keepalive
+          git config user.name "ai-monitor-bot"
+          git config user.email "actions@github.com"
+          git add .keepalive
+          git commit -m "chore: keepalive $(date -u '+%Y-%m-%d')" || echo "no changes to commit"
+          git push

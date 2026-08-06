@@ -27,6 +27,10 @@ ai_monitor/output/*.txt
 Thumbs.db
 desktop.ini
 
+# 本地环境变量（含密钥，绝不入版本库）
+.env
+ai_monitor/.env
+
 # 编辑器
 .vscode/
 .idea/
