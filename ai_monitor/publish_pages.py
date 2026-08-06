@@ -22,7 +22,6 @@ GitHub Pages 启用方法：仓库 Settings → Pages → Deploy from branch →
 """
 
 import argparse
-import html
 import json
 import os
 import shutil
@@ -124,20 +123,20 @@ def pages_url(date_str):
 
 
 def build_notice_content(date_str, url):
-    """构建微信提醒内容：链接 + 条数统计 + Top 标题。"""
-    lines = [f"<b>{date_str} 简报已更新</b>"]
+    """构建微信提醒内容（Markdown 格式，链接可点击）：标题 + 链接 + 条数 + Top 标题。"""
+    lines = [f"**{date_str} 简报已更新**"]
     if url:
-        lines.append(f'<a href="{url}">点击查看网页版</a>')
+        lines.append(f"[点击查看网页版]({url})")
     try:
         with open(os.path.join(OUTPUT_DIR, "items_for_llm.json"),
                   encoding="utf-8") as f:
             items = json.load(f)
         lines.append(f"共 {len(items)} 条 AI 相关动态：")
         for it in items[:5]:
-            lines.append(f"· {html.escape(it['title'][:60])}")
+            lines.append(f"- {it['title'][:60]}")
     except Exception:
         pass
-    return "<br>".join(lines)
+    return "\n".join(lines)
 
 
 def main():

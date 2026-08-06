@@ -49,15 +49,15 @@ def run_step(name, cmd):
 
 
 def notify_failure(failed_steps, logs):
-    """通过微信发送失败通知（未配置 WECHAT_NOTIFY_KEY 时仅打印）。"""
+    """通过微信发送失败通知（Markdown 格式；未配置 key 时仅打印）。"""
     try:
         sys.path.insert(0, BASE_DIR)
         import wechat_notify
         now = bj_now_str()
         content = (
-            f"<b>AI 海外动态监测 · 运行失败</b><br>"
-            f"时间：{now}<br>"
-            f"失败步骤：{'、'.join(failed_steps)}<br>"
+            f"**AI 海外动态监测 · 运行失败**\n"
+            f"时间：{now}\n"
+            f"失败步骤：{'、'.join(failed_steps)}\n"
             "请在 GitHub Actions 运行日志中查看详细报错。"
         )
         wechat_notify.send_wechat(
@@ -75,8 +75,8 @@ def notify_degraded():
         now = bj_now_str()
         wechat_notify.send_wechat(
             f"【AI海外动态】LLM 分析失败 {now}",
-            "<b>LLM 分析全部失败，今日简报为英文兜底版</b><br>"
-            "可能原因：Gemini API Key 无效 / 免费档限流。<br>"
+            "**LLM 分析全部失败，今日简报为英文兜底版**\n"
+            "可能原因：Gemini API Key 无效 / 免费档限流。\n"
             "请查看 Actions 日志中『步骤2/4 LLM 深度分析』的输出，"
             "并在 CLOUD_DEPLOY.md 常见问题中排查。")
         print("\n[通知] LLM 降级警告已通过微信发送。")

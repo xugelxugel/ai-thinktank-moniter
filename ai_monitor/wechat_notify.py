@@ -7,6 +7,12 @@
 免费额度：Server酱普通用户每天约 5 条，PushPlus 每天约 200 条，
 本任务每天 1-2 条，绰绰有余。
 
+注意：**content 请使用 Markdown 格式**（Server酱与 PushPlus 均按
+Markdown 渲染），这样链接可点击、加粗生效。示例：
+  **2026-08-06 简报已更新**
+  [点击查看网页版](https://...)
+  - 条目标题
+
 环境变量:
   WECHAT_NOTIFY_TYPE   serverchan（默认）| pushplus
   WECHAT_NOTIFY_KEY    Server酱 SENDKEY：sct.ftqq.com 用微信扫码登录后获取
@@ -26,7 +32,7 @@ import requests
 
 
 def send_wechat(title, content, notify_type=None, key=None, dry_run=False):
-    """发送微信提醒。返回 True 表示已发送（或 dry-run 校验通过）。"""
+    """发送微信提醒（content 为 Markdown 格式）。返回 True 表示已发送。"""
     notify_type = (notify_type or os.environ.get(
         "WECHAT_NOTIFY_TYPE", "serverchan")).lower()
     key = (key or os.environ.get("WECHAT_NOTIFY_KEY", "")).strip()
@@ -37,7 +43,7 @@ def send_wechat(title, content, notify_type=None, key=None, dry_run=False):
     if notify_type == "pushplus":
         url = "https://www.pushplus.plus/send"
         payload = {"token": key, "title": title,
-                   "content": content, "template": "html"}
+                   "content": content, "template": "markdown"}
         if dry_run:
             print(f"[dry-run] pushplus: {url}\n  "
                   f"payload: {json.dumps(payload, ensure_ascii=False)[:200]}")
@@ -64,7 +70,7 @@ def send_wechat(title, content, notify_type=None, key=None, dry_run=False):
 def main():
     parser = argparse.ArgumentParser(description="微信提醒（Server酱/PushPlus）")
     parser.add_argument("--title", required=True, help="消息标题")
-    parser.add_argument("--content", default="", help="消息内容（支持 HTML/Markdown）")
+    parser.add_argument("--content", default="", help="消息内容（Markdown 格式）")
     parser.add_argument("--dry-run", action="store_true",
                         help="仅打印请求，不真实发送")
     args = parser.parse_args()
