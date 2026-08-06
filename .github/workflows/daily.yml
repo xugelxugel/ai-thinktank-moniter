@@ -3,7 +3,7 @@
 #   monitor.py 抓取 → llm_analyze.py LLM分析 → gen_enhanced_from_json.py 生成简报 → send_email.py 发邮件
 #
 # 首次配置：仓库 Settings → Secrets and variables → Actions → New repository secret
-#   必填：LLM_API_KEY（Gemini 免费 Key）、SMTP_USER（QQ 邮箱）、SMTP_PASS（16 位 QQ 邮箱授权码）
+#   必填：LLM_API_KEY（Gemini 免费 Key）、SMTP_USER（Outlook 邮箱）、SMTP_PASS（16 位应用密码）
 #   可选：LLM_FALLBACK_API_KEY（智谱 GLM 备用）、MAIL_TO（收件邮箱，默认=发件邮箱）
 # 手动测试：仓库 Actions 页面 → 本工作流 → Run workflow
 
