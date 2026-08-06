@@ -232,7 +232,9 @@ def build_providers():
                 "LLM_BASE_URL",
                 "https://generativelanguage.googleapis.com/v1beta/openai/"),
             "api_key": os.environ.get("LLM_API_KEY", ""),
-            "model": os.environ.get("LLM_MODEL", "gemini-2.0-flash"),
+            # 模型名会随 Google 迭代更新（gemini-2.0-flash 已下线），
+            # 若仍 400/429 请按 CLOUD_DEPLOY.md 常见问题检查可用模型
+            "model": os.environ.get("LLM_MODEL", "gemini-3.6-flash"),
         },
         {
             "name": "bigmodel",
