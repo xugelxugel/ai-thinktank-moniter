@@ -35,6 +35,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
 
+      # 先配置 Pages 站点（自动启用 + 切换为 GitHub Actions 部署模式），
+      # 必须在 keepalive push 之前执行，否则 push 会触发分支构建器。
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+        with:
+          enablement: true
+
       - name: Set up Python
         uses: actions/setup-python@v7
         with:
@@ -64,9 +71,6 @@ jobs:
           git push
 
       # ---- GitHub Pages 工作流部署（官方推荐，纯文件上传，无构建超时）----
-      - name: Configure Pages
-        uses: actions/configure-pages@v6
-
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:

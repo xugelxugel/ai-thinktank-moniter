@@ -42,5 +42,5 @@ echo "推送完成！接下来请完成 3 步（详见 ai_monitor/CLOUD_DEPLOY.m
 echo "  1. 配置 Secrets: 仓库 Settings → Secrets and variables → Actions"
 echo "     必填: LLM_API_KEY（Gemini Key）、WECHAT_NOTIFY_KEY（Server酱 SENDKEY）"
 echo "     可选: LLM_FALLBACK_API_KEY（智谱）、WECHAT_NOTIFY_TYPE（serverchan/pushplus）"
-echo "  2. 启用 Pages: Settings → Pages → Deploy from a branch → main + /docs"
+echo "  2. 启用 Pages: Settings → Pages → Source 选 \"GitHub Actions\"（工作流会自动配置）"
 echo "  3. 手动测试: Actions → AI Monitor Daily Briefing → Run workflow"

@@ -8,9 +8,10 @@ GitHub Pages 发布 + 微信提醒（云端版）
   2. 生成 docs/index.html（历史归档索引页）
   3. 通过微信推送简报提醒（含 Pages 网页链接）
 
-真正的"上线"由 GitHub Actions 的 commit+push 完成（保活步骤会一并提交
-docs/ 目录），本脚本只负责把文件放到 docs/ 并触发微信提醒。
-GitHub Pages 启用方法：仓库 Settings → Pages → Deploy from branch → main + /docs。
+真正的"上线"由 GitHub Actions 工作流部署完成（upload-pages-artifact +
+deploy-pages），本脚本只负责把文件放到 docs/ 并触发微信提醒。
+GitHub Pages 启用方法：仓库 Settings → Pages → Source 选 "GitHub Actions"
+（configure-pages 的 enablement: true 会自动创建/切换，无需手动设置）。
 
 环境变量:
   WECHAT_NOTIFY_TYPE / WECHAT_NOTIFY_KEY   见 wechat_notify.py
