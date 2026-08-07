@@ -1,10 +1,10 @@
 # AI 海外动态监测 · 每日云端流水线
-# 每天 23:00 UTC（北京时间次日 07:00）自动运行：
+# 每天 22:35 UTC（北京时间次日 06:35）自动运行：
 #   monitor.py 抓取 → llm_analyze.py LLM分析 → gen_enhanced_from_json.py 生成简报
 #   → publish_pages.py 发布到 docs/（GitHub Pages）+ 微信提醒 → 工作流方式部署 Pages
 #
 # 注意：schedule 的 cron 使用 UTC 时区（GitHub Actions 固定 UTC）。
-#   "0 23 * * *" = 每天 23:00 UTC = 北京时间次日 07:00。
+#   "35 22 * * *" = 每天 22:35 UTC = 北京时间次日 06:35。
 # 若定时任务未触发：推送一次本文件的微小改动（如改注释）即可让 GitHub
 # 重新注册 cron（修改 workflow 文件会重置 schedule 注册）。
 #
@@ -21,7 +21,7 @@ name: AI Monitor Daily Briefing
 
 on:
   schedule:
-    - cron: "0 23 * * *"
+    - cron: "35 22 * * *"
   workflow_dispatch:
 
 permissions:

@@ -20,7 +20,7 @@
 | `ai_monitor/run_daily.py` | 编排：monitor → llm_analyze → gen_enhanced → publish，失败自动微信通知 |
 | `ai_monitor/requirements.txt` | 依赖清单 |
 | `ai_monitor/.env.example` | 环境变量模板（含全部说明） |
-| `.github/workflows/daily.yml` | 每日 23:00 UTC（北京 7:00）定时任务 + 发布 Pages + 保活 commit |
+| `.github/workflows/daily.yml` | 每日 22:35 UTC（北京 6:35）定时任务 + 发布 Pages + 保活 commit |
 
 现有 `config.py` / `monitor.py` / `llm_enhance.py` / `gen_enhanced_from_json.py` **零改动**。
 （`send_email.py` 已移除 —— 不再使用邮件交付）
@@ -89,7 +89,7 @@ https://<你的用户名>.github.io/<仓库名>/briefings/YYYY-MM-DD.html
 
 ## 八、定时、发布与保活说明
 
-- 定时：cron `0 23 * * *`（UTC）= 北京时间每天早上 7:00（有数分钟延迟，属正常）
+- 定时：cron `35 22 * * *`（UTC）= 北京时间每天早上 6:35（有数分钟延迟，属正常）
 - **发布**：workflow 最后的保活步骤会把 `docs/` 与 `.keepalive` 一起 commit + push，
   触发 GitHub Pages 自动更新
 - **保活**：每天自动 commit 一次，防止 GitHub 因仓库 60 天无活动而暂停定时任务
