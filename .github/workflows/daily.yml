@@ -3,8 +3,14 @@
 #   monitor.py 抓取 → llm_analyze.py LLM分析 → gen_enhanced_from_json.py 生成简报
 #   → publish_pages.py 发布到 docs/（GitHub Pages）+ 微信提醒 → 工作流方式部署 Pages
 #
+# 注意：schedule 的 cron 使用 UTC 时区（GitHub Actions 固定 UTC）。
+#   "0 23 * * *" = 每天 23:00 UTC = 北京时间次日 07:00。
+# 若定时任务未触发：推送一次本文件的微小改动（如改注释）即可让 GitHub
+# 重新注册 cron（修改 workflow 文件会重置 schedule 注册）。
+#
 # GitHub Pages 启用（一次性）：仓库 Settings → Pages → Source 选 "GitHub Actions"
-#   （v1.4.6 起改用官方 deploy-pages 工作流部署，绕开 branch 构建器超时问题）
+#   （v1.4.6 起改用官方 deploy-pages 工作流部署，绕开 branch 构建器超时问题；
+#     v1.4.7 起 configure-pages 加 enablement:true 自动创建/切换站点模式）
 #
 # 首次配置：仓库 Settings → Secrets and variables → Actions → New repository secret
 #   必填：LLM_API_KEY（Gemini 免费 Key）、WECHAT_NOTIFY_KEY（Server酱 SENDKEY 或 PushPlus token）
@@ -71,6 +77,27 @@ jobs:
           git push
 
       # ---- GitHub Pages 工作流部署（官方推荐，纯文件上传，无构建超时）----
+      # 首次启用/切换模式后，站点创建是异步的，直接 deploy 可能失败。
+      # 轮询 Pages API 直到站点状态就绪（最多约 2 分钟）。
+      - name: Wait for Pages site to be ready
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          REPO="${GITHUB_REPOSITORY}"
+          for i in $(seq 1 12); do
+            STATUS=$(curl -s -H "Authorization: token $GH_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/${REPO}/pages" \
+              | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('status','missing'))" 2>/dev/null || echo missing)
+            echo "  检查 $i/12: Pages status=$STATUS"
+            if [ "$STATUS" != "missing" ] && [ "$STATUS" != "undefined" ] && [ "$STATUS" != "null" ]; then
+              echo "  Pages 站点已就绪，开始部署"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "  [警告] Pages 站点多次检查仍未就绪，继续尝试部署"
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
