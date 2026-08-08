@@ -37,9 +37,9 @@ ai_monitor/
 └── README.md                   # 本说明文件
 ```
 
-## 数据源（42 个，全部经过实际验证）
+## 数据源（43 个，全部经过实际验证）
 
-> 22 个源使用 Google News RSS（当网站无 RSS、RSS 失效或仅含新闻不含出版物时使用），20 个使用原始 RSS/Atom。
+> 24 个源使用 Google News RSS（当网站无 RSS、RSS 失效或仅含新闻不含出版物时使用），19 个使用原始 RSS/Atom。
 
 ### 海外智库（20 个）
 - CSIS 战略与国际研究中心（Google News RSS）
@@ -56,7 +56,7 @@ ai_monitor/
 - Foreign Affairs 外交事务
 - Carnegie Endowment 卡内基国际和平基金会（Google News RSS）
 - CSET 安全与新兴技术中心（Google News RSS）
-- Bruegel 布鲁盖尔智库
+- Bruegel 布鲁盖尔智库（Google News RSS）
 - Chatham House 英国皇家国际事务研究所
 - Lawfare 法律事务（Google News RSS）
 - Stanford HAI 斯坦福以人为本AI研究院（Google News RSS）
@@ -75,9 +75,9 @@ ai_monitor/
 - World Economic Forum 世界经济论坛（Google News RSS）
 - World Bank 世界银行（Google News RSS）
 
-### 美国政府（14 个）
+### 美国政府（15 个）
 **科研与监管机构：**
-- NIST 国家标准与技术研究院
+- NIST 国家标准与技术研究院（新闻 RSS + Google News 双源，Google News 覆盖 AI 栏目文档/草案发布）
 - FTC 联邦贸易委员会（Google News RSS）
 - NTIA 国家电信与信息管理局（Google News RSS）
 - DARPA 国防高级研究计划局（Google News RSS）

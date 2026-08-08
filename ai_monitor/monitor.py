@@ -245,6 +245,7 @@ def run_monitor(days=3):
 
     all_items = []
     seen_links = set()
+    seen_titles = set()
     feed_ok = 0
     feed_fail = 0
     total_entries = 0
@@ -285,6 +286,14 @@ def run_monitor(days=3):
             if link_hash in seen_links:
                 continue
 
+            # 跨源标题去重（归一化标题）：同一文章可能同时出现在
+            # 官方 RSS 与 Google News 源（链接不同，如 NIST），
+            # 避免同一条目重复进入简报。
+            title_norm = re.sub(r"[^\w\s]", "", title.lower())
+            title_norm = re.sub(r"\s+", " ", title_norm).strip()
+            if title_norm and title_norm in seen_titles:
+                continue
+
             # AI 关键词过滤
             # title_keyword_only: 仅检查标题（用于联邦公报等全文搜索源，
             # 避免摘要中偶尔提及AI的无关文件误入）
@@ -306,6 +315,8 @@ def run_monitor(days=3):
                 continue
 
             seen_links.add(link_hash)
+            if title_norm:
+                seen_titles.add(title_norm)
             count += 1
             all_items.append({
                 "title": title,

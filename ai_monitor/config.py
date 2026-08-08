@@ -241,8 +241,21 @@ SOURCES = [
     {
         "name": "NIST",
         "name_cn": "国家标准与技术研究院",
+        # 官方新闻 RSS：覆盖 NIST 新闻稿（含 AI 相关）。
+        # 注意：该 RSS 仅含新闻稿，不含 AI 栏目下文档/草案发布
+        # （2026-08-07 NIST AI 200-2 TEVV-Athlon 草案即因此漏报）
         "url": "https://www.nist.gov/news-events/news/rss.xml",
         "category": "us_gov",
+    },
+    {
+        "name": "NIST",
+        "name_cn": "国家标准与技术研究院",
+        # Google News 补充源：site:nist.gov 可捕获 AI 栏目页面/文档/草案
+        # （2026-08-08 实测可返回 TEVV-Athlon 页面），弥补新闻 RSS 覆盖不足。
+        # 与新闻 RSS 同文条目由 monitor.py 跨源标题去重避免重复。
+        "url": "https://news.google.com/rss/search?q=site:nist.gov+AI+OR+%22artificial+intelligence%22&hl=en-US&gl=US&ceid=US:en",
+        "category": "us_gov",
+        "source_type": "google_news",
     },
     {
         "name": "FTC",
