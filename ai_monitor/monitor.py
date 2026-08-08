@@ -197,10 +197,12 @@ def is_ai_related(title, summary):
 # 出版物过滤
 # ============================================================
 
-def is_publication(title, link):
+def is_publication(title, link, extra_exclude_keywords=None):
     """判断条目是否为出版物（研究报告/政策分析/评论文章等），
     排除活动通知、招聘、会议公告、视频/播客等一般性资讯，
     以及仅含公司名/产品名而非实质出版物的条目。
+    extra_exclude_keywords: 源级额外排除词（config.py 中该源的 exclude_title_keywords），
+    用于按源精准过滤（如国会源的听证会通知、白宫源的发布会实录）。
     返回 (bool, reason) — reason 为排除原因（如被排除则说明匹配了哪条规则）。
     """
     link_lower = link.lower()
@@ -211,8 +213,11 @@ def is_publication(title, link):
         if pattern in link_lower:
             return (False, f"URL含'{pattern}'")
 
-    # 检查标题排除关键词
-    for kw in EXCLUDE_TITLE_KEYWORDS:
+    # 检查标题排除关键词（全局 + 源级）
+    title_exclude = list(EXCLUDE_TITLE_KEYWORDS)
+    if extra_exclude_keywords:
+        title_exclude.extend(extra_exclude_keywords)
+    for kw in title_exclude:
         if kw in title_lower:
             return (False, f"标题含'{kw}'")
 
@@ -305,7 +310,10 @@ def run_monitor(days=3):
                 continue
 
             # 出版物过滤：排除活动通知、招聘、会议公告等非出版物内容
-            is_pub, excl_reason = is_publication(title, link)
+            # （含源级排除词，如国会听证会通知、白宫发布会实录）
+            is_pub, excl_reason = is_publication(
+                title, link, source.get("exclude_title_keywords")
+            )
             if not is_pub:
                 continue
 

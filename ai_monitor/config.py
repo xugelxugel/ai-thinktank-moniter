@@ -296,8 +296,11 @@ SOURCES = [
         "name": "White House - News",
         "name_cn": "白宫-政策发布",
         # 政策框架、行动计划、声明
+        # 源级排除词：press briefing（发布会实录）、press gaggle、readout（会晤纪要）
+        # 属一般性资讯，非出版物；Fact Sheet/Statement 等政策文件保留
         "url": "https://www.whitehouse.gov/news/feed/",
         "category": "us_gov",
+        "exclude_title_keywords": ["press briefing", "press gaggle", "readout"],
     },
 
     # ---- 联邦公报 (Federal Register) ----
@@ -359,9 +362,16 @@ SOURCES = [
         "name": "U.S. Congress",
         "name_cn": "美国国会",
         # Congress.gov 封锁 RSS，通过 Google News 获取 AI 相关法案/听证会
+        # 源级排除词：仅排除听证会"通知/预告"（announces hearing / hearing notice 等），
+        # 保留"证词/记录"（Testimony of ... / S.Hrg. / ... HEARING COMMITTEE... 等出版物）
         "url": "https://news.google.com/rss/search?q=site:congress.gov+AI+OR+%22artificial+intelligence%22+OR+semiconductor+OR+%22export+control%22&hl=en-US&gl=US&ceid=US:en",
         "category": "us_gov",
         "source_type": "google_news",
+        "exclude_title_keywords": [
+            "announces hearing", "announces a hearing", "announces committee hearing",
+            "hearing notice", "notice of hearing", "schedules hearing", "scheduled hearing",
+            "to hold a hearing", "hearing schedule", "upcoming hearing",
+        ],
     },
 
     # ---- 美国商务部 ----

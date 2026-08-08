@@ -106,10 +106,12 @@ ai_monitor/
    - 标记了 `title_keyword_only: True` 的源（如联邦公报）仅检查标题，避免摘要中偶尔提及AI的无关文件误入
    - 联邦公报 API 的 `conditions[term]` 搜索全文，返回的条目标题/摘要可能完全不含AI关键词（如医保、管道许可等），需标题级过滤
 2. **URL 路径排除** — 链接含 `/events/`、`/press-release/`、`/careers/`、`/videos/` 等路径的条目排除
+   - 注：Google News 源的链接为 news.google.com 包装链接，此规则对它们不生效，靠标题排除词兜底
 3. **标题关键词排除** — 标题含 `register now`、`webinar`、`the download:`、`10 bits:`、`5 q's with` 等的条目排除
+   - **源级排除词**：部分源在 `config.py` 中配置了 `exclude_title_keywords`（如国会源排除听证会"通知/预告"但保留证词/记录；白宫 News 源排除发布会实录/会晤纪要），按源精准过滤
 4. **标题最小词数** — 标题少于 3 个词的条目排除（如 "Horizon3.ai"、"Gero AI" 等公司名/产品名，非出版物）
 
-过滤规则在 `config.py` 的 `EXCLUDE_URL_PATTERNS` 和 `EXCLUDE_TITLE_KEYWORDS` 中，可随时增删。
+过滤规则在 `config.py` 的 `EXCLUDE_URL_PATTERNS`、`EXCLUDE_TITLE_KEYWORDS` 及各源的 `exclude_title_keywords` 字段中，可随时增删。
 
 ## AI 关键词覆盖范围
 
