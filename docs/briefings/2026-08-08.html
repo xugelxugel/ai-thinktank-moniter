@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年08月08日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年08月08日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">9</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">1</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">6</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">2</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-critical">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Chatham House</span>
+                    <span class="card-date">08-07 18:06</span>
+                </div>
+                <h3 class="card-title">AI繁荣即将破裂吗？</h3>
+                <p class="card-title-en">Is the AI boom about to bust?</p>
+                <p class="card-llm-summary">Chatham House播客《Independent Thinking》聚焦中美AI领导力竞赛与AI崩盘风险：全球在AI、数据中心和先进芯片制造上的累计投入已达2.6万亿美元，远超以往任何基础设施超级工程，然而科技巨头深陷亏损泥潭。专家围绕这一史无前例的资本押注是否会演变为泡沫破裂展开辩论，并评估若AI泡沫破灭将对中美两国竞赛格局产生何种冲击。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 8/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：直接讨论中美AI领导力竞赛，并分析2.6万亿美元投入的泡沫风险对两国竞争格局的冲击，属全球AI竞赛格局核心议题</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: artificial intelligence, AI</span>
+                    <a href="https://www.chathamhouse.org/2026/08/ai-boom-about-bust-independent-thinking-podcast" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">CNAS</span>
+                    <span class="card-date">08-08 05:44</span>
+                </div>
+                <h3 class="card-title">生成式AI加速器挑战赛（GENIAC）——CNAS报告</h3>
+                <p class="card-title-en">Generative AI Accelerator Challenge (GENIAC) - CNAS Reports</p>
+                <p class="card-llm-summary">新美国安全中心（CNAS）发布关于生成式AI加速器挑战赛（GENIAC）的报告。GENIAC是日本经济产业省主导的官方项目，旨在扶持本土生成式AI开发、增强日本的AI算力与产业竞争力。CNAS以美国国家安全视角审视这一盟国级AI创新动员项目，折射出美国对关键盟友AI能力建设的持续关注，以及盟友生态在AI竞赛中的战略价值。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及全球AI竞赛格局中盟友（日本）的AI产业动员，属美国视角下的竞争格局分析，但非直接对华议题</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, generative AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSjk1QlhmRllURm9GemdmX000dGwtMGluTVlQOXlWc01GbjZtY1NFbFZzSGtLblNRY3lNQWFnaGJETFNBZWxwR0ZabzBHS3FNSzdybW5wVnRPWTBKczRxQ1VkY0xqZ3UxdmQ1MGRvVnZmQzgwdDVGVXFsWTgwazE0STU5TFRsay0x?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">CSIS</span>
+                    <span class="card-date">08-08 05:15</span>
+                </div>
+                <h3 class="card-title">谁买单？AI驱动的网络攻击对经济意味着什么</h3>
+                <p class="card-title-en">Who Pays? What AI-Powered Cyberattacks Mean for the Economy</p>
+                <p class="card-llm-summary">CSIS发文剖析AI赋能的网络攻击给经济带来的成本与责任分配问题，探讨攻击成本下降、规模扩大如何放大企业和社会损失，以及保险公司、政府与受害机构各自应承担的经济责任。文章将AI网络安全威胁从技术层面延伸到经济损失与风险转移机制，为理解AI安全的经济维度提供分析框架。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及AI网络攻击对国家安全与经济安全的影响，属前沿AI安全范畴，间接与中美安全竞争相关</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxNQVl0akRuNWdZU2dxZUdRTnF4UF9HcHpwWE9yMHZ4bGNJTEYxbEN3VDYtb3lQdHhhdS1ocVU1VmV1SzVMbnBRSkREay1FSmozSWRtZk9LZjQxMW1zZ2xtWFNZWHBmQUExQTFQX2F4QzNIRnNEUzBTT0Jlb0dGWUptWG9iNUpETHJOa2dxZm5lM1FDWjlmZ0xsbzVldzNDWEwt?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Goldman Sachs</span>
+                    <span class="card-date">08-08 01:16</span>
+                </div>
+                <h3 class="card-title">2026年全球AI投资预计将突破1万亿美元</h3>
+                <p class="card-title-en">Global AI Investment Is Forecast to Exceed $1 Trillion in 2026</p>
+                <p class="card-llm-summary">高盛预测2026年全球AI投资规模将超过1万亿美元，涵盖模型训练、数据中心与AI基础设施等领域。该预测反映了全球AI资本开支的持续膨胀，也间接揭示了AI竞赛在资本层面的白热化程度——巨额投入既是技术竞争的动力，也孕育着产能过剩与泡沫风险。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：全球AI资本投入格局分析，从资本维度折射AI竞赛规模，间接涉及中美竞争但非政策核心</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOeDZ2dUk3YUJGenFKNm9feDlCc3RxZU9jaXA0WkYxM21uY2dBVmpGXzVMVkQtSXpUbjNEVEJjSGY0M1ZWcExLZ0U1dFNfaVhRc3FSV0IwOXJRMWwwLXpkQTE5RWZvYXBIV1B3NVVvUTdscUlScm5id29aRnNXVEF1OU56T25qbnAwV3dVNUJTZDdaVF8tRHE1SExhb1g5TThkQ0tHbWxBNlI?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#5</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Chatham House</span>
+                    <span class="card-date">08-07 18:28</span>
+                </div>
+                <h3 class="card-title">联合国能否弥合全球AI鸿沟？</h3>
+                <p class="card-title-en">Can the UN close the global AI gap?</p>
+                <p class="card-llm-summary">英国皇家国际事务研究所（Chatham House）发文分析联合国在全球AI治理中的角色：2026年7月6-7日在日内瓦举行的联合国全球对话汇聚政府、企业、学界与公民社会，讨论AI超级大国、中等强国与发展中国家之间不断扩大的技术差距及其风险。文章质疑联合国机制在弥合AI鸿沟、遏制数字分化方面的实际效力，触及全球AI治理权力分配的深层矛盾。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：全球AI治理格局与数字鸿沟议题，涉及AI大国与小国关系，间接关联中美主导权博弈</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, AI governance</span>
+                    <a href="https://www.chathamhouse.org/2026/08/can-un-close-global-ai-gap" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#6</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Lawfare</span>
+                    <span class="card-date">08-08 05:34</span>
+                </div>
+                <h3 class="card-title">扩展定律：Daniel Kokotajlo谈《AI 2040：A计划》</h3>
+                <p class="card-title-en">Scaling Laws: Daniel Kokotajlo on AI 2040: Plan A</p>
+                <p class="card-llm-summary">Lawfare播客邀请AI治理研究者Daniel Kokotajlo（前OpenAI成员）讨论其《AI 2040：Plan A》一文，围绕AI扩展定律（scaling laws）推演前沿模型能力在2040年前的演进路径，并评估在这一轨迹下人类社会与治理体系面临的准备不足风险。讨论聚焦于能力快速跃升情景下的规划与安全议题。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 4/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：前沿AI能力演进与长期治理规划讨论，属AI安全与治理范畴，与中美竞争无直接关联</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxNRWhESTdsdFBfc3FXSXJZaHFBVWJ3YmZXcTlveTNObjRJQks1SVR6WGtjOUlwdXdJWnlFSUxLMFZWMlJ3QzdBZGN0WDBPY3JYaElJMGRKNk1nOUxjYTItTE5RMU1FRUdpdE1QbFRSLWdTRkpWMi03T3VpSmhjYU5uWnBpNDN5MDNORzlNb2kzbw?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#7</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Lawfare</span>
+                    <span class="card-date">08-08 01:04</span>
+                </div>
+                <h3 class="card-title">AI宪法的法院</h3>
+                <p class="card-title-en">Courts for AI Constitutions</p>
+                <p class="card-llm-summary">Lawfare刊文探讨AI系统内部治理规则（即所谓“AI宪法”，约束模型行为的准则）的司法执行问题：当AI供应商承诺遵循自身宪法条款时，用户能否通过法院主张权利？文章分析这一新型治理机制在法律层面面临的可诉性、责任归属与执行困境，属于前沿AI治理的制度化探索。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 4/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：前沿AI治理的法律机制探讨，属治理创新议题，与中美竞争无直接关联</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE9DMTM5QmhsTWxyQnZuTnFEcGpUZ1lDQ01TWFBCTnVsejFhemVNa1FHazdoRDlYckpFR2FaWDl2c0dQOUFzUEs1YXpTTUJuUXViUDhWdG0xT3I4REZ1cDhNT2hjeVhWSFRHcS1XOGQtOTdUUQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#8</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Brookings Institution</span>
+                    <span class="card-date">08-07 22:06</span>
+                </div>
+                <h3 class="card-title">AI税收辩论忽略了已经存在的威胁</h3>
+                <p class="card-title-en">AI tax debate misses the threat that’s already here</p>
+                <p class="card-llm-summary">布鲁金斯学会撰文指出，围绕AI的税收政策辩论聚焦于未来的自动化和就业冲击，却忽视了AI正在当下造成的现实威胁——包括对现有税基的侵蚀、劳动力市场结构的即时变化以及由此产生的财政压力。文章呼吁政策制定者把税收讨论拉回当前AI部署带来的迫切问题。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：聚焦美国国内AI税收与劳动力议题，属AI经济社会政策，与中美竞争关系较远</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxNTnJQT1g1MF9YNUlXZm9naE5vNVJrdm9XUk8tcjJiVU9vbnY0QXpxZi1YR2szcGl0Snl4azRYM0Q2NHg0UUdkaFBOcWlkLXdpYV9XQ0c3V0xsNjJ3TUNwdm5ha0dlRkhDSkltQ0NTWHQwLUhqN2lZc29wZXFvVmhrUnNZZ01Ib3BMS0YxbncwOA?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#9</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Goldman Sachs</span>
+                    <span class="card-date">08-08 03:11</span>
+                </div>
+                <h3 class="card-title">Steven Tananbaum：信贷投资的演变与AI投资机遇</h3>
+                <p class="card-title-en">Steven Tananbaum: The Evolution of Credit Investing and AI Opportunities</p>
+                <p class="card-llm-summary">高盛播客对话投资界人士Steven Tananbaum，讨论信贷投资策略的演变以及AI技术为信贷市场带来的新机遇，包括AI相关企业融资、数据中心等新型资产类别对信贷配置的影响。内容属于金融机构对AI商业机会的投资视角分析，侧重市场回报而非地缘政治。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：纯金融投资视角的AI机会讨论，与中美AI竞争核心议题关系较远</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxPenpyalZjS1RFTzlwNmRtcjNwSERnSHRLdFh2QTNza1cxZ21mNDFrX09jbW40UHJjQXktVW1tN0Q2WW9TWGd0STZIaUJyVXRuOTltNHVncElxQ0RRdkdQZXpPTVZnZ3ZhTXJ1c0NtaHU3NGRqczRPNl9zVVFsVnRZV3ZGSkc5ekQwLTRvcTJoWEhaM1ZkaHpGa3hpMHFhQzY1NkRjWXk1d2hsUGNFbnRESnQzWDhhR3FKWXB0bnNPQnFoUQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-08-08 10:06 UTC
+    </div>
+</body>
+</html>

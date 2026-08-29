@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年08月07日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年08月07日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">13</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">1</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">7</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">5</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-critical">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">White House - Presidential Actions</span>
+                    <span class="card-date">08-07 05:03</span>
+                </div>
+                <h3 class="card-title">调整美国多晶硅及其衍生物进口（总统公告）</h3>
+                <p class="card-title-en">Adjusting Imports of Polysilicon and its Derivatives into the United States</p>
+                <p class="card-llm-summary">美国总统发布行政公告，以维护半导体和太阳能供应链安全为由，调整多晶硅及其衍生物的进口政策。公告指出美国长期依赖外国（主要为中国）多晶硅供应，侵蚀了本土产业的经济与国家安全。此举是特朗普政府延续对华供应链脱钩战略的又一举措，将直接影响中国主导的多晶硅出口市场，是中美科技与贸易竞争在关键矿物与半导体上游材料环节的直接交锋。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 9/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：直接涉及中美半导体供应链竞争与对华贸易政策，属核心议题</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: semiconductor</span>
+                    <a href="https://www.whitehouse.gov/presidential-actions/2026/08/adjusting-imports-of-polysilicon-and-its-derivatives-into-the-united-states/" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">CSIS</span>
+                    <span class="card-date">08-07 05:52</span>
+                </div>
+                <h3 class="card-title">「现状」的终结：AI是否会削弱美国软件的法律保护盾？</h3>
+                <p class="card-title-en">The End of “As-Is”: Could AI Undermine Software’s U.S. Legal Shield?</p>
+                <p class="card-llm-summary">CSIS（战略与国际研究中心）发文探讨AI对美式软件法律保护框架的冲击。美国软件业长期依赖「以现状出售」（as-is）免责模式及责任豁免制度，而AI生成的代码与自动决策使产品缺陷归责问题变得模糊，可能动摇这一法律基石。文章触及美国AI法律监管走向，若美国收紧软件责任规则，将重塑全球AI软件开发合规标准，间接影响包括中国在内的AI软件出口与开源生态格局。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及美国AI法律与监管政策走向，属国家安全战略关联议题，但未直接针对中美竞争</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOVGhSY3hZSDh1VFNROU10UmhLUEZVdlBhMDRqZ2RqcGF4cV9PWjNQNUd0N3NYTW1CYkNCcWlLWDBnZ2RnV1hJX2dSWkVrWjFKRzZ2UWM4ckxEUWRzelpWOUN3UFIzUW9LbUNNa1hLN2lGalhWVjF5VFN1Sy1GbmpST0FTa0w?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">RAND Corporation</span>
+                    <span class="card-date">08-06 23:34</span>
+                </div>
+                <h3 class="card-title">解读前沿AI的双重用途生物基准：测量、饱和与代际分析</h3>
+                <p class="card-title-en">Interpreting Dual-Use Biology Benchmarks for Frontier AI: Measurement, Saturation, and Generational Analysis</p>
+                <p class="card-llm-summary">兰德公司发布研究报告，系统评估用于衡量前沿AI模型生物安全风险的「双重用途生物基准」（dual-use biology benchmarks），分析其测量有效性、是否已趋于饱和以及各代模型的演进趋势。研究旨在为前沿AI生物滥用风险建立可量化的评估工具，这是AI安全治理的前沿议题。中美两国均在推进AI生物安全评估体系建设，此类方法论进展可能影响未来国际AI安全标准的制定与互认。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：前沿AI安全与生物安全治理议题，涉及国际AI安全标准竞争</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, frontier AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5vZ2JfREhBN3F6UzlFRksydXlrTG5GekVkWFR2WnB2MEJ6eElVRHdLdVFLcGpnT2NPNi1HRjNtUDJLeF84QWlMa1JWNXJxQ3gwdVlseGhyQ1ZzWVZNZmMxMVVKSzQzY21r?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Lawfare</span>
+                    <span class="card-date">08-07 02:33</span>
+                </div>
+                <h3 class="card-title">AI宪政主义的新研究议程</h3>
+                <p class="card-title-en">A New Research Agenda for AI Constitutionalism</p>
+                <p class="card-llm-summary">Lawfare发文提出AI宪政主义（AI Constitutionalism）研究议程，主张以宪政原则——权力分立、权利保护、问责制——来框定AI治理框架，将AI系统视为新型「治理实体」加以约束。该议程呼应全球AI监管从技术安全向制度设计深化的趋势，反映美国学界在AI法治话语权上的布局，其治理理念可能影响未来国际AI规则谈判中的价值取向。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：AI治理与制度设计议题，间接影响国际AI规则话语权竞争</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxQa1phS2RIYUhBcVBmdU5lSXl4Q1VvdU5WbVRXSURwWURhTHQ3ZlJ5NHJweUotSFBVZnJIcHF3eFpvYjFZQkw3dV92NXNuVkh5S3B0alYtSUt0NDA1SEQzZEFJTzl0NFZzbXQ1SHVLcVdwTDVqTkJOc0RzSF8xV1d5VXpneXJXRUs2d1M0?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#5</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">JPMorgan Chase</span>
+                    <span class="card-date">08-07 01:26</span>
+                </div>
+                <h3 class="card-title">AI驱动的存储芯片短缺：DRAM价格、通胀与市场风险</h3>
+                <p class="card-title-en">The AI-Driven Memory Shortage: DRAM Prices, Inflation and Market Risks</p>
+                <p class="card-llm-summary">摩根大通发布市场分析，指出AI算力扩张正引发DRAM存储芯片供应紧张，推高价格并带来通胀与市场波动风险。存储芯片是AI基础设施的核心组件，其供应格局直接关系到全球AI算力建设成本。DRAM市场长期由三星、SK海力士和美光主导，中国存储厂商的追赶正是中美芯片竞争的关键战场之一，此议题对评估中美算力军备竞赛的成本与瓶颈具有参考价值。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：半导体供应链与AI基础设施市场分析，间接相关中美芯片竞争格局</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxPd2JSc2c3QTJJY1c1NncwWjdRRVVCclBSOTloN01tRG5YSlFRUEx4R0c3cUhROHZoVG1QcG1kTkIwM0J2QWZMa0dvMC1jT3hoVzI2UWI4QUNRTWdHc2tHZzlTbm9nZkN5eU5JdzFJMmNScl9RWjRXN3B3YVVMcWNvM0tydVk2UFVmUzVobkRETG45TmNneWZvRDh3N0d1aGhOSEx1ZA?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#6</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">World Economic Forum</span>
+                    <span class="card-date">08-06 22:29</span>
+                </div>
+                <h3 class="card-title">Neocloud是下一代AI基础设施吗？</h3>
+                <p class="card-title-en">Are neoclouds the next generation of AI infrastructure?</p>
+                <p class="card-llm-summary">世界经济论坛刊文探讨「neocloud」（新一代AI原生云服务商）是否代表AI基础设施的演进方向。Neocloud以GPU优先架构和专为AI训练推理优化著称，正挑战传统云巨头的市场地位。AI算力基础设施的竞争格局变化影响全球AI产业布局与资本流向，也关乎各国AI算力自主可控的战略选择，对中国观察全球算力供给多元化和云市场变局具有参考意义。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 4/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：AI基础设施产业格局分析，间接关联全球算力竞争，但与中美直接博弈关系较弱</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQZDNrbkY2YkhnaXhEbEhhRHc0ajNNR2hWRnFKQTcwc29Ldk0ya3NUU0RZYVQ5VXRDeGwzT3k5VlA4X3lxZUJIZE9KR1YyQXpNWXM3TmRtWWxEekRSYlpscXhHVGc0MFU1NHR2UWpSdVBHV2NwakMzRTBIc2REVGNzekFxd1RUMWxhbnMwdDZrSlMwc1lIRFdfTm5xMVFLcmpjeVhHVzVLXzFSQUdva0E?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#7</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Federal Register - Semiconductor</span>
+                    <span class="card-date">08-06 12:00</span>
+                </div>
+                <h3 class="card-title">外贸区45号：Ascentec Engineering拟议生产活动通知（半导体设备精密零件）</h3>
+                <p class="card-title-en">Foreign-Trade Zone (FTZ) 45, Notification of Proposed Production Activity; Ascentec Engineering, LLC; (Semiconductor Equipment Precision Parts, Assemblies, and Production Kits); Tualatin and Dallas, Oregon</p>
+                <p class="card-llm-summary">美国联邦公报发布外贸区（FTZ）45号公告，涉及Ascentec Engineering公司在俄勒冈州Tualatin和Dallas开展半导体设备精密零件、组件及生产套件的拟议生产活动。外贸区制度允许企业在区内延迟或减免关税，是美方强化本土半导体供应链、降低制造成本的政策工具之一，反映美国半导体产业回流的具体落地动作，对观察美国供应链政策执行细节有一定价值。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 4/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：半导体供应链政策执行层面信息，间接相关中美芯片竞争</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: semiconductor</span>
+                    <a href="https://www.federalregister.gov/documents/2026/08/06/2026-16000/foreign-trade-zone-ftz-45-notification-of-proposed-production-activity-ascentec-engineering-llc" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#8</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Federal Register - Semiconductor</span>
+                    <span class="card-date">08-06 12:00</span>
+                </div>
+                <h3 class="card-title">外贸区18号：西部数据拟议生产活动通知（半导体晶圆）</h3>
+                <p class="card-title-en">Foreign-Trade Zone (FTZ) 18, Notification of Proposed Production Activity; Western Digital Technologies, Inc.; (Semiconductor Die); San Jose and Fremont California</p>
+                <p class="card-llm-summary">美国联邦公报发布外贸区（FTZ）18号公告，涉及西部数据（Western Digital）公司在加州San Jose和Fremont开展半导体晶圆（semiconductor die）拟议生产活动。西部数据是全球存储芯片巨头，其通过外贸区制度扩大本土晶圆生产，体现美国在存储芯片领域强化本土制造的产业政策动向，对理解美国半导体供应链布局具有参考意义。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 4/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：半导体供应链政策执行层面信息，间接相关中美芯片竞争</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: semiconductor</span>
+                    <a href="https://www.federalregister.gov/documents/2026/08/06/2026-15937/foreign-trade-zone-ftz-18-notification-of-proposed-production-activity-western-digital-technologies" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#9</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Goldman Sachs</span>
+                    <span class="card-date">08-06 15:01</span>
+                </div>
+                <h3 class="card-title">AI债务如何重塑信贷市场</h3>
+                <p class="card-title-en">How AI Debt Is Reshaping Credit Markets</p>
+                <p class="card-llm-summary">高盛发布金融分析，探讨AI投资热潮催生的「AI债务」如何影响全球信贷市场结构，包括科技企业大规模举债建设算力基础设施带来的融资风险与市场定价变化。该分析反映AI资本开支的金融维度，属于市场风险观察，与中美科技竞争的直接政策关联较弱，但AI算力投资的信贷周期对评估全球AI产业泡沫风险有参考价值。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：AI投资与金融市场分析，与中美AI竞争政策博弈关联较弱</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNY0NVTjR3anNRcVNlTXVSc0wxY0xWUXNoUHdJSzI3RUlDWW5rU1l4UmpXZGpOU3RuWE5BLS1YZmxLZHRvcjBKV0JxeE96S3ZmRDdNWVhQQlJnaGVoaXhUN295ZEJCX19wSnp1WUhqYkNlZ1NLT013VVZFZUllUWRSRlA2bGJFa3VRWV8tT0hWLVM4TGJzdEUzTS1ReFYwaUV4U1p6TVJXYw?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#10</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">UN News</span>
+                    <span class="card-date">08-07 07:17</span>
+                </div>
+                <h3 class="card-title">青少年与AI峰会——纪念2026年国际青年日</h3>
+                <p class="card-title-en">Youth and AI Summit, in commemoration of International Youth Day 2026</p>
+                <p class="card-llm-summary">联合国新闻发布的活动预告，为纪念2026年国际青年日举办青少年与AI主题峰会，聚焦青年群体在人工智能时代的能力建设与参与机会。此类活动反映国际组织将AI议题与青年发展议程结合的趋势，但内容偏向社会赋能，与中美AI竞争的核心政策博弈关联较弱。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：AI应用与青年社会议题，与中美AI竞争核心博弈关系较远</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE1xc1pUYWt4U0dRdFB6cUFjWHZSZUE2RHBGaTFPNkFOTk56WlFwU19SbHNnLUd4MXpyRmJMN3Y3V1RNOThKYng4QW9PNFMzdDFVRGt0SlliMA?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#11</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">World Bank</span>
+                    <span class="card-date">08-06 22:25</span>
+                </div>
+                <h3 class="card-title">当老龄化遇上数字与AI：弥合面向老龄化世界的「银发数字鸿沟」</h3>
+                <p class="card-title-en">When aging meets digital &amp; AI: Closing the silver digital divide for an aging world</p>
+                <p class="card-llm-summary">世界银行发文关注老龄化社会中的数字鸿沟问题，探讨AI与数字技术如何在老龄化趋势下为老年人提供包容性服务。文章聚焦社会政策与数字包容，属于AI应用的社会维度研究，与中美科技竞争的政策博弈关联不大。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：AI应用与数字包容社会议题，与中美AI竞争关系较远</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOUFpuZjRidlVwcHVSRGx2WWZ1VDJraGtrVkdzV1U4cl9aejFJdlhFM2l3dDkyb0RJaDZmT255aHZMeEJFRWc1QXdZSGhpWFVsY0cweF9DY25NZzB6OHpjQWt6QWF0WG1uNTk3bEVVOVdYWTZ6YVYwMlhyeTFrUGtVdVI2MEkzWGRTTjU3RlV2bjBBV3dnNXNTakRQeUxrbUtjd1ZXM3E5M0tSZEhPeHJZdER0VERqQQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#12</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">World Economic Forum</span>
+                    <span class="card-date">08-06 19:35</span>
+                </div>
+                <h3 class="card-title">AI不会取代医疗工作者，但可帮助培训数百万医疗人员</h3>
+                <p class="card-title-en">AI won&#x27;t replace healthcare workers. It can help train millions more</p>
+                <p class="card-llm-summary">世界经济论坛文章论证AI在医疗培训领域的赋能作用，认为AI不会替代医护人员，而是通过模拟训练、知识辅助等方式缓解全球医疗人力短缺。该文属AI行业应用与劳动力议题，关注发展中国家医疗能力建设，与中美AI竞争的核心政策议题关联度低。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：AI应用与医疗培训社会议题，与中美AI竞争关系较远</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOU1Z5VXBZclJaMHh2aV9IS0FpdEN2NFF2UDRRdnZlRDJGTGZvZ0VxTnFhU0RFRW1RR0tVSlBGYlRORFV2LW5MQmxYM3B3VS1jd0Q1UjN4LVBUTUFkckFZSkxmOWdvUmNLZmQ3S2l2cTd6VlNzQjN4Ui1NcE4yRmtoVFBTcWMxZHB1S3pVcW1QZw?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#13</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">UN News</span>
+                    <span class="card-date">08-06 14:02</span>
+                </div>
+                <h3 class="card-title">青少年与AI峰会——纪念2026年国际青年日</h3>
+                <p class="card-title-en">Youth and AI Summit, in commemoration of International Youth Day 2026</p>
+                <p class="card-llm-summary">联合国新闻发布的同主题活动报道（不同链接版本），内容为纪念国际青年日的青少年与AI峰会安排，聚焦青年AI素养与参与机会。属国际组织的社会赋能类活动信息，与中美AI竞争核心议题无直接关联。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：AI青年社会活动信息，与中美AI竞争关系较远</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE1TWFZrQWprODJaTVRCQU5fOEx4NFpveGU1Y1VDQ09VdVVwOXdVUnllVmZyTVZkRkt5UEFVRG5JMU9JSTlJbC1pX2oxYWF4WG9GR2tmckhuaw?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-08-07 00:28 UTC
+    </div>
+</body>
+</html>

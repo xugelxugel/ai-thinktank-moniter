@@ -34,6 +34,10 @@ OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 REPO_ROOT = os.path.dirname(BASE_DIR)        # 项目根 = GitHub 仓库根
 DOCS_DIR = os.path.join(REPO_ROOT, "docs")
 BRIEFINGS_DIR = os.path.join(DOCS_DIR, "briefings")
+# 每日结构化数据归档目录（llm_analysis.json 的副本），供归档页统计与日后检索。
+# 注意：docs/ 必须随每次运行一起 commit 回仓库，否则下次 Actions checkout 时
+# 前几天的简报/数据会丢失（Pages 每次部署是整包替换 docs/）。
+DATA_DIR = os.path.join(DOCS_DIR, "data")
 
 
 def latest_enhanced_html():
@@ -48,18 +52,36 @@ def latest_enhanced_html():
 
 
 def publish():
-    """复制最新简报到 docs/briefings/，返回 (日期字符串, 目标路径)。"""
+    """复制最新简报到 docs/briefings/，并归档当日结构化数据，返回 (日期, 目标路径)。"""
     src = latest_enhanced_html()
     base = os.path.basename(src)                       # briefing_enhanced_2026-08-06.html
     date_str = base.replace("briefing_enhanced_", "").replace(".html", "")
     os.makedirs(BRIEFINGS_DIR, exist_ok=True)
     dst = os.path.join(BRIEFINGS_DIR, f"{date_str}.html")
     shutil.copy2(src, dst)
+
+    # 同步归档当日 LLM 分析结果（URL -> 分析字段 的 dict），用于归档页显示条数、
+    # 以及日后按关键词检索历史数据。缺失时不影响主流程。
+    src_json = os.path.join(OUTPUT_DIR, "llm_analysis.json")
+    if os.path.exists(src_json):
+        os.makedirs(DATA_DIR, exist_ok=True)
+        shutil.copy2(src_json, os.path.join(DATA_DIR, f"{date_str}.json"))
     return date_str, dst
 
 
+def entry_count(date_str):
+    """从 data/YYYY-MM-DD.json 读取当日条目数；读不到返回 None。"""
+    path = os.path.join(DATA_DIR, f"{date_str}.json")
+    try:
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+        return len(data)          # llm_analysis.json 结构为 {url: {...}}
+    except Exception:
+        return None
+
+
 def generate_index():
-    """生成 docs/index.html 归档索引页，返回归档期数。"""
+    """生成 docs/index.html 归档索引页（按月分组），返回归档期数。"""
     entries = []
     if os.path.isdir(BRIEFINGS_DIR):
         for f in sorted(os.listdir(BRIEFINGS_DIR)):
@@ -73,10 +95,24 @@ def generate_index():
             entries.append((d, f))
     entries.sort(reverse=True)
 
-    items_html = "".join(
-        f'<li><a href="briefings/{f}">{d}</a></li>' for d, f in entries)
-    if not items_html:
-        items_html = "<li>暂无简报</li>"
+    # 按月分组：2026-08 -> [(日期, 文件名), ...]
+    months = {}
+    for d, f in entries:
+        months.setdefault(d[:7], []).append((d, f))
+
+    blocks = []
+    for month in sorted(months.keys(), reverse=True):
+        rows = []
+        for d, f in months[month]:
+            n = entry_count(d)
+            badge = (f'<span class="cnt">{n} 条</span>' if n is not None
+                     else '<span class="cnt none">—</span>')
+            rows.append(
+                f'<li><a href="briefings/{f}"><span class="d">{d}</span>{badge}</a></li>')
+        blocks.append(
+            f'<h2 class="month">{month}</h2>\n<ul>\n' + "\n".join(rows) + "\n</ul>")
+
+    archive_html = "\n".join(blocks) if blocks else "<p>暂无简报</p>"
 
     index = f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -86,21 +122,23 @@ def generate_index():
 <title>AI 海外动态监测简报 · 归档</title>
 <style>
 body {{ font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
-       background: #f5f5f5; color: #333; line-height: 1.7; max-width: 720px; margin: 0 auto; padding: 24px; }}
-h1 {{ font-size: 22px; color: #1a1a2e; }}
-.sub {{ color: #888; font-size: 13px; margin-bottom: 20px; }}
-ul {{ list-style: none; padding: 0; }}
-li {{ background: #fff; border-radius: 8px; margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }}
-a {{ display: block; padding: 12px 16px; color: #2563eb; text-decoration: none; font-size: 15px; }}
-a:hover {{ background: #f0f7ff; }}
+       background: #fff; color: #222; line-height: 1.7; max-width: 820px; margin: 0 auto; padding: 28px 20px 60px; }}
+h1 {{ font-size: 24px; color: #1a1a2e; margin-bottom: 6px; }}
+.sub {{ color: #888; font-size: 14px; margin-bottom: 28px; }}
+h2.month {{ font-size: 16px; color: #444; margin: 26px 0 10px; padding-left: 2px; font-weight: 600; }}
+ul {{ list-style: none; padding: 0; margin: 0; }}
+li {{ border-bottom: 1px solid #eceff3; }}
+a {{ display: flex; justify-content: space-between; align-items: center;
+     padding: 12px 14px; color: #1a56db; text-decoration: none; font-size: 16px; border-radius: 6px; }}
+a:hover {{ background: #f2f7ff; }}
+.cnt {{ color: #888; font-size: 13px; font-weight: 400; }}
+.cnt.none {{ color: #ccc; }}
 </style>
 </head>
 <body>
 <h1>AI 海外动态监测简报</h1>
-<div class="sub">每日监测海外智库、国际组织、美国政府的 AI 相关出版物 · 共 {len(entries)} 期</div>
-<ul>
-{items_html}
-</ul>
+<div class="sub">每日监测海外智库、国际组织、美国政府的 AI 相关出版物 · 共 {len(entries)} 期 · 最新 {entries[0][0] if entries else '—'}</div>
+{archive_html}
 </body>
 </html>"""
     os.makedirs(DOCS_DIR, exist_ok=True)

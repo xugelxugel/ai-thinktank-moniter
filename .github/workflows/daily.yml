@@ -64,18 +64,6 @@ jobs:
           WECHAT_NOTIFY_KEY: ${{ secrets.WECHAT_NOTIFY_KEY }}
         run: python ai_monitor/run_daily.py
 
-      # 保活：把 .keepalive 时间戳提交推送，防止 GitHub 因仓库 60 天
-      # 无活动自动暂停定时任务。docs/ 新简报由下面的工作流部署上传，
-      # 无需 commit（避免 push 触发 branch 构建器再次超时）。
-      - name: Keep repository active
-        run: |
-          echo "last_run: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > .keepalive
-          git config user.name "ai-monitor-bot"
-          git config user.email "actions@github.com"
-          git add .keepalive
-          git commit -m "chore: keepalive $(date -u '+%Y-%m-%d')" || echo "no changes to commit"
-          git push
-
       # ---- GitHub Pages 工作流部署（官方推荐，纯文件上传，无构建超时）----
       # 首次启用/切换模式后，站点创建是异步的，直接 deploy 可能失败。
       # 轮询 Pages API 直到站点状态就绪（最多约 2 分钟）。
@@ -107,3 +95,27 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+      # ---- 归档入库 + 仓库保活（必须在 Pages 部署之后）----
+      # 关键：docs/ 里的当日简报（briefings/YYYY-MM-DD.html）、结构化数据
+      # （data/YYYY-MM-DD.json）和归档索引 index.html 必须 commit 回仓库。
+      # 原因：Pages 每次部署是"整包替换"，而 Actions 每次运行都是从 main
+      # 全新 checkout —— 若历史简报不入库，下次运行时 docs/ 里只剩空壳，
+      # 部署后前几天的简报就会从站点上消失（只剩当天那一份）。
+      # 本工作流只由 schedule / workflow_dispatch 触发，此处的 push 不会
+      # 递归触发新的运行。
+      # 保活：持续更新 .keepalive 时间戳，防止 GitHub 因仓库 60 天无活动
+      # 自动暂停 schedule 定时任务。
+      - name: Archive briefings and keep repository active
+        run: |
+          echo "last_run: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > .keepalive
+          git config user.name "ai-monitor-bot"
+          git config user.email "actions@github.com"
+          git add .keepalive docs
+          if git diff --cached --quiet; then
+            echo "  无新增简报，跳过提交"
+            exit 0
+          fi
+          git commit -m "chore: archive briefing $(date -u '+%Y-%m-%d') + keepalive"
+          git pull --ff-only || git pull --rebase || true
+          git push || { echo "  [警告] 首次 push 失败，重试一次"; git pull --rebase; git push; }

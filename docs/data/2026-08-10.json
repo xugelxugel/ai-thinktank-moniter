@@ -1,0 +1,16 @@
+{
+  "https://www.technologyreview.com/2026/08/10/1141384/ai-agents-for-science/": {
+    "title_cn": "AI for Science需要推理能力，而非仅仅数据",
+    "summary_cn": "文章回溯科学史上多次被宣告\"终结\"的误判（1903年物理学家Michelson断言物理事实已全部发现、1980年代Hawking预言理论物理即将完成），指出AI的爆发式到来同样引发此类联想，但作者认为AI真正改变科学的路径并非继续堆砌数据，而是补齐推理与假设生成能力。当前AI系统擅长模式识别，却难以完成科学家所需的因果推断与实验设计，AI for Science的下一个突破点在于让模型从\"数据关联\"走向\"科学推理\"。",
+    "importance_score": 4,
+    "score_reason": "涉及前沿AI能力发展方向（推理vs数据）与AI4Science应用范式，属间接影响中美AI竞赛格局的技术路线讨论",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/08/10/1141511/these-startups-are-chasing-the-next-big-thing-in-llms/": {
+    "title_cn": "这些初创公司正在追逐LLM领域的下一个大事件",
+    "summary_cn": "作为MIT科技评论\"What's Next\"系列文章，文章以2017年Google《Attention Is All You Need》论文为起点，回顾Transformer架构如何开启LLM时代，并指出当前一批初创公司正押注后Transformer时代的下一代技术范式，包括新注意力机制、更高效的训练与推理架构、专业领域模型等方向。文章认为LLM技术演进尚未见顶，创业生态正在争夺定义\"下一代大模型\"的话语权。",
+    "importance_score": 4,
+    "score_reason": "涉及LLM技术代际演进方向与全球创业生态格局，对判断AI竞赛下一阶段竞争焦点具有间接参考价值",
+    "china_relevance": "中"
+  }
+}
