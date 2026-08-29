@@ -56,6 +56,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r ai_monitor/requirements.txt
 
+      # 归档保留性自检：用临时 git 仓库做对照实验，确认"简报入库则历史保留、
+      # 不入库则丢失"的归档逻辑未被改坏。纯本地操作，几秒完成。
+      # 失败即中断，避免带着坏掉的归档逻辑继续跑（那样历史简报会静默丢失）。
+      - name: Run archive retention test
+        run: python ai_monitor/test_archive.py
+
       - name: Run daily briefing pipeline
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
