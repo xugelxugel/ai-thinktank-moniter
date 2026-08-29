@@ -1,37 +1,30 @@
 {
   "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOVkZnMjk5XzJtYXRkT1F5N3pxWnd4U29aanJwS3cxR2pZNHY2M214dndZaGlTQWJRbXhKcTJVWC1EQWhucWVqdkNkMzdhbDRCOHlQa3hPSlhqc2VGTmZ0U3h1VW5RbXR4TUJOejJsR3BnRUtrU1Q4LUIxSVUzRGZramU5STRaQ1BTU0dOV3pKNlJqNjZ4QWk2UWVoTTJacm9WYjY4U0lQdHNtdnFMNk10RlpWZW9kd2xlM0hueHp2anVGZGh4SHBoWFZhQnM3QllUZjlBTE5mZmpBcWxJbkd2dkVuZDMyQQ?oc=5": {
-    "title_cn": "网络前沿倡议：AI增强的实时知识产权访问监控",
-    "summary_cn": "世界经济论坛发起的该倡议旨在利用AI技术提高对敏感知识产权访问的实时监控能力，提升企业与机构的网络防御效率。在美西方高度警惕中国获取前沿关键技术（如半导体设计与前沿AI模型）的背景下，知识产权防护正从事后追责转向基于AI的实时动态拦截。这一趋势表明AI不仅是科技竞争的核心，也正成为西方构建技术护城河、防范关键技术流失的重要工具。",
-    "importance_score": 5,
-    "score_reason": "涉及AI在知识产权与网络安全防护中的应用，与中美科技战中的技术防泄漏及反窃密议题间接相关。",
+    "title_cn": "网络前沿倡议：利用 AI 实现实时知识产权访问监控",
+    "summary_cn": "世界经济论坛发起的该倡议旨在部署 AI 技术，对网络空间中的知识产权（IP）访问行为进行实时监测与防护。在当前中美科技博弈加剧的背景下，前沿 AI 模型与芯片设计等核心知识产权的安全防护至关重要，此类 AI 驱动的监控机制反映了全球机构在防范关键技术外泄与网络间谍活动上的战略升级。",
+    "importance_score": 6,
+    "score_reason": "议题聚焦于利用 AI 技术强化知识产权保护与网络安全监管，与中美科技竞争中的核心技术反窃密和出口管制履约间接相关。",
     "china_relevance": "中"
   },
   "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWkZhTEJsN0gtdkQ4SkF4SEM4MFdhTjlRNlZ2RGlnMjJXb2V0SHF5RVlha2NGNC1hZFdFQk5XVlg2d1IzYjBTTGJTM0lpRjdZb2Z5NlZPZEU5anRSSjMyYW5fTWlHS1V2MnJrS0UwZ0tnQU1WZDlLQk1ZOXZiYlJUa24xVVkwbXAyYklnRDFFWTNLVU9QQmQwQW1R?oc=5": {
-    "title_cn": "AI与美国劳动力：关于未来工作的简报",
-    "summary_cn": "本简报重点探讨人工智能对美国国内劳动力市场的转型冲击及应对策略。从中美AI竞争视角来看，健全的高技能人才供给与劳动力转型韧性是美国维持长期技术创新优势的基础支撑，但该文主要聚焦于美国内部经济与就业政策调整。",
+    "title_cn": "AI与美国劳动力：关于工作未来的简报",
+    "summary_cn": "该简报探讨了人工智能对美国国内劳动力市场、岗位转型及生产力重塑的影响。从中美竞争视角来看，美国劳动力结构的AI化转型与人才适应力是支撑其长期科技竞争力的内部基础，但报告本身侧重于美国内政与劳动力政策调整。总体而言，该内容反映了美国为维持经济与技术领先而在人力资本层面所做的准备。",
     "importance_score": 3,
-    "score_reason": "文章侧重于美国国内AI引发的就业冲击与劳动力再培训政策，属于国内经济与劳动议题，与中美直接战略博弈相关性较低。",
+    "score_reason": "文章主要关注美国国内劳动力市场与AI应用的适应性调整，属于AI经济影响与国内政策范畴，与中美直接的技术博弈或地缘竞争关联度较低。",
     "china_relevance": "低"
   },
   "https://datainnovation.org/2026/08/ais-frontier-is-moving-its-legal-definition-should-too/": {
-    "title_cn": "AI的前沿正在推移，其法律定义也应同步更新",
-    "summary_cn": "本文探讨了随着大模型能力快速迭代，政策制定者如何重新审视与界定“前沿模型”（Frontier Models），以有效应对潜在的重大风险。动态更新前沿AI的法律定义，直接影响着美国AI监管政策的门槛设置与合规边界。在美中AI竞争加剧的背景下，前沿模型定义的变化将深刻影响技术出口管制、开源限制以及全球AI安全治理标准的制高点争夺。",
+    "title_cn": "AI前沿正在演进，其法律定义也应随之调整",
+    "summary_cn": "本文探讨了随着AI技术快速迭代，政策制定者对“前沿模型”（Frontier Models）的法律与监管定义亟需动态调整的问题。在美中AI竞争格局下，前沿AI的认定标准直接关乎美国AI监管政策、算力门槛以及出口管控边界的设定。合理更新监管界限不仅影响高风险AI模型的安全防线，更关乎美国能否在维持安全监管的同时保持对华技术领先优势。",
     "importance_score": 8,
-    "score_reason": "本文涉及美国前沿AI模型的法律界定与监管政策，直接关联美方国家安全战略及未来的技术合规与限制标准。",
-    "china_relevance": "中"
-  },
-  "https://cms.hoover.org/research/stanford-professor-andrew-hall-joins-anthropic-research-political-economy": {
-    "title_cn": "斯坦福大学教授 Andrew Hall 加入 Anthropic 研究超级智能的政治经济学",
-    "summary_cn": "斯坦福大学及胡佛研究所学者 Andrew Hall 加入 Anthropic 公司的“法治”（Rule of Law）团队，专注于研究强大 AI 系统的民主自治、个人自由与公众信任。这一跨界合作反映出美国头部 AI 实验室正加速吸纳政治学与经济学顶尖人才，试图前瞻性地确立符合西方民主价值观的 AI 治理范式。在中美 AI 竞争背景下，此类研究旨在打造由西方主导的超级智能制度框架，为未来全球 AI 治理标准与话语权博弈奠定理论基础。",
-    "importance_score": 5,
-    "score_reason": "本文涉及美国前沿 AI 企业在 AI 治理与价值观对齐上的智库人才布局，属于 AI 治理与规则制定的间接相关议题。",
+    "score_reason": "该文涉及美国前沿AI立法与政策界定，直接关联算力监管门槛及出口控制等中美AI博弈的核心政策工具。",
     "china_relevance": "中"
   },
   "https://cms.hoover.org/research/elons-favorite-sci-fi-prophet-was-wrong-0": {
-    "title_cn": "马斯克最爱的科幻预言家错了",
-    "summary_cn": "本文批判了以马斯克为代表的AI技术乌托邦主义，强调AI未来的发展不会带来轻而易举的物质丰裕，而是充满混乱与不可预测的现实后果。胡佛研究所的这一视角反映了美国顶级智库正从“技术乐观主义”转向“硬核现实主义”。在国家安全与地缘政治背景下，这种观念转变将推动美方在AI治理和战略竞争中采取更加防范和务实的政策手段。",
-    "importance_score": 4,
-    "score_reason": "文章探讨了AI发展预期与治理理念的现实主义转变，未直接提及中美芯片禁令或技术对决等核心竞争议题。",
-    "china_relevance": "低"
+    "title_cn": "埃隆·马斯克最爱的科幻预言家错了",
+    "summary_cn": "文章指出，关于人工智能乌托邦的幻想是不切实际的，我们应该为科幻小说中预见的混乱和意外的后果做好准备。这反映了对于人工智能发展的悲观看法，可能影响美国对AI的监管和战略布局，进而影响中美AI竞争格局。",
+    "importance_score": 7,
+    "score_reason": "文章涉及美国对AI发展的看法，间接影响中美AI竞争态势。",
+    "china_relevance": "中"
   }
 }
