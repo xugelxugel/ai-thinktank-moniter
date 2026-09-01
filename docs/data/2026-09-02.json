@@ -1,0 +1,93 @@
+{
+  "https://news.google.com/rss/articles/CBMiigFBVV95cUxQSUV6ZURweWkxTV9IOVhVZXlfRW11c2pFYUJHXzdNMmhuNUZBeDdrSFhhczlkR1E2RUdTWE9EeFNpUlFUZVpaV2VmN3ZobEZOTmtUM3pXMWdzb1pHaGhxNncyMmdfd1RQZ0FiME5WdXdCVnlvTXg4QXVIZ2NwTjBtUjRrX2dIT0NIYVE?oc=5": {
+    "title_cn": "缩放定律：构建 AI 信任与保障生态系统",
+    "summary_cn": "随着大模型遵循缩放定律加速迭代，建立系统化的 AI 评估、审计与信任保障生态已成为前沿技术安全可控的核心诉求。该议题凸显了美国通过政策引导与标准制定强化 AI 治理主导权的战略意图。在全球 AI 规则制定博弈中，完善的信任保障体系将成为美方塑造国际安全规范、提升其 AI 生态软实力的重要屏障。",
+    "importance_score": 6,
+    "score_reason": "文章聚焦前沿 AI 模型的安全评估与信任保障体系建设，属于 AI 安全治理与标准竞争领域的相关议题。",
+    "china_relevance": "中"
+  },
+  "https://www.atlanticcouncil.org/dispatches/russia-wants-to-sell-sovereign-ai-abroad-heres-what-its-really-selling/": {
+    "title_cn": "俄罗斯意图向海外输出“主权AI”：其背后真实目的解析",
+    "summary_cn": "俄罗斯最新AI立法将国内模型置于国家严密掌控之下，并试图向海外推广这种强调国家控制的“主权AI”技术与治理模式。这一举措反映了全球AI地缘政治从单纯的中美双雄竞争向多极化演变的趋势，第三方势力正试图通过输出威权式数字工具抢占全球南方市场。对于中美而言，这标志着全球AI软实力输出、技术标准制定与数据主权的争夺正变得更加复杂。",
+    "importance_score": 7,
+    "score_reason": "文章揭示了俄罗斯向海外输出“主权AI”的地缘战略，属于全球AI竞赛格局及AI治理模式竞争的重要动态。",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/09/01/1143247/ai-interstellar-journey-alpha-centauri/": {
+    "title_cn": "AI如何规划前往半人马座α星的恒星际之旅",
+    "summary_cn": "非营利组织“费米探索任务”宣布计划于2029年底发射航天器前往半人马座α星，并利用 AI 完成了复杂的恒星际航行路线规划。虽然这展现了美国在前沿 AI 科学应用（AI for Science）领域的软实力与创新应用，但该项目属于长期的民间深空科学探索，对当前中美在芯片管制、核心大模型及 AI 地缘政治博弈等领域的直接竞争影响较为有限。",
+    "importance_score": 2,
+    "score_reason": "本文主要讨论 AI 在深空探测与科学研究中的应用，属于前沿科研探索，与中美 AI 战略博弈及出口管制等核心议题关系较远。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQUUlXelozaGFDeTdza3hYc1FIMEUxWDI1ZThHbW0xLUJ6Q040WDZzZmZ5dDlTSzNJc3V0b1hQRi1jaEUtb2M3QThjMnJwbXNIMWx6OWlDd3ZOdXJQNVNWdTF4RmFlaENKRU43T3VRRzExd01jNXJPSGRsUFdlcHJLRnZKNENMNGJrMjJWRTBQV0VLTUhCa2ZveVF1akExVUpMUDEyQklwcjM2Zk9rNVBWWXRVTldSRm8xSTI3OXd6aUxSQQ?oc=5": {
+    "title_cn": "AI Token 使用量增长下的数据中心电力需求展望",
+    "summary_cn": "报告分析了随着 AI Token 消耗量高速增长，数据中心电力需求面临的爆发式压力。随着大模型训练与推理规模不断扩大，能源供给与电网容量正取代单纯的芯片获取，成为制约 AI 算力扩展的新瓶颈。这一趋势深刻影响中美 AI 竞争格局，电力基础设施建设效率与能源保障能力正成为决定两国算力集群规模上限的关键因素。",
+    "importance_score": 6,
+    "score_reason": "报告关注 AI 算力扩张背后的能源基础设施瓶颈，电力供给能力已成为影响中美大模型部署速度与规模的深层竞争要素。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiigFBVV95cUxNYnllbEYzbmYtOW9pVkNPRE1OTUVYdDlHNnh6RHVnTGd2MDA4NjE4MThzUGgtbTR0eHhxRlZ1dWRvRkdOX1ExRERwRWhlQVY2S0FvRFlwekJ6UUtCWk5UcWstb1hoZXNMRXhaNjB0RXJ4bTFTLWRzS2JsQ3dxZmVsMlpHNVhNYU9yVmc?oc=5": {
+    "title_cn": "“富足派”民主党人面临数据中心建设难题",
+    "summary_cn": "本文剖析了美国民主党内倡导“富足议程”的阵营在推动AI数据中心和配套能源建设时所面临的环保法规与党内政治阻力。数据中心暴增的算力与用电需求引发了土地许可与环保目标的冲突，凸显了美国在算力基础设施扩张上的体制性难题。在算力即国力的竞争格局下，这种国内基础设施建设的延误可能成为削弱美国对华AI算力优势的关键隐患。",
+    "importance_score": 7,
+    "score_reason": "文章揭示了美国国内关于AI数据中心建设的监管与政治博弈，这构成了影响美国AI算力扩张与对华竞争力的关键瓶颈。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiygFBVV95cUxQOWxaNWF1RGt4M0hXUGJPT1VsZEg2YWcwT251cHBEYWU0aGVqN1JYTkltZkxBbGozNW1VaS1NT2UyOFpQaEVaN1Y5eWZxRXJrbjVhUGRaZUZfVFRrbDJnSmg2Y2kxaVN5R25lV1lEVU1ScW4wb3kzWUpPazltNTBDSUhsM2NiaUM4YlVSWHJsdGNJNFFiYWZQeXVvQ2NlQ3ROX21JcXR2dENZYnpDckptT05VR0R1UVRzTy1QV0F5UUNlQUl3YzV2SlhR?oc=5": {
+    "title_cn": "2026年全球AI与数字峰会（2026年10月19–22日）",
+    "summary_cn": "世界银行宣布将于2026年10月举办全球AI与数字峰会，旨在推动全球数字转型与AI技术的包容性应用。此类由多边金融机构主导的全球性峰会，正日益成为美中两国争夺全球南方数字基础设施建设、AI技术援助以及治理标准话语权的重要外交赛场。美中两国可能借此平台展现各自的数字发展模式，加速向发展中国家输出AI生态与软实力。",
+    "importance_score": 3,
+    "score_reason": "该内容为世界银行关于全球数字发展峰会的活动预告，侧重数字不平等与多边发展，与中美核心技术对抗和直接策略竞争关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPcGxNVjF6ajNUYnFoNXF6dlJvbFRqQVdtU013aTlVNTlsMmZYQVRvcFJxMUkyTVk2MjB1SEpSUlYwZ3ZEWHJfcVJhVG9hYzRJcWRxaGZHMWh1OGlLTVVMa3NMajNpLUloVlAtOE4xUHB4aVpJUGZGeVhCWEFUYzFCUy1pYklNaDRfSllQNFZ1QVE2RjZiN2Y0MzZ5aHZxT3V6c2VJT3pyTkI?oc=5": {
+    "title_cn": "美国正在构建 AI 护栏，但前行之路何在？",
+    "summary_cn": "文章指出美国当前的 AI 政策过度聚焦于建立安全监管与“护栏”，却缺乏推动技术创新与产业落地的积极路线图。从中美 AI 竞争视角看，这种重防守、轻发展的战略倾斜可能抑制美国本土的技术创新活力，给全力推进 AI 赋能产业的中国带来战略赶超的窗口期。",
+    "importance_score": 8,
+    "score_reason": "探讨美国 AI 治理政策与国家创新战略的失衡问题，直接关系到全球 AI 竞赛中美国的长期科技竞争力。",
+    "china_relevance": "中"
+  },
+  "https://datainnovation.org/2026/09/america-is-building-ai-guardrails-but-where-is-the-road-forward/": {
+    "title_cn": "美国正在构建 AI 护栏，但前进之路在何方？",
+    "summary_cn": "当前美国 AI 讨论过度聚焦于风险防范与安全护栏，缺乏对技术推广与产业落地的积极建设路线。在中美 AI 竞争加剧的背景下，若美国因过度防御性监管而放缓创新节奏，可能削弱其对华技术优势。政策制定者需在风险管控与保持国家战略竞争力之间取得积极平衡。",
+    "importance_score": 7,
+    "score_reason": "探讨了美国 AI 政策在安全监管与创新发展之间的战略权衡，直接关系到美国维持对华 AI 竞争优势的政策导向。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMivgFBVV95cUxPLVJqQzUzeG9ROHN4WXV3Wl9DQnBQYzRPbTMzQTlnLWJ1a3N2ZDJZSXMtRm04RnktbVVCWWhEb1NtbTNNSF8yYU4zRzdUdU5iZ28xX1I0MFFaazJFSTNXd1czRFItOENiTTZlbm1pYTl0QnE5NEpEVGlUYXNSazFDM1RoMjZNMll3bEJPWU1mNzlJcDlRYTNIU3plMWNVSHVSZHJUN09iWldZa1BCcC1GVC1zTzd3Mk42a3dTQUFn?oc=5": {
+    "title_cn": "可编程主权：以协调化专业分工应对人工智能领域的“N-2问题”",
+    "summary_cn": "本文探讨了在美中科技博弈重塑全球人工智能（AI）和半导体格局的背景下，欧洲等第三方力量面临的技术代差与供应链依赖危机（即“N-2问题”）。文章提出了“可编程主权”框架，倡导通过盟友间的协调化专业分工来构建局部技术壁垒与防务韧性。这反映出美中AI极化对决正倒逼欧洲等区域调整战略，试图在美中双极垄断下寻求科技自主与外交制衡空间。",
+    "importance_score": 7,
+    "score_reason": "文章探讨了美中AI极化竞争对全球供应链与地缘政治的影响，以及第三方行为体针对美中技术封锁的战略应对。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOS2Vid1JDS3FJWGtxZnF4RlZ2UjRCZ0N4OG5pZ0lydFEwaF9YMFg2d19fdDFoWmRVYmtyTTQ4elNhSW1ndVBUdGF3Rm03TmJ1MGN6Y3huZGlIVUJHMy1nbzdEWkFVWVVZNkpVdmhWRWxGUDl5RDRmTVdmbHpPbHplbDRyb1VzSEVXZ1hUXzl0UFM4TjEzYi05NExGWFFQMU94aUpIaTloSWNoRlhETkE3S0dYdEFQX3FMTjlBLV8tZER6UEdxZkFJNGxUdkNLTkVhZTdoaThac20wdHdabGxtd2VKZHVTdDFHc2xVaFJISVhWQXF4TEhCNw?oc=5": {
+    "title_cn": "2026年第二季度亚洲股票盈利：AI与非AI驱动因素",
+    "summary_cn": "本报告评估了亚洲股市的盈利表现，重点拆解了生成式AI资本开支与传统业务对区域企业业绩的差异化拉动作用。以东亚芯片及硬件巨头为主力的亚洲科技供应链在提供全球AI算力硬件中占据核心地位，其盈利结构的变化折射出全球AI基础设施建设的投资热度。在中美科技博弈与出口管制背景下，该分析为观察先进半导体产业链韧性与产能重构提供了重要的市场与财务视角。",
+    "importance_score": 5,
+    "score_reason": "本文主要围绕亚洲科技供应链与股市盈利状况展开分析，属于AI半导体产业链与市场表现的间接相关研判。",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/09/01/1142180/making-the-ai-powered-case-for-legacy-modernization/": {
+    "title_cn": "AI驱动传统系统现代化的战略价值分析",
+    "summary_cn": "本文阐述了如何利用生成式AI打破企业传统IT系统改造的高成本与高风险瓶颈，将基础设施升级从风险管理转化为竞争机遇。从中美AI竞争格局来看，该趋势反映出AI竞争正从底层大模型训练向垂直行业企业级软件重构与落地应用深度延伸。美企通过AI加速传统产业数字化赋能，意在巩固其在商业软件生态与企业生产率上的优势。",
+    "importance_score": 2,
+    "score_reason": "文章侧重于企业IT系统升级与AI商业落地，不涉及中美地缘政治、技术出口管制或国家级战略博弈等核心议题。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSzh0dktnUzdqRDJVM2hYaHAzYW1WOXpiZ1UyMFlhNnpCa25xR3ZOdVFOd0R5aDF5YV9uRnJjU2RicGpjZTNzSmIyQWU5YTd2eEZ6QzY2QU84aHZGdDAwQzc3ZjNHekhtcVlvUUt3T01rN2g0YjFncWM5cVl4LVdWc2x4WU1pOVd3d19ReU91WFZraTBDcm8xZzlKMjBhMWhGcHBUNzhIQ1ZTZw?oc=5": {
+    "title_cn": "教育领域 AI 预算指南：各国教育部须知",
+    "summary_cn": "本报告由世界银行发布，旨在为各国教育部门在推进人工智能（AI）应用时的财政预算与资源配置提供指导。虽然文章立足于全球公共教育的数字化转型，但反映出新兴市场对 AI 基础设施及应用服务的强劲需求。在中美科技竞争延伸至全球南方（Global South）的背景下，此类公共部门的 AI 预算规划间接影响两国 AI 教育软硬件生态在新兴市场的渗透与标准确立。",
+    "importance_score": 2,
+    "score_reason": "文章侧重于教育领域的 AI 预算与公共管理应用，属于常规技术推广范畴，与中美芯片战争或大模型核心竞争等核心议题关联较弱。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPU2JCcGd3NFVHTVRxc1hRMDdVNW81OWFOZEUzNUJnaVA2MlRwUUNuV2VOUTQ3aEwxTXRwRHl1d292V09BVDNCclM1Y3hfZ0dNdFYwWGJvSXQ2V0Fvd1hXWmZOeVoxWUUydFBJbGhPTDNwMnVuSnBBclc4Vks2cDBVZVoxbWt3YkdpdlRkeFFHaWR5SVpnQll1UEZwMV85ZnpEY3laclhpQWJoQQ?oc=5": {
+    "title_cn": "恐怖组织如何利用人工智能",
+    "summary_cn": "本文分析了非国家恶劣行为者及恐怖组织利用人工智能进行宣传扩散、心理战和战术策划的风险。非传统安全领域的AI滥用正在推高全球AI安全门槛，促使美国将前沿技术扩散风险纳入国家安全顶层设计。这一趋势将间接加剧中美在开源AI模型监管、国际AI安全标准制定以及前沿技术管控方面的博弈。",
+    "importance_score": 5,
+    "score_reason": "文章聚焦非国家主体对AI的滥用风险，属于前沿AI安全与治理的间接相关议题。",
+    "china_relevance": "低"
+  }
+}
