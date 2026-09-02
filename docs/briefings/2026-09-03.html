@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年09月03日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年09月03日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">9</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">2</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">3</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">4</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-critical">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">U.S. Dept. of Commerce</span>
+                    <span class="card-date">09-03 05:11</span>
+                </div>
+                <h3 class="card-title">AI繁荣公约</h3>
+                <p class="card-title-en">The AI Prosperity Compact</p>
+                <p class="card-llm-summary">美国商务部推动的《AI繁荣公约》旨在联合盟友与战略伙伴，建立以美方技术和安全规则为核心的全球AI基础设施与供应链生态。该倡议通过在算力部署、标准制定和安全治理上深化合作，防范前沿AI技术流向非信任方。这标志着美国正从单边出口管制转向“多边阵营化”包围圈，企图在基础设施与规则层面阻断中国AI产业链的全球化拓展。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 8/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：该公约体现了美国商务部拉拢盟友构建闭环AI生态、在全球AI基础设施与标准竞争中围堵中国的战略意图。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxQS19kVzdHSWRCdGlzV3ZlWWVsOVpyMDgwM0tHX3lyS2EwTUFYelptTnBJVkFodWhhR3VnZmc0TEliXzNUWnV6eTZ6SnNfUnZrdEhSWUJRUWF5YW1ULVk1SFZBS0t5SUpscGU4eVJ5VGkyX3ZNUG10SzktN203ZzZDS0VtaldUS00?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-critical">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">U.S. Congress</span>
+                    <span class="card-date">09-02 17:28</span>
+                </div>
+                <h3 class="card-title">H.R.10189 - 第119届国会（2025-2026）：国防AI可靠性与报告法案</h3>
+                <p class="card-title-en">H.R.10189 - 119th Congress (2025-2026): Defense AI Reliability and Reporting Act</p>
+                <p class="card-llm-summary">该法案旨在针对美国国防领域的AI系统建立严格的可靠性评估与定期报告机制，确保军事智能化技术的安全与可控。在中美大国博弈延伸至军事智能化装备的背景下，美国国会通过立法强化军用AI的风险管理与质量控制。这反映出美方正将AI安全治理深度融入国防能力建设，试图在保持军事AI技术领先优势的同时降低作战部署风险。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 8/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：该法案涉及美国国防AI立法与国家安全战略，直接关乎美军军事AI装备的可靠性与大国智能化军事竞赛。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE8xbG9WZnpoRW9NeEFRUWJCcV8wZElRTVJaVkRQNmdTa25ZYXZObUVlYlpzcEVlVFdOZlFUSkRPVnhHcmVjTXFlWkgteW5yX0kxcDhNWEh5UF9EWGp4R0RkWEZWTFd1ZFotRXRDandB?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">U.S. Dept. of Commerce</span>
+                    <span class="card-date">09-03 05:11</span>
+                </div>
+                <h3 class="card-title">G20 AI繁荣目标</h3>
+                <p class="card-title-en">The G20 AI Prosperity Objectives</p>
+                <p class="card-llm-summary">美国商务部参与推动的“G20 AI繁荣目标”旨在通过多边框架设定全球AI发展与经济转型的优先议题。该倡议反映了美国利用G20等多边机制掌握全球AI规则制定主导权的战略意图。在中美AI博弈日益加剧的背景下，美国意图通过此类规则重塑联合盟友与主要经济体，从而对中国在全球AI标准与治理话语权上的扩张形成挤压。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及美国在多边框架下推动全球AI治理与标准制定，属于影响全球AI竞赛格局与规则治理的间接相关议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxON1FpTFVpLTE3RzZ2U1p0dElhY1BvdndPOFR2bFdCSmlvdWlOaWZuTUZET05nR1p3U3Bfb0FDNWFJWHZpRFZEa2tGcTBSTEpNdXhRWGRsR0VvMHZvbHVMVHJLc3ROejVTeEpCaWNKVzBsTWxrazctNmxseDN3Rmo5OE5VeXVtUzBudnlwTm9wem4?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">JPMorgan Chase</span>
+                    <span class="card-date">09-02 07:22</span>
+                </div>
+                <h3 class="card-title">2026年第二季度亚洲股市盈利：AI与非AI驱动因素</h3>
+                <p class="card-title-en">2Q26 Asia Equity Earnings: AI and Non-AI drivers</p>
+                <p class="card-llm-summary">摩根大通在报告中分析了2026年第二季度亚洲股票收益的主要动力，着重区分了AI相关与非AI相关产业对企业盈利的贡献。从中美AI竞争格局来看，亚洲（特别是台韩及中国大陆）的半导体和硬件供应链是全球AI算力建构的关键枢纽，其盈利状况直接映射出美国AI资本支出的强劲程度以及中国科技供应链在制裁下的演变。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：侧重于金融机构对亚洲AI供应链与硬件市场的盈利展望，间接反映中美AI产业资本支出与供应链竞争。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxQM3lXaTN1Z1hqbE9rMjNlMkt1THRNR002Q01jdnFzbDNXZkhWWGVyb3VzNVlQTVNKRTRMbldfRXF3Z0hZbWJFVWRrSDByenhOWV9Fa2YxY1B1NTdLV05sVWdESjgwNEdsTm5KeVV6cDhNU0k3VHg5OUNFQllkS2YwQ2RQRVRObS1xX2ZOVTlYbFdFazhNU2dvUGRfQWVMcFFkSDNLSS1lcU5sQXo2WHQtdWpkOXlydkhoSFJZVUdpNXhhb05faWcxc1d4RzNDUndJZTVkdHZZTFljSXZjS1lKTXByd0tyeHdzZF9hdTJZdm1VekZKOElkVQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#5</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">RAND Corporation</span>
+                    <span class="card-date">09-02 18:32</span>
+                </div>
+                <h3 class="card-title">供应链对AI的运营依赖与新兴保险风险</h3>
+                <p class="card-title-en">Operational reliance on AI in supply chains and emerging insurance risks</p>
+                <p class="card-llm-summary">兰德公司分析了供应链在关键业务运营中对AI系统日益加深的依赖，并揭示了由此引发的系统性风险与保险保障缺口。虽然AI优化了物流与生产调度，但算法故障或网络攻击可能引发供应链级联瘫痪。这一议题反映出在前沿科技应用推广过程中，关键供应链的风险控制与防灾韧性正成为影响国家经济安全与科技竞争力的隐性要素。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 4/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：探讨AI在供应链中的运营风险与保险响应，属于AI治理与供应链韧性的间接相关议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5LY1Jqb0ZZQ3FxTGtfMTYxRkRyM1Q1T05pQktuOGVOSEFiVHFaV2RXYWEzUE1WbzE4SW9yNzdLcnY2SjhuU3NsRmZEM3RpTF9MQTU3ZVV5ODhQVGtxTmw3bTVzMUN0aHVp?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#6</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">IEEE Spectrum</span>
+                    <span class="card-date">09-02 21:00</span>
+                </div>
+                <h3 class="card-title">AI的高效可能导致下一代顶尖专家断层</h3>
+                <p class="card-title-en">AI Efficiency Could Cost Us the Next Generation of Experts</p>
+                <p class="card-llm-summary">文章警告称，过度追求AI与自动化效率可能导致关键工程领域的人类专家出现“技能退化”与人才断层，使系统在应对极端未知风险时缺乏有效的人类干预能力。从中美科技竞争视角看，高阶工程人才梯队的厚度与隐性知识积累是国家硬核科技韧性的基石，如何在推动AI赋能的同时保持人类基础实操能力，将成为两国在关键基础设施与前沿工程领域长期对抗的隐性变量。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章侧重探讨AI自动化对工程师技能培养与复杂系统管理的副作用，属于AI应用与人才培养议题，与中美直接战略竞争关系较远。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://spectrum.ieee.org/ai-engineer-skills" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#7</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Hoover Institution</span>
+                    <span class="card-date">日期未知</span>
+                </div>
+                <h3 class="card-title">生成式AI应用初期的失业恐惧研究</h3>
+                <p class="card-title-en">Job Loss Fears in the First Years of Generative Artificial Intelligence</p>
+                <p class="card-llm-summary">该研究探讨了生成式AI在落地初期对劳动力市场产生的冲击以及公众的失业担忧。从中美AI竞争视角来看，社会对AI技术的适应力与劳动力转型阵痛直接影响着两国AI产业化推广的速率与生产力释放效率。美国在评估GenAI对就业市场影响方面的经验，为其能否保持长期的技术生产力转化优势提供了重要的微观视角。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：该文侧重于生成式AI对劳动力市场与就业的微观经济学影响，与中美芯片管制、技术博弈等核心大国竞争议题关联度较低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: artificial intelligence</span>
+                    <a href="https://cms.hoover.org/research/job-loss-fears-first-years-generative-artificial-intelligence" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#8</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">MIT Technology Review</span>
+                    <span class="card-date">09-02 22:00</span>
+                </div>
+                <h3 class="card-title">大规模简化 AI 整合：助力企业高效赋能</h3>
+                <p class="card-title-en">Facilitating AI integration with simplicity at scale</p>
+                <p class="card-llm-summary">本文以跨国制造企业捷普（Jabil）为例，探讨了企业在规模化发展中如何通过破除数据孤岛与简化系统来加速 AI 技术的落地集成。从中美竞争视角看，工业 AI 赋能传统制造是美国重塑供应链韧性与工业竞争力的重要手段，但该文更侧重于企业内部的具体实施路径。整体而言，这反映了美国产业界在底层应用端推进 AI 赋能的实际进展。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：主要探讨企业内部 AI 整合与组织管理效率，属于应用层案例，与中美高端 AI 战略竞争直接关联度较低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://www.technologyreview.com/2026/09/02/1142879/facilitating-ai-integration-with-simplicity-at-scale/" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#9</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">World Economic Forum</span>
+                    <span class="card-date">09-02 18:04</span>
+                </div>
+                <h3 class="card-title">在 AI 时代，人际互动会成为新的招聘优势吗？——本月就业与技能趋势</h3>
+                <p class="card-title-en">In the age of AI, are human connections the new hiring advantage? – and other trends in jobs and skills this month</p>
+                <p class="card-llm-summary">本报告探讨了生成式 AI 普及背景下全球劳动力市场对人际沟通与“软技能”需求增加的趋势。从中美 AI 竞争的角度来看，技术的快速演进正在重塑劳动力结构，人才储备与组织适应力将成为两国实现 AI 技术落地和生产力转化的关键支撑。然而，该内容主要偏向通用职场管理，未直接涉及地缘政治或核心技术博弈。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章聚焦于 AI 时代的劳动力技能转型与招聘趋势，属于一般的组织管理与就业议题，与中美 AI 核心技术竞争和政策博弈关系较远。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOLTVYVlEzQmNTYV9vclV2bk1oRjVST2RSTnlhcHdmMUFwRENrLXFTb1hKOTlIc1Q0aXZEMk8xUjB5aW0yTUVtRHpRUkNvNGJYSmxxNjk1WDBLY2tGSTM5dTMwcU9YQTRxU0MxVm84OHo1T0pIcE14ZXRkTDBIN3Qxamx5UUMyYkNRdXRfb3hRX2ZSQnJGZ1pPTlNqSDVMZlNxek9CLVhFZmtwejVXY014NGlZNVEzMVAz?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-09-02 22:45 UTC
+    </div>
+</body>
+</html>

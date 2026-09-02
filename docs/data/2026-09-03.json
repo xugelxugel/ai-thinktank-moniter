@@ -1,0 +1,65 @@
+{
+  "https://news.google.com/rss/articles/CBMikAFBVV95cUxON1FpTFVpLTE3RzZ2U1p0dElhY1BvdndPOFR2bFdCSmlvdWlOaWZuTUZET05nR1p3U3Bfb0FDNWFJWHZpRFZEa2tGcTBSTEpNdXhRWGRsR0VvMHZvbHVMVHJLc3ROejVTeEpCaWNKVzBsTWxrazctNmxseDN3Rmo5OE5VeXVtUzBudnlwTm9wem4?oc=5": {
+    "title_cn": "G20 AI繁荣目标",
+    "summary_cn": "美国商务部参与推动的“G20 AI繁荣目标”旨在通过多边框架设定全球AI发展与经济转型的优先议题。该倡议反映了美国利用G20等多边机制掌握全球AI规则制定主导权的战略意图。在中美AI博弈日益加剧的背景下，美国意图通过此类规则重塑联合盟友与主要经济体，从而对中国在全球AI标准与治理话语权上的扩张形成挤压。",
+    "importance_score": 6,
+    "score_reason": "涉及美国在多边框架下推动全球AI治理与标准制定，属于影响全球AI竞赛格局与规则治理的间接相关议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMihwFBVV95cUxQS19kVzdHSWRCdGlzV3ZlWWVsOVpyMDgwM0tHX3lyS2EwTUFYelptTnBJVkFodWhhR3VnZmc0TEliXzNUWnV6eTZ6SnNfUnZrdEhSWUJRUWF5YW1ULVk1SFZBS0t5SUpscGU4eVJ5VGkyX3ZNUG10SzktN203ZzZDS0VtaldUS00?oc=5": {
+    "title_cn": "AI繁荣公约",
+    "summary_cn": "美国商务部推动的《AI繁荣公约》旨在联合盟友与战略伙伴，建立以美方技术和安全规则为核心的全球AI基础设施与供应链生态。该倡议通过在算力部署、标准制定和安全治理上深化合作，防范前沿AI技术流向非信任方。这标志着美国正从单边出口管制转向“多边阵营化”包围圈，企图在基础设施与规则层面阻断中国AI产业链的全球化拓展。",
+    "importance_score": 8,
+    "score_reason": "该公约体现了美国商务部拉拢盟友构建闭环AI生态、在全球AI基础设施与标准竞争中围堵中国的战略意图。",
+    "china_relevance": "高"
+  },
+  "https://www.technologyreview.com/2026/09/02/1142879/facilitating-ai-integration-with-simplicity-at-scale/": {
+    "title_cn": "大规模简化 AI 整合：助力企业高效赋能",
+    "summary_cn": "本文以跨国制造企业捷普（Jabil）为例，探讨了企业在规模化发展中如何通过破除数据孤岛与简化系统来加速 AI 技术的落地集成。从中美竞争视角看，工业 AI 赋能传统制造是美国重塑供应链韧性与工业竞争力的重要手段，但该文更侧重于企业内部的具体实施路径。整体而言，这反映了美国产业界在底层应用端推进 AI 赋能的实际进展。",
+    "importance_score": 2,
+    "score_reason": "主要探讨企业内部 AI 整合与组织管理效率，属于应用层案例，与中美高端 AI 战略竞争直接关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://spectrum.ieee.org/ai-engineer-skills": {
+    "title_cn": "AI的高效可能导致下一代顶尖专家断层",
+    "summary_cn": "文章警告称，过度追求AI与自动化效率可能导致关键工程领域的人类专家出现“技能退化”与人才断层，使系统在应对极端未知风险时缺乏有效的人类干预能力。从中美科技竞争视角看，高阶工程人才梯队的厚度与隐性知识积累是国家硬核科技韧性的基石，如何在推动AI赋能的同时保持人类基础实操能力，将成为两国在关键基础设施与前沿工程领域长期对抗的隐性变量。",
+    "importance_score": 3,
+    "score_reason": "文章侧重探讨AI自动化对工程师技能培养与复杂系统管理的副作用，属于AI应用与人才培养议题，与中美直接战略竞争关系较远。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5LY1Jqb0ZZQ3FxTGtfMTYxRkRyM1Q1T05pQktuOGVOSEFiVHFaV2RXYWEzUE1WbzE4SW9yNzdLcnY2SjhuU3NsRmZEM3RpTF9MQTU3ZVV5ODhQVGtxTmw3bTVzMUN0aHVp?oc=5": {
+    "title_cn": "供应链对AI的运营依赖与新兴保险风险",
+    "summary_cn": "兰德公司分析了供应链在关键业务运营中对AI系统日益加深的依赖，并揭示了由此引发的系统性风险与保险保障缺口。虽然AI优化了物流与生产调度，但算法故障或网络攻击可能引发供应链级联瘫痪。这一议题反映出在前沿科技应用推广过程中，关键供应链的风险控制与防灾韧性正成为影响国家经济安全与科技竞争力的隐性要素。",
+    "importance_score": 4,
+    "score_reason": "探讨AI在供应链中的运营风险与保险响应，属于AI治理与供应链韧性的间接相关议题。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOLTVYVlEzQmNTYV9vclV2bk1oRjVST2RSTnlhcHdmMUFwRENrLXFTb1hKOTlIc1Q0aXZEMk8xUjB5aW0yTUVtRHpRUkNvNGJYSmxxNjk1WDBLY2tGSTM5dTMwcU9YQTRxU0MxVm84OHo1T0pIcE14ZXRkTDBIN3Qxamx5UUMyYkNRdXRfb3hRX2ZSQnJGZ1pPTlNqSDVMZlNxek9CLVhFZmtwejVXY014NGlZNVEzMVAz?oc=5": {
+    "title_cn": "在 AI 时代，人际互动会成为新的招聘优势吗？——本月就业与技能趋势",
+    "summary_cn": "本报告探讨了生成式 AI 普及背景下全球劳动力市场对人际沟通与“软技能”需求增加的趋势。从中美 AI 竞争的角度来看，技术的快速演进正在重塑劳动力结构，人才储备与组织适应力将成为两国实现 AI 技术落地和生产力转化的关键支撑。然而，该内容主要偏向通用职场管理，未直接涉及地缘政治或核心技术博弈。",
+    "importance_score": 2,
+    "score_reason": "文章聚焦于 AI 时代的劳动力技能转型与招聘趋势，属于一般的组织管理与就业议题，与中美 AI 核心技术竞争和政策博弈关系较远。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMibkFVX3lxTE8xbG9WZnpoRW9NeEFRUWJCcV8wZElRTVJaVkRQNmdTa25ZYXZObUVlYlpzcEVlVFdOZlFUSkRPVnhHcmVjTXFlWkgteW5yX0kxcDhNWEh5UF9EWGp4R0RkWEZWTFd1ZFotRXRDandB?oc=5": {
+    "title_cn": "H.R.10189 - 第119届国会（2025-2026）：国防AI可靠性与报告法案",
+    "summary_cn": "该法案旨在针对美国国防领域的AI系统建立严格的可靠性评估与定期报告机制，确保军事智能化技术的安全与可控。在中美大国博弈延伸至军事智能化装备的背景下，美国国会通过立法强化军用AI的风险管理与质量控制。这反映出美方正将AI安全治理深度融入国防能力建设，试图在保持军事AI技术领先优势的同时降低作战部署风险。",
+    "importance_score": 8,
+    "score_reason": "该法案涉及美国国防AI立法与国家安全战略，直接关乎美军军事AI装备的可靠性与大国智能化军事竞赛。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQM3lXaTN1Z1hqbE9rMjNlMkt1THRNR002Q01jdnFzbDNXZkhWWGVyb3VzNVlQTVNKRTRMbldfRXF3Z0hZbWJFVWRrSDByenhOWV9Fa2YxY1B1NTdLV05sVWdESjgwNEdsTm5KeVV6cDhNU0k3VHg5OUNFQllkS2YwQ2RQRVRObS1xX2ZOVTlYbFdFazhNU2dvUGRfQWVMcFFkSDNLSS1lcU5sQXo2WHQtdWpkOXlydkhoSFJZVUdpNXhhb05faWcxc1d4RzNDUndJZTVkdHZZTFljSXZjS1lKTXByd0tyeHdzZF9hdTJZdm1VekZKOElkVQ?oc=5": {
+    "title_cn": "2026年第二季度亚洲股市盈利：AI与非AI驱动因素",
+    "summary_cn": "摩根大通在报告中分析了2026年第二季度亚洲股票收益的主要动力，着重区分了AI相关与非AI相关产业对企业盈利的贡献。从中美AI竞争格局来看，亚洲（特别是台韩及中国大陆）的半导体和硬件供应链是全球AI算力建构的关键枢纽，其盈利状况直接映射出美国AI资本支出的强劲程度以及中国科技供应链在制裁下的演变。",
+    "importance_score": 5,
+    "score_reason": "侧重于金融机构对亚洲AI供应链与硬件市场的盈利展望，间接反映中美AI产业资本支出与供应链竞争。",
+    "china_relevance": "中"
+  },
+  "https://cms.hoover.org/research/job-loss-fears-first-years-generative-artificial-intelligence": {
+    "title_cn": "生成式AI应用初期的失业恐惧研究",
+    "summary_cn": "该研究探讨了生成式AI在落地初期对劳动力市场产生的冲击以及公众的失业担忧。从中美AI竞争视角来看，社会对AI技术的适应力与劳动力转型阵痛直接影响着两国AI产业化推广的速率与生产力释放效率。美国在评估GenAI对就业市场影响方面的经验，为其能否保持长期的技术生产力转化优势提供了重要的微观视角。",
+    "importance_score": 3,
+    "score_reason": "该文侧重于生成式AI对劳动力市场与就业的微观经济学影响，与中美芯片管制、技术博弈等核心大国竞争议题关联度较低。",
+    "china_relevance": "低"
+  }
+}
