@@ -1,0 +1,65 @@
+{
+  "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPem5yeGtkYkxVY0NjQmlTUmhBRW1tOTQxSFQ0blpKWjRrNjlCNzZSNXZoenY3cmgtODd5LXN1eUhvRC1icEZQNnpkVE04aUk1RXdGNkxkaXJ1ZW5aRVpjQW55T0xzdXdpMUJkSl9UeGpMWXZUX3VMQXFrQW1mM0o3dTU3Y1EzbXdjMUYw?oc=5": {
+    "title_cn": "AI正在影响全球劳动力市场吗？",
+    "summary_cn": "高盛在该研究中评估了生成式AI对全球劳动力市场的实际宏观影响，探讨技术普及对就业结构与生产率的短期及中长期效应。尽管当前数据尚未显现大规模失业，但AI带来的劳动生产率重塑将直接影响国家综合经济竞争力。在中美AI博弈背景下，劳动力对AI技术的应用普及与技能转型效率，将成为决定两国能否将技术领先转化为经济红利的关键变量。",
+    "importance_score": 3,
+    "score_reason": "文章聚焦AI对全球劳动力与经济的宏观影响，属于应用层面的经济学评估，与中美核心技术对抗或出口管制等议题关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://www.atlanticcouncil.org/blogs/menasource/bahrains-opportunity-for-ai-leadership-lies-under-water/": {
+    "title_cn": "巴林打造 AI 领导力的机遇蕴藏于水下",
+    "summary_cn": "本文探讨了巴林通过部署水下数据中心等创新基础设施，突破算力散热与能耗瓶颈以提升其全球 AI 强国地位的可能性。随着中东地区迅速成为全球算力基础设施建设与科技博弈的关键节点，此类新型算力承载模式的探索将影响区域算力格局的发展。在中美 AI 竞争加剧的背景下，中东国家对前沿 AI 基础设施的抢先布局也为其在全球算力供应链中争取了更多战略回旋空间。",
+    "importance_score": 4,
+    "score_reason": "文章探讨了中东地区在前沿 AI 算力基础设施（水下数据中心）上的创新尝试，属于全球 AI 算力生态与基础设施建设的间接相关议题。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQX2w3bmJVQnk1UGpfQXI1RTdacnc3d2lMX2Frdlh0UEtSS1JQSjAxaXJocnFLRDIwZ3JJeDNzWHVzMXJFWmVTcFZJdXgxdkoxakdqN0Fqa0IzUEs5WDhhYmRmc0JINzZWNGN1aGY0d1RRVnZ4T0g1N0VUaFV6SlVLSU9DZlhlaEd3NnZYSzBQMHowTEhFeG12eGowZ0RSRlZVQXZYVE1vUDVWRGhGcTdWa2c2Rk9DXzlW?oc=5": {
+    "title_cn": "开放权重外交：中国 AI 模型如何重演“数字丝绸之路”",
+    "summary_cn": "本文探讨了中国如何利用开源及开放权重（Open-Weight）AI 模型作为地缘政治外交工具，在全球（特别是南方国家）推广其数字基础设施与生态系统。在面临美国芯片限制与技术围堵的背景下，中国正试图通过提供高性能开源模型争取全球开发者生态，开辟抗衡美国闭源 AI 垄断地位的新战场。",
+    "importance_score": 9,
+    "score_reason": "文章深入剖析了中国利用开源 AI 模型开展外交并与美国争夺全球 AI 技术生态主导权的核心战略。",
+    "china_relevance": "高"
+  },
+  "https://datainnovation.org/2026/09/training-physical-ai/": {
+    "title_cn": "训练具身AI",
+    "summary_cn": "美国人形机器人初创公司Figure AI推出视频数据收集平台Index，旨在通过大规模真实世界视频训练具身AI执行复杂任务。具身智能正成为中美AI竞争的下半场核心战场，美国企业通过大众众包加速构建物理世界数据集以抢占生态壁垒，将对两国在工业自动化与机器人领域的产业话语权产生重要影响。",
+    "importance_score": 4,
+    "score_reason": "展示了美国在前沿具身AI与物理数据集构建上的最新商业与技术突破，属于前沿技术应用侧，与中美地缘竞争间接相关。",
+    "china_relevance": "中"
+  },
+  "https://datainnovation.org/2026/09/5-qs-gavin-aydelotte-co-founder-of-snowcrash-labs/": {
+    "title_cn": "对话 SnowCrash Labs 联合创始人 Gavin Aydelotte：5个关键问题",
+    "summary_cn": "本文是对硅谷初创公司 SnowCrash Labs 联合创始人的专访，探讨了其开发的 AI 模型评估与智能路由平台。随着全球大模型呈多极化发展，模型路由与评估中间件已成为优化推理效率、降低算力成本的关键基础设施。该技术创新折射出美方在 AI 工具链与生态赋能方面的持续演进，间接影响中美企业在 AI 落地应用中的算力效能比拼。",
+    "importance_score": 2,
+    "score_reason": "内容专注于初创公司的微观 AI 工具链与中间件技术，与中美地缘政治、国家安全或战略竞争关系较远。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSnpPR1dtT21QMUJnR0YyZVVoYXdVZWFNRFBFTDlBX1BoelpIQVZxREtaTDZJUnhKQi1LNW5qbGRkZ2d6amhkUEdTcGFkbzlZOXp2eDJJbGdGRngzTllqYTlnUDRJSy1oNktEVE5JTGwybmNoVVBNQ0VpZy1KVFJOMWFQRXNHZDh4c0FRaDhER0swaVBWaGQ4?oc=5": {
+    "title_cn": "人工智能的发展前景",
+    "summary_cn": "世界银行本报告聚焦于人工智能推动全球经济增长与生产力提升的潜力，侧重探讨发展中国家如何通过AI弥合数字鸿沟。从中美AI博弈视角来看，全球南方国家对AI技术与基础设施的需求，正成为中美两大科技阵营争夺海外市场和标准话语权的新阵地。尽管报告偏重包容性发展，但其揭示的技术扩散瓶颈凸显了地缘政治对抗下全球AI生态碎片化的风险。",
+    "importance_score": 3,
+    "score_reason": "报告主要从全球发展与数字不平等的角度探讨AI的经济价值，与中美直接的AI技术封锁或军备竞赛议题关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQX29xWGdnTUowVEljWmZDbUFRVlJ6OFUxUVRBRDNhOUNROVpiNXlBQld4SU5ERkJ0NFJ4cms3NmZwekdqT3ZqOURCRlRyY3NTMmxIWTloZTU2Wno4VkozaURTMEk2cWp1M1p5dkJ3TEVtd19qQzZRdDdRczFyclpyYkdCZ0NkMnFWal9aYWVvLVkwMUVGZEFtZEZpQUVtcGZVOFRHdFQyTm1hUjJzTkU2UzVmTEYzNklGRUs3blpRcmU?oc=5": {
+    "title_cn": "通过自主权、互操作性与开放性落地 AI 主权",
+    "summary_cn": "本文探讨了各国如何通过提升技术自主能力、推进系统互操作性及拥抱开源生态来实现“AI主权”，以应对美中科技巨头在底层大模型与算力上的垄断风险。在中美AI地缘博弈加剧的背景下，第三方国家寻求技术自立的努力正在重塑全球AI治理格局与技术扩散路径。这一趋势将直接影响美中两国的AI技术出海策略与跨国生态排他性布局。",
+    "importance_score": 7,
+    "score_reason": "文章探讨了全球各地区在中美科技双雄垄断下寻求“AI主权”的战略路径，切中全球AI竞赛格局演变与技术阵营分化的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMitgFBVV95cUxOWWxvUnJUa0V0SU1sLW1JRE5LT1o5d01teWF2RWJDVVpKaHQwNHlvSGMyZFBoQ201X1ROYWwycHluZVdtNFFoNjdEV1NFalBaY19OZUxwSjYxNzE1UFZPZk1ybzBLVUhzNlc1VmJqZHpzeFN5UlU1YnZ5QVN1T1ZSbF9ueThjRnhhd3czM2hxTUVRdHhrNHQ0MnhKVEFhdmdkTmNCS2g4TFltaXAxRUU2SFIwMGFVQQ?oc=5": {
+    "title_cn": "职场AI：从私人聊天到团队协作的转变",
+    "summary_cn": "本文探讨了职场AI技术的发展趋势，从私人聊天工具向团队协作平台的转变，这反映了AI在提升工作效率和团队协作方面的潜力。这一趋势对于中美两国在AI领域的竞争具有重要意义，尤其是在团队协作和生产力提升方面，中国企业在追赶过程中可能面临挑战和机遇并存的局面。",
+    "importance_score": 7,
+    "score_reason": "文章涉及AI在职场中的应用，与全球AI竞赛格局有关，但并未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiigFBVV95cUxNbXRodnJPTV95SXFUQVk0b1plOWpUbTAtbHVycUlDVmlOdFlwUkRkZEhaeURwWW5Ja1MwQklpU09nTHFYaHU1SFdIbjJ0UF9DU2tvdDRwMzB0azVlTEU1ZzVpbHlnRDNadkpZVWxjalRFb2pRdkhkS2psQUl0VjVOc25xWTZ0bFRnRVE?oc=5": {
+    "title_cn": "人工智能繁荣公约",
+    "summary_cn": "美国商务部发布的《人工智能繁荣公约》可能旨在推动美国AI产业的发展，提升生产效率，并可能对中美AI竞争格局产生影响，尤其是在AI技术标准和产业政策方面。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI产业政策，可能影响全球AI竞赛格局，与中美AI竞争间接相关。",
+    "china_relevance": "中"
+  }
+}
