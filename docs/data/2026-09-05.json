@@ -1,0 +1,37 @@
+{
+  "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNT1pWSENBb0Z2elVWdnJ4NEUtTkRzRkJOaFExSDAzWFF1Y0otTkhfa2F4WElWa1FNckJKbDRZQTZLR21tMFR6UnZJYjFFcEtTeGZUcTBjMWF0OWZhbGhaVktFc0hRMEtCZmJjcmtNSmlTd3hNa2ZHWEQ5VTlRekd0N0IzeERlR0czWGhDUW10eUNUbkhfMW82T1dtSGNveDJXMWZ0MG5PRElyV0E?oc=5": {
+    "title_cn": "APEC 经济体中的 AI 与旅游业",
+    "summary_cn": "本报告由经合组织（OECD）发布，探讨了 AI 技术在 APEC 区域内旅游业中的应用场景及其对经济提振的潜力。虽然议题侧重于垂直领域的数字赋能，但反映出亚太地区推动 AI 落地应用与数字转型的总体趋势。在中美 AI 竞争加剧的背景下，此类区域性应用生态与规则的塑造，也是两国间接争夺数字经济话语权与技术标准辐射力的隐性战场。",
+    "importance_score": 2,
+    "score_reason": "本文聚焦于 AI 在亚太旅游业等垂直领域的具体应用，属于泛 AI 应用与产业赋能议题，与中美 AI 核心技术竞争、芯片管制及国家安全博弈关系较远。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYTZHRU1uNG9nalVjSGtuckhBTlM4T3I3NkNHenZDYm9JUlc3Ty1CNDFLaGRCRjFlUWViVFZnNHhxTTJkNHZIRlVpU3dUUnZKV1haSmM3azdCY1ZEWU1aZXZuZ3RaUE1QcllHRXFKV0M2TW9OR2JjSk9IclJFQXlVdzgxRG5CbXdJM1ViVW1kV0g3bEpnMnRiVDY4c1hpOTJTak42WUMyR0dKUQ?oc=5": {
+    "title_cn": "AI现在能够设计病毒：我们迫切需要建立生物安全护栏",
+    "summary_cn": "兰德公司警告称前沿AI模型已具备辅助甚至设计新型病毒的潜在风险，呼吁政府尽快出台针对生物AI领域的监管与安全护栏。在中美AI竞争维度下，前沿AI模型的生物双重用途风险（Dual-use risks）正成为美方评估AI国家安全威胁的核心依据，将直接推动美方加码对前沿生物AI模型、开源技术及算力出口的限制。",
+    "importance_score": 6,
+    "score_reason": "文章探讨前沿AI的生物安全与双重用途威胁，直接影响美方国家安全风险评估及对华AI技术出口管制决策。",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/09/04/1140872/architecting-memory-and-storage-in-the-ai-era/": {
+    "title_cn": "构建AI时代的内存与存储架构",
+    "summary_cn": "本文探讨了AI推理时代对底层内存与存储基础设施架构的硬性需求，强调实时智能服务依赖于高性能硬件支撑。在当前中美AI竞争格局下，以HBM及先进存储为代表的硬件架构已成为算力供应链的关键瓶颈，直接关乎两国在AI实时推理与大规模产业落地上的软硬件综合效能比拼。",
+    "importance_score": 5,
+    "score_reason": "探讨AI半导体与存储基础设施架构，属于中美硬件供应链与算力竞争的间接相关议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMikgFBVV95cUxPdlgwa0Rpbm90R1Q4Rkh5d1dfRVpHSy1XSzUtS2ZoNGE3SHpSYUUxVGZFMFluT2hRUFlvaTVwR2kxVGRjS3BEUkNVLXoyWGVxc2R5LXJwWXZTeVp4QzkxMUxZS0lMX1pHcnJzSlNzZG1BNm1rZFJpNVNVTWtfUlBFbG81TzVoRDJOTWx5Y01uQkVwUQ?oc=5": {
+    "title_cn": "AI实战：构建未来工作场所技能",
+    "summary_cn": "本报告探讨了企业如何推动AI技能在工作场所的落地应用，旨在提升劳动力队伍的数字化素养与生产力。这反映出美国顶级金融机构正加速将AI技术转化为实际生产力，强化其在应用层与人力资本上的软实力优势。高素质AI劳动力储备虽属于微观层面，但长远看将是决定中美两国AI商业化落地效率与经济拉动力的底层支撑之一。",
+    "importance_score": 2,
+    "score_reason": "内容侧重于企业内部的AI技能培训与人力资源转型，属于组织管理层面的应用议题，对中美直接的科技博弈与宏观竞争影响较远。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMitAFBVV95cUxPdFh0V1ZOd3pya05fN1NDaUdUbUgtMDhLMVZRUE1ITDE1RHVfX1E5MVdyR3FPUVNtYUpnOFJNblQ3SDhyakhWQXdDRm9abmE3NUNOcjZFQ0xEdlhFSkxTSFZvSVFVTHNnRGhtWm5DUHVIdzJMWVh6VGY0WEttV1ZQLUJ0TnBtRnRMWWF6YVZmUzYzWFplNWF5SldDLTRKSGRQUEJGZmEycWhBeGw1a0dBN3JnVzA?oc=5": {
+    "title_cn": "ITIF指出：桑德斯-卡萨尔 AI 禁令将牺牲美国创新与竞争力",
+    "summary_cn": "智库 ITIF 警告称，议员桑德斯与卡萨尔提出的限制性 AI 立法将严重削弱美国科技企业的创新能力与市场优势。在美中科技博弈加剧的背景下，过度严苛的国内监管可能自缚手脚，进而给中国在 AI 前沿领域的赶超提供可乘之机。该报道揭示了美国内部在监管合规与国家安全竞争力之间的深刻矛盾。",
+    "importance_score": 8,
+    "score_reason": "文章探讨美国关键 AI 监管立法对国家创新能力的影响，直接关系到美国在中美 AI 竞赛中的战略竞争力。",
+    "china_relevance": "中"
+  }
+}
