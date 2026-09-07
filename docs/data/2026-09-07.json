@@ -1,0 +1,23 @@
+{
+  "https://www.federalregister.gov/documents/2026/09/08/2026-18260/certain-foreign-fabricated-semiconductor-devices-products-containing-the-same-and-components-thereof": {
+    "title_cn": "某些国外制造的半导体器件、含该器件的产品及其组件：美国国际贸易委员会终止相关调查的决定通知",
+    "summary_cn": "美国国际贸易委员会（USITC）决定不复审行政法官的初步裁定，正式基于双方和解终止对海外制造半导体器件及其产品的337调查。该案虽系商业和解收尾，但体现了美国利用贸易救济与法律工具监管海外半导体供应链的常态化趋势。在中美芯片博弈背景下，针对“海外制造”芯片的专利与贸易诉讼可能成为间接影响跨境半导体供应链稳定性的壁垒手段。",
+    "importance_score": 4,
+    "score_reason": "该内容属于半导体贸易纠纷与知识产权调查的程序性终止公告，间接涉及半导体供应链，但未直接讨论中美出口管制或AI芯片核心博弈。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQWnFPMVVDcGU2VC1UM0YxTWljUlFKaGlUeVNJRUhiV3Fuby1kZzU0UVQ4cFZQOFhPY2tWQ2hBeWRDb1lpNndvRGlXVE41UmZZR2U1SWVicW02SERhS0ZpV2RZWndqUjVEejY3VnNlZUd0MEJtTGdhaHF0MVJObXdJMEExMEJ4cnlKWFRYSkRONjNkTVp4YUZOMnpXNzZHbGJ3ci1EbnJmY3RwU05TWnZ2SWFiMFoyQjB5VzRYeDR2VU1haVEtbEhaeEoxZHRIdVo4dm1DRTFJdTBKZw?oc=5": {
+    "title_cn": "另类投资接入：解锁 Agentic AI 在私募市场中的潜力",
+    "summary_cn": "摩根大通探讨了 Agentic AI（智能体 AI）在私募市场和另类资产配置中的落地应用，强调其在提升高价值金融决策和自动化运营中的关键作用。从竞争格局来看，这展示了美国金融巨头正加速将前沿 AI 技术融入传统高门槛产业，以强化其资本与技术的双重优势。这种垂直领域的商业化闭环构建，构成了美国在 AI 产业化落地层面保持全球领先的重要基础。",
+    "importance_score": 3,
+    "score_reason": "本文聚焦于 AI 在金融私募市场的商业化应用，属于具体行业落地议题，与中美核心 AI 技术博弈或国家安全战略关系较远。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMinwFBVV95cUxPbWFDRm1zSG83LW1wMHZmb3RsZmJvVmI3cXE0bUdHUVFqWDQ5YlRuS1UwWS1JcE81cDdFV2gtWkV5Z0luRzRobks1LV9ZVnVINEotRElZa1BUTURfZFl4d05YX2RNdnJjSU9PeHBBUlUwWmMzRGpwNE5oeUNsQTZ1S0ptalltVzhfMmhWYk93RUxQMHl3ZFAtaTZ4UkViUFE?oc=5": {
+    "title_cn": "世界银行收到的信息公开（AI）申请汇总：2016年11月",
+    "summary_cn": "本资料为世界银行2016年11月收到的信息公开（Access to Information）申请例行汇总。内容侧重于多边金融机构的内部行政透明度与历史数据调阅记录，未涉及地缘政治、大国科技博弈或前沿人工智能技术发展。从中美AI竞争视角来看，该文件缺乏实质性战略分析价值。",
+    "importance_score": 1,
+    "score_reason": "本文仅涉及世界银行内部行政调阅记录，与中美AI竞争、技术封锁或战略布局完全无关联。",
+    "china_relevance": "低"
+  }
+}
