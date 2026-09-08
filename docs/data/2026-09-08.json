@@ -1,0 +1,30 @@
+{
+  "https://www.federalregister.gov/documents/2026/09/08/2026-18260/certain-foreign-fabricated-semiconductor-devices-products-containing-the-same-and-components-thereof": {
+    "title_cn": "特定外国制造的半导体器件、包含该器件的产品及其部件：美国国际贸易委员会决定不复审基于和解终止调查的初裁决定",
+    "summary_cn": "美国国际贸易委员会（USITC）决定不复审行政法官采纳双方联合提议的初裁，正式基于和解终止对特定外国制造半导体器件及其零部件的337调查。该决定表明商业知识产权纠纷的和解暂时缓解了相关涉外半导体企业的在美禁售与诉讼风险。从中美竞争视角看，此类337调查与和解反映出美方利用贸易合规与专利屏障监控与调控全球半导体硬件供应链的常态化手段。",
+    "importance_score": 4,
+    "score_reason": "属于半导体知识产权贸易争端与诉讼程序的间接相关议题，未直接涉及核心出口管制政策或前沿AI芯片封锁。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5SN3ZrbWZFU1loMzlZN1N0dlJyaXpWWm5hc3A1QXB5d0tWdGpvRFo1ZlY5U20wMzVpd1Z0eG9rUWtyc3d5YjhpLVl3LTJYMlRUUzk5bTRFRQ?oc=5": {
+    "title_cn": "AI：联合国人权高专图尔克呼吁在 AI 成为“对人类的生存风险”之前采取行动",
+    "summary_cn": "联合国人权事务高级专员图尔克警告称，AI 若缺乏有效监管可能对人类生存构成威胁，呼吁国际社会加速建立基于人权的治理框架。在全球 AI 治理话语权的争夺中，此类多边倡议反映出联合国试图推动统一安全规则的努力。然而在中美科技博弈加剧的背景下，两国在 AI 安全与监管哲学上的分歧，将使此类全球性统一标准的落地面临现实挑战。",
+    "importance_score": 4,
+    "score_reason": "涉及联合国推动的全球 AI 风险与人权治理框架，属于 AI 监管与安全等间接相关议题，未直接聚焦中美双边对抗。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMitwFBVV95cUxOUGhmLXRMRVE0WE5Uem9kbG05RmtLN1dYWGxNOUdvQzY4NjlDemFKYURSLXNOX3FCT29nMURTZjlhSzUtVEdYVkJIYjN5WTd0TnM3enVORjFFemJRSlQzS2RWclRFb3VsZ1BWY3lhSncxQUY2Y0FBcHp4MUNvQU1DR3lkVDRUcUtnYTlGTVhhQzhKSTNfWnl4MDNrNDlfQmROcjFLMzhFWTVYWDh1UElTbjdpcDRuaUU?oc=5": {
+    "title_cn": "AI如何重塑领导者需要作出的战略决策",
+    "summary_cn": "本文探讨了人工智能如何从根本上改变政企领导者的决策路径、风险评估与资源配置模式。在中美科技博弈日趋激烈的背景下，领导层对AI技术的战略敏捷性与治理能力正成为转化为国家及企业竞争优势的关键软实力。然而，文章主要关注组织管理与通用治理层面，未深入涉及地缘政治对抗的具体细节。",
+    "importance_score": 2,
+    "score_reason": "文章主要关注AI对企业与组织领导者决策模式的重塑，属于组织管理与应用层面的通用议题，与中美核心科技竞争关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTE0xbmkzNGZ0UVg1MW8yQ1BzVFJsUHhYOENzNkdDNVdkeGZqZGpFSERuLWpOdjJZVXl3U0hGMDE5UUpOX2lKWlBUZm51d2NnaUpUdjM5emo0VQ?oc=5": {
+    "title_cn": "管控先进人工智能：第14409号行政命令解读",
+    "summary_cn": "该文档对美国管控先进人工智能的行政命令进行了系统解读，重点聚焦前沿模型的国家安全评估、算力监控及风险防控机制。这表明美国正持续通过行政与立法协同，构建以国家安全为核心的前沿AI监管框架。在中美竞争背景下，此举意在强化美国在顶级AI技术上的封控能力，进一步推高中国获取与研发前沿AI技术的合规与技术壁垒。",
+    "importance_score": 8,
+    "score_reason": "涉及美国前沿AI控制政策与行政命令解读，属于美国AI国家安全战略与全球竞赛格局的核心议题。",
+    "china_relevance": "高"
+  }
+}
