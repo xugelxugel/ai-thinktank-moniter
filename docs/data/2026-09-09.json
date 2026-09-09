@@ -1,0 +1,100 @@
+{
+  "https://news.google.com/rss/articles/CBMinAFBVV95cUxQa2h6YWFrQXp0Uk5LLW1rd1E0YzZzQlhxM3NRMnEyV2VjS2x5bzV3SllteVdtaEF6bGRvcXlvV3BsUjJ2OERJbEYxX2kxbjY0NGl4d1BoeFNBSVFhR3pzNmdraGl3SndveloxR0ItZ2RwbXJ6enV1RmtrR0hITXlqRGVXcnQ4MGE1akZ0SmRidWMtLTdWSnNpUTFTZ3M?oc=5": {
+    "title_cn": "AI法律审查显示数百万人生活在歧视性地方法律之下",
+    "summary_cn": "斯坦福HAI研究团队利用AI自动化分析工具对地方法律文本进行深度审查，揭示了广泛存在的历史性歧视性条款。该研究展示了美国在“AI+法律科技”与公共治理领域的落地应用，但侧重于国内社会公平与地方立法审查。从中美AI竞争角度看，该成果反映了软性应用生态的繁荣，但与底层芯片、大模型对抗及国家安全战略关联不大。",
+    "importance_score": 2,
+    "score_reason": "该内容主要关注AI在美国地方法律审查中的应用，属于社会治理与应用层面，与中美AI科技博弈和芯片战争无直接联系。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1yRUVaUGl1V2FjZ05rZkN1VGZmajdjbjhxVVplX0hzMkNXWDFqeTU0QTNobVN5OFNvUVJuUTFRZEpwQUp1dW9HOTNuNUU4ZW5rbGJpVTFJZw?oc=5": {
+    "title_cn": "AI数据中心对全球电力系统构成日益严重的威胁",
+    "summary_cn": "本文聚焦全球AI数据中心快速扩张对电力基础设施带来的严峻挑战。在科技巨头加速大模型迭代的背景下，电力与能源供给已成为制约算力集群扩展的关键瓶颈。从中美AI竞争角度来看，这一趋势表明算力比拼正在向底层能源保障能力延伸，基础设施的承载力将直接影响两国AI产业的长期扩张速度。",
+    "importance_score": 5,
+    "score_reason": "议题关注AI数据中心的能源与基础设施瓶颈，属于AI算力扩展与全球治理的间接相关议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMisgFBVV95cUxQVU5qaWNIdlhaY0ZtV18ySktiUkZLZlcxRURSOXpGQ0FNandPNHlreUEwSnNPdHhzVTU2Q1J1RjFpYWltLWlZNm95Q1NQQ3doaXpPZ1FRbVpjN18teWtEdWFfWXNRME1PUXp6amE5OFRET0JENDBnLVh1TDVQejBDaEZtOG1PRlA4eUtEYnlka0J3dF9jaWFPWE5lMTMySFBaUU5ISTFPN1ZKeWRHcUw4UEhR?oc=5": {
+    "title_cn": "中等强国的 AI 自主权：在中美之间保留选择空间",
+    "summary_cn": "本文分析了全球中等强国在中美 AI 科技博弈加剧的背景下，如何通过多元化供应链和监管政策维系战略自主性。中等强国拒绝在美中 AI 技术生态之间进行二选一，力图保留议价能力与技术选择权。这表明第三国力量正在重塑美中 AI 全球竞争的走势，对两国的技术标准输出与阵营划分策略提出了新挑战。",
+    "importance_score": 8,
+    "score_reason": "文章直接讨论中等强国在中美 AI 科技博弈中的战略定位，切中两国全球技术生态竞争与地缘政治博弈的核心议题。",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMie0FVX3lxTFBld1lkNEJNSzEzM3lEbjM2RlNnNXJCMjhOVjIxb3lmMGpfTlhkVThnaHBjdjBFTGxpcERSRlZRa3NMWTVTZkRxdVhNRkVrNjNaYUhTbXVPUF9CNzFZR2d5eVZVYUN2N3kxeC1iV0l6T3hvQnp0SDc1bVZkSQ?oc=5": {
+    "title_cn": "面向 AI 时代的英国国防采购重塑",
+    "summary_cn": "本文分析了英国如何重构其国防采购体系，以加速前沿 AI 技术向军事能力的转化与部署。面对日益紧张的全球地缘政治格局，英美及其盟友正在通过防务体制改革构建 AI 技术防线，提振西方阵营的军事科技竞争力。这一趋势表明军事 AI 采购与供应链重构已成为西方应对大国竞争的重要抓手。",
+    "importance_score": 6,
+    "score_reason": "文章讨论了美国关键盟友在国防 AI 采购领域的机制改革，属于全球军事 AI 竞赛与西方防务策略调控的间接相关议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiogFBVV95cUxQZVRRZW9wV1RoQkhLUTVzY0JGY3BtZUpqZk1ySW96Qi1nUnFGZ3NWNDJXR0V5ZHdOUGxxakdIUzJaQ1N5Wl9rdVBCWGZPelIwRjV6aExqZ0RqRnRzUFA2amZuWHZZZlRUWHE5aFAtVExqeGszeW10NjBfZEMtY3BUVUpaM1EwM2RFNk03UXprSHZ0Q0JaQzhMbXVvdXQ2ZGdyeHc?oc=5": {
+    "title_cn": "科学家如何利用 AI agent 提升土壤研究",
+    "summary_cn": "本文探讨了智能体（AI agent）在土壤科学与农业研究中的应用，展现了 AI 赋能科学研究（AI for Science）的落地场景。尽管科研智能化是中美科技竞赛的重要底层能力，但该文章侧重于具体的生态与农业应用，未涉及大国博弈或战略政策。这反映出 AI 正在从通用大模型向垂直领域科研加速渗透，成为全球科研效率提升的基础工具。",
+    "importance_score": 2,
+    "score_reason": "文章关注 AI agent 在土壤科研中的具体应用，属于垂直领域的技术实践，与中美大国竞争、芯片制裁或地缘政治战略关联度极低。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNMk0yMVFtSjA1UGFGVjNzSUE5VmpNTExGTzF2Vmg5Tk12MG42QmE1ZW9FdHA1ZFVWRjdKU0JDcXp3elZlZ0VSaEJYR1F1cjZHcEsxaTNLSTFTd1A0TGZqYnQ3T2ZNbkRvR3dTUlZvcUprWXlwTnRLVHJGZUZzd3VsbFU4NFJhQTl1M0ZYZnF3VHVrVHM1LXA0ZkY0enZSMERsQ1p6VkRDTFo0NnJydXJ2Y0hieXpRM2FZ?oc=5": {
+    "title_cn": "智能体AI的全球护栏：联合国或任何机构能够提供吗？",
+    "summary_cn": "本文探讨了针对具备自主决策与执行能力的智能体AI（Agentic AI）设立全球治理规范的紧迫性与挑战，并质疑联合国等传统多边组织建立统一护栏的能力。在大国科技竞争加剧的背景下，中美两国在前沿AI安全与监管主导权上的分歧，使得全球统一的多边治理框架难以落地。智能体AI的规则制定正从全球多边协调演变为大国间制度供给与标准主导权的博弈。",
+    "importance_score": 5,
+    "score_reason": "文章聚焦于前沿智能体AI的全球治理与国际组织治理局限，属于AI治理与国际规范设定的间接相关议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5ON08wMWtmdG5NdTZkTmt1MGFCNkJuVk9IREhGSVpITi1lNnh0WXBiUlk1dlo5UlpYU3N2bHhUbnhiXzhzOUVaa0F0d2ZXRTJJRUJBR1QtZw?oc=5": {
+    "title_cn": "AI背后的数字化劳工：重新审视中国的人工智能与劳动",
+    "summary_cn": "本文探讨了中国AI产业爆发式增长背后庞大的数据标注员等底座劳动力群体的生存现状。规模化且高性价比的人工标注与反馈（RLHF）是中国大模型训练的重要支撑，但联合国视角更侧重于劳工权益保障与数字不平等问题。从中美AI竞争视角来看，基础数据治理与人力成本结构将间接影响两国AI基础设施的长期演进与迭代成本。",
+    "importance_score": 3,
+    "score_reason": "文章主要从联合国视角关注中国AI数据标注者的社会权益与工作环境，属于与中美直接战略竞争关系较远的劳动与社会治理议题。",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMilgFBVV95cUxONDEtcXkyWmNfWG1QRXB0Q19hTmJMekx6YTFjdmZCX0tpc0g4VVpBMkdIRzBKNEl1am5PLWllc3FYXzZxaUxkVXpBYlotX2pha0xTVGc2aFBlOUtRcGVweWNKdWhBWmZ3R0FjTEVFLWtrclFVemozOS15NHVwMVZkSXBIdXFxdlZPcVhLbjRjdmhIdUhCOHc?oc=5": {
+    "title_cn": "AI时代的虚假信息如何同时攻击人类与机器认知",
+    "summary_cn": "文章探讨了生成式AI时代虚假信息的新型威胁，指出攻击者不仅操纵人类心理，还通过数据污染与对抗攻击手段直接干预大模型等“机器认知”。在中美认知战与AI安全博弈升温的背景下，人机双重认知防御已成为国家安全与数字治理的新焦点。这一趋势促使美西方加速构建AI信息完整性标准，间接影响中美全球AI治理话语权之争。",
+    "importance_score": 5,
+    "score_reason": "议题聚焦于AI虚假信息治理与机器认知安全，属于中美AI国家安全与治理维度的间接相关议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiswFBVV95cUxOdm4zdWZ2cGlEZXlwUEFPVkNWeWxmTkZKandKNnQ1WkIySF9hWW55clc0dWIyOENWM3MxV1JnTW05dmc1WUFOM0haRkNxR1RkdnZSdTVjS3JuX1gyYU5lM21fX29GdWdacUh0R25yRHFZQUNhUlBmVkVhUElTdXVYSnBBWXNqcXV4bEwwS1ZMdHYweXRGMEcwZk0xa2RTUWF6TEI3T2plcTQ5b3ZLaXpEZnBpbw?oc=5": {
+    "title_cn": "为什么投资者不仅需要看清 AI 的机遇，还要更清楚地认识其风险以应对不平等问题",
+    "summary_cn": "本文呼吁资本市场在评估 AI 商业前景的同时，必须深刻审视其引发的社会不平等与治理风险。在中美 AI 竞争背景下，西方资本对“负责任 AI”及 ESG 风险的关注正重塑投资偏好与合规成本，这可能拉大中美 AI 资本运作模式的差异。随着全球对数字鸿沟治理呼声渐高，AI 伦理标准与风险防范正成为影响跨国 AI 投资与产业链布局的新变量。",
+    "importance_score": 3,
+    "score_reason": "文章主要聚焦于投资者如何评估 AI 带来的社会不平等与风险，属于投资伦理与数字包容性议题，与中美核心技术博弈关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://www.technologyreview.com/2026/09/08/1142088/danijar-hafner-developing-plan-ahead-agents/": {
+    "title_cn": "这位 AI 创业者正在开发能够应对突发状况并提前规划的 Agent",
+    "summary_cn": "前沿 AI 学者 Danijar Hafner 成立隐形初创公司，致力于融合世界模型与强化学习，开发能够在不确定环境中自主规划的高阶 AI Agent。该路线突破了传统大语言模型的局限，代表了美国硅谷在前沿 AGI 演进路径上的最新探索。在中美 AI 竞争中，世界模型与复杂规划 Agent 正在成为双方在具身智能及自主决策系统领域角逐的关键技术高地。",
+    "importance_score": 3,
+    "score_reason": "文章聚焦于美国初创企业在前沿 AI Agent 技术路线上的探索，未直接涉及中美地缘政治、出口管制或国家安全战略等核心议题。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMisgFBVV95cUxQc3pxRWtJU3F6MTNwRHhLUUEyNnU0Vk05aTU0VWdLZ0hjNzVfRmQzSkVPcG1PdUxSTThOaTBxaTVXU1RlVzRpanp5MWxoR3hRMWg1eGpESWJFdVh1aU8zTUtHaTltN1h1MUpGVzAzbDhjeTQtSHlTNjh2TEVUVVFJaGtKWXdGWV95V0RwOFRJQlZDMllPaU9zUmxCT2NwWVJRU292VkN5b1N0RHUzOW51T2xB?oc=5": {
+    "title_cn": "自主性悖论：当人类负责批准而由AI做出决策",
+    "summary_cn": "本文探讨了AI决策系统中“人类在回路中”（Human-in-the-loop）沦为形式化批准的“自主性悖论”，揭示了人类控制权名存实亡的安全治理风险。在前沿AI与军事自主系统加速演进的背景下，监管机制失灵将对全球AI安全与责任归属产生深远影响。这也间接映射出中美两国在军事AI与自主系统标准制定中，关于责任界定与监管规则的潜在博弈。",
+    "importance_score": 4,
+    "score_reason": "文章聚焦于AI自主性伦理与人类监管失效的风险，属于AI治理与前沿安全领域的间接相关议题。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMibkFVX3lxTFA2UW9aRl9KUUM0eE53dnVtODNyTEdEaFdmdDZqQ1MxQ05IdzFhdVc0RVNKRWpDLW80SE5HMk44OURNSjUzNXVJZlFiS211NW9TYTBkakR3WnMwZWRGX3N3Z1ZCLXJOMHlXRVlZMDNR?oc=5": {
+    "title_cn": "美国第119届国会S.4214法案：《人工智能数据中心暂停法案》",
+    "summary_cn": "该法案旨在暂缓或限制美国境内新 AI 数据中心建设，反映出美国立法层面对算力扩张带来的电力瓶颈与环境影响的深层担忧。算力基础设施是中美 AI 竞赛的核心战力，此类限制性立法若获推进，将直接拖慢美国 AI 算力规模的扩建速度，可能削弱其对华算力领先优势。这凸显了美国在寻求全球 AI 霸权与解决国内基础设施承载力限制之间的现实矛盾。",
+    "importance_score": 7,
+    "score_reason": "该法案涉及美国 AI 算力基础设施的关键立法管控，直接影响美国维持对华 AI 算力规模优势的能力。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMingFBVV95cUxOQTFTT29RZlVCMVE5MFhyOVZiSDBQTUFQcjkzcEdzM19lb2Y0aE5RUGFUX1ZIVkNBTHpWLXhONVZTV3dJdFM1Vm5mT3pnTTNGbWY2YzhaaFdnbjdCcmEzUWhqYzlzMEREYXBNZkxUY3UyTnloRTdVZ1Y2T1NWZ1c4MndEZVEwM0dTRmRXTUNRWWNHLVAxYTN6TEFFVDI1QQ?oc=5": {
+    "title_cn": "GTIPA视角：制定驱动创新的AI政策",
+    "summary_cn": "本报告由ITIF旗下的全球贸易与创新政策联盟（GTIPA）发布，重点关注如何通过营造亲创新的监管环境来提升国家AI竞争力。在当前中美科技博弈加剧的背景下，此类倡议旨在推动美国及其盟友保持政策灵活性以加速AI产业化，防止过度监管削弱西方在全球AI竞赛中的领先地位。",
+    "importance_score": 7,
+    "score_reason": "文章涉及美国主流智库关于全球AI政策与国家创新战略的规划，间接影响中美全球AI规则制高点的争夺。",
+    "china_relevance": "中"
+  },
+  "https://www.federalregister.gov/documents/2026/09/08/2026-18260/certain-foreign-fabricated-semiconductor-devices-products-containing-the-same-and-components-thereof": {
+    "title_cn": "特定外国制造的半导体器件、包含该器件的产品及其部件：美国贸委会决定不复审关于根据和解终止调查的初步裁决通知",
+    "summary_cn": "美国国际贸易委员会（USITC）根据当事方提交的联合动议与和解协议，决定终止对特定外国制造半导体器件及相关产品的337调查。该事件表明涉及半导体硬件领域的跨国专利纠纷通过商业和解得到了阶段性化解，短期内规避了行政禁售对相关芯片供应链的直接冲击。在当前中美半导体博弈大背景下，这类337调查与私营和解反映出知识产权诉讼已成为各方围绕半导体与AI算力供应链进行战术牵制的重要手段。",
+    "importance_score": 5,
+    "score_reason": "涉及半导体供应链与知识产权博弈，但因属于企业间和解终止调查，对中美AI竞争的大局和政策走向影响有限。",
+    "china_relevance": "中"
+  }
+}
