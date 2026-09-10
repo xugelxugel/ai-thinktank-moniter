@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年09月10日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年09月10日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">7</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">4</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">1</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">2</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-critical">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Hoover Institution</span>
+                    <span class="card-date">日期未知</span>
+                </div>
+                <h3 class="card-title">中国正在如何窃取美国的 AI</h3>
+                <p class="card-title-en">How China Is Stealing America’s AI</p>
+                <p class="card-llm-summary">文章指责中国在 AI 领域正在重演其既有的重商主义策略，即通过知识产权获取、本土产业补贴、封锁外国竞争者以及向全球市场倾销来重塑竞争格局。这集中体现了美国保守派智库将中国 AI 崛起视为非公平竞争与重大国家安全威胁的鹰派叙事，预示着美方将进一步推动更严厉的对华技术围堵与产业保护政策。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 9/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章直接聚焦中美 AI 核心竞争、工业政策对抗与美国对华技术围堵策略，属于最高优先级的情报议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://cms.hoover.org/research/how-china-stealing-americas-ai" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-critical">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">CSIS</span>
+                    <span class="card-date">09-10 05:58</span>
+                </div>
+                <h3 class="card-title">TRUST 框架下的模型蒸馏：倡议打造美印可信 AI 模型蒸馏与扩散走廊</h3>
+                <p class="card-title-en">Distillation Under TRUST: The Case for a U.S.-India Trusted AI Model Distillation and Diffusion Corridor</p>
+                <p class="card-llm-summary">智库 CSIS 提出构建美印“可信 AI 模型蒸馏与扩散走廊”，主张通过向印度开放前沿 AI 模型的蒸馏与衍生授权，深化美印地缘科技同盟。这一战略旨在利用印度的人才与市场优势，构建由美国主导且安全可控的 AI 技术扩散通道，从而抵消中国在全球南方及开源 AI 领域的渗透力。这表明美国正将 AI 模型蒸馏与技术分发作为地缘博弈的新工具，通过构建排他性的“可信生态”来巩固其全球 AI 霸权。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 8/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章探讨美国通过美印联盟重塑全球 AI 模型扩散机制，属于美国组建科技同盟对抗中国 AI 影响力的国家安全与地缘战略议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPUklPaTdpVDBlMnhHbmx1YWhhSWVDcTlEZEl1VzNuc3lSd1B6QzJIZTVCSWlrMWRzaDYtQnVsOC01cklXU0NaWjh4M25LVm1LMUFHQkVZVTE3ZUh6Y0JadGNubFlMYXlZZ3BNN2tKbFFIYS1Fd1c5WG9KaXNqWHdOcEc1bGF6OVZjZUVsYzZaMU95czgzU3hIUFd4Wm4xMzNUVkVtN09FVk5jVHI0ejBYSmln?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-critical">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Brookings Institution</span>
+                    <span class="card-date">09-10 01:29</span>
+                </div>
+                <h3 class="card-title">推进军事AI的人类控制</h3>
+                <p class="card-title-en">Advancing human control of military AI</p>
+                <p class="card-llm-summary">布鲁金斯学会探讨了在军事决策与自主武器系统中强化“人类控制”的技术与政策路径。在中美军事智能化竞赛加剧的背景下，美方意图通过确立军事AI使用规范与风险防控标准，既维持自身军事技术优势，又防范因算法失控引发的突发大国冲突。这反映了美国试图在对华军事AI竞争中通过规则塑造与风险管控来巩固战略主导权。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 8/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章探讨美国军事AI战略与自主武器控制，直接涉及中美军事智能化博弈、国家安全战略及全球安全治理规范。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE15OEJjNUFVWTBLUXZHNlRwUnJ5alVMNEU1aXdZanhxVDltdHJMNkdqTGVWY2RzdnhNTi1tdmZ5S1hKRDZ0ZktUeVQ5djlIMWJqaDh3UkpCQkRXNS14czh4Skd1ZkhqOHd0S1E3N180WnhORXRuX1VEMWlJQnduTFE?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">CNAS</span>
+                    <span class="card-date">09-10 03:18</span>
+                </div>
+                <h3 class="card-title">AI的现代神话</h3>
+                <p class="card-title-en">The Modern Mythology of AI</p>
+                <p class="card-llm-summary">本文出自美国国家安全智库 CNAS，旨在解构当前战略界将 AI 能力与其在国家安全中作用过度神话的倾向。文章指出，盲目夸大 AI 的威慑力或误判其发展节奏容易导致战略认知偏差，政策制定者须客观审视 AI 的实际技术局限。这一分析对评估中美 AI 技术的真实差距以及避免因过度恐慌而制定脱离实际的对华出口管制政策具有重要参考价值。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章出自顶级智库，探讨了美战略界对 AI 能力的认知误区，影响美对华科技竞争与国家安全策略的制定。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE55VUM0emx5SS1KeGtFZW5qTWVzMVdtWXp4dzlTSjM2OE5odVozTXRRa3NMV1ZLNjBmYll0azhvYXFMQnNuemd5S2pDRmxxTElNekxSeXBYdDNNOHpSQm15ajFNVkdtdGwyWmhZSE9PWlZzYjE3LU55WGd5bw?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#5</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">ITIF</span>
+                    <span class="card-date">09-09 18:43</span>
+                </div>
+                <h3 class="card-title">辩论：人工智能的风险是否超过其收益？ | 演示文稿 | 2026年10月3日</h3>
+                <p class="card-title-en">Debate: Do the Risks of Artificial Intelligence Outweigh Its Benefits? | Presentation | Oct 3, 2026</p>
+                <p class="card-llm-summary">信息技术与创新基金会（ITIF）举办本次辩论，集中探讨AI技术风险与潜在收益的权衡，体现了美国科技政策界在AI监管路线上的分歧。ITIF作为支持创新的智库，通常警惕过度监管破坏本土产业活力。从中美AI竞争视角看，此类辩论反映了美国在制定AI治理政策时的核心矛盾，即如何在防范技术风险的同时，避免因过重监管而削弱自身相对中国的AI创新速度与战略领先地位。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：议题聚焦美国国内AI治理与监管政策的分歧探讨，间接影响美国在对华AI竞争中的政策制定与监管节奏。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: artificial intelligence</span>
+                    <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxObXJRWjB4RHR6Z1BwU2hhejJtSkdGU1YyVHBhZ0t6akZpSDNTZ1BYNHliVEpFdWJCdkwtOUp4NUtaMFBPdXZ5UGFkaW5xU1E4Xy1JdWhpbnktYUNnakY1UENZWlc4bS1ZVy1nZ1dZSEVmeXdCU0lpS1NodGV2UTBUcUZpblVwS1pEdXdJZmt0V3E3ajByZFBYSkxVY3NnVmVUNzczTE5iTQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#6</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">World Bank</span>
+                    <span class="card-date">09-10 03:15</span>
+                </div>
+                <h3 class="card-title">各国政府如何使用 AI？来自全球的新证据</h3>
+                <p class="card-title-en">How are governments using AI? New evidence from around the world</p>
+                <p class="card-llm-summary">世界银行此项研究梳理了全球公共部门在政务服务与数字化治理中采纳 AI 的最新实践与趋势。从中美竞争视角来看，公共部门的 AI 应用效率正演变为衡量国家数字治理效能的关键指标。两国未来在向全球南方国家输出数字基础设施及政务 AI 治理标准上的隐性博弈值得关注。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章探讨全球公共部门的 AI 落地与应用实践，属于具体领域的数字化治理议题，与中美芯片战或核心技术对决直接关联度较低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxOUDVmTUp0ek93a2VNLWFnd0F1UHJfVjlvMjk5b1hpY1Y0TTEwQkdzc3ZRLUhKWWItQ0hvREoteE5sYWhJSTV3MlZqTzFzWHp1aVFlQ0s3SlJ6MnRPY29GcHppemE5NmFrdEpBY2ZocGZrNTlnR1BlTVRpSHB3d1JVZHZ1czl3REJ1V2xzWFdVVHpESFQ0RnNHRkk2cDdxZkFYOWpSYW9FMUJWb240bTJyYg?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#7</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Atlantic Council</span>
+                    <span class="card-date">09-10 02:32</span>
+                </div>
+                <h3 class="card-title">下月国际货币基金组织与世界银行年会值得关注的五大议题</h3>
+                <p class="card-title-en">The five issues to watch at next month’s IMF-World Bank Annual Meetings</p>
+                <p class="card-llm-summary">文章预告了即将召开的国际货币基金组织与世界银行年会关注的五大核心问题，包括债务激增、贸易碎片化以及 AI 带来的颠覆性冲击。从中美博弈视角来看，贸易碎片化与 AI 颠覆交织，反映出技术地缘政治正在重塑全球经济与多边金融治理格局。随着全球经济面临技术脱钩压力，多边机构正被迫评估 AI 对全球生产力和产业结构的远期影响。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章仅将 AI 颠覆作为宏观经济大背景下的议题之一提及，未深入剖析中美 AI 核心技术竞争、芯片管制或战略对决。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://www.atlanticcouncil.org/blogs/econographics/the-five-issues-to-watch-at-next-months-imf-world-bank-annual-meetings/" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-09-10 00:33 UTC
+    </div>
+</body>
+</html>
