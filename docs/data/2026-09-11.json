@@ -1,0 +1,79 @@
+{
+  "https://news.google.com/rss/articles/CBMirgFBVV95cUxPSXgya1VLbml1ZzN3TVJrMTgtN2hwNi02d21aTnpldE5zNXZqQ2NPVkIyRlYyb0tlQmdRLUdKOGhCeHoyRDdEM0w3YTVHVEJKdkZ2TFZ2S3JZTkZtSktvU2tGc3hNMGlZY0N3cmRjMXpVOVJVQVFVOFlKLU9UMktWODQyY1BqMEw2Ym1fNVh5eUNZMlN0TEk1VzNaVU5ndGcxUmNBdHBCRWh3T01PQnc?oc=5": {
+    "title_cn": "智能体、助手与意识提升者：AI 在智库传播中的下一步",
+    "summary_cn": "本文探讨了美国智库在公共传播与政策推广中应用 AI 智能体与助手的下一阶段策略。报告分析了生成式 AI 如何重塑智库的议程设置与公众沟通能力，展现了美国政策研究机构在 AI 工具落地应用上的最新实践。尽管该文侧重于组织内部运营与传播效率提升，但反映了美国智库界正加速利用 AI 强化其政策话语权构建与软实力输出。",
+    "importance_score": 2,
+    "score_reason": "文章仅讨论智库内部利用 AI 工具提升传播与运营效率，属于 AI 在特定领域的应用实践，与中美 AI 竞争、芯片制裁或科技战略无关。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMioAFBVV95cUxQeGxXaDMyT3RUVUozRXNxX3V1VVprSmYwcEh1aGZtMU84TTBXN2hEVWdNY1Frd3EycDA4cjZVVjQ5ZUhqcEt0YmlHWXA0V09MVENtdFZzcndHazJtOUtOR1NyMlFJQ2d1a1J1NXFYby1FZC1Yc2xVeXhwLXlDNjVBSTM5OUxlSEFHVkpVc3NDUEwwOXdPMVg3cW0yczdQZXox?oc=5": {
+    "title_cn": "让人民繁荣：数据中心之争与 AI 政策的未来",
+    "summary_cn": "该文聚焦美国国内数据中心扩建面临的政策障碍与能源供应争端。智库指出，放宽规制与保障算力能源供给是确保美国维持 AI 领先地位的核心，这直接关系到美国能否在基础设施层面保持对中国集中力量办大事模式的算力绝对优势。",
+    "importance_score": 7,
+    "score_reason": "文章探讨美国 AI 数据中心建设与能源政策，算力承载力直接关乎美国能否在底层算力规模上维持对华竞争优势。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1xN2hsaVpnMlk1V0VHWHBFdzFSUXRJdmVXdF9uRnRNVnRscFlBQkRrMm1FUUxpS3g2MWtXR1UxTTJBNTBtMXR4QVp3dXFJelRyVFYzeDJxS0lsY3pqMG9n?oc=5": {
+    "title_cn": "AI背后的人类劳动：重新思考中国的人工智能与工作",
+    "summary_cn": "本文探讨了中国人工智能快速突破背后庞大的数据标注与清洗等底层劳工群体，揭示了高度自动化算法依赖密集的低成本人类劳动的现实。从中美竞争视角来看，尽管算力和算法是地缘博弈焦点，但中国庞大的数据标注劳工体系仍为其AI产业提供了关键的基础支撑，同时也突显了全球AI供应链底层的劳动权益与治理挑战。",
+    "importance_score": 3,
+    "score_reason": "文章侧重于中国AI产业链中的底层劳动者与数字不平等议题，属于社会劳动与AI应用层面，与中美地缘政治及硬科技直接竞争的关联度较低。",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBKeThHYWpFQ052enFKcmZuZG1OcDRKWVB6bkFrajRLQWdUVU44anBpWUgxd2Y5SU9HTEtUc0M5d0lHcGFGQmpKRVhrQTFOQm95THduNmlVdw?oc=5": {
+    "title_cn": "面向发展中国家 AI 论坛（AIFOD）——非洲峰会（2027年2月17-19日）",
+    "summary_cn": "联合国预告将于2027年2月举办面向发展中国家 AI 论坛（AIFOD）非洲峰会，旨在促进全球南方国家的 AI 能力建设与技术普及。尽管议题侧重于数字不平等与多边治理，但其背后折射出中美两国在非洲及全球南方国家争夺 AI 技术标准、数字基础设施与外交影响力的潜在角力。",
+    "importance_score": 3,
+    "score_reason": "议题侧重于发展中国家 AI 应用与数字鸿沟，属于与中美核心对抗关系较远的外围治理议题。",
+    "china_relevance": "低"
+  },
+  "https://www.technologyreview.com/2026/09/10/1141649/powering-ai-is-an-architecture-problem/": {
+    "title_cn": "解决 AI 供电难题本质上是一个架构问题",
+    "summary_cn": "本文揭示了全球最大数据中心枢纽美国弗吉尼亚州阿什本因电网故障频发导致的严重断电隐患。随着前沿 AI 大模型算力需求的爆发式增长，老旧的电网架构与集中式供电瓶颈正严重制约美国 AI 数据中心的扩容能力。从中美竞争视角来看，电力与能源基建的建设效率和韧性正从底层隐性因素演变为决定双方 AI 算力集群规模化落地的战略关键。",
+    "importance_score": 6,
+    "score_reason": "揭示了美国 AI 算力基建面临的电力瓶颈，属间接影响中美 AI 算力规模竞速的基础设施议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5Yb1JvLTB2VmZERTRUSFpld2lQWF8zSkY1UTdwYW8xcmVPbWpPM1JxT0FwUkZocHRSVVhwOXVWZU9MTDhoXzhfQ3F4V2o?oc=5": {
+    "title_cn": "水资源、清洁能源与人工智能：巴拉圭在 AI 时代的可持续发展模式",
+    "summary_cn": "本文探讨了巴拉圭如何利用其丰富的纯净水与水电等清洁能源资源，打造支持 AI 数据中心基础设施的发展模式。从中美 AI 竞争视角来看，这反映了全球 AI 算力急剧扩张对电网和散热资源的巨大依赖，凸显了绿色能源基础设施正成为全球算力布局的重要外围争夺点。",
+    "importance_score": 3,
+    "score_reason": "文章关注巴拉圭利用清洁能源支撑 AI 发展，属于 AI 算力能耗与可持续发展议题，与中美核心科技对抗直接关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZ2VnU2RMNVZBV1FucUJwc2RJOF9BLUpPVjdGbnk1SHYyY3lwNGpQdmg1cTVYN0M5Vzd4V0JwcDhLelBVYmxIRFRQMEwyR2ZfNnBRdFhaZGRGbGFQNlk5VVo2Um5kZUxlcHctWXdXQkdNRi1QSkloeVk1WVdtRFc5bFlPS3RONW9KQ3VzLW5PVUQ4eW1HMXhfSU1nTkk1U2lYZzZBdTNpSkhGNmVn?oc=5": {
+    "title_cn": "欧洲如何解决其迫在眉睫的 AI 算力基础设施短缺问题？",
+    "summary_cn": "本文探讨了欧洲在 AI 算力基础设施方面的严重不足及其破解路径。在中美两国全力压注算力基建、加剧前沿大模型博弈的背景下，欧洲对美国云巨头的高度的依赖暴露出其数字主权劣势。欧洲若无法弥补算力短缺，不仅将在全球 AI 竞争中进一步边缘化，也将削弱其在中美科技对峙中的地缘战略自主性。",
+    "importance_score": 6,
+    "score_reason": "议题聚焦全球 AI 算力基础设施格局与欧洲技术主权，属于中美科技博弈的间接相关领域。",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/09/10/1141421/healthcare-ais-next-test-is-integration/": {
+    "title_cn": "医疗 AI 的下一个考验是系统集成",
+    "summary_cn": "大型科技公司正加速将长文本处理与复杂术语解析等前沿 AI 能力引入医疗领域，但行业痛点正从模型能力演变为与现有临床工作流程的深度集成。在中美 AI 竞争中，虽然美国在底层大模型能力上保持领先，但在医疗等高壁垒垂直场景的落地效率将决定其技术优势能否转化为实际的生产力与商业壁垒。",
+    "importance_score": 3,
+    "score_reason": "本文主要探讨 AI 在医疗行业的垂直场景应用与系统集成瓶颈，属于产业应用层面，与中美科技博弈及战略竞争关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMinwFBVV95cUxPTWdDUUl1VDcyX1l6LUhJdksyTXlpODJZVUJUdDFYMGxsVTFJaVZ6QUZDT19lczNKRmlnbm8ycFd5eHNYZmltUlRFWG9LU3VwUlJxQkczcUhXeVBLWUQ3UmFUd2Zpd3hhQWxMaVQtN3RMcEUzOW5zUDNGaXQ5Y2phdFc5bkJGa242NnpmcThRWU9MaWF6YmZrLXZKSUVGY1k?oc=5": {
+    "title_cn": "中国人工智能目标与欧洲的战略选择",
+    "summary_cn": "本文分析了中国在人工智能领域的战略目标以及欧洲面对中国AI崛起时所面临的战略抉择。在中美科技博弈日益加剧的背景下，欧洲的政策走向将直接影响全球AI技术标准、供应链格局以及第三方地缘力量的平衡，是评估中美AI大国竞争外部环境的关键视角。",
+    "importance_score": 8,
+    "score_reason": "文章直接分析中国AI战略及其对欧洲的影响，涉及全球AI科技竞赛格局与中美欧三边博弈。",
+    "china_relevance": "高"
+  },
+  "https://www.federalregister.gov/documents/2026/09/10/2026-18490/foreign-trade-zone-ftz-183-notification-of-proposed-production-activity-dongjin-semichem-texas-inc": {
+    "title_cn": "对外贸易区（FTZ）183拟议生产活动通知：东进世美肯德克萨斯有限公司（半导体级光刻胶稀释剂）德克萨斯州基林市",
+    "summary_cn": "韩国半导体材料巨头东进世美肯申请在德克萨斯州对外贸易区内生产半导体级光刻胶稀释剂，以配套美本土晶圆厂需求。光刻胶配套化学品是先进制程芯片制造的关键上游材料，该举措反映出美国正在加速补齐上游化学材料短板并强化本土供应链生态。这有助于提升美国本土AI芯片制造的供应链韧性，间接加剧对华半导体先进制程的技术竞争壁垒。",
+    "importance_score": 5,
+    "score_reason": "涉及美国本土半导体关键上游化学材料供应链建设，属于半导体硬件供应链的间接相关议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOUXBHQ2R3S19oaHUyQzBDWlg2YXhLWHdQWk1peDE5dy13R3lna3dTeVVTd2hCUmprUEtZaUM0Z1dyclNlNkxuMWNxeDQtMlR3TzhLQ3dMbVQ4Z21jT3J3dHppT3VqTTM1aHZ6cG1GTUlSa3JYZEFBRFBFZFk0X19mX19HTUsyZV9PRmJsaGdLMG1vdnZrM042T3Fac3hyWjZkcjFsVnlvNF9lVTY2RDVTQW9OV1NmQm5VSVQ0OGZmaGNZQmY4ODR5TW50eV9EN291a3pVS0NwMUtmeUkxT3NNd19NT0tsbkdUQnc?oc=5": {
+    "title_cn": "中美 AI 竞赛正如何演进？",
+    "summary_cn": "摩根大通从全球金融与资本市场的视角，梳理了中美两国在人工智能领跑权争夺中的最新动态与战略态势。分析涵盖了算力芯片管制、开源与闭源生态演变以及大模型商业化落地等核心维度对竞争格局的影响。这表明顶级华尔街机构正将中美 AI 竞争视为评估未来全球经济增长与地缘政治风险的核心变量。",
+    "importance_score": 10,
+    "score_reason": "文章由全球顶级金融机构发布，直接聚焦“中美 AI 竞赛”这一核心议题进行深度评估。",
+    "china_relevance": "高"
+  }
+}

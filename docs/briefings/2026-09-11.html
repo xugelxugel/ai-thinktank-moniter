@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年09月11日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年09月11日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">11</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">3</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">3</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">5</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-critical">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">JPMorgan Chase</span>
+                    <span class="card-date">09-10 09:28</span>
+                </div>
+                <h3 class="card-title">中美 AI 竞赛正如何演进？</h3>
+                <p class="card-title-en">How is the U.S.-China AI race evolving?</p>
+                <p class="card-llm-summary">摩根大通从全球金融与资本市场的视角，梳理了中美两国在人工智能领跑权争夺中的最新动态与战略态势。分析涵盖了算力芯片管制、开源与闭源生态演变以及大模型商业化落地等核心维度对竞争格局的影响。这表明顶级华尔街机构正将中美 AI 竞争视为评估未来全球经济增长与地缘政治风险的核心变量。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 10/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章由全球顶级金融机构发布，直接聚焦“中美 AI 竞赛”这一核心议题进行深度评估。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMi6gFBVV95cUxOUXBHQ2R3S19oaHUyQzBDWlg2YXhLWHdQWk1peDE5dy13R3lna3dTeVVTd2hCUmprUEtZaUM0Z1dyclNlNkxuMWNxeDQtMlR3TzhLQ3dMbVQ4Z21jT3J3dHppT3VqTTM1aHZ6cG1GTUlSa3JYZEFBRFBFZFk0X19mX19HTUsyZV9PRmJsaGdLMG1vdnZrM042T3Fac3hyWjZkcjFsVnlvNF9lVTY2RDVTQW9OV1NmQm5VSVQ0OGZmaGNZQmY4ODR5TW50eV9EN291a3pVS0NwMUtmeUkxT3NNd19NT0tsbkdUQnc?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-critical">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Bruegel</span>
+                    <span class="card-date">09-10 16:20</span>
+                </div>
+                <h3 class="card-title">中国人工智能目标与欧洲的战略选择</h3>
+                <p class="card-title-en">China’s artificial intelligence goals and strategic choices for Europe</p>
+                <p class="card-llm-summary">本文分析了中国在人工智能领域的战略目标以及欧洲面对中国AI崛起时所面临的战略抉择。在中美科技博弈日益加剧的背景下，欧洲的政策走向将直接影响全球AI技术标准、供应链格局以及第三方地缘力量的平衡，是评估中美AI大国竞争外部环境的关键视角。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 8/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章直接分析中国AI战略及其对欧洲的影响，涉及全球AI科技竞赛格局与中美欧三边博弈。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: artificial intelligence</span>
+                    <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPTWdDUUl1VDcyX1l6LUhJdksyTXlpODJZVUJUdDFYMGxsVTFJaVZ6QUZDT19lczNKRmlnbm8ycFd5eHNYZmltUlRFWG9LU3VwUlJxQkczcUhXeVBLWUQ3UmFUd2Zpd3hhQWxMaVQtN3RMcEUzOW5zUDNGaXQ5Y2phdFc5bkJGa242NnpmcThRWU9MaWF6YmZrLXZKSUVGY1k?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">R Street Institute</span>
+                    <span class="card-date">09-11 03:56</span>
+                </div>
+                <h3 class="card-title">让人民繁荣：数据中心之争与 AI 政策的未来</h3>
+                <p class="card-title-en">Let People Prosper: Data Center Wars and the Future of AI Policy</p>
+                <p class="card-llm-summary">该文聚焦美国国内数据中心扩建面临的政策障碍与能源供应争端。智库指出，放宽规制与保障算力能源供给是确保美国维持 AI 领先地位的核心，这直接关系到美国能否在基础设施层面保持对中国集中力量办大事模式的算力绝对优势。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章探讨美国 AI 数据中心建设与能源政策，算力承载力直接关乎美国能否在底层算力规模上维持对华竞争优势。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, AI policy, data center</span>
+                    <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQeGxXaDMyT3RUVUozRXNxX3V1VVprSmYwcEh1aGZtMU84TTBXN2hEVWdNY1Frd3EycDA4cjZVVjQ5ZUhqcEt0YmlHWXA0V09MVENtdFZzcndHazJtOUtOR1NyMlFJQ2d1a1J1NXFYby1FZC1Yc2xVeXhwLXlDNjVBSTM5OUxlSEFHVkpVc3NDUEwwOXdPMVg3cW0yczdQZXox?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">MIT Technology Review</span>
+                    <span class="card-date">09-10 19:00</span>
+                </div>
+                <h3 class="card-title">解决 AI 供电难题本质上是一个架构问题</h3>
+                <p class="card-title-en">Powering AI is an architecture problem</p>
+                <p class="card-llm-summary">本文揭示了全球最大数据中心枢纽美国弗吉尼亚州阿什本因电网故障频发导致的严重断电隐患。随着前沿 AI 大模型算力需求的爆发式增长，老旧的电网架构与集中式供电瓶颈正严重制约美国 AI 数据中心的扩容能力。从中美竞争视角来看，电力与能源基建的建设效率和韧性正从底层隐性因素演变为决定双方 AI 算力集群规模化落地的战略关键。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：揭示了美国 AI 算力基建面临的电力瓶颈，属间接影响中美 AI 算力规模竞速的基础设施议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, data center</span>
+                    <a href="https://www.technologyreview.com/2026/09/10/1141649/powering-ai-is-an-architecture-problem/" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#5</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Bruegel</span>
+                    <span class="card-date">09-10 18:30</span>
+                </div>
+                <h3 class="card-title">欧洲如何解决其迫在眉睫的 AI 算力基础设施短缺问题？</h3>
+                <p class="card-title-en">How can Europe address its pressing AI compute infrastructure shortfall?</p>
+                <p class="card-llm-summary">本文探讨了欧洲在 AI 算力基础设施方面的严重不足及其破解路径。在中美两国全力压注算力基建、加剧前沿大模型博弈的背景下，欧洲对美国云巨头的高度的依赖暴露出其数字主权劣势。欧洲若无法弥补算力短缺，不仅将在全球 AI 竞争中进一步边缘化，也将削弱其在中美科技对峙中的地缘战略自主性。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：议题聚焦全球 AI 算力基础设施格局与欧洲技术主权，属于中美科技博弈的间接相关领域。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, compute</span>
+                    <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxNZ2VnU2RMNVZBV1FucUJwc2RJOF9BLUpPVjdGbnk1SHYyY3lwNGpQdmg1cTVYN0M5Vzd4V0JwcDhLelBVYmxIRFRQMEwyR2ZfNnBRdFhaZGRGbGFQNlk5VVo2Um5kZUxlcHctWXdXQkdNRi1QSkloeVk1WVdtRFc5bFlPS3RONW9KQ3VzLW5PVUQ4eW1HMXhfSU1nTkk1U2lYZzZBdTNpSkhGNmVn?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#6</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Federal Register - Semiconductor</span>
+                    <span class="card-date">09-10 12:00</span>
+                </div>
+                <h3 class="card-title">对外贸易区（FTZ）183拟议生产活动通知：东进世美肯德克萨斯有限公司（半导体级光刻胶稀释剂）德克萨斯州基林市</h3>
+                <p class="card-title-en">Foreign-Trade Zone (FTZ) 183, Notification of Proposed Production Activity; Dongjin Semichem Texas, Inc.; (Semiconductor-Grade Photoresist Thinner); Killeen, Texas</p>
+                <p class="card-llm-summary">韩国半导体材料巨头东进世美肯申请在德克萨斯州对外贸易区内生产半导体级光刻胶稀释剂，以配套美本土晶圆厂需求。光刻胶配套化学品是先进制程芯片制造的关键上游材料，该举措反映出美国正在加速补齐上游化学材料短板并强化本土供应链生态。这有助于提升美国本土AI芯片制造的供应链韧性，间接加剧对华半导体先进制程的技术竞争壁垒。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及美国本土半导体关键上游化学材料供应链建设，属于半导体硬件供应链的间接相关议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: semiconductor</span>
+                    <a href="https://www.federalregister.gov/documents/2026/09/10/2026-18490/foreign-trade-zone-ftz-183-notification-of-proposed-production-activity-dongjin-semichem-texas-inc" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#7</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">UN News</span>
+                    <span class="card-date">09-10 21:14</span>
+                </div>
+                <h3 class="card-title">AI背后的人类劳动：重新思考中国的人工智能与工作</h3>
+                <p class="card-title-en">Human labour behind AI: Rethinking artificial intelligence and work in China</p>
+                <p class="card-llm-summary">本文探讨了中国人工智能快速突破背后庞大的数据标注与清洗等底层劳工群体，揭示了高度自动化算法依赖密集的低成本人类劳动的现实。从中美竞争视角来看，尽管算力和算法是地缘博弈焦点，但中国庞大的数据标注劳工体系仍为其AI产业提供了关键的基础支撑，同时也突显了全球AI供应链底层的劳动权益与治理挑战。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章侧重于中国AI产业链中的底层劳动者与数字不平等议题，属于社会劳动与AI应用层面，与中美地缘政治及硬科技直接竞争的关联度较低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: artificial intelligence, AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE1xN2hsaVpnMlk1V0VHWHBFdzFSUXRJdmVXdF9uRnRNVnRscFlBQkRrMm1FUUxpS3g2MWtXR1UxTTJBNTBtMXR4QVp3dXFJelRyVFYzeDJxS0lsY3pqMG9n?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#8</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">UN News</span>
+                    <span class="card-date">09-10 19:11</span>
+                </div>
+                <h3 class="card-title">面向发展中国家 AI 论坛（AIFOD）——非洲峰会（2027年2月17-19日）</h3>
+                <p class="card-title-en">AI For Developing Countries Forum (AIFOD)- Africa Summit (17-19 Feb 2027)</p>
+                <p class="card-llm-summary">联合国预告将于2027年2月举办面向发展中国家 AI 论坛（AIFOD）非洲峰会，旨在促进全球南方国家的 AI 能力建设与技术普及。尽管议题侧重于数字不平等与多边治理，但其背后折射出中美两国在非洲及全球南方国家争夺 AI 技术标准、数字基础设施与外交影响力的潜在角力。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：议题侧重于发展中国家 AI 应用与数字鸿沟，属于与中美核心对抗关系较远的外围治理议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTFBKeThHYWpFQ052enFKcmZuZG1OcDRKWVB6bkFrajRLQWdUVU44anBpWUgxd2Y5SU9HTEtUc0M5d0lHcGFGQmpKRVhrQTFOQm95THduNmlVdw?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#9</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">UN News</span>
+                    <span class="card-date">09-10 18:30</span>
+                </div>
+                <h3 class="card-title">水资源、清洁能源与人工智能：巴拉圭在 AI 时代的可持续发展模式</h3>
+                <p class="card-title-en">Water, Clean Energy and Artificial Intelligence Paraguay&#x27;s Model for Sustainable Development in the Age of AI</p>
+                <p class="card-llm-summary">本文探讨了巴拉圭如何利用其丰富的纯净水与水电等清洁能源资源，打造支持 AI 数据中心基础设施的发展模式。从中美 AI 竞争视角来看，这反映了全球 AI 算力急剧扩张对电网和散热资源的巨大依赖，凸显了绿色能源基础设施正成为全球算力布局的重要外围争夺点。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章关注巴拉圭利用清洁能源支撑 AI 发展，属于 AI 算力能耗与可持续发展议题，与中美核心科技对抗直接关联度较低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: artificial intelligence, AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE5Yb1JvLTB2VmZERTRUSFpld2lQWF8zSkY1UTdwYW8xcmVPbWpPM1JxT0FwUkZocHRSVVhwOXVWZU9MTDhoXzhfQ3F4V2o?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#10</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">MIT Technology Review</span>
+                    <span class="card-date">09-10 16:58</span>
+                </div>
+                <h3 class="card-title">医疗 AI 的下一个考验是系统集成</h3>
+                <p class="card-title-en">Healthcare AI’s next test is integration</p>
+                <p class="card-llm-summary">大型科技公司正加速将长文本处理与复杂术语解析等前沿 AI 能力引入医疗领域，但行业痛点正从模型能力演变为与现有临床工作流程的深度集成。在中美 AI 竞争中，虽然美国在底层大模型能力上保持领先，但在医疗等高壁垒垂直场景的落地效率将决定其技术优势能否转化为实际的生产力与商业壁垒。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：本文主要探讨 AI 在医疗行业的垂直场景应用与系统集成瓶颈，属于产业应用层面，与中美科技博弈及战略竞争关联度较低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://www.technologyreview.com/2026/09/10/1141421/healthcare-ais-next-test-is-integration/" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#11</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">R Street Institute</span>
+                    <span class="card-date">09-11 04:18</span>
+                </div>
+                <h3 class="card-title">智能体、助手与意识提升者：AI 在智库传播中的下一步</h3>
+                <p class="card-title-en">Agents, Assistants and Awareness Raisers: Next Steps for AI in Think Tank Comms</p>
+                <p class="card-llm-summary">本文探讨了美国智库在公共传播与政策推广中应用 AI 智能体与助手的下一阶段策略。报告分析了生成式 AI 如何重塑智库的议程设置与公众沟通能力，展现了美国政策研究机构在 AI 工具落地应用上的最新实践。尽管该文侧重于组织内部运营与传播效率提升，但反映了美国智库界正加速利用 AI 强化其政策话语权构建与软实力输出。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章仅讨论智库内部利用 AI 工具提升传播与运营效率，属于 AI 在特定领域的应用实践，与中美 AI 竞争、芯片制裁或科技战略无关。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPSXgya1VLbml1ZzN3TVJrMTgtN2hwNi02d21aTnpldE5zNXZqQ2NPVkIyRlYyb0tlQmdRLUdKOGhCeHoyRDdEM0w3YTVHVEJKdkZ2TFZ2S3JZTkZtSktvU2tGc3hNMGlZY0N3cmRjMXpVOVJVQVFVOFlKLU9UMktWODQyY1BqMEw2Ym1fNVh5eUNZMlN0TEk1VzNaVU5ndGcxUmNBdHBCRWh3T01PQnc?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-09-11 00:34 UTC
+    </div>
+</body>
+</html>
