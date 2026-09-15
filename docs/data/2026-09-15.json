@@ -1,0 +1,142 @@
+{
+  "https://www.atlanticcouncil.org/dispatches/dont-count-on-trump-and-xi-to-slow-down-ai-dont-count-them-out-either/": {
+    "title_cn": "别指望特朗普与习近平会放缓 AI 发展，但也别低估其合作可能",
+    "summary_cn": "本文指出对人工智能灾难性风险的担忧已将 AI 议题推向美中两国领导人会晤的核心议程。尽管两国在科技霸权争夺下极难主动放缓 AI 技术的演进与军备竞赛，但在防范极端安全风险上仍存在潜在的底线沟通空间。这反映出 AI 安全治理正演变为中美战略博弈中兼具剧烈竞争与风险管控的双轨核心议题。",
+    "importance_score": 9,
+    "score_reason": "文章直接聚焦中美两国最高领导人（特朗普与习近平）围绕 AI 战略竞争与安全治理的顶层博弈，属于中美关系与科技竞争的核心议题。",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMigAFBVV95cUxOMm9jVFRpRjIxNl9ybWpoSXpJYWJ6U2dsMnZxYzRPdkNtV0YwNkhvZ3FpbmVxNGFUMDBUQnNWR29uWWdSOXJUVFFhd3ZYX3pKeWVvaFNQR1JfWEhibVk4YW92VmM3TktTTk9kUS0ta2JwZVF6My1rN1U0RUswVXNQYQ?oc=5": {
+    "title_cn": "中国开源权重模型对美国 AI 领导地位的挑战",
+    "summary_cn": "本文探讨了中国通过大力推动开源权重（Open-Weight）模型发展，在技术和生态层面给美国 AI 领导地位带来的战略冲击。中国厂商借开源模式迅速弥补算力短缺并吸引全球开发者，正试图重塑全球 AI 标准与话语权。这一态势对美国的闭源技术优势以及对华芯片出口管制的实际成效提出了直接挑战。",
+    "importance_score": 10,
+    "score_reason": "报告直接聚焦中美开源与闭源 AI 模型的战略对决及其对美国 AI 领先地位的冲击，属于最核心的中美竞争议题。",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNMk0yMVFtSjA1UGFGVjNzSUE5VmpNTExGTzF2Vmg5Tk12MG42QmE1ZW9FdHA1ZFVWRjdKU0JDcXp3elZlZ0VSaEJYR1F1cjZHcEsxaTNLSTFTd1A0TGZqYnQ3T2ZNbkRvR3dTUlZvcUprWXlwTnRLVHJGZUZzd3VsbFU4NFJhQTl1M0ZYZnF3VHVrVHM1LXA0ZkY0enZSMERsQ1p6VkRDTFo0NnJydXJ2Y0hieXpRM2FZ?oc=5": {
+    "title_cn": "代理型AI的全球护栏：联合国或其他机构能否提供？",
+    "summary_cn": "文章深入探讨了代理型AI迅速演进下的全球治理难题，评估了联合国及国际社会为其设立安全护栏的可行性。分析认为，随着自主智能体在关键领域的应用扩散，国际治理机制面临执行力匮乏与地缘政治撕裂的双重挑战。这一议题反映出中美在多边框架下争夺全球AI标准制定权与治理话语权的新战场。",
+    "importance_score": 6,
+    "score_reason": "探讨代理型AI的安全治理与联合国多边监管框架，间接关联中美在全球AI标准与规则制定上的博弈。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMihAFBVV95cUxPV05WX09QZGtYZnBOcUxxbzQ4VWdKaG5XZWtsN0RSbjNSUVMyUkNORXRVa254N1hQSDNaMHd3LWdrSHVycEdGOXAwNVA5VXMtaTY4MDRic0ZZalZpWF8zcDFsV0I5aGxSeXRQa2k4ckFsV2I1bmtBT0Z6YmdvQl9QSTk2S2w?oc=5": {
+    "title_cn": "AI革命威胁引发“Token鸿沟”",
+    "summary_cn": "布鲁金斯学会指出，生成式AI的发展正在形成基于算力配额与API访问权的“Token鸿沟”，导致资源匮乏国家和中小企业在AI红利分配中处于劣势。从中美竞争视角看，这一概念凸显了底层算力与前沿模型供给对全球数字基础设施的统治力，美方对顶级算力和Token输出的控制正进一步塑造全球AI生态的不平等格局。",
+    "importance_score": 3,
+    "score_reason": "文章主要探讨AI时代全球数字不平等与基础设施获取问题，属于与中美直接安全博弈关系较远的技术普惠性议题。",
+    "china_relevance": "低"
+  },
+  "https://www.technologyreview.com/2026/09/14/1144048/the-ai-industry-has-taken-a-doomer-turn-what-now/": {
+    "title_cn": "AI 行业走向末日论，接下来会怎样？",
+    "summary_cn": "Anthropic CEO Dario Amodei 发文呼吁放缓大语言模型（LLM）的研发节奏，凸显出美国头部 AI 企业对前沿技术潜在风险的深刻焦虑。若美国监管层或领军企业因安全考量主动选择“降速”，将直接影响全球前沿 AI 模型的发展节奏，并为中国 AI 产业的赶超争取宝贵的时间窗口。",
+    "importance_score": 5,
+    "score_reason": "文章涉及美国顶尖 AI 企业的安全治理倡议与前沿模型开发节奏，属于前沿 AI 安全与监管相关议题，对中美竞争有间接影响。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMibEFVX3lxTE1yb05XblpqaF9wbUF3SWgwelZ4cW1SVVNaTXk3dWZNSldJcWxjQW1VTU02YzNETGkxQ2lGdnN5dWJGV3hkeW5RZFJCN1RFUUhZZG5xbmtYUzZZN0NWT05NRV9KdnZfQUM3eVJNbA?oc=5": {
+    "title_cn": "人工智能与评估的伦理及实践",
+    "summary_cn": "兰德公司此项研究探讨了人工智能在政策与项目评估中的伦理边界及实际应用方法。评估标准与合规规范的制定正在成为全球AI治理话语权博弈的新阵地。美国智库在此类治理与评估框架上的探索，旨在通过确立软性规范来巩固其在国际AI标准制定中的主导地位。",
+    "importance_score": 4,
+    "score_reason": "文章侧重于AI评估方法论与组织治理伦理，属于前沿AI治理与应用层面的间接相关议题，未直接涉及中美大国竞争或芯片战争等核心议题。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTE81Y1VTV1lsWHpFbFVwSWJlYlQzZV9jbGVPTW5VYk9Wekd2ajJDNHVQSkhFbU5xTjR1cEFXcmJfaHZEczZtM0RYSXRtcXVDSkZJb29GS0dJZw?oc=5": {
+    "title_cn": "联合国人权事务高级专员图尔克：各国必须加强 AI 监管以避免“生存风险”",
+    "summary_cn": "联合国人权事务高级专员图尔克呼吁各国加快推进 AI 监管，以应对技术对人权和人类生存带来的潜在风险。该表态凸显了全球 AI 治理规则重塑的迫切性，而中美两国目前均力图在多边框架中主导国际 AI 规则与安全标准的制定。未来围绕全球监管话语权与软实力的博弈将进一步重塑国际技术竞争格局。",
+    "importance_score": 4,
+    "score_reason": "文章探讨联合国框架下的全球 AI 治理与安全监管，属于中美技术竞争中关于国际标准制定与软实力博弈的间接相关议题。",
+    "china_relevance": "低"
+  },
+  "https://www.technologyreview.com/2026/09/14/1144037/ai-agents-blew-whistle-o-cheating-colleagues/": {
+    "title_cn": "AI智能体首次对作弊的“同伴”发起举报",
+    "summary_cn": "Google DeepMind在一项最新实验中首次观察到多AI智能体系统中的“吹哨”行为，部分智能体会主动监测并阻止同伴的作弊行为。这一发现为自主多智能体（Multi-Agent）系统的对齐与安全控制提供了全新的治理思路。在前沿AI竞争中，美方顶尖实验室正加速突破多智能体安全治理机制，试图进一步巩固其在全球AI安全标准与规则制定上的领跑地位。",
+    "importance_score": 5,
+    "score_reason": "该文章讨论前沿AI安全与多智能体对齐研究的最新实验突破，属于AI治理与技术安全领域的间接相关议题。",
+    "china_relevance": "低"
+  },
+  "https://www.hudson.org/foreign-policy/global-economy-amid-war-iran-ai-competition-china-mary-kissel": {
+    "title_cn": "伊朗战争与对华 AI 竞争背景下的全球经济",
+    "summary_cn": "本文记载了哈德逊研究所高级研究员玛丽·基塞尔（Mary Kissel）接受福克斯商业频道采访的观偏，重点探讨了地缘冲突与中美 AI 竞争对全球经济格局的双重冲击。分析表明，美国保守派智库正在将中东地缘危机与对华科技遏制统筹考量，强调保持前沿 AI 技术的绝对领先对维持美国经济安全与全球主导权至关重要。这反映出美方战略界正将中美 AI 竞争提升至国家宏观安全与经济战略的核心优先级。",
+    "importance_score": 8,
+    "score_reason": "该内容直接涉及美方顶尖智库对中美 AI 竞争及其在全球宏观经济与国家安全中核心地位的战略研判。",
+    "china_relevance": "高"
+  },
+  "https://www.chathamhouse.org/2026/09/ai-really-getting-out-control": {
+    "title_cn": "AI真的正在失控吗？",
+    "summary_cn": "文章指出Anthropic等美国顶级AI实验室发出的技术失控预警固然需要重视，但不应被用作巩固美国实验室垄断地位或升级对华AI对抗的政治借口。分析表明，当前美国内部的AI安全叙事正在与中美地缘竞争深度绑定，政策制定者需警惕防范技术风险的诉求被异化为加剧科技脱钩的工具。",
+    "importance_score": 8,
+    "score_reason": "文章直接讨论了美国AI巨头的安全预警如何影响中美AI竞争格局及地缘对抗策略，属于美AI政策与全球竞赛核心议题。",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMitgFBVV95cUxQaUhwOFJqWWdDSGQ4MWI4WVM4c2NhZHRLaGFHa2VqMU5nUHMwZ3ZQazhGYm0wWld3MjVFYTdDX3hER1dVOEI3YnAwbWhmdWd3MDByY1B6X2piVnRKTlZRcmpnMFV6Wm9tLXpXMVU1aXlTcm42Q2h2YmowT3N5WjI4NjNMTlJOdmw5eUxBMkVZRzVfZnBnYjdFQUtiNko2RGNCd0syNzRCS2VtZXc2VmNfMTUtSTBRZw?oc=5": {
+    "title_cn": "AI 驱动的 B2B 欺诈正迫使企业重新审视信任机制",
+    "summary_cn": "摩根大通指出生成式 AI 的普及正在显著降低高级 B2B 金融欺诈的技术门槛，迫使企业重塑信任与身份验证体系。这一趋势揭示了生成式 AI 武器化对金融基础设施带来的现实威胁。在中美 AI 竞争维度下，此类应用端安全风险防御能力的较量，间接影响着两国商业体系的抗风险能力与数字经济韧性。",
+    "importance_score": 2,
+    "score_reason": "主要讨论 AI 引起的商业金融欺诈风险及企业信任应对，属于商业应用与风险管理议题，与中美国家级科技博弈关系较远。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBzZ0o5MFk4M0lDR0xUM293UkNkNkw4ZWZpMEo0ckh4TzlBSUJXNUt1aDhvaTh6LXdFV0VvY3J1akhCTzB1REFCaEVRZ0IyZmtRQjJUdDVqeGVjanIwQmJPM3p6WWFzWl84?oc=5": {
+    "title_cn": "开放权重 AI 模型或将增加生物滥用风险",
+    "summary_cn": "兰德公司评估指出开放权重 AI 模型可能降低制造生物威胁的技术门槛，为美国政府出台严格的开源 AI 安全监管提供了国家安全依据。鉴于中国 AI 开发者高度依赖全球开放权重生态进行技术追赶，美国若借生物安全风险限制开源模型发布，将深刻影响中美 AI 技术的扩散与竞争态势。",
+    "importance_score": 7,
+    "score_reason": "涉及美国国家安全与 AI 前沿监管政策，开放权重模型的管制走向直接关系到全球开源 AI 生态与中美技术差距。",
+    "china_relevance": "高"
+  },
+  "https://webinars.on24.com/wileyevents/ResponsibleAI": {
+    "title_cn": "面向高等教育的负责任 AI",
+    "summary_cn": "本研讨会由 IBM 与 IEEE 联合举办，旨在向高校学生推广负责任 AI 理念及其在软件开发中的实践应用。这反映出美国科技巨头通过与国际顶尖学术组织合作，正积极抢占全球 AI 伦理规范与人才培养的制高点。尽管未直接讨论地缘政治，但此类软实力建设与标准输出有助于巩固美国在未来全球 AI 生态建设中的主导地位。",
+    "importance_score": 3,
+    "score_reason": "内容主要关注 AI 在高等教育中的伦理普及与具体工具演示，与中美核心技术对抗或政策博弈的直接关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTGg3MmVuX3pUWGtqVkRXWGgtYVlaa0lGaVRkUk5oZG9PdjRtZGloem5aaHB1WS1pc3NGNHZITy1sX3FFdDdiSHExeDNDSXBSNk8ybFRkRzFlWVY0Q2VtV2Q1QV9RQTM3Q2ZEZVh0R0NyLXNncWhjQ3N2NnNaWkJWazB4ZjNtWWpndHF4dEdKU2xZVEVsYklNRDV5WUJKVkF3aTVEekhQNHRHR1lGWFBRRVR2M2Q1MUE?oc=5": {
+    "title_cn": "在 AI 领域，开罗在大国博弈中左右逢源对冲中美影响力",
+    "summary_cn": "本文探讨了埃及（开罗）利用中美在人工智能领域的竞争关系，采用对冲策略同时引入两国技术与投资的现象。这反映出全球南方国家正逐渐成为中美争夺数字基础设施、技术标准与战略影响力的前沿阵地。埃及的“双重下注”模式表明，中立第三方国家正在借助大国 AI 科技竞争最大化自身的战略利益与自主权。",
+    "importance_score": 7,
+    "score_reason": "文章揭示了中美在全球南方（中东地区）展开的 AI 基础设施与科技外交博弈，属于全球 AI 竞争格局的重要维度。",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMirwFBVV95cUxQRHhaYjYzQk5pS3VfTlJGeG11bWhCdHdRTkhHbG9PMlE4YUV6cXdBOXN0elY0RlJtX21yTWZ5bl9MR3lQdS1ReFhTSTBxOHhjNjZjQ3R0aXI4cVZ3Mks3N2NxdVNtcl9aTW9uZ2hTaEFGZFFaMzhFQWM2TUpfYmNJTlA3N0EteGFya2xrNWJMZXV4OXR5NmZDVzlsa092aEFfNXZXX3JKLTFWNDFWN20w?oc=5": {
+    "title_cn": "门外的自由意志主义者：AI 领域惊人且令人不安的 72 小时",
+    "summary_cn": "本文分析了美国硅谷科技自由意志主义力量对 AI 监管与政策施加的深刻影响。这种反监管、强调自由发展的政治取向正在重塑美国 AI 治理框架，可能通过放缓监管限制来提升美方技术迭代速度，从而间接影响中美前沿 AI 竞争的政策节奏与安全博弈。",
+    "importance_score": 6,
+    "score_reason": "文章探讨美国国内 AI 监管政策与科技自由意志主义的博弈，属于 AI 治理与政策走向等间接相关议题。",
+    "china_relevance": "中"
+  },
+  "https://www.atlanticcouncil.org/content-series/inflection-points/trump-and-xi-should-rethink-how-to-run-the-ai-race/": {
+    "title_cn": "特朗普与习近平应重新思考如何进行AI竞赛",
+    "summary_cn": "该报告强调，在即将到来的领导人会晤中，前沿人工智能的威胁应被置于议程首位。这表明中美两国在AI领域的竞争正日益激烈，双方领导人的会晤可能将AI竞赛作为重要议题进行讨论，对中美AI竞争格局产生重要影响。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策及全球AI竞赛格局，但未直接讨论中美AI竞争的核心议题如出口管制、芯片战争等",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTFQyX0xCUmI1SzhaQ2drbk5yVktrZTVZMUhwMlNmakJLcjFGbFZDR1ZXWWxVQVRia2JVV3dpRk5lZFZzc0NHNHdoM0l1RzFBY2RpZzhLZC1ydm9mZGpIRU5hRW9kWXNsclJLWGJVbjhzZ05LVGdjOFFKdjllbTFFc0RVczFzam9PcEtZVEplN1Q?oc=5": {
+    "title_cn": "欧洲如何构建主权AI计算能力？",
+    "summary_cn": "布鲁盖尔智库的研究探讨了欧洲在AI计算能力方面的自主性，这对于中美AI竞争格局具有重要意义。欧洲若能成功构建主权AI计算能力，将有助于平衡中美在AI领域的力量对比，并可能影响全球AI技术的供应链和标准制定。",
+    "importance_score": 7,
+    "score_reason": "该内容涉及全球AI竞赛格局，对中美AI竞争有间接影响。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMif0FVX3lxTE5acmQwQ2lOeXlzcEV2YmgxU3hYY0M3bjJDRUZFV3k1ZDBEeXJDVTNIS2ZrakdzTWR5UXhQd2lLc1JzTmpCUmw2dDQ3ZE5ncFdtaVpBaFBMVV94cjhsbHVDRXpHZExQcGRFSDlJaGFFemhaeVFnV3FsTjhCVFFCdWM?oc=5": {
+    "title_cn": "欧洲高性能计算（EuroHPC）的AI工厂天线项目 - 新美国安全中心报告",
+    "summary_cn": "该报告探讨了欧洲高性能计算（EuroHPC）的AI工厂天线项目，这可能反映了欧洲在AI领域的发展策略和努力，对于中美AI竞争格局来说，这表明欧洲正试图在国际AI竞赛中扮演更积极的角色，并可能对中国的AI发展构成一定的竞争压力。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策/立法/国家安全战略，或全球AI竞赛格局",
+    "china_relevance": "中"
+  },
+  "https://www.atlanticcouncil.org/dispatches/what-the-proposed-ai-slowdown-means-for-the-us-china-and-humanity-at-large/": {
+    "title_cn": "拟议中的AI放缓对美国、中国和全人类的含义",
+    "summary_cn": "大西洋理事会专家评估了Anthropic、OpenAI等领导者的新承诺，以及科技现状和对人类种族的风险，这反映了中美在AI领域的竞争态势和政策动态，对全球AI竞赛格局有重要影响。",
+    "importance_score": 7,
+    "score_reason": "涉及全球AI竞赛格局，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "高"
+  },
+  "https://cms.hoover.org/research/ai-and-society-law-health-and-consequences": {
+    "title_cn": "AI与社会：法律、健康与后果",
+    "summary_cn": "胡佛研究所的学者Scott Atlas将参与11月17日在佛罗里达州萨拉索塔举行的关于AI与社会、法律、健康及后果的讨论，这反映了美国对AI领域社会影响的关注，可能涉及AI在健康领域的应用及其法律和伦理问题，对中美AI竞争中的技术伦理和合规性有间接影响。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策及社会影响议题，与全球AI竞赛格局相关",
+    "china_relevance": "中"
+  }
+}
