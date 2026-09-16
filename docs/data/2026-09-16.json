@@ -1,0 +1,86 @@
+{
+  "https://www.technologyreview.com/2026/09/15/1143936/roundtables-will-ai-really-kill-us-all/": {
+    "title_cn": "圆桌讨论：AI 真的会毁灭人类吗？",
+    "summary_cn": "本次圆桌讨论聚焦全球顶尖 AI 实验室员工对前沿人工智能生存风险（X-risk）的担忧，探讨其究竟属于现实安全威胁还是行业炒作。从中美竞争视角看，美国本土对前沿 AI 极端风险的讨论正在深刻塑造其国家安全与 AI 治理逻辑。此类安全关切常被美方决策层用作收紧前沿模型监管、限制关键技术流动及推动开源审查的政策依据。",
+    "importance_score": 5,
+    "score_reason": "该内容聚焦前沿 AI 安全与生存风险治理，属于间接影响美国 AI 监管政策及技术扩散路径的议题。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNWJSVWtHZFFBc2l3Vzg2UWRoRkNVbmZIVk5NbnFRQU02d3p5bm5rR1phSG8zeGpvcnBqVE10T2JKWWx2ZW5fVlpxeVVnS3RBcTBsdlVZYlMtb09OUFNnN09sVW1iZE1SdDRBYVp4OWh2M0lGSTJpV1JzVHgxRDJEdzdB?oc=5": {
+    "title_cn": "我们为何选择不在前沿 AI 实验室工作",
+    "summary_cn": "文章探讨了前沿安全与政策研究人员拒绝加入美国主流商业 AI 实验室的原因，揭示了商业化扩张与国家安全、公共治理需求之间的内在张力。从中美 AI 竞争视角看，顶级安全与治理人才对商业实验室的异议反映出美国前沿 AI 生态内部的分歧，可能影响其在 AI 安全标准制定与战略人才整合上的整体效能。",
+    "importance_score": 4,
+    "score_reason": "文章探讨美国前沿 AI 实验室的人才流向与安全治理伦理，涉及 AI 生态与治理议题，但与中美直接竞争关联较远。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQVDNRNWJZWC1JcWY2amQ5TTAxX1VTUERwQTBNejZHZTlaSk1WVEU4UExHVUJXUHdSaWpNVlZLX0xNQ3EtdXpHeVRTWW8zeVdPVWRoUEViUkN4Wm1sV2UxdlBPYWRFeGFBZmlsVkNzUDFrY09NV2puekVQTTg2Zjk0VVp4Nm9IVW4xdDdvZmRsM1YyaW5lN3ZnM2FvYTFlUUtoMWotWkhHSThTYVMybTlwT2E0bFJvckJ1Z0tfNWJ4RHY2N1NzMkdycHV2U0czNmNDa3J4cDdPQW9PY2tCNE9NWExnUFk?oc=5": {
+    "title_cn": "数据中心遭遇民主：AI 建设浪潮引发的公众反弹",
+    "summary_cn": "随着美国科技巨头加速布局 AI 算力，数据中心在电力消耗、资源占用和环境保护方面引发了本土社区与民选官员的强烈反弹。这一现象揭示了美国在推动 AI 基础设施建设时受到的民主程序与社会阻力约束，与中国集中资源统筹算力建设的体制形成鲜明对比。算力基建的本地抗性或将成为制约美国维持对华 AI 算力绝对领先优势的关键瓶颈。",
+    "importance_score": 6,
+    "score_reason": "文章分析了美国AI数据中心扩张所面临的社区与政治阻力，揭示了可能制约美国算力规模化增长的本土基础设施瓶颈。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiekFVX3lxTFBwUjhwdHFobkdkd19xX3lJRm1NM2FoYzBrQ3h0bXpHY3JrLXY5MzVzNkxqNWl2WmV6SzdhQ2xkb2tmQXNFUHlDYjh1X29sUVU2Mkx4cHlJN3pyMFVvS3JjYVNNeTNMT09PZDgwUzFlVzlGY2pscTVWczB3?oc=5": {
+    "title_cn": "AI时代的劳动力政策",
+    "summary_cn": "本文章聚焦于美国在人工智能快速普及背景下的劳动力政策应对，提出了职业重塑、技能培训及社会安全网构建的国家级框架。从美中科技竞争角度来看，美国劳动力市场的适应力与人才梯队建设是支撑其前沿AI产业落地的经济根基，对维持对华长期综合竞争优势具有隐性支撑作用。",
+    "importance_score": 4,
+    "score_reason": "文章侧重于美国国内AI劳动力转型与经济适应政策，属于间接影响国家竞争力的内部议题，未直接涉及中美地缘政治或技术管制。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMisAJBVV95cUxQM0RQWHVmODR1d1lXcldYdmNDblU4cXlUQ0dpVm4zR0pwVm43NFdfTHBBNE9SRF84Nnl2OXFadUhnSkhZN25ZZk5xdEdrVF8wUC1RNzlOa0FRdlZxX0JyaVBNcTU0cGpOeFNaVVZDSzh1UHFhWmstZWhXYjJtYzAzTGE4TkVMR01WZTlST01SU2hnLUNXSXh6cGlxOEdQQXRGOVVkQUJ0dXBQSk93bmlyeXpWTkgyVnVsQTg4a18yVHY5a09VSWhwUDBEeGZBRm9yelhIbVlKaWIzRHhpWjJ3dkpub1E4YkdrT2JmeExKWUxiLVdxN2lJblRwWTc3NWRlUjdPSUsxbUpLSzYtRnJXR3RUZWJvVVFEeTFuaVBJbGN4MHBVMm5pTUQtYl9NclMw?oc=5": {
+    "title_cn": "重视 AI 的资产配置：资本投资热潮下的投资组合构建",
+    "summary_cn": "本报告从华尔街金融视角剖析了生成式 AI 基础设施（芯片、数据中心及能源）引爆的巨额资本支出热潮，并提出了相应的资产配置策略。从中美 AI 竞争视角看，这展现了美国依靠资本市场与科技巨头（Hyperscalers）构建的强大资金与算力壁垒，形成了对华竞争的底层资本优势。然而，如此庞大的资本投入也面临投资回报率（ROI）验证的压力，其市场波动可能间接影响美国 AI 产业的持续扩张能力。",
+    "importance_score": 4,
+    "score_reason": "报告聚焦于商业投资与资产配置策略，虽体现了支撑美国 AI 领先地位的资本实力，但未直接涉及中美政策、出口管制或技术博弈。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMioAFBVV95cUxOaGM0RDI3RmFJdjlwUUtkRm9Uc0ZaNm5NUVRkM29jc0NKUzVXQ0Z1RjNmRWdGNmFyQVBNVmJ1QjRLdHd4TDVwZzgwdjR2SndmWFFVYXZMTmxGQTNRU1NBRWJraW5Zb0laNk9Mdm9wM2FZWV9UZWNNOC1KODEwV2JxbUVlZVI2NUFRX2lSZExpRUJBdUdZWk5wQVp3RFBZYzFJ?oc=5": {
+    "title_cn": "为什么 CEO 在 AI 时代面临的真正挑战是保持掌控力",
+    "summary_cn": "本文探讨了企业管理层在加速引入 AI 技术时面临的组织控制与风险治理难题，强调 CEO 需在拥抱创新与维持管理控制力之间取得平衡。从中美 AI 竞逐的视角看，该议题揭示了商业落地阶段企业内部治理效率对技术生产力转化的关键作用。尽管侧重于微观企业管理，这反映出技术扩散期两国企业在推动 AI 产业化应用时共同面临的管理瓶颈。",
+    "importance_score": 2,
+    "score_reason": "文章立足于微观企业管理与 CEO 治理维度，讨论 AI 应用中的组织控制问题，与中美国家级 AI 战略及地缘竞争关系较远。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPWkoybjZNd1dxZTdWZjlsWUlkU0FQcDBENXhBdHFQUDAzOWttWmVpdVI3eGd3dWlwV3FFR3Zub0VPRDczWkgzZzBXUDlCXzJaZXBsX3daVTZCTHRxQ3p2ckZKcGpQYzk0Vmd2ODdheEpOREtER2lPcTdpWlloM0lIYm0wZ1ZqSF9ZWUFPeWNRQ0hXWHBJbDNFSGhLdWdqTkpsLV9pdnJzeTRaZy03UW5zVlR5VXFPYmRTbTFKT01lZEJUNjBnaVdfWERfcF9PUHA4Vml1dm5LOA?oc=5": {
+    "title_cn": "摩根大通：为何我们看好不断上升的AI债务机遇",
+    "summary_cn": "摩根大通分析指出，随着AI数据中心与算力基础设施需求呈爆发式增长，科技巨头对债务融资的需求显著上升，为私人信贷与债券市场创造了新机遇。这一现象表明，美国正在利用其深厚的资本市场杠杆，为庞大的算力基建提供资金支撑，以期巩固其在全球AI领域的先发优势。然而，高度依赖杠杆的算力扩张也积累了资本过热风险，可能对美方AI生态的长期金融稳定性带来挑战。",
+    "importance_score": 4,
+    "score_reason": "该内容聚焦于美国AI基础设施建设的债务融资与资本市场动态，间接反映了美方维持算力规模优势的资金驱动模式。",
+    "china_relevance": "低"
+  },
+  "https://spectrum.ieee.org/inference-hardware-revolution": {
+    "title_cn": "AI推理革命已经到来",
+    "summary_cn": "文章指出全球AI竞争焦点正从单纯依靠算力堆叠的“预训练扩张”向“推理端计算与硬件革新”转移。随着前沿大模型预训练收益放缓，推理效率与专用芯片架构已成为下一阶段算力博弈的核心。在美对华高端芯片出口管制的背景下，推理算力革命为中国AI产业链在特定推理芯片与软硬件协同优化上提供了边际突破的战略机遇。",
+    "importance_score": 6,
+    "score_reason": "本文探讨了AI算力从训练向推理端转移的技术范式变革，间接涉及半导体硬件架构与中美算力竞争的演进路径。",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/09/15/1144129/ai-models-need-more-data-about-biology-and-openai-is-paying-to-create-it/": {
+    "title_cn": "AI模型需要更多生物学数据，OpenAI 正出资制造这些数据",
+    "summary_cn": "文章揭示 OpenAI 正通过付费生成新数据及收购破产生物科技公司的商业机密，攻克生物 AI 模型面临的数据瓶颈。生物大模型（AI4S）已成为中美科技博弈中关乎生物安全与生命科学主导权的核心赛道。OpenAI 强力收拢高质量生物数据，将进一步巩固美国在前沿科学 AI 领域的先发壁垒。",
+    "importance_score": 6,
+    "score_reason": "本文涉及顶级 AI 机构在中美关键赛道“生物 AI/AI4S”中的数据布局，反映了前沿 AI 竞争向科学壁垒演进的趋势。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiogFBVV95cUxQdkwxSU1YVTB5WC1va2lGdUczVW1HUUhkbkU3WGlaUzZfbWNxRzgyOTNtbXFrQmp6Y1ZsZ2p6RkNDZlAtWE1xSW9uRHhxcmJHa1E5R0xyUGF2bFdzTXZVNld6anhvLTh6dDg1emEzdlVPSmlwZWMwSWFJZzhyanFISzg4RGlMTFpsdmc1RWJ1dmFyOWtHcnNJcC1RUGpndVZtbHc?oc=5": {
+    "title_cn": "人类专业知识正成为日益宝贵的 AI 数据形式",
+    "summary_cn": "随着互联网公开文本数据的逐渐枯竭，高质量的人类专业知识（如医疗、法律及高端编程等领域数据）已成为打破前沿大模型训练瓶颈的核心资产。在中美 AI 大模型角逐中，竞争焦点正从单纯的“公开数据规模”转向高价值领域数据与专家级 RLHF（基于人类反馈的强化学习）资源，这将直接影响两国在专业垂直领域 AI 能力的演进速度。",
+    "importance_score": 4,
+    "score_reason": "该文探讨了人类专业数据对前沿 AI 训练的重要性，涉及 AI 技术演进中的数据瓶颈问题，与中美 AI 竞争存在间接关联。",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/09/15/1144028/ai-infrastructure-boom-investment-bubble-risk/": {
+    "title_cn": "AI万亿美元豪赌的利害与风险",
+    "summary_cn": "本文探讨了美国科技巨头在AI基础设施领域展开万亿美元级资本支出的经济逻辑及其潜在的资本泡沫风险。这种“算力先行”的高风险豪赌反映出美国科技界急于通过基础设施垄断巩固技术领先地位的战略焦虑，但也面临投资回报率不足的隐患。若美国AI基础设施投资泡沫破裂，将直接影响其算力扩张步伐，进而为在芯片受限背景下注重工程效率与成本控制的中国AI产业提供追赶的战略窗口期。",
+    "importance_score": 6,
+    "score_reason": "文章聚焦美国AI基础设施的巨额资本投入与泡沫风险，虽未直接论述对华战术，但该算力竞赛直接决定了美国维持对华技术优势的经济可持续性。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMieEFVX3lxTE5uT2V1Ql81RFNQejlQQi1qTDZ2aGt5V0tsdFBJU3ZRNXNoaEtRMkp2eU1GZnpuT2VGakZFeW5tZGZsMjdmSFZxN3lGMzdTQno0SS1tQnptMUNLN1ZMeVpaMG5lZFhxaXJobzFSRWJNS3pZZi1FaDNJdw?oc=5": {
+    "title_cn": "AI 如何提升公司治理标准",
+    "summary_cn": "本文探讨了人工智能技术在优化企业决策效率、合规监控及董事会风险管理方面的应用潜能。从中美竞争视角看，AI在企业治理领域的深度融合反映了两国在“AI赋能产业落地”与“组织智能化转型”上的软实力较量，是前沿技术向实体经济渗透的重要体现。",
+    "importance_score": 2,
+    "score_reason": "文章主要关注AI在企业组织管理与公司治理中的应用，属于商业管理范畴，与中美硬核AI技术博弈、地缘政治及芯片出口管制等核心议题关联度较低。",
+    "china_relevance": "低"
+  }
+}
