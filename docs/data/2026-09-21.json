@@ -1,0 +1,30 @@
+{
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTE56WTZtRlRabjM5OUpWazJmWERHYjFTN2YzOW5sYlZLVGdPUzRzRzFSeG1xNUd3STg3REZ2V2Z1X1lwbGhWZlItNW43N0dYTklCZmxUQVNwZw?oc=5": {
+    "title_cn": "人工智能与新兴技术……",
+    "summary_cn": "该报道聚焦联合国等多边框架下对人工智能及新兴技术的治理讨论，强调在全球范围内平衡技术创新与风险防控。当前，中美两国均积极在联合国平台参与AI国际标准与伦理规范的塑造，多边治理规则正在成为两国争夺全球科技话语权的延伸战场。",
+    "importance_score": 4,
+    "score_reason": "涉及联合国全球多边框架下的AI治理议题，属于中美争夺国际标准与话语权的间接相关领域。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMibkFVX3lxTFA2UW9aRl9KUUM0eE53dnVtODNyTEdEaFdmdDZqQ1MxQ05IdzFhdVc0RVNKRWpDLW80SE5HMk44OURNSjUzNXVJZlFiS211NW9TYTBkakR3WnMwZWRGX3N3Z1ZCLXJOMHlXRVlZMDNR?oc=5": {
+    "title_cn": "S.4214法案 - 第119届美国国会（2025-2026）：人工智能数据中心暂缓法案",
+    "summary_cn": "该法案提议在美国实施人工智能数据中心建设的暂缓令，反映出前沿算力扩张对美国本土电力供应和资源环境带来的巨大压力。若该法案通过，可能短期内限制美国超大规模算力集群的扩建速度，直接影响美国在美中AI算力竞赛中的硬件领先优势。这表明能源与基础设施承载力已成为美中AI科技博弈中不可忽视的关键制约因素。",
+    "importance_score": 7,
+    "score_reason": "该法案涉及美国AI算力基础设施的重大监管立法，对美国保持对华算力领先地位的产能扩张具有潜在制约作用。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPY25kWkVlX2JHSmFYNUc2ZGdoN1dfOGtFdUJFSEZoTnZzSXZOUTBRYmc2TkFmNFpxd1FmUzNGYnZfMjBxaHNBWmh4WTBCZ0VVd3haTFllOUtfWDNjdXA0RnRJYVJLVG55ZllySXpEUXFwdC1EVjhwd3BhRDUwVVpfSV9LTW9JSmxYSXNzdmo3Qlk0SWpuUGJiM2Q4SVhOMzRTek5WVkRuOWxOczdGbUtBRW94YjFfWDJvd041d3JpZ3BqRW43bFJMamlER25Yb1dyTFdHQ3FkZ1VYQVZBMUkwaVRxbGJla3Q1dWp4akt3?oc=5": {
+    "title_cn": "教育领域中的人工智能",
+    "summary_cn": "该报告探讨了人工智能在教育系统中的整合应用及其相关政策框架，强调提升AI素养与弥合数字鸿沟的重要性。从中美AI竞争角度来看，AI教育应用的普及直接影响两国科技人才梯队的长期储备与AI技术包容性治理，但本报告主要聚焦OECD成员国的公共政策实践。这表明虽然教育AI是国家长期竞争力的基础，但该议题目前侧重于多边社会应用与治理而非直接的地缘科技对抗。",
+    "importance_score": 2,
+    "score_reason": "本报告关注经合组织框架下AI在教育领域的应用与政策，属于AI社会应用与公共治理范畴，与中美硬核科技博弈和战略竞争直接关系较低。",
+    "china_relevance": "低"
+  },
+  "https://cms.hoover.org/research/chinese-hackers-are-running-ai-stolen-networks-avoid-detection-google-says": {
+    "title_cn": "谷歌表示，中国黑客正在被侵入的网络上运行 AI 以规避检测",
+    "summary_cn": "谷歌披露，与中国相关的黑客正将网络间谍活动与 AI 智能体相结合，极大地提升了入侵自动化程度并缩短攻击周期。攻击者不仅瞄准北美进行专有 AI 研究的学术、医疗和军事机构，还在受害云系统上部署开源模型以规避商业审查。这表明中美 AI 竞争已进一步升级为利用开源 AI 工具进行攻防对抗和核心技术窃取的非对称安全博弈。",
+    "importance_score": 8,
+    "score_reason": "该事件揭示了中国黑客利用开源 AI 技术对美国军工及学术界的前沿 AI 专有技术进行智能化网络窃密，属于中美国家安全与技术封锁对抗的核心范畴。",
+    "china_relevance": "高"
+  }
+}
