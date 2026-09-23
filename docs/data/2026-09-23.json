@@ -1,0 +1,198 @@
+{
+  "https://www.atlanticcouncil.org/in-depth-research-reports/report/ai-data-under-the-microscope-accelerating-and-securing-the-ai-data-supply-chain-for-the-health-and-biopharmaceutical-sectors/": {
+    "title_cn": "显微镜下的AI数据：加速并保障医疗与生物制药领域的AI数据供应链安全",
+    "summary_cn": "本报告系统梳理了医疗与生物制药领域AI数据供应链的七大核心组件（从训练数据到模型权重及API等），剖析了碎片化全球监管对跨国创新与数据流动的约束。在美中科技博弈向前沿AI与生物科技（Biotech）交叉领域延伸的背景下，生命科学领域的基因数据跨境安全与AI数据供应链韧性，正成为美方塑造技术壁垒、防范数据流失与维护国家生物安全的关键焦点。",
+    "importance_score": 6,
+    "score_reason": "报告深入探讨了生物医药领域的AI数据供应链安全与跨境监管，切中了美中科技竞争中涉及生物安全与前沿AI数据合规的间接核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMixgFBVV95cUxNN1JucTJiOGVwZFVqbW1RRjhTVG1xdmFSWFRoS19PSDNYSmhrSlgwR2dKZVNfR3Vqa284cV9PWVF3WHdKZlZER0M5a3g4bjVvSnZRZjdGZnZTQW1HTzhXdDltaXBZM3E2SG56enE4aHppNnFLd3RpWTlpbDhQNEtjSzFka0duVWZCUGp6U3dPWm5pX1c5eVdPWVR5U2JKc3hUZUhpd3I4QWtONGtfN0ViN1N3ajBEX08zVGduMFlSWm8ydzBzekE?oc=5": {
+    "title_cn": "评估AI的存在性风险及其预防提案 | TechTank 播客",
+    "summary_cn": "本期布鲁金斯学会播客聚焦前沿 AI 带来的存在性风险（x-risk）以及相应的政策预防提案。美国智库对前沿安全风险的评估与立法建议，将直接塑造美方对大模型的监管门槛，并在全球 AI 安全标准与治理规则制定中间接影响中美战略博弈。",
+    "importance_score": 5,
+    "score_reason": "讨论前沿AI安全与美国政策监管提案，属于与中美AI竞争间接相关的治理议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiywFBVV95cUxOTW0yaDdCYmhnS3RNbE9TUnl4djZsaWhrTmx3bXdnV1YxNzZ6ek4tc2N5a3NVeVRsUmYwSF9XYzFRN2ZEUHdMSWtjbnY0NldZYkt2a0xwNUhqeFpJMUQzNE5TWVVyaHVOVElHWTNDNmRyQl9IeEhScTBGdUtWbS03d19UZUdJdEx1enZkWElWM1pLa0tmQ1hTQmpWN2ZEMVVWS2dTaUM1ZzNfZEZvdUQzQXQ0WDZKbFFZeFBWZmh1Vi1MWUhMOTRVeVBaSQ?oc=5": {
+    "title_cn": "军事领域的人工智能及其对人权的影响",
+    "summary_cn": "该报告由卡内基国际和平基金会发布，探讨了人工智能在军事领域的应用及其对人权可能产生的负面影响。报告内容涉及人工智能在军事决策、武器系统中的作用，以及这些技术可能带来的伦理和安全问题。这一议题与中美AI竞争格局紧密相关，因为它不仅反映了全球AI技术在军事领域的竞争态势，还涉及了技术发展与伦理、安全、人权之间的平衡问题，对华相关性较高。",
+    "importance_score": 7,
+    "score_reason": "报告虽未直接讨论中美AI竞争，但涉及了AI在军事领域的应用，这与中美在军事技术方面的竞争有关，同时也反映了全球AI竞赛的格局。",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMihAFBVV95cUxQbGxsMldfRm1nLXZULV9xQlRmUlJjdGpkcS04Y0pVR0VwX2ZFTF9LVU1MVWFLQVlaQS10Y3V6MTVYeHpfamsxVlQ3b3dwaDUwdDN3TEZINDB6UV9Ibi16dU9oNzRfbUlYcUptRHF1NmpQaG8zY3liTVRVNUNsYlVGb0lTR0s?oc=5": {
+    "title_cn": "理解美国联邦政府的AI支出",
+    "summary_cn": "该报告分析了美国联邦政府在人工智能领域的支出情况，揭示了其AI战略布局和资金分配，对中美AI竞争格局有一定影响，尤其是对中美在AI技术研发和应用方面的竞争态势有所揭示。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策及资金分配，对全球AI竞赛格局有一定影响，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMisAFBVV95cUxNRGJtZmowQWFGVFZnOUpjVHFTVERRUjdLUE9yZlM2ejhvRy1kbm1ia2lTU0VoMnVVNmJCc3ZWeGY5Qkg5R2Z2U0xqM25BZDlxbzhZc2wtTkZoUC11UmFSaEJvU3FZYzl5THhWSVlmeVBHMHVHSGRGYjdKMVlibU54SDVxd2pVNzRyMkJMOUZOeDBsaEFLaDVOdExRNzRYb3JjTGtyanB3eElla0tKVHRTSg?oc=5": {
+    "title_cn": "解码AI——人工智能的承诺对发展中经济体的意义",
+    "summary_cn": "世界银行的研究报告探讨了人工智能对发展中国家的影响，这与中国在全球AI竞赛中的地位和策略密切相关，特别是在AI治理和半导体供应链方面。",
+    "importance_score": 7,
+    "score_reason": "报告涉及全球AI竞赛格局，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5vWWoyZUJ1N0FQXzNheUNsLTVybXR3Vk14Yld1UndvSkc0eTlKZWFKcEtna1NqSXdMRUQ0ODZXM0RSX0FtRGRYd0VzanNLWFNFbFpFT1RRSQ?oc=5": {
+    "title_cn": "人工智能与人类发展",
+    "summary_cn": "联合国新闻报道了人工智能在人类发展中的应用和影响，这与中国在AI领域的战略布局和发展方向密切相关，体现了全球AI竞赛的格局变化，对中美AI竞争格局有一定影响。",
+    "importance_score": 7,
+    "score_reason": "涉及全球AI竞赛格局，与中国AI战略相关，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMimAFBVV95cUxNTmhiNWtiNjZSaFBKQ3REOHJyRTJLa0lNN1dLMXR3QmVjUUtLWjU3N1ZZWm1vRVc3QTRUYWZUVHJGVk9XbmhmRFA5dE84TnZ1LUluX1E2bnlLTUh0dE1pZ19qNEQzVlpGdW43cE5udXNwVk1mdGJZcDJQTlNLME9MTVIwdDVQbVY0clFGeEFlQWN3ZENCaWlkMg?oc=5": {
+    "title_cn": "通过风险共担启动前沿AI治理",
+    "summary_cn": "本文探讨了通过风险共担机制来推动前沿AI治理的构建，这可能与中美在AI治理领域的竞争有关，特别是在全球AI竞赛格局中，中美两国在AI治理方面的策略和立场可能成为竞争的关键点。",
+    "importance_score": 7,
+    "score_reason": "涉及全球AI竞赛格局，但未直接讨论中美AI竞争的核心议题如出口管制、芯片战争等。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiswFBVV95cUxQMW91UDlkd25oWTVnN3FFR1RHZkE2ZnYzLXBwc25aam5lVFh2VllPV01pUXIyZU10bmFWVlJMYWdYSURVR0E4RlJrS0NTc0pMaUpwWFdoR3p6RktmejliZzZVVkw4Uzc0LXptbFZKVzZ2MkpTVUc4YTRELU9xYjdFS19XYTZvWEVmYmdVemJTTGdDbkxJb3BZREwtOERsSkM1a1Y0QUdIY2xCLS1Ea1E0US1BZw?oc=5": {
+    "title_cn": "CNAS洞察 | 美中AI协议需要验证而非信任",
+    "summary_cn": "该报告指出，美中AI协议的执行需要通过验证而非单纯依赖信任，这反映了中美在AI领域的竞争态势，强调了双方在AI治理和合作中的不确定性，对中美AI竞争格局具有重要影响。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策及全球AI竞赛格局，但未直接讨论核心议题如出口管制、芯片战争等。",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMiggFBVV95cUxPbGVSdDNNY1dCX1RHYnVzMnFzWU1Ka2hITXk0SVBzYzhwTkhJMnRDZ1h5UkhWSXlOdnBBVWFmUmNXNkR6alJwcDhnTjU5QzJiZWNtRVF3TjJ2NTN0Q3E5WEZlc3U4T1pTdXNON2p2OWhKWjhNYk5NU1FFaGpaeUhoVWpB?oc=5": {
+    "title_cn": "AI的颠覆性政治",
+    "summary_cn": "本文探讨了人工智能对政治格局的颠覆性影响，分析了AI技术如何改变国际关系和国家安全战略，对中美AI竞争格局的全球影响进行了深入探讨。",
+    "importance_score": 7,
+    "score_reason": "文章涉及AI对全球政治格局的影响，虽未直接讨论中美AI竞争，但对理解全球AI竞赛格局有重要意义。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMirgFBVV95cUxNcXRtYlpRdVBFRWZYZ3hCYmU3Y282Sm9Yb2lncWhUT2Znemc2TTZrbVFQYjBEbEUydUFGeUlDcllOQllYd0QtV1U1YWFKZmIyMG0yOVhsWmt4NzlPbGVRSjYxdUlLMzdvbkwwQnFld0RqTU1kT0JwTEN6UEg4RGFMVmxqaGxuSHhaZTE2R0xFR05qdm00YUhKZ2o1aWtMcEFvOXFUN2JJLTFhQlozWEE?oc=5": {
+    "title_cn": "AI发展速度可否放缓？斯坦福HAI专家评估风险、规则与竞赛前景",
+    "summary_cn": "本文探讨了人工智能发展的速度问题，分析了斯坦福HAI研究院专家对AI风险、规则和未来竞赛前景的看法。文章内容与中美AI竞争格局紧密相关，涉及美国对AI发展的态度和策略，对中美AI竞赛的动态有重要影响。",
+    "importance_score": 7,
+    "score_reason": "文章讨论了AI发展的风险和规则，虽然未直接提及中美AI竞争，但内容涉及美国AI政策，对全球AI竞赛格局有间接影响。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMizwFBVV95cUxOWDN0eWxKWklIMWt6d3ZHX3Awc1BYYWwxTjRlSUpuQ01tRkhlV3l5cEZ1ZEctYlFaMVNwZllJTEpSSFBLXzFkM2wzTS16cXZycFhUemtSSmFfZnFXR0VIT1Y1NWxpS0hZRW9HYlMxckZ1VTRiTnB5RmpiRjdtUXZMMm1fYk1PZ3lUSEs0WmdqQmc3dmxrRFRzLVFlTWxGQUhHWWtnTm1BN2xPd1ZLSzNUajdWVTdzUERCaEx2c0xuUUI5bHliTXlfWXVSVWFfQkk?oc=5": {
+    "title_cn": "第10228次会议 - 维护国际和平与安全：人工智能与国际安全",
+    "summary_cn": "本次会议聚焦人工智能与国际安全议题，涉及AI在维护国际和平与安全中的作用，以及AI技术可能带来的安全挑战。这与中国在AI领域的国际地位和安全战略紧密相关，反映了中美在AI领域的竞争态势和国际合作的复杂性。",
+    "importance_score": 7,
+    "score_reason": "会议内容涉及AI与国际安全，虽未直接讨论中美AI竞争，但对中美AI战略布局和全球AI治理格局有间接影响。",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBlX1BSTHprWTVWRmpURktsd2x3aEo0QkhnanhsQ2RnbmkxZzVORUROcXZwMUNfUEEtRU5SczhWc3pmZXJEWkZ0ZU9QbG1EWXk3d2lKRTU1UQ?oc=5": {
+    "title_cn": "特朗普捍卫对伊朗、委内瑞拉的军事行动，并呼吁重新品牌化AI",
+    "summary_cn": "特朗普在联合国新闻中强调了对伊朗和委内瑞拉的军事行动，同时提出对AI进行重新品牌化的建议。这一言论反映出美国在军事和科技领域的双重战略考量，可能与中美AI竞争格局中的地缘政治因素有关，暗示了美国在AI领域的战略调整和竞争策略的潜在变化。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策及地缘政治，对全球AI竞赛格局有一定影响，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMilAFBVV95cUxPR25MLXlRU3Z0clowX2QtMk12V3FhSk9kU21nOUo1MTVqZDEtUlNMc0RNWHpMV2xoUVFCemZpSlNTVHY0Y1p2MnFtLXJYeTJhZTJSOTNnMlJFclNLRlRxcktDdUNIWHR0TEF5c2NsM1ZUaVZsMEgtVlp4VlFCeEFzZWFWbEVOUzlqamNBcDFBTHh6cndE?oc=5": {
+    "title_cn": "AI概述与搜索安全港的局限性",
+    "summary_cn": "本文探讨了AI概述的局限性，并分析了搜索安全港在AI领域的应用和挑战，对中美AI竞争格局中的技术政策和安全战略有重要影响。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策与安全战略，对全球AI竞赛格局有间接影响。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1faFBKeVFJMHlBOGYxQ1BWUzVuNm5LUDFUVVN5WjdOa2tHb19ZRi1NS0JzOGlzS2J0YlZzSUFwWDlyaHh2OG40MFUyQkNaQXFObnZHazFKSQ?oc=5": {
+    "title_cn": "人工智能与国际安全 - 安全理事会第10228次会议",
+    "summary_cn": "该报道来自联合国新闻，虽然没有摘要，但会议标题涉及人工智能与国际安全，这表明会议可能讨论了人工智能在国家安全和国际关系中的作用，这对于理解中美AI竞争格局中的国际政策和战略具有重要意义。",
+    "importance_score": 7,
+    "score_reason": "虽然未直接讨论中美AI竞争，但涉及国际安全议题，对中美AI竞争的全球背景有间接影响。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMFk4Y1VpM3I3V2hNOXhmVUdieUIyYzFvV1h6am1ZeUQxTUdtRFljNVdNakFaOTVmd0doNnVuZ21neXJoX0ZVTzFGVUw3aGhTeDBOOE9SR3h5V1lxc2RkcDQ5Zm04enl1UzVwMW0wd3NObXdHLXRJSFVoY1hHVUNKVnpqUjZUS2FaRGd2TGRB?oc=5": {
+    "title_cn": "欧盟AI法案对美国创新的成本分析",
+    "summary_cn": "该文章分析了欧盟AI法案对美国创新的影响，指出法案可能对美国的AI产业造成阻碍，从而影响中美AI竞争格局。",
+    "importance_score": 7,
+    "score_reason": "文章涉及美国AI政策，对全球AI竞赛格局有一定影响，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbUV0ZnpNRnVoV0tEX2RTU0pSYl9nVFR5YmtKUEJnaVNHbGduZEpxNHBVWEItN3VzVW1sbDd0cVotWmpNVmZ6LVdyenJ3RDFyRzkwZzhYRzFJSmswdFZtQVFscVBwQjRkSFA4b000YlFlM2ZVQl9uc3NXU1dMOFM5U2haajVXb1BDWndiR2FaRUVMWkduY0dhdEFmbzRUY01OenFBLWNiV1d5TEZENzFUQnZB?oc=5": {
+    "title_cn": "利用AI支持英国国家医疗服务体系（NHS）的分级和导航",
+    "summary_cn": "该报告由兰德公司发布，探讨了AI在NHS中的应用，特别是在患者分级和医疗资源导航方面的潜力。这反映了美国在医疗AI领域的探索，对中美AI在医疗健康领域的竞争格局有一定影响，尤其是在全球医疗资源分配和医疗技术标准方面。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI在医疗领域的应用探索，对全球医疗AI技术发展有间接影响，与中美AI竞争格局相关，但非核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMisAFBVV95cUxQV3RNTnFjMjJ2VGZnZmh6M2ZHYnpfNXQ2QXI5Zk1ZRzRKQnhUTlh0eVE5RWZjRlI5djBMNTJmdElRQ0Y0STc5MTFpUFFJTnJuQ1lDRGMxVFNwN2F6cUFkZzU0NS1nckdFRGlhdHZPWk45Uzg5QkZkY2JSQXoyZ3ZQSVBqczVBNnlGTXJuYUVkOFc3bmczRU9heVZMVnJULTVYNEVJczZ5ZEVVQ3piZmlTdQ?oc=5": {
+    "title_cn": "荷兰和英国AI生态系统的映射",
+    "summary_cn": "该报告由兰德公司发布，分析了荷兰和英国在AI领域的生态系统布局，包括企业、研究机构、政策环境等，对于理解欧洲AI发展态势和中美AI竞争格局具有参考价值。",
+    "importance_score": 7,
+    "score_reason": "报告虽未直接讨论中美AI竞争，但提供了欧洲AI发展情况，有助于评估全球AI竞赛格局中的欧洲角色，间接影响中美AI竞争格局。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNTHNaOHpTOWozbDZvbTJrYXptVHlRbkJucnpmS2NPYUpmTlRGX1d5aHhWZk5oWWpXd0NVQkZlVHhmc0c1MldZYWRsU1J2RmZVVUI2R3QtNlFCcGVGbkxpdElTc2ZJcmlvT3BiSkpjTnFiWmhtbHl4OTk1NUxQbkxoeWJhVkg2U0Yzb3pKTFlua0JLVGJzMHJPQ1hmMDQ5STFnZ3prREQtYlVJMDlSMGkyTndXcWdOR1hFZ0NKekxNbl9zeFZTYWtTOGl3R0VIRmZhMy1RMTA4eDhTNktFbENOdVdQRQ?oc=5": {
+    "title_cn": "规模定律：哥伦比亚法学院直播，宪法能教给我们关于治理AI的什么？",
+    "summary_cn": "该文章探讨了宪法在AI治理中的作用，分析了宪法原则如何应用于AI政策和法规制定，这对于理解中美两国在AI治理和法规制定上的差异具有重要意义。",
+    "importance_score": 7,
+    "score_reason": "文章涉及美国AI政策制定，对全球AI竞赛格局有一定影响，与中美AI竞争间接相关。",
+    "china_relevance": "中"
+  },
+  "https://www.hudson.org/technology/ai-revolution-could-become-national-security-disaster-if-we-arent-careful-alexandra-seymour": {
+    "title_cn": "如果我们不小心，AI革命可能成为国家安全灾难",
+    "summary_cn": "美国在全球高性能计算领域占据75%的份额，但暂停令可能导致这一优势被中国和其他竞争对手夺走。文章强调了对美国AI政策的担忧，并指出这可能会影响中美AI竞争格局。",
+    "importance_score": 8,
+    "score_reason": "直接讨论了中美AI竞争中的国家安全问题",
+    "china_relevance": "高"
+  },
+  "https://www.hudson.org/foreign-policy/ais-threat-chinas-control-walter-russell-mead": {
+    "title_cn": "人工智能对中国的控制威胁",
+    "summary_cn": "该报告指出，如果人工智能的知识库建立在谎言和宣传之上，那么它就称不上智能。这反映了人工智能在知识基础上的可靠性问题，对中美AI竞争格局中中国面临的挑战进行了深入分析。",
+    "importance_score": 7,
+    "score_reason": "报告涉及美国对人工智能的担忧及其对中国的影响，间接关联中美AI竞争格局。",
+    "china_relevance": "高"
+  },
+  "https://www.hudson.org/foreign-policy/trump-can-derail-chinas-ai-threat-thomas-duesterberg": {
+    "title_cn": "特朗普可能破坏中国的AI威胁",
+    "summary_cn": "特朗普总统如果愿意对北京实施经济压力，可以复杂化中国的AI战略。这表明美国在AI领域对中国的竞争策略有所反应，可能影响中美AI竞争格局。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策及对中国的战略反应，但未直接讨论中美AI竞争的核心议题如出口管制或芯片战争。",
+    "china_relevance": "高"
+  },
+  "https://spectrum.ieee.org/fanless-liquid-cooled-ai-servers-coolit": {
+    "title_cn": "无风扇的未来：液体冷却AI服务器的100%热量捕获",
+    "summary_cn": "本文探讨了液体冷却技术在AI服务器中的应用，指出在超过250千瓦的密度下，传统的液气混合冷却方式已不再适用，而近100%的热量捕获技术可以有效解决散热问题，这对中美两国在AI服务器领域的竞争具有重要意义。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI技术发展及全球AI竞赛格局",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5TbmV1ZGJzYmEyLXZZZHVkRnR6M0R1ZXdINTB3UG1hdDJoOU4zWFpsaDBtR09fTFFpM0tuVkVEV0VQdE8zV0JBcDcyMU1wUUhwT1BGbXBBQQ?oc=5": {
+    "title_cn": "在人工智能驱动世界中确保可靠信息——联合国大会第81届会议",
+    "summary_cn": "该报告讨论了在人工智能时代确保信息可靠性的重要性，这对于中美两国在全球AI竞赛中的地位至关重要。它涉及了信息安全和全球治理问题，间接反映了中美在AI领域的竞争态势。",
+    "importance_score": 7,
+    "score_reason": "内容涉及全球AI竞赛格局，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9OUFdSclYwcXkwSVIxMnRnWDIzcUxnZmVTQkpfVnBkZlZXa05RVFI5MmFyNXZscGZKWmFkU0hYbTExcDg4NlhfZ1F0bllxMlRzOTA4bERtZHlCcEVteVl3?oc=5": {
+    "title_cn": "人工智能时代保护儿童权利：作为操作工具的人工智能儿童权利保护联盟",
+    "summary_cn": "本文探讨了人工智能在保护儿童权利方面的应用，以及如何通过人工智能工具来加强儿童权利保护。这与中国在AI伦理和儿童保护方面的政策和法规制定有关，可能对中美AI竞争格局产生间接影响。",
+    "importance_score": 7,
+    "score_reason": "涉及全球AI竞赛格局和儿童权利保护，与中美AI竞争间接相关",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/09/22/1144867/dont-be-fooled-summer-ai-hype/": {
+    "title_cn": "别被这个夏天的AI炒作所迷惑",
+    "summary_cn": "近期AI领域炒作不断，Anthropic和Meta相继宣称其模型在安全领域具有优势，但随后也发生了模型安全漏洞事件。这反映出AI技术在快速发展中仍存在安全隐患，对中美AI竞争格局有一定影响，但并非直接竞争的核心议题。",
+    "importance_score": 7,
+    "score_reason": "涉及全球AI竞赛格局，但未直接讨论中美AI竞争的核心议题如出口管制、芯片战争等。",
+    "china_relevance": "中"
+  },
+  "https://www.foreignaffairs.com/united-states/trouble-nuclear-ai-analogy": {
+    "title_cn": "核武器与人工智能类比的问题",
+    "summary_cn": "文章探讨了在限制快速发展的人工智能危险的努力中，许多人将人工智能与核武器相提并论，但指出这种类比可能存在误导，并讨论了这种类比对中美AI竞争格局的影响，特别是涉及美国AI政策与国家安全战略的讨论。",
+    "importance_score": 7,
+    "score_reason": "文章涉及美国AI政策与国家安全战略，对全球AI竞赛格局有间接影响，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://cms.hoover.org/research/victor-davis-hanson-lefts-psychodrama-cycle-designed-win-them-elections": {
+    "title_cn": "维克多·戴维斯·汉森：左翼的心理剧循环旨在赢得选举",
+    "summary_cn": "胡佛研究所研究员维克多·戴维斯·汉森指出，全球变暖、核冬天、COVID-19等事件以及左翼在选举前总是炒作的心理剧，可能与即将到来的AI“末日”事件并非巧合。这反映了美国政治中AI议题被用作选举策略的现象，间接关联到中美AI竞争格局。",
+    "importance_score": 7,
+    "score_reason": "内容涉及美国AI政策与选举策略，间接影响中美AI竞争格局。",
+    "china_relevance": "中"
+  },
+  "https://cms.hoover.org/research/could-artificial-intelligence-kill-us-all-and-how-exactly": {
+    "title_cn": "人工智能是否会让我们全部丧命？究竟是如何做到的？",
+    "summary_cn": "胡佛研究所的Herbert Lin认为，真正的威胁仍然来自于核武器本身以及人类对它们的决策，而不是人工智能控制系统的假设情景。这一观点与中美AI竞争格局中关于人工智能安全与控制的讨论密切相关，强调了人工智能治理的重要性。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策与国家安全战略，对全球AI竞赛格局有影响，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  }
+}
