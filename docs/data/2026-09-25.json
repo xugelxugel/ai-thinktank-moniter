@@ -1,0 +1,114 @@
+{
+  "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRVhmWWM0MjJnRFF4S20yS2hlQ20zOWhFbHpPb3VNTDBkN05LYVNNS25SRzBCQm83R01ISlpERFhIUW5yR0lnNDEtZkNybVMwRXBCN054NVI1TDZNSnhiV1RVdGViLWhndXg2MXlGT2NsZGVxX21Ea1g4ZnVUMGRqR1RJSm9MY1RBRVFpQm9icTJrdnkzM2tILXA5d3JvTGZsTlZldGs2a2JnczBJV1E?oc=5": {
+    "title_cn": "NIST NCCoE 发布 DevSecOps 新资源并宣布将举行智能体 AI 研讨会",
+    "summary_cn": "NIST 旗下国家网络安全卓越中心（NCCoE）发布了 DevSecOps 相关技术资源，并围绕智能体 AI（Agentic AI）的安全性展开研讨，体现了美方正在加快布局前沿 AI 开发流程的安全与标准化体系。智能体 AI 作为下一代 AI 竞争的关键高地，其安全治理与开发标准将成为中美科技博弈中规则制定权争夺的重要组成部分。美国通过 NIST 率先建立此类标准，意在强化其国内 AI 供应链的安全韧性并巩固全球技术治理的主导地位。",
+    "importance_score": 5,
+    "score_reason": "涉及美国 NIST 对 DevSecOps 及前沿智能体 AI 安全标准的推进，属于 AI 治理与技术标准制定的间接相关议题。",
+    "china_relevance": "中"
+  },
+  "https://datainnovation.org/2026/09/revealing-movement-patterns/": {
+    "title_cn": "揭示人口流动模式：橡树岭国家实验室推出LandScan Mosaic可视化系统",
+    "summary_cn": "美国橡树岭国家实验室开发了AI驱动的LandScan Mosaic系统，能够实现建筑物级别的全天候人口流动高精度可视化。该技术展现了美国国家实验室将AI深度融入地理空间情报与态势感知的最新进展，凸显了AI在军民两用及战略情报领域的潜在价值。",
+    "importance_score": 5,
+    "score_reason": "本文涉及美国国家实验室在AI地理空间情报与双重用途技术上的具体应用，属于国家安全与AI技术交叉的间接相关议题。",
+    "china_relevance": "低"
+  },
+  "https://datainnovation.org/2026/09/analyzing-lunar-topography/": {
+    "title_cn": "分析月球地形",
+    "summary_cn": "IBM与美国国家航空航天局（NASA）联合推出了包含30多层地图和图像的月球数据集，用于训练面向月球探索的AI基础模型。该项目展现了美国将AI大模型技术融入深空探测的最新部署，旨在通过智能化工具提升太空地理空间信息的分析效率。在中美深空探测与月球竞逐加剧的背景下，航天地理AI模型正成为两国争夺太空科技制高点的新兴支撑手段。",
+    "importance_score": 3,
+    "score_reason": "该内容属于AI在航天探月领域的具体应用，虽处于中美太空科技竞争大背景下，但未直接触及核心AI政策、芯片禁令或战略博弈。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMisAFBVV95cUxNS25hUWROR1JXek1kNWFHcEREU1ZXSWNiY3VKRUk2V2hGSlFiV1dwMmJpM1p2MDdXaE5LMTBFeWFodUFiQmlwTVR3cUtCRVVGcnBuQzVCSE9Eb0FDc05SQUJxNmItTmRFaHJDUXpycHhnc0tNa0JtdzhFTmR3NUNUWXdCeGdjcHczVTV1SlFVUzBCYTFDOFhJajItelQ4UnhoZk5EcVdlUlhRdVhabnZoeQ?oc=5": {
+    "title_cn": "AGI 平稳过渡：管理迈向先进 AI 道路上的风险",
+    "summary_cn": "兰德公司（RAND）在报告中探讨了迈向通用人工智能（AGI）进程中的极端风险管理与国家安全策略。分析表明，美国智库正试图在对华 AI 竞争加剧的背景下，为美政策制定者构建一套兼顾‘保持技术领先’与‘防范失控风险’的治理框架。这反映出美方将 AGI 安全上升为国家安全议题，旨在通过风险管控维持其在全球 AI 竞赛中的战略主导权。",
+    "importance_score": 7,
+    "score_reason": "报告出自美国国防核心智库，聚焦前沿 AI 风险管理与国家安全战略，反映了美国在前沿 AI 竞赛中的政策动向。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUk5XSWJSVGgwblc4dkc2cU9rUm1fQmZ3b2xXZHVKODY2Mlh0cjc4RDlKSElfaEV6U19MNmpfNmxkYnZvT1N6Qm1sMjB2TTQ4UXozSGJLT25lU3pjZDlFN010NDF3Zjk2YnVYcEsxT2dJNVZUYWtNMjVZbkg3ZUtaUUxmUmd0OEtLa1hXdTBKcy11YlRzLThxakFYTWJmdHJFOXZ6cHhubE5HcHZnTWpmeFVFLS1hc3BlREVj?oc=5": {
+    "title_cn": "AI初创企业如何应对监管：对话 Maryam Mujica 与 Munjal Shah",
+    "summary_cn": "本期CSIS对话探讨了美国AI初创企业在日益复杂的政策环境中如何平衡合规成本与创新速度。监管政策的明确度与执行力度将直接决定美国AI初创生态的繁荣度，进而影响中美AI竞争中美方技术迭代的敏捷性与商业化落地能力。",
+    "importance_score": 5,
+    "score_reason": "关注美国国内AI治理与初创企业合规策略，间接影响美方在AI竞赛中的生态创新活力。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWk1falZRYjRiLVR4U0VqM2ozakZOa0RzUl92TWx4OE1hZWZQR05ScFAwSmx4eklBam84WmttbWVoUmI3Z05oUUN2MHFETkZJV0VZb2hrcTVPTjNMUDZ2QlNQbzlrQmxReXhseFZ3cEdGLU5HckR5MHZEdzVqejAxZHIzOWZ0TkhvNUo0a1hraGl5d0ExV3lSODI3QmVSRnpMZWRrT1pWd0gtWDlqT1UyZzdlZnhaV0Q3TFRJ?oc=5": {
+    "title_cn": "纽约州无需新立法即可向全国共享前沿 AI 安全报告",
+    "summary_cn": "本文探讨了纽约州如何利用现有法律机制跨州共享前沿AI安全报告，展现了美国在联邦立法僵局下通过州级行政创新推动AI治理的灵活路径。这种信息共享机制若成功推广，将加速美国国内前沿AI安全审查与风险评估的全国协同。在中美AI竞赛背景下，美国加速构建国内AI安全监管闭环，旨在强化前沿大模型的安全屏障，但也可能重塑本土AI巨头的合规成本与迭代节奏。",
+    "importance_score": 5,
+    "score_reason": "涉及美国前沿AI安全治理与州级监管政策机制创新，间接影响美国AI产业的合规生态与发展节奏。",
+    "china_relevance": "低"
+  },
+  "https://www.hudson.org/technology/why-us-should-pace-risk-not-speed-ai-race-china-jason-hsu": {
+    "title_cn": "为什么美国在中美 AI 竞赛中应把控风险而非放缓速度",
+    "summary_cn": "本文由哈德逊研究所专家撰写，探讨了美国在面对中国 AI 崛起时应采取的战略姿态。作者主张美国不应因担忧 AI 风险而放缓研发与部署的速度，而应通过精准管理风险来维持创新活力，避免在与中国的科技博弈中失去主导权。这反映了华盛顿智库圈对“安全与发展”博弈的最新思考，即主张通过保持技术迭代优势来确保美国在中美 AI 战略竞争中的绝对优势。",
+    "importance_score": 9,
+    "score_reason": "文章直接探讨中美 AI 战略竞赛的核心议题，并针对美国如何维持对华 AI 竞争力提出了明确的战略与政策主张。",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRk9EV0hSblg1LUJxYlIxYVBqVjNGN1JlV1AyUGx4aTNEb00tWUhLbEtUU0pvakRkVVZ6SHVlQnZnOFFJZmZZdkEzcmdkdUJMbUR2emVwYVA4eHlhRkNPLWNVSmF0Y1ZBR2g0T0VGdU1teVJXeFAyS3pGRkNZMGtLcS04VjcwSGVWQ1V1TFRyM0t5VVZjS1RoZEJOaFlBUGRRa2NGTUZRRmFhamkyWFVr?oc=5": {
+    "title_cn": "智能体AI如何通过新一代初创企业重塑供应链韧性",
+    "summary_cn": "文章探讨了智能体AI（Agentic AI）如何超越传统自动化，通过自主决策与执行能力重塑全球供应链的抗风险能力。在中美地缘政治紧张与产业链重构背景下，AI驱动的供应链韧性正成为大国竞争中保障关键工业与科技供应链安全的重要基础设施。美欧初创企业在该领域的快速崛起，可能进一步巩固西方在大国博弈中的供应链技术优势与产业护城河。",
+    "importance_score": 3,
+    "score_reason": "该文聚焦于智能体AI在商业供应链重构中的应用与初创生态，未直接探讨中美政策博弈、出口管制或核心技术对抗，属于关系较远的应用层面议题。",
+    "china_relevance": "低"
+  },
+  "https://www.technologyreview.com/2026/09/24/1145048/ai-climate-week/": {
+    "title_cn": "AI主导纽约气候周讨论",
+    "summary_cn": "纽约气候周期间，前沿AI发展带来的巨大能源消耗与气候影响成为全球政商界关注的核心焦点。随着大模型迭代对算力及电力需求的爆发式增长，清洁能源供给正成为支撑AI发展的关键隐性瓶颈。这一议题间接折射出中美在AI算力基础设施扩张与能源转型战略上的深层竞争与考量。",
+    "importance_score": 4,
+    "score_reason": "主要关注AI发展对能源与气候的负荷，属于中美AI算力基础设施与可持续发展竞争的间接相关议题。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBJUjFUOVc3RVdPOFRIeUhvOFB1TGd2cWg4VEJkTnNXMnlDckRLVzBseVdMLTk1cnN6NVNxOEgtdTdLWE94akwxQV9vWWw?oc=5": {
+    "title_cn": "NIST AI联盟会员门户服务条款",
+    "summary_cn": "本文档定义了美国国家标准与技术研究院（NIST）人工智能安全研究所联盟（AISIC）成员门户的使用规则与规范。作为美方整合产学研资源、制定前沿AI安全与评估标准的核心平台，该门户的制度化运营反映出美国正在加速夯实本土AI治理的技术基础设施。这一动作旨在通过联合盟友与顶尖企业确立美式AI安全标准，对全球AI技术规范的演进及中方在国际标准制定中的话语权产生间接协同效应。",
+    "importance_score": 4,
+    "score_reason": "本文档仅为美国NIST AI安全联盟的例行合规管理文件，虽体现美方AI治理机制落地，但缺乏重大政策转向或直接的对华竞争策略。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5jcVZnTDBBRFB2ZlpybTFSeWhfdWNQU1pObzdzSjdTYnRyd1NLT1Y0eXMySkNkZ2tWcnRxTDY3ZEVYZU11LUEtVw?oc=5": {
+    "title_cn": "NIST AI联盟成员门户网站",
+    "summary_cn": "美国国家标准与技术研究院（NIST）上线其AI安全研究所联盟（AISIC）成员门户，旨在提升产学研各方在前沿AI安全评估与标准制定中的协同效率。作为美方落实AI行政命令的关键机制，该平台反映了美国正加速整合国内及盟友资源，以确立全球AI治理与安全规则的主导权。这体现了中美竞争已从单纯的技术攻防延伸至国际标准与话语权的规则之争。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI国家安全战略与安全标准制定的具体实施，旨在争夺全球AI治理规则话语权。",
+    "china_relevance": "中"
+  },
+  "https://www.federalregister.gov/documents/2026/09/24/2026-19525/foreign-trade-zone-ftz-27-notification-of-proposed-production-activity-rochester-electronics-llc": {
+    "title_cn": "对外贸易区（FTZ）27号，拟议生产活动通知；罗切斯特电子有限公司（半导体产品）；马萨诸塞州纽伯里波特",
+    "summary_cn": "美国马萨诸塞州第27外贸区（FTZ）发布通知，拟批准罗切斯特电子（Rochester Electronics）在该区内开展半导体产品的生产与加工活动。罗切斯特电子作为全球领先的授权半导体复产与分销商，其外贸区资质申请旨在降低关税成本并提升本土供应链灵活性。此举反映了美国正在通过政策工具巩固本土半导体（尤其是成熟制程与特殊器件）供应链的安全与韧性，为中美芯片博弈背景下的底层AI硬件供应链提供间接支撑。",
+    "importance_score": 4,
+    "score_reason": "该内容属于美国半导体供应链及外贸区的日常行政审批，侧重于本土芯片加工分销，与前沿AI芯片竞争间接相关。",
+    "china_relevance": "低"
+  },
+  "https://www.federalregister.gov/documents/2026/09/24/2026-19504/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-for": {
+    "title_cn": "机构信息收集活动：提交管理和预算局审查与批准；征求意见；半导体制造国家有害空气污染物排放标准（续期）",
+    "summary_cn": "美国环境保护局（EPA）已向管理和预算局（OMB）提交半导体制造业国家有害空气污染物排放标准（NESHAP）的信息收集请求续期申请，旨在维持对本土芯片制造企业排放数据的合规监管。该动作属于美国内部常规的环保行政程序续期，反映了美方对本土半导体生产设施合规运维的持续监督。尽管半导体产能是AI算力竞争的基石，但此项纯合规性文件对中美AI竞争格局与出口管制策略影响极为有限。",
+    "importance_score": 3,
+    "score_reason": "本文仅涉及美国国内半导体工厂环保排放申报的例行行政程序续期，与中美AI竞赛及芯片制裁等核心议题关系较远。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMibkFVX3lxTE84MTdfLVpVYXpvLVFqQ21mSndwV3Z5Z2EwcUhXd2w0U3lQRHp1NzJiT1pORzlMaHBNMXBMNjJieVFfai1GUnl5S0Fkb2IyVFVqb2hhT280TjZQeS1vU2FIUkFUdkM4YTJTbXROaWhR?oc=5": {
+    "title_cn": "为 AI 基础设施建设融资",
+    "summary_cn": "本文探讨了满足前沿 AI 模型庞大算力与能源需求所需的巨额资本筹措机制及金融政策挑战。随着中美 AI 竞赛逐渐演变为算力底座与能源供给的比拼，美国能否通过资本市场与政策协同高效完成基础设施建设，将直接决定其能否维持对华硬件规模优势。",
+    "importance_score": 7,
+    "score_reason": "文章聚焦于支持前沿 AI 算力规模化所需的资本与政策支撑，切中全球 AI 基础设施竞赛的核心驱动力。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMibEFVX3lxTFA5ekJMck1CNnNOcmtzSkRWMVJaTXlhNW5EU2hsR2FDN0Q2bEF6d3FtaXVoZWVVNm1tRFlBemd4R1BDY0Z6ck5uZkc2VXVFRno2RG1CZXRHdTl5WFllS1dNVFJFYlJ4Q1MtbTV5bQ?oc=5": {
+    "title_cn": "为什么 AI 会引发如此巨大的争议？",
+    "summary_cn": "本文剖析了围绕 AI 在安全风险、经济颠覆及监管路径上引发剧烈争议的深层原因。从中美竞争视角来看，美国国内在“严格安全监管”与“加速创新以保持对华优势”之间的战略路线分歧，直接决定了其科技政策的走向与执行效率。",
+    "importance_score": 6,
+    "score_reason": "聚焦美国国内 AI 治理与监管路线之争，间接影响美国对华科技战略的统筹与实施效率。",
+    "china_relevance": "中"
+  },
+  "https://cms.hoover.org/research/robotics-roadmaps-around-world-spotlight-month-china": {
+    "title_cn": "全球机器人路线图聚焦：中国",
+    "summary_cn": "中国正通过加大对具身人工智能和类人机器人领域的投入，依托其庞大的制造业基础设施，瞄准下一场工业革命。这一举措不仅体现了中国在全球机器人领域的雄心，也凸显了中美在人工智能领域的竞争态势。",
+    "importance_score": 7,
+    "score_reason": "内容涉及全球人工智能竞赛格局，尤其是中国在该领域的战略布局，与美国的相关政策形成对比。",
+    "china_relevance": "高"
+  }
+}
