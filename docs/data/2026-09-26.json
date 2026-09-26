@@ -1,0 +1,37 @@
+{
+  "https://news.google.com/rss/articles/CBMigwFBVV95cUxPUjNrSHhuTVVvUkpOc1AyQ2M2c3ZCV1ZQTWV2UF90c2psUFJVTGtsdkFBZmZ4UHlZUkpiRm5iaTM0NGxfSldadXJtcTQ3V050cVdTODA1X1BLS3VoNUZTWVFBeWNyV1cyUUR0ZWRacGc3R1QtRUtaY1FqQmZVTkNfbU5CRQ?oc=5": {
+    "title_cn": "评估 AI 的基准测试可能存在偏差",
+    "summary_cn": "斯坦福 HAI 指出当前用于衡量大模型能力与安全性的基准测试（Benchmarks）存在失真问题，难以准确反映前沿 AI 的真实水平。在中美 AI 竞争中，基准测试不仅是衡量中美模型能力差距（如 OpenAI 与 DeepSeek、Qwen 等）的核心尺子，也是美国政策制定者设定 AI 安全监管与芯片管制能力门槛的技术依据。测试标准的失效可能导致对两国 AI 技术差距及潜在风险的误判。",
+    "importance_score": 6,
+    "score_reason": "议题聚焦于 AI 评估基准与治理标准，间接影响中美技术差距的精准度量及前沿 AI 安全监管门槛的设定。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMifEFVX3lxTE05OWN5TmNHZHctd0tScnZZa2owSllSU3FjX2NuOG94bjY5THNxVURwSHByaGM5ZVAzSVJZRXNxTmpmNkNRUm4yNlNKZUs0U0dmTFE0MTFRRmVueXNlTnRqTnVZQkFQNTRjTjdpSVBlcXBkTmh1Ti1IOVdCa1A?oc=5": {
+    "title_cn": "创新灯泡：AI存在记忆问题",
+    "summary_cn": "该报告指出AI在记忆方面存在缺陷，这可能影响其学习和决策能力。这一发现对于中美AI竞争格局具有重要意义，因为它可能影响AI在关键领域的应用和性能，从而影响两国在AI领域的竞争地位。",
+    "importance_score": 7,
+    "score_reason": "涉及AI性能和应用的讨论，对中美AI竞争格局有间接影响",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMibkFVX3lxTE1jSkhmenpUSjJsWVcyUE5pSmZWVTljd3hwNUZEMnRnV1JudEtLSm1meW83TWtKMnE1eUxIOWdRY1FNZkNiakpWT1ctNEFveGRMVURkVDVZbFdSSUI3VTVoV3A1QzZ2T3BCaXdqVF9B?oc=5": {
+    "title_cn": "迎接AI诉讼浪潮",
+    "summary_cn": "文章探讨了AI领域日益增长的诉讼趋势，这可能影响AI技术的研发和商业应用，对中美两国在AI领域的竞争格局产生间接影响。",
+    "importance_score": 7,
+    "score_reason": "文章涉及美国AI领域的法律动态，对全球AI竞赛格局有一定影响，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTE56WTZtRlRabjM5OUpWazJmWERHYjFTN2YzOW5sYlZLVGdPUzRzRzFSeG1xNUd3STg3REZ2V2Z1X1lwbGhWZlItNW43N0dYTklCZmxUQVNwZw?oc=5": {
+    "title_cn": "人工智能与新兴技术在维护国际和平与安全中的角色，重点关注海上安全方面",
+    "summary_cn": "本文探讨了人工智能和新兴技术在维护国际和平与安全中的作用，特别是海上安全领域。文章强调了人工智能在海上安全监控、防御和应对海上威胁方面的潜力，并分析了这些技术如何影响中美两国在海上安全领域的竞争态势。",
+    "importance_score": 7,
+    "score_reason": "文章虽未直接讨论中美AI竞争，但涉及了人工智能在国家安全战略中的应用，对全球AI竞赛格局有一定影响，因此评分7分。",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/": {
+    "title_cn": "五角大楼寻求3000万美元研发AI-powered谎言探测器",
+    "summary_cn": "美国政府在五角大楼的预算请求中提出，未来五年内投资3030万美元用于改进型测谎仪的研发，该项目名为Polygraph+或Polygraph Next，将聚焦于利用人工智能和机器学习算法的评分算法，以及一种称为“远程感应”的技术。这一举措反映了美国在AI领域的战略布局，可能对中美AI竞争格局产生间接影响。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策与国家安全战略，对全球AI竞赛格局有一定影响",
+    "china_relevance": "中"
+  }
+}
