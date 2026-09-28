@@ -1,0 +1,30 @@
+{
+  "https://news.google.com/rss/articles/CBMilAFBVV95cUxNVDV5cVlCbzN5WUVvYmJHOXdtV2toekFEalRQQWhiLVRocEp0bGJraklwN1hQWjk0VDVUM2JBek5TSWE4ZGJkNjFUMEQtdUpIZ0JKZnNqS2E3ZmFyZkpOeXFLS0FoMU5mWW16SVczbV9RUFZ4ZENNZUQtNFB6Q212cmFobWlRVGJNZVNuLWFTS0tYN1lQ?oc=5": {
+    "title_cn": "制造商如何跨工厂扩展人工智能和数字化转型",
+    "summary_cn": "本文探讨了制造业如何通过人工智能和数字化转型来提升生产效率，这对中美两国在AI领域的竞争具有重要意义。中国制造商若能成功实施这些策略，将有助于提升其在全球市场的竞争力，而美国在AI技术方面的领先地位可能会受到挑战。",
+    "importance_score": 7,
+    "score_reason": "文章涉及全球制造业的数字化转型，间接反映了中美在AI领域的竞争态势。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiygFBVV95cUxNTWE1d1gxTlhjMmZnYnUzQ0xDVEVVdEpUbmIxaVpDQjk2ZVhSVVBfU2JpaXRYTVNSQVpYTDlDcjl5Sjh1Y0wtRXFsakg3clBSS3ZxQkhMOXdNNW4wUF9KXzhJYUlBY1RxUFota2c2WjB2QldVZ2RIanJici1oeDdZdEM5MTlQYTY0UU5GX3dQT2pRaWdPdjQ0UExqUUZxaExtSWMzUnFVX3hteXY2SjNpU3RncWMyZGVjMUhkdnd1M25VM1g1SUVRLXhR?oc=5": {
+    "title_cn": "AI用于溯源和可追溯性",
+    "summary_cn": "该报告由NIST发布，探讨了AI技术在溯源和可追溯性方面的应用，这对于中美两国在供应链管理和产品安全方面的竞争具有重要意义。随着全球供应链的复杂化，AI在提高透明度和追踪能力方面的作用日益凸显，这可能影响中美两国在相关技术领域的竞争态势。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策及全球供应链管理，与中美AI竞争格局间接相关",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPUVZGVVJfUW95UC15MkU3VzJZRktmNzNxc1RtdmlrZktvRDFkSTdwYXpvZTBqaEFfdXNEbFp0NzZ5RmV0WG1DLXhzRDg0YzZLTmNERVFtYWQ1em1yVGRxZW51Q3V1OUJEdTNtV0RUTHhRcGJJb2tudUhGWWo3V252djFFR3dfQjRESURjMkJQNGIzcFpuTlFRVF9sZ25BS1ZXU09ZUl9jOHFraWdaS2hYdFRwcjJIbE5KTlZmX2hrSzloZy1XYlcwajVjLTRNMDdlbkkzalZJNFZBQzBHbFlDOQ?oc=5": {
+    "title_cn": "对AI推理芯片的硬件攻击",
+    "summary_cn": "NIST发布报告，探讨硬件攻击对AI推理芯片的影响，涉及AI芯片安全与可靠性问题，对中美AI芯片产业竞争格局有重要影响，可能引发对AI芯片安全的关注和研发投入增加。",
+    "importance_score": 7,
+    "score_reason": "报告涉及AI芯片安全，与全球AI竞赛格局和国家安全战略相关。",
+    "china_relevance": "高"
+  },
+  "https://cms.hoover.org/research/iran-and-china-create-first-their-kind-autonomous-ai-influence-campaigns": {
+    "title_cn": "伊朗与中国开创首例自主人工智能影响活动",
+    "summary_cn": "伊朗和中国利用开源人工智能模型和AI代理在社交媒体上发起影响活动，这引发了美国官员对AI在在线操纵中潜在用途的担忧。这些活动涉及数百个AI代理自主创建虚假账户和传播虚假信息，突显了AI在信息战中的潜在威胁，对中美AI竞争格局构成间接影响。",
+    "importance_score": 7,
+    "score_reason": "涉及美国对AI的担忧和潜在的国家安全战略问题，但并非直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "高"
+  }
+}

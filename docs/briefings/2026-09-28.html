@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年09月28日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年09月28日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">5</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">4</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">0</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">1</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-high">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">World Economic Forum</span>
+                    <span class="card-date">09-27 15:00</span>
+                </div>
+                <h3 class="card-title">制造商如何跨工厂扩展人工智能和数字化转型</h3>
+                <p class="card-title-en">How manufacturers can scale AI and digital transformation across every factory</p>
+                <p class="card-llm-summary">本文探讨了制造业如何通过人工智能和数字化转型来提升生产效率，这对中美两国在AI领域的竞争具有重要意义。中国制造商若能成功实施这些策略，将有助于提升其在全球市场的竞争力，而美国在AI技术方面的领先地位可能会受到挑战。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章涉及全球制造业的数字化转型，间接反映了中美在AI领域的竞争态势。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNVDV5cVlCbzN5WUVvYmJHOXdtV2toekFEalRQQWhiLVRocEp0bGJraklwN1hQWjk0VDVUM2JBek5TSWE4ZGJkNjFUMEQtdUpIZ0JKZnNqS2E3ZmFyZkpOeXFLS0FoMU5mWW16SVczbV9RUFZ4ZENNZUQtNFB6Q212cmFobWlRVGJNZVNuLWFTS0tYN1lQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">NIST</span>
+                    <span class="card-date">09-27 09:49</span>
+                </div>
+                <h3 class="card-title">AI用于溯源和可追溯性</h3>
+                <p class="card-title-en">AI for Provenance and Traceability</p>
+                <p class="card-llm-summary">该报告由NIST发布，探讨了AI技术在溯源和可追溯性方面的应用，这对于中美两国在供应链管理和产品安全方面的竞争具有重要意义。随着全球供应链的复杂化，AI在提高透明度和追踪能力方面的作用日益凸显，这可能影响中美两国在相关技术领域的竞争态势。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及美国AI政策及全球供应链管理，与中美AI竞争格局间接相关</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxNTWE1d1gxTlhjMmZnYnUzQ0xDVEVVdEpUbmIxaVpDQjk2ZVhSVVBfU2JpaXRYTVNSQVpYTDlDcjl5Sjh1Y0wtRXFsakg3clBSS3ZxQkhMOXdNNW4wUF9KXzhJYUlBY1RxUFota2c2WjB2QldVZ2RIanJici1oeDdZdEM5MTlQYTY0UU5GX3dQT2pRaWdPdjQ0UExqUUZxaExtSWMzUnFVX3hteXY2SjNpU3RncWMyZGVjMUhkdnd1M25VM1g1SUVRLXhR?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">NIST</span>
+                    <span class="card-date">09-27 09:46</span>
+                </div>
+                <h3 class="card-title">对AI推理芯片的硬件攻击</h3>
+                <p class="card-title-en">Hardware attacks on AI Inference chips</p>
+                <p class="card-llm-summary">NIST发布报告，探讨硬件攻击对AI推理芯片的影响，涉及AI芯片安全与可靠性问题，对中美AI芯片产业竞争格局有重要影响，可能引发对AI芯片安全的关注和研发投入增加。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：报告涉及AI芯片安全，与全球AI竞赛格局和国家安全战略相关。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxPUVZGVVJfUW95UC15MkU3VzJZRktmNzNxc1RtdmlrZktvRDFkSTdwYXpvZTBqaEFfdXNEbFp0NzZ5RmV0WG1DLXhzRDg0YzZLTmNERVFtYWQ1em1yVGRxZW51Q3V1OUJEdTNtV0RUTHhRcGJJb2tudUhGWWo3V252djFFR3dfQjRESURjMkJQNGIzcFpuTlFRVF9sZ25BS1ZXU09ZUl9jOHFraWdaS2hYdFRwcjJIbE5KTlZmX2hrSzloZy1XYlcwajVjLTRNMDdlbkkzalZJNFZBQzBHbFlDOQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Hoover Institution</span>
+                    <span class="card-date">日期未知</span>
+                </div>
+                <h3 class="card-title">伊朗与中国开创首例自主人工智能影响活动</h3>
+                <p class="card-title-en">Iran and China Create First-of-Their-Kind Autonomous A.I. Influence Campaigns</p>
+                <p class="card-llm-summary">伊朗和中国利用开源人工智能模型和AI代理在社交媒体上发起影响活动，这引发了美国官员对AI在在线操纵中潜在用途的担忧。这些活动涉及数百个AI代理自主创建虚假账户和传播虚假信息，突显了AI在信息战中的潜在威胁，对中美AI竞争格局构成间接影响。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及美国对AI的担忧和潜在的国家安全战略问题，但并非直接讨论中美AI竞争的核心议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://cms.hoover.org/research/iran-and-china-create-first-their-kind-autonomous-ai-influence-campaigns" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#5</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">CSIS</span>
+                    <span class="card-date">09-27 23:06</span>
+                </div>
+                <h3 class="card-title">Innovation Lightbulb: Building the AI Workforce: The Math Behind the Pipeline</h3>
+                <p class="card-title-en">Innovation Lightbulb: Building the AI Workforce: The Math Behind the Pipeline</p>
+                <p class="card-llm-summary"></p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQd1d0c3NaVUpyVVZORWhDSFRoaWlrN2Zwd3A2b0c0ckdhNERqNHgwbG9rYUE3M3NzOFl3X0lSZzd5LWlFYXItdkVxUlJIdnlSMUpmMzBZcWppQjU0S2lvd25zMlNQOVJsN3JZaXpfQ281NHZYZ3hCUHZlaFJtYkFXUVBHWXNnc3A1WlF0VEtJYnR3a2VDRjVfQg?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-09-28 01:07 UTC
+    </div>
+</body>
+</html>
