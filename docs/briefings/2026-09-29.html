@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年09月29日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年09月29日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">9</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">7</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">1</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">1</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-high">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">R Street Institute</span>
+                    <span class="card-date">09-29 03:38</span>
+                </div>
+                <h3 class="card-title">桑德斯-卡萨尔《禁止人工超级智能法案》是AI威权主义</h3>
+                <p class="card-title-en">The Sanders-Casar “Ban Artificial Superintelligence Act” is AI Authoritarianism</p>
+                <p class="card-llm-summary">R街研究所的研究报告指出，该法案旨在限制AI的发展，反映出对AI技术的威权控制倾向。这一政策可能影响全球AI竞赛格局，尤其是中美两国在AI领域的竞争，因此具有较高的重要性。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及美国AI政策及全球AI竞赛格局</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxOc1RwTzRicURzSmFFamxLZnV4ZEpLdTE3REY2SVdQcGpVSlM2SE5OSDNUaW0yb0JMWVQ2SmJBZXFJRmFFenhrX21TRVJuTFBuQ0FWYTZOMldmdnROS2R6dU5FdFZhLUJHelRsV2dRQWQzbFlOTndfblNHR2Y3YUpDSTBucGN0engyWGhvMk1EZkFJUG1KdHFUcVhsYlV1N0cxbk13ZWN0a0NLSmJOLVZLMVloUQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Lawfare</span>
+                    <span class="card-date">09-29 02:31</span>
+                </div>
+                <h3 class="card-title">我们未讨论的AI威胁</h3>
+                <p class="card-title-en">The AI Threat We’re Not Talking About</p>
+                <p class="card-llm-summary">本文探讨了中美AI竞争中未被充分讨论的潜在威胁，分析了这些威胁对全球AI竞赛格局的影响，并暗示了美国在AI政策上的潜在调整方向。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及全球AI竞赛格局，但未直接讨论中美AI竞争的核心议题如出口管制、芯片战争等</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTFBJVVlMcFBqbmQweHlZNU5FVlYzTVhCRmFndUlJdGtCc1VtY25MNmZnN2FteWdrX196NDZSR0hJLVFIUzk4SzJpRVBKdUJZakVyR0xac3FNQUZvSDk0djJOdno5cEktSFhDOEx6YU56bXpuMjRkc1p4QnJVT0o2V0U?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">IEEE Spectrum</span>
+                    <span class="card-date">09-29 02:00</span>
+                </div>
+                <h3 class="card-title">IEEE推出面向青少年的STEM新书系列——TryEngineering</h3>
+                <p class="card-title-en">A New IEEE STEM Book Series for Tweens from TryEngineering</p>
+                <p class="card-llm-summary">IEEE TryEngineering致力于激发儿童对知识的兴趣，通过介绍人工智能、电动汽车和海洋探索等领域的快速发展的技术，帮助年轻学习者理解相关概念，为培养下一代问题解决者、创造者和工程师做好准备。这一系列书籍的推出，反映了美国在STEM教育领域的重视，对于提升美国在AI领域的竞争力具有重要意义，同时也可能对全球AI竞赛格局产生影响，对中国在AI教育领域的竞争产生间接影响。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及美国AI教育政策，对全球AI竞赛格局有间接影响</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: artificial intelligence</span>
+                    <a href="https://spectrum.ieee.org/ieee-stem-books-tweens-tryengineering" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">MIT Technology Review</span>
+                    <span class="card-date">09-29 01:03</span>
+                </div>
+                <h3 class="card-title">何时我们能说AI做出了科学发现？</h3>
+                <p class="card-title-en">When can we say AI made a scientific discovery?</p>
+                <p class="card-llm-summary">Anthropic近期宣布其分子生物学实验室的 Claude 代理在阅读并推测复杂的生物学问题，同时人类科学家进行实验。这一进展反映了AI在科学研究领域的应用，对中美AI竞赛格局中的AI在科学发现中的作用有重要影响。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及AI在科学研究中的应用，影响全球AI竞赛格局，与中美AI竞争间接相关。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#5</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">U.S. Congress</span>
+                    <span class="card-date">09-28 18:13</span>
+                </div>
+                <h3 class="card-title">H.R.8094 - 119届国会（2025-2026年）：2026年人工智能基础模型透明度法案</h3>
+                <p class="card-title-en">Text - H.R.8094 - 119th Congress (2025-2026): AI Foundation Model Transparency Act of 2026</p>
+                <p class="card-llm-summary">该法案旨在提高人工智能基础模型的透明度，涉及美国对人工智能模型的监管政策，可能对中美AI竞赛格局产生影响，特别是在模型安全性和国际竞争方面。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及美国AI政策与立法，对全球AI竞赛格局有间接影响</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, foundation model</span>
+                    <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5pdkZ5MUh4ZHB6Y3ZUREtBRS1tVUdLQW40NVQyZ2t3YU50a0RfMXcyeEJfMGpnSFREV1h2dkhEdmtkRkx3YXJuM0tGektUeE81N2xheG1ycDBPT3k4Rk1aX0o1NEZZUkVPME54REtzU3JIMFk?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#6</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">MIT Technology Review</span>
+                    <span class="card-date">09-28 16:06</span>
+                </div>
+                <h3 class="card-title">AI代理失控时谁负责？</h3>
+                <p class="card-title-en">Who’s liable when AI agents go rogue?</p>
+                <p class="card-llm-summary">近期，AI代理引发的连锁网络攻击事件震惊全球，本文探讨了AI代理失控的责任归属问题，这对于中美AI竞争格局中的AI治理和安全战略具有重要意义。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及全球AI竞赛格局和AI治理问题，间接影响中美AI竞争态势。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://www.technologyreview.com/2026/09/28/1145197/whos-liable-when-ai-agents-go-rogue/" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#7</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Hoover Institution</span>
+                    <span class="card-date">日期未知</span>
+                </div>
+                <h3 class="card-title">不要期待中国在AI问题上诚实，麦克马斯特在特朗普-习近平会晤中说道</h3>
+                <p class="card-title-en">Don’t Expect China To Be Honest About AI, H.R. McMaster Says Of Trump-Xi Meeting</p>
+                <p class="card-llm-summary">胡佛研究所的学者H.R.麦克马斯特讨论了特朗普-习近平会晤可能带来的结果，指出中国在AI领域的竞争策略可能不会完全透明，这反映了中美在AI领域的竞争态势和双方在会晤中的策略博弈。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：内容涉及中美AI竞争的背景和策略，但未直接讨论具体的技术或政策细节。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://cms.hoover.org/research/dont-expect-china-be-honest-about-ai-hr-mcmaster-says-trump-xi-meeting" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#8</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">World Bank</span>
+                    <span class="card-date">09-29 04:27</span>
+                </div>
+                <h3 class="card-title">小规模AI发展黑客松常见问题解答</h3>
+                <p class="card-title-en">Small AI for Development Hackathon FAQ</p>
+                <p class="card-llm-summary">世界银行发布的关于小规模AI发展黑客松的常见问题解答，涉及AI在发展领域的应用，可能对中美AI在发展领域的竞争格局产生影响，但并未直接涉及中美AI竞争的核心议题，如出口管制或芯片战争等，因此重要性评分不高。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 4/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：内容未直接涉及中美AI竞争的核心议题，更多关注AI在发展领域的应用和推广。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxNdkg4R2V3WG9pWFZrMjlaN2Z4djZ2SkZPaklFd1Z3N1NvR2I3MTVSdk91eHpYMmhGbldFZjdmTUE5UVl2dFZhaWhvbXpTTGE3YmV0T29LQXFSS0p1VU03aHgyQjM5cW43MTlFNjk4OTl0Rm8xNzJycnM1MkM3eHlzeUVYNl9vY1RxbU1ES3BEbHI2S1Ixb1lseUpzZjczTjNPMHlIaWI3X01OV1B3LWZWeDVRejBkWGdxY1FUOEVOYmhoNG9CUHRLTXF4Rkt2Zw?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#9</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Carnegie Endowment</span>
+                    <span class="card-date">09-29 06:12</span>
+                </div>
+                <h3 class="card-title">AI Breakout Capacity: A Middle-Power Path Between Racing and Dependence</h3>
+                <p class="card-title-en">AI Breakout Capacity: A Middle-Power Path Between Racing and Dependence</p>
+                <p class="card-llm-summary"></p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxQUl9vc3BNOHhueE41a0dTLUxsbVUwamdiR0RRY1ktS0pXUkNSSWdGaTZyYi1lZF91Zm9lUk14ekpFRng5UldVX1NSajFSWlQzR2liRVJ4eXREcXBIbFZKaFJzbWJiOG1IVGMwMnVSRzFWdXk0UXpRT3RzZWZXZzdJY0MwSDNTeUJDY3JOQ1hyZDFDWmVjN2FhbGxyYmRkZlg0UW1TOEFUcnVYWUJkZllPeHJIdE9TUnVFV29TVDZFRVF5LTIxcGpQQXlB?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-09-29 02:17 UTC
+    </div>
+</body>
+</html>

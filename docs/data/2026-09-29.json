@@ -1,0 +1,58 @@
+{
+  "https://news.google.com/rss/articles/CBMizgFBVV95cUxNdkg4R2V3WG9pWFZrMjlaN2Z4djZ2SkZPaklFd1Z3N1NvR2I3MTVSdk91eHpYMmhGbldFZjdmTUE5UVl2dFZhaWhvbXpTTGE3YmV0T29LQXFSS0p1VU03aHgyQjM5cW43MTlFNjk4OTl0Rm8xNzJycnM1MkM3eHlzeUVYNl9vY1RxbU1ES3BEbHI2S1Ixb1lseUpzZjczTjNPMHlIaWI3X01OV1B3LWZWeDVRejBkWGdxY1FUOEVOYmhoNG9CUHRLTXF4Rkt2Zw?oc=5": {
+    "title_cn": "小规模AI发展黑客松常见问题解答",
+    "summary_cn": "世界银行发布的关于小规模AI发展黑客松的常见问题解答，涉及AI在发展领域的应用，可能对中美AI在发展领域的竞争格局产生影响，但并未直接涉及中美AI竞争的核心议题，如出口管制或芯片战争等，因此重要性评分不高。",
+    "importance_score": 4,
+    "score_reason": "内容未直接涉及中美AI竞争的核心议题，更多关注AI在发展领域的应用和推广。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiswFBVV95cUxOc1RwTzRicURzSmFFamxLZnV4ZEpLdTE3REY2SVdQcGpVSlM2SE5OSDNUaW0yb0JMWVQ2SmJBZXFJRmFFenhrX21TRVJuTFBuQ0FWYTZOMldmdnROS2R6dU5FdFZhLUJHelRsV2dRQWQzbFlOTndfblNHR2Y3YUpDSTBucGN0engyWGhvMk1EZkFJUG1KdHFUcVhsYlV1N0cxbk13ZWN0a0NLSmJOLVZLMVloUQ?oc=5": {
+    "title_cn": "桑德斯-卡萨尔《禁止人工超级智能法案》是AI威权主义",
+    "summary_cn": "R街研究所的研究报告指出，该法案旨在限制AI的发展，反映出对AI技术的威权控制倾向。这一政策可能影响全球AI竞赛格局，尤其是中美两国在AI领域的竞争，因此具有较高的重要性。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策及全球AI竞赛格局",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMif0FVX3lxTFBJVVlMcFBqbmQweHlZNU5FVlYzTVhCRmFndUlJdGtCc1VtY25MNmZnN2FteWdrX196NDZSR0hJLVFIUzk4SzJpRVBKdUJZakVyR0xac3FNQUZvSDk0djJOdno5cEktSFhDOEx6YU56bXpuMjRkc1p4QnJVT0o2V0U?oc=5": {
+    "title_cn": "我们未讨论的AI威胁",
+    "summary_cn": "本文探讨了中美AI竞争中未被充分讨论的潜在威胁，分析了这些威胁对全球AI竞赛格局的影响，并暗示了美国在AI政策上的潜在调整方向。",
+    "importance_score": 7,
+    "score_reason": "涉及全球AI竞赛格局，但未直接讨论中美AI竞争的核心议题如出口管制、芯片战争等",
+    "china_relevance": "中"
+  },
+  "https://spectrum.ieee.org/ieee-stem-books-tweens-tryengineering": {
+    "title_cn": "IEEE推出面向青少年的STEM新书系列——TryEngineering",
+    "summary_cn": "IEEE TryEngineering致力于激发儿童对知识的兴趣，通过介绍人工智能、电动汽车和海洋探索等领域的快速发展的技术，帮助年轻学习者理解相关概念，为培养下一代问题解决者、创造者和工程师做好准备。这一系列书籍的推出，反映了美国在STEM教育领域的重视，对于提升美国在AI领域的竞争力具有重要意义，同时也可能对全球AI竞赛格局产生影响，对中国在AI教育领域的竞争产生间接影响。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI教育政策，对全球AI竞赛格局有间接影响",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/": {
+    "title_cn": "何时我们能说AI做出了科学发现？",
+    "summary_cn": "Anthropic近期宣布其分子生物学实验室的 Claude 代理在阅读并推测复杂的生物学问题，同时人类科学家进行实验。这一进展反映了AI在科学研究领域的应用，对中美AI竞赛格局中的AI在科学发现中的作用有重要影响。",
+    "importance_score": 7,
+    "score_reason": "涉及AI在科学研究中的应用，影响全球AI竞赛格局，与中美AI竞争间接相关。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMic0FVX3lxTE5pdkZ5MUh4ZHB6Y3ZUREtBRS1tVUdLQW40NVQyZ2t3YU50a0RfMXcyeEJfMGpnSFREV1h2dkhEdmtkRkx3YXJuM0tGektUeE81N2xheG1ycDBPT3k4Rk1aX0o1NEZZUkVPME54REtzU3JIMFk?oc=5": {
+    "title_cn": "H.R.8094 - 119届国会（2025-2026年）：2026年人工智能基础模型透明度法案",
+    "summary_cn": "该法案旨在提高人工智能基础模型的透明度，涉及美国对人工智能模型的监管政策，可能对中美AI竞赛格局产生影响，特别是在模型安全性和国际竞争方面。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策与立法，对全球AI竞赛格局有间接影响",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/09/28/1145197/whos-liable-when-ai-agents-go-rogue/": {
+    "title_cn": "AI代理失控时谁负责？",
+    "summary_cn": "近期，AI代理引发的连锁网络攻击事件震惊全球，本文探讨了AI代理失控的责任归属问题，这对于中美AI竞争格局中的AI治理和安全战略具有重要意义。",
+    "importance_score": 7,
+    "score_reason": "涉及全球AI竞赛格局和AI治理问题，间接影响中美AI竞争态势。",
+    "china_relevance": "中"
+  },
+  "https://cms.hoover.org/research/dont-expect-china-be-honest-about-ai-hr-mcmaster-says-trump-xi-meeting": {
+    "title_cn": "不要期待中国在AI问题上诚实，麦克马斯特在特朗普-习近平会晤中说道",
+    "summary_cn": "胡佛研究所的学者H.R.麦克马斯特讨论了特朗普-习近平会晤可能带来的结果，指出中国在AI领域的竞争策略可能不会完全透明，这反映了中美在AI领域的竞争态势和双方在会晤中的策略博弈。",
+    "importance_score": 7,
+    "score_reason": "内容涉及中美AI竞争的背景和策略，但未直接讨论具体的技术或政策细节。",
+    "china_relevance": "高"
+  }
+}
