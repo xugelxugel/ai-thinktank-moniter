@@ -1,0 +1,30 @@
+{
+  "https://news.google.com/rss/articles/CBMihgFBVV95cUxPNDhXNFA2UlpQN05Hbnhrb1M1VURURTQ3U3l1SkxvVFRPaF93YmRaOXhkT1hpX2gxcm9ILUlrT1ZSTHRQck1FX2tCLW1xVndEQ1BOZ29sWklrTDhxd2hLWXJXSjZfWk1QRWladDVrZlJWZm52TDlscGt4RmhJaXVJcVdSRTllUQ?oc=5": {
+    "title_cn": "前沿AI模型治理的警告",
+    "summary_cn": "该文章对前沿AI模型治理提出了警告，强调了AI模型治理的重要性，并可能对中美AI竞争格局产生影响，特别是在AI治理和模型安全方面。",
+    "importance_score": 7,
+    "score_reason": "文章涉及AI模型治理，与全球AI竞赛格局和国家安全战略相关，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWGY0MVI5WjY4Wm9fRGJSQlZGZkY4NUlBTGQxUGIyODkwekVFMEUxdXl6ZFRzVnpFRDFXZmF3b1lTNk9kVzFZZDVFVmRrTGpKdmM3TTVHTVRqLXRpdHlneHk0R0JxWllvVjBZQ2xqTkhIVzFkY1gtUkZhWlhnTmx3V0RjbFA?oc=5": {
+    "title_cn": "中国为何不会放缓其AI步伐",
+    "summary_cn": "布鲁盖尔智库的研究表明，尽管面临国际压力和挑战，中国将继续加大在人工智能领域的投入，以保持其在全球AI竞赛中的领先地位。这一趋势对中美AI竞争格局具有重要影响，中国政府的坚定立场和持续投资将加剧两国在AI领域的竞争。",
+    "importance_score": 7,
+    "score_reason": "文章讨论了中国在AI领域的战略和全球影响，与中美AI竞争格局直接相关，但未深入探讨具体的技术或政策细节。",
+    "china_relevance": "高"
+  },
+  "https://www.technologyreview.com/2026/10/01/1145588/ai-mind-reading-reconstructs-what-youre-looking-at/": {
+    "title_cn": "AI“读心”工具可从脑扫描中重建你所看到的图像",
+    "summary_cn": "这项新技术能够通过分析脑扫描来猜测用户正在观看的内容，并以惊人的精确度重建该图像。它还可以反向操作，根据用户所看的内容预测其大脑活动。这一进展在中美AI竞赛中具有重要意义，因为它可能影响未来脑机接口和神经科学领域的发展，对华相关性较高。",
+    "importance_score": 7,
+    "score_reason": "涉及前沿AI技术在神经科学领域的应用，可能对全球AI竞赛格局产生影响，与中美AI竞争间接相关。",
+    "china_relevance": "高"
+  },
+  "https://www.foreignaffairs.com/united-states/artificial-intelligence-autocrat-technology-empowers-dictators": {
+    "title_cn": "AI独裁者",
+    "summary_cn": "本文探讨了技术如何赋予独裁者权力并对其构成威胁，这对于中美AI竞争格局中的技术伦理和安全问题具有重要意义。文章指出，AI技术的发展可能被用于加强独裁政权的控制力，这对中国在全球AI竞赛中的立场和策略提出了挑战。",
+    "importance_score": 7,
+    "score_reason": "文章虽未直接讨论中美AI竞争，但涉及AI技术对国家安全和治理的影响，与全球AI竞赛格局相关，对中美AI竞争有间接影响。",
+    "china_relevance": "高"
+  }
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年10月02日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年10月02日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">5</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">4</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">0</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">1</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-high">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Lawfare</span>
+                    <span class="card-date">10-02 01:33</span>
+                </div>
+                <h3 class="card-title">前沿AI模型治理的警告</h3>
+                <p class="card-title-en">A Warning for Frontier AI Model Governance</p>
+                <p class="card-llm-summary">该文章对前沿AI模型治理提出了警告，强调了AI模型治理的重要性，并可能对中美AI竞争格局产生影响，特别是在AI治理和模型安全方面。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章涉及AI模型治理，与全球AI竞赛格局和国家安全战略相关，但未直接讨论中美AI竞争的核心议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, frontier AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxPNDhXNFA2UlpQN05Hbnhrb1M1VURURTQ3U3l1SkxvVFRPaF93YmRaOXhkT1hpX2gxcm9ILUlrT1ZSTHRQck1FX2tCLW1xVndEQ1BOZ29sWklrTDhxd2hLWXJXSjZfWk1QRWladDVrZlJWZm52TDlscGt4RmhJaXVJcVdSRTllUQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Bruegel</span>
+                    <span class="card-date">10-01 21:57</span>
+                </div>
+                <h3 class="card-title">中国为何不会放缓其AI步伐</h3>
+                <p class="card-title-en">Why China will not slow down its AI pace</p>
+                <p class="card-llm-summary">布鲁盖尔智库的研究表明，尽管面临国际压力和挑战，中国将继续加大在人工智能领域的投入，以保持其在全球AI竞赛中的领先地位。这一趋势对中美AI竞争格局具有重要影响，中国政府的坚定立场和持续投资将加剧两国在AI领域的竞争。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章讨论了中国在AI领域的战略和全球影响，与中美AI竞争格局直接相关，但未深入探讨具体的技术或政策细节。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxQWGY0MVI5WjY4Wm9fRGJSQlZGZkY4NUlBTGQxUGIyODkwekVFMEUxdXl6ZFRzVnpFRDFXZmF3b1lTNk9kVzFZZDVFVmRrTGpKdmM3TTVHTVRqLXRpdHlneHk0R0JxWllvVjBZQ2xqTkhIVzFkY1gtUkZhWlhnTmx3V0RjbFA?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">MIT Technology Review</span>
+                    <span class="card-date">10-01 18:32</span>
+                </div>
+                <h3 class="card-title">AI“读心”工具可从脑扫描中重建你所看到的图像</h3>
+                <p class="card-title-en">An AI “mind-reading” tool can reconstruct what you’re looking at from a brain scan</p>
+                <p class="card-llm-summary">这项新技术能够通过分析脑扫描来猜测用户正在观看的内容，并以惊人的精确度重建该图像。它还可以反向操作，根据用户所看的内容预测其大脑活动。这一进展在中美AI竞赛中具有重要意义，因为它可能影响未来脑机接口和神经科学领域的发展，对华相关性较高。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及前沿AI技术在神经科学领域的应用，可能对全球AI竞赛格局产生影响，与中美AI竞争间接相关。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://www.technologyreview.com/2026/10/01/1145588/ai-mind-reading-reconstructs-what-youre-looking-at/" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Foreign Affairs</span>
+                    <span class="card-date">10-01 12:00</span>
+                </div>
+                <h3 class="card-title">AI独裁者</h3>
+                <p class="card-title-en">The AI Autocrat</p>
+                <p class="card-llm-summary">本文探讨了技术如何赋予独裁者权力并对其构成威胁，这对于中美AI竞争格局中的技术伦理和安全问题具有重要意义。文章指出，AI技术的发展可能被用于加强独裁政权的控制力，这对中国在全球AI竞赛中的立场和策略提出了挑战。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章虽未直接讨论中美AI竞争，但涉及AI技术对国家安全和治理的影响，与全球AI竞赛格局相关，对中美AI竞争有间接影响。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://www.foreignaffairs.com/united-states/artificial-intelligence-autocrat-technology-empowers-dictators" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#5</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">World Bank</span>
+                    <span class="card-date">10-02 04:56</span>
+                </div>
+                <h3 class="card-title">Not Faster, but Better : Generative AI and Teacher Skill in Peru (English)</h3>
+                <p class="card-title-en">Not Faster, but Better : Generative AI and Teacher Skill in Peru (English)</p>
+                <p class="card-llm-summary"></p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, generative AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxObWlndmRXYkZBZXoxZXVqbHdYTG9pbHh6T2FLMFlGT29VQUQ3WnlnZ0dGNnF3aGdCc3dsTU1PcTNYdHVsMkR6Q2NPdHg0ZzYzbHdpcEwyenBCYWR0LU1YSGExck1XM0kzOTVYUmxWTTVmcDBnbTFZZmhweXBWa1oyNlBtOVpDUERWdzdDV3Q0YzFLZjBjT19CVHpJMURTYnc?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-10-02 01:48 UTC
+    </div>
+</body>
+</html>
