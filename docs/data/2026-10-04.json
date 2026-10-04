@@ -1,0 +1,16 @@
+{
+  "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5RejFlcEVFc1NTbGQyMFZMM01jQ19xNWNoQ3VOR0VxRy1TZWtqZ0NtTUNDdHdJWjRDVlRTRFF2eTh2cUd3ODREOExQV2hrOFJFeTlVcFMyV0kwQnExMzJMTGhB?oc=5": {
+    "title_cn": "AI信任论坛",
+    "summary_cn": "联合国新闻发布的AI信任论坛相关报道，虽然无具体摘要，但考虑到来源为联合国新闻，可能涉及全球AI治理和国际合作议题，对中美AI竞争格局有一定间接影响。",
+    "importance_score": 5,
+    "score_reason": "涉及全球AI治理和国际合作议题，与中美AI竞争关系间接相关。",
+    "china_relevance": "中"
+  },
+  "https://cms.hoover.org/research/mickey-levy-amid-true-investment-boom-fed-must-hike-keep-policy-rate-neutral": {
+    "title_cn": "Mickey Levy：在“真正的投资繁荣”中，美联储必须加息以保持政策利率中性",
+    "summary_cn": "胡佛研究所的Mickey Levy指出，消费者韧性和AI资本支出正在推高实际利率，因此美联储必须相应调整。这表明美国在AI领域的投资活跃，可能对全球AI技术发展产生影响，间接关系到中美AI竞争格局。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策调整，对全球AI技术发展有潜在影响，与中美AI竞争格局间接相关。",
+    "china_relevance": "中"
+  }
+}
