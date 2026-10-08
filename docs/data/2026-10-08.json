@@ -1,0 +1,37 @@
+{
+  "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUnZISW9MMDFTSFBMLWtQN2JjWHU0bWFyZFBGNDlXSjBkdjdhRHFVUks4LXJ6RkU4eVVQNHNiNjZDVm0yUVdHdTFUNVJmVVh3ZUtHNzlqM0dUV2xDdVUwTlE3WXRIT1U2d1A1b2xIZHp6N1RTQ1RMM09QOHpETE5qU3YtekRmR1FaaWo1VmpwR0NUTmZOS0hlWg?oc=5": {
+    "title_cn": "超越试点和公关：什么让AI公益合作伙伴关系有效",
+    "summary_cn": "本文探讨了AI公益合作伙伴关系的成功因素，分析了斯坦福以人为本AI研究院的研究，强调了合作、透明度和共同目标在推动AI技术向善方面的作用。该内容与中美AI竞争格局的关系在于，它揭示了全球范围内AI技术应用的治理模式，对于中国企业在国际舞台上如何构建合作伙伴关系，以及如何在国际AI竞赛中保持竞争力具有重要启示。",
+    "importance_score": 7,
+    "score_reason": "内容涉及全球AI竞赛格局，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMingFBVV95cUxOdUhZb0dLQXVsQ09TVWhEeGtUVjAzLUE0TDBQc2pBNmZyQ1pCcVZRMXpBZFhlU2hPYUd6a21CWnB1MHFuQ2JhXzFsMUVjTFYtWEt6c3RzNlE1cTdsTks3U1hzOVJYZTEzMzB1TG5XTkNrX0ZhRkhzbDNhc21VVkRZVmItbHMwamk2V28wenZocERhdjBLYk9IeVhhOFVVQQ?oc=5": {
+    "title_cn": "想让员工接受AI？别把它当作生产力工具来推销",
+    "summary_cn": "斯坦福以人为本AI研究院的研究指出，将AI视为提高生产力的工具可能无法激发员工的接受度，这与中国在推广AI应用时可能面临的挑战有关，需要更深入地理解员工对AI的接受心理和实际应用场景，以促进AI在中国的健康发展。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策及员工接受度问题，对全球AI竞赛格局有一定影响，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNOWNFUm8yR3BXTDV0UFdoa205Q214R2tLRndnTUdrckZkMFkxZ1BUUTNEbXhwdDlCMnMxMEpSemMwdnUxTDJvQTNaVlhLUi1XUi1hTGxDNUcxOV96dURuMWRKa2V5ek9hZHJ1QU02MHpMOEF0UHN5ZVVDaFVUeTlyOERBcFFmeWFOLXRiY2FDS3ZMd3pIcWxPeEUtRmZ2T2JWZ3RmVE5LTC0?oc=5": {
+    "title_cn": "人工智能治理中的公民议会：与 Audrey Tang 的访谈",
+    "summary_cn": "本文探讨了人工智能治理中公民议会的角色，涉及台湾地区开放政府运动领袖 Audrey Tang 的观点，这反映了全球范围内对AI治理的重视，并可能对中美AI治理模式产生间接影响。",
+    "importance_score": 7,
+    "score_reason": "文章讨论了AI治理，与全球AI竞赛格局相关，但未直接涉及中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://content.knowledgehub.wiley.com/hiphi-a-large-scale-benchmark-for-high-precision-human-motion-and-object-interaction/": {
+    "title_cn": "HiPHI：高精度人形机器人运动和物体交互大规模基准数据集",
+    "summary_cn": "该白皮书为机器人研究人员和工程师概述了一个新的大规模动作捕捉数据集，旨在缩小限制人形机器人学习的数据差距。它还展示了在数据集上训练的政策如何转移到真实的人形机器人上。这一研究对于提升人形机器人性能和交互能力具有重要意义，对中美两国在机器人领域的竞争具有间接影响。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策及全球AI竞赛格局",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiTEFVX3lxTFA4UkpPYk05b05zYWp6WDNCX3o0ekRBZ0s2dGxLbm9DQjZtY2tOemNKYmRZZEI1eG5RTGRxaHo4TjBXMnZtMHhFX21Ba0g?oc=5": {
+    "title_cn": "联合国新闻：人工智能时代的关键性阅读：在人工智能中介环境中的理解、评估和行动能力",
+    "summary_cn": "该报道探讨了在人工智能时代，如何培养人们在人工智能中介环境中的关键性阅读能力，包括理解、评估和行动。这与中国在AI教育和人才培养方面的战略需求紧密相关，对于提升中国在全球AI竞赛中的竞争力具有重要意义。",
+    "importance_score": 7,
+    "score_reason": "涉及全球AI竞赛格局，对中国的AI教育和人才培养有直接影响",
+    "china_relevance": "高"
+  }
+}
