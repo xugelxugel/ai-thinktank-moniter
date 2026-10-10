@@ -1,0 +1,72 @@
+{
+  "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQVURQV2hIRkdzSFZxdk1VOURpOUQ1VlpwRHQzR0FacnZhZm9DZXQzWVZ5QW1xTkZNR09VSlA1Z2Rrb0x1cWMxdFEyS1MwRFJxeTJSNkhmX2w3ZTNfTi05QU40MmoycG41bC0tSE8tdkhNcnBEeUE4aklQaEsyV0x3emdWMnBERjlBdXow?oc=5": {
+    "title_cn": "联合国新闻：人工智能时代的关键性阅读：在人工智能中介环境中的理解、评估和行动能力",
+    "summary_cn": "本文探讨了在人工智能时代，如何培养关键性阅读能力以理解和评估人工智能中介环境中的信息，并采取相应行动。这与中国在AI领域提升自主创新能力，以及在全球AI竞赛中保持竞争力密切相关。",
+    "importance_score": 7,
+    "score_reason": "文章涉及AI时代的教育和关键性阅读能力，与全球AI竞赛格局有关，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMijAFBVV95cUxPYlhFMm5EREZCUndpYXBqeTdIRFUwVVpDbVFHVVUya1lkWkVrNmpKWlZiTGNpNEpyM041R2ZfRUFjX2ZTSHlzSmFsZ01IZFNpMTBuUWNiekpqaGpQQk43TG5QWXhyU3lFdHd2b1M3M1ZyaDRHM2MtYXlXcmRENlc5TnRtcExGOVZOclFCdQ?oc=5": {
+    "title_cn": "关于在人工智能时代现代化国家漏洞数据库的评论",
+    "summary_cn": "该报告由信息技术与创新基金会提交给美国国家标准与技术研究院（NIST），讨论了在人工智能时代如何改进国家漏洞数据库。这反映了美国在AI安全领域的政策动向，对中美AI竞争格局有一定影响，尤其是在网络安全和漏洞管理方面。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI安全政策，对全球AI竞赛格局有一定影响，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMivgFBVV95cUxPRDE4cnNEeTd1c01NYU1zVDlUNVl5b3lwMC1BV2xad0dNekVFRlhMaE95OExaQW1qTkpRUlUzdlpqUXdqOGZJZVh2UWV4M0VQQ3Nud0hYMkJyT00zOXVDdF8tYVEzcUFnUm9QT0N6N3l0YVZUT2F3MzBmUEhkdTByY3FiMkFSdlZodjYtU0NaZ043VXREcWJvb0pYYlZ2eXZJT3ZnX2tPQm9WN2JHOVg2ZGozaDNTZ0syWFBBakRB?oc=5": {
+    "title_cn": "中国AI模型竞争加剧，芯片行业进步推动",
+    "summary_cn": "随着芯片行业的进步，中国AI模型之间的竞争正在加剧，这反映出中国在全球AI竞赛中的活跃参与，并可能加剧中美在AI领域的竞争态势。",
+    "importance_score": 7,
+    "score_reason": "内容涉及中国AI模型竞争和芯片行业进展，间接影响中美AI竞争格局。",
+    "china_relevance": "高"
+  },
+  "https://spectrum.ieee.org/master-ai-chip-principles-ieee": {
+    "title_cn": "掌握AI芯片原理的新IEEE设计项目",
+    "summary_cn": "当前工程师面临AI硬件复杂性的前所未有的加速，这在新近的研究文章《重新审视边缘AI：机遇与挑战》中得到了阐述。文章探讨了边缘AI的快速增长及其带来的挑战，包括资源限制、模型架构限制和边缘AI部署中的网络需求。这种加速是由...驱动的，这与中国在AI芯片领域的追赶和竞争密切相关。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策及全球AI竞赛格局，对中美AI竞争有间接影响",
+    "china_relevance": "高"
+  },
+  "https://spectrum.ieee.org/integrating-engineering-ethics-education": {
+    "title_cn": "我们需要将伦理融入我们的工程课程",
+    "summary_cn": "Anthropic首席执行官Dario Amodei呼吁AI行业放慢发展步伐，强调安全与速度之间的关键紧张关系，指出问题不仅是技术错误，更是社会技术失败。这一呼吁反映了美国在AI伦理教育方面的重视，可能对全球AI发展产生深远影响，对中美AI竞争格局有间接相关影响。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策及全球AI竞赛格局",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/10/09/1145728/we-are-putting-too-much-faith-in-ai-to-say-no/": {
+    "title_cn": "我们对AI拒绝能力的过度信任",
+    "summary_cn": "本文探讨了人们对于AI能否像人类一样具备拒绝能力的担忧，指出科幻作品中机器人反叛的常见主题，并分析了这种担忧与中美AI竞争格局中AI治理和安全问题的关联性。",
+    "importance_score": 7,
+    "score_reason": "文章涉及AI的伦理和安全问题，与全球AI竞赛格局及美国AI政策相关，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMisAFBVV95cUxPU2pKb21MeFpSa0VhVmt1U0F0REFySXBKZTFEUDFkZi0wRGNPV2NqMWhkcGdEUzIybkdBY09rWnFxSXFlMkV0b0RKcHpyMHpzbk1FVmZqUDBGcW5mazdkMGJRUFg3Z2h2emtaU0JKMGpPXzlHZ19rd29SeDQ4bjRYYm91QmdraXZwdjBFS3E5UVQ2VGx3X1V2UndaMmhMSVFXQVlvNDBKMzBrSWl6MDRseg?oc=5": {
+    "title_cn": "为何网络安全与物理自主AI必须共同治理",
+    "summary_cn": "本文探讨了网络安全与物理自主AI在治理上的紧密联系，指出两者共同治理对于维护国家安全和促进AI技术健康发展至关重要。这一议题与中美AI竞争格局紧密相关，因为中美两国在AI领域的竞争不仅体现在技术层面，也体现在治理和标准制定上。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策及全球AI竞赛格局，但未直接讨论中美AI竞争的核心议题如出口管制和芯片战争。",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5LQTcxOW9kMjhWWl9HbGhlWGV6MGIwb1QwN3lUR2RRMm5GemQtNnVQYTNneEV3RVFDSU40aEhRdzdsaGVBdkE5YlVEQVZGTFFENllnMDl4ZjNEdw?oc=5": {
+    "title_cn": "第一委员会强调核不扩散、无核区、战时人工智能控制以及结束乌克兰战争的重要性",
+    "summary_cn": "该报道强调了联合国第一委员会对核不扩散、无核区、人工智能在战争中的控制以及结束乌克兰战争的必要性。这反映了国际社会对人工智能在军事领域的关注，尤其是在中美两国在AI技术竞争加剧的背景下，对AI在战争中的应用和控制的担忧。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策及全球AI竞赛格局",
+    "china_relevance": "中"
+  },
+  "https://www.federalregister.gov/documents/2026/10/09/2026-20773/foreign-trade-zone-ftz-183-authorization-of-production-activity-ultra-clean-technology-systems-and": {
+    "title_cn": "外国贸易区183号；生产活动授权；超清洁技术系统与服务公司；（主要为半导体行业提供输入）；德克萨斯州曼诺尔",
+    "summary_cn": "美国联邦公报发布了一项关于外国贸易区183号生产活动的授权，涉及超清洁技术系统与服务公司，该公司主要为半导体行业提供输入。这一政策可能影响美国半导体产业的全球竞争力，进而对中美AI竞争格局产生影响。",
+    "importance_score": 7,
+    "score_reason": "该内容涉及美国半导体产业政策，与全球AI竞赛格局相关，但并未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://cms.hoover.org/research/race-us-china-struggles-recruit-foreign-ai-researchers": {
+    "title_cn": "中美AI竞赛：中国努力吸引外国研究者却面临挑战",
+    "summary_cn": "尽管中国努力吸引外国AI研究者，但美国仍通过雇佣来自中国和其他国家的海外研究者保持其在AI研究领域的领先地位，这加剧了中美AI竞争的紧张局势。",
+    "importance_score": 7,
+    "score_reason": "内容涉及中美AI竞争格局，但未直接讨论核心议题如出口管制、芯片战争等，因此评分略低于核心议题的评分标准。",
+    "china_relevance": "高"
+  }
+}
