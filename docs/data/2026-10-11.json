@@ -1,0 +1,23 @@
+{
+  "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9jcXNaclg0MVFuUFRmbUhST2h2emZpX09YTHFZLW5MSVdVQUNTOG9aajFkU3FkWl9EQXhWNElHcmFGZlp5NWZySGVQeGZmdVhoaWg0?oc=5": {
+    "title_cn": "AI面临的挑战与行为规则",
+    "summary_cn": "NIST发布的研究报告探讨了AI技术发展中的行为规则挑战，这直接关系到AI在安全、伦理和治理方面的国际竞争，对中美两国在AI领域的战略布局具有重要意义。",
+    "importance_score": 7,
+    "score_reason": "报告涉及AI治理和全球AI竞赛格局，与中美AI竞争间接相关。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiogFBVV95cUxQQzZoSzRsNnJoeklCTGp4NHlQbEQ2WFBsVEN1RWQ1V3hFcmNjckVpTDROVlI3eVdzRGgzTnBZRFEtRDdFWjlQNGtvdFNFWW9KUlFCcVRVQURxdHBjQnB5RE5GckVYbjdKWkNnV0pFTl90QlRPbENzblp1SGJHVWlnZl9vWVNBYW1rWDBydHFlaU1jb0FOekJTLUlVRmo2UUl0OHc?oc=5": {
+    "title_cn": "管理企业AI成本：PointFive联合创始人兼CEO Alon Arvatz问答",
+    "summary_cn": "本文采访了PointFive的联合创始人兼CEO Alon Arvatz，讨论了企业如何管理AI成本，这对于中美AI竞争中的企业成本控制具有重要意义。文章可能涉及企业级AI解决方案的成本效益分析，以及在全球AI竞赛中保持竞争力的策略，对华相关性较高，因为中国企业也在寻求降低AI成本以提升竞争力。",
+    "importance_score": 7,
+    "score_reason": "文章讨论了企业级AI成本管理，与全球AI竞赛格局和中美AI竞争间接相关",
+    "china_relevance": "高"
+  },
+  "https://cms.hoover.org/research/race-us-china-struggles-recruit-foreign-ai-researchers": {
+    "title_cn": "与美国竞争，中国努力招募外国人工智能研究人员",
+    "summary_cn": "尽管中国努力吸引外国研究人员，但在中国工作的美国科学家数量却在增加。美国通过雇佣来自中国和其他国家的外国研究人员，继续在人工智能研究领域保持领先，这表明中美在AI人才争夺战中的竞争态势激烈。",
+    "importance_score": 7,
+    "score_reason": "内容涉及中美在AI人才领域的竞争，对全球AI竞赛格局有影响，但未直接涉及核心议题如出口管制、芯片战争等。",
+    "china_relevance": "高"
+  }
+}
