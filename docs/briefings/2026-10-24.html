@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年10月24日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年10月24日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">6</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">5</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">0</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">1</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-high">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">U.S. Congress</span>
+                    <span class="card-date">10-23 16:14</span>
+                </div>
+                <h3 class="card-title">S.4214 - 119届国会（2025-2026年）：人工智能数据中心禁令法案</h3>
+                <p class="card-title-en">S.4214 - 119th Congress (2025-2026): Artificial Intelligence Data Center Moratorium Act</p>
+                <p class="card-llm-summary">该法案旨在对人工智能数据中心的建设实施禁令，可能反映出美国对人工智能基础设施建设的严格监管态度，这将对中美两国在人工智能领域的竞争产生间接影响，尤其是在数据中心技术方面。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及美国AI政策及国家安全战略，对全球AI竞赛格局有一定影响，但并非直接讨论中美AI竞争的核心议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: artificial intelligence, data center</span>
+                    <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTFA2UW9aRl9KUUM0eE53dnVtODNyTEdEaFdmdDZqQ1MxQ05IdzFhdVc0RVNKRWpDLW80SE5HMk44OURNSjUzNXVJZlFiS211NW9TYTBkakR3WnMwZWRGX3N3Z1ZCLXJOMHlXRVlZMDNR?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">U.S. Congress</span>
+                    <span class="card-date">10-23 16:14</span>
+                </div>
+                <h3 class="card-title">H.R.9917 - 119届国会（2025-2026年）：AI终止开关法案</h3>
+                <p class="card-title-en">Text - H.R.9917 - 119th Congress (2025-2026): AI Kill Switch Act</p>
+                <p class="card-llm-summary">该法案旨在为人工智能系统提供一种紧急停止机制，以防止潜在的安全风险。这反映了美国对AI安全性和治理的重视，可能对中美AI竞争格局产生间接影响，尤其是在AI安全标准和治理方面。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及美国AI政策与立法，对全球AI竞赛格局有间接影响。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE52em5DZEc1RXUtUV9aanFLenBEMkVMamJ5MzM3UEhXYlNfQTl3WEVya3VGOG9HaHNyVHAtQ0Y1OGpCY1ptX1U0c3F2bk92M3hxdDJRdVNERmJBRFpGVXdxYnVBVXlEWUZhTmthcko5MmptdFE?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">JPMorgan Chase</span>
+                    <span class="card-date">10-23 13:00</span>
+                </div>
+                <h3 class="card-title">信用市场寻找AI的薄弱环节</h3>
+                <p class="card-title-en">Credit markets look for AI’s weak links</p>
+                <p class="card-llm-summary">摩根大通的研究报告关注信用市场对AI技术的评估，分析AI技术可能存在的风险和弱点，这反映了全球对AI技术安全性和可靠性的担忧，对中美AI竞争格局中的技术安全与风险管理具有重要意义。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及全球AI竞赛格局和AI技术安全议题，但未直接讨论中美AI竞争的核心议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNR0NHSUtfSnZxMzEzMlVMdlRhd3hJeXZtZ3F6RDRPMEIwYWNrMy1LQ2tncVJvSWtPajZVQTdFeEpNYWxwenY2WHJkaE5OVjY3UGZzOURYVVZMSUsxMFVTNGtPRXdaNVVsZ2VjV2dOcnVsbmVaZVZSTF9saDlXdDZydFVwVEt3dmd0NUQ3Zmw5S0oza2NvZnRFNFRsRThHLVF2YzYxcms5Qmx4Y2pxQU50UTFGV1VLTDQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Lawfare</span>
+                    <span class="card-date">10-23 12:50</span>
+                </div>
+                <h3 class="card-title">AI、儿童安全与法律</h3>
+                <p class="card-title-en">AI, Child Safety, and the Law</p>
+                <p class="card-llm-summary">该文章探讨了人工智能在儿童安全领域的应用和法律问题，涉及美国对AI技术的监管和立法，可能对中美AI竞争格局产生影响，尤其是在儿童隐私保护和AI伦理方面。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及美国AI政策与立法，对全球AI竞赛格局有间接影响。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQenVVdG11Wl9WSlhEbnpGajdxNjhsR3Q2REdsSENLZU5vaXR5THBSUmtBSEIyZGVnM3pZV0VlWW1rbDUzUXhBRjVSTmVrcUFLZDQ4VzFib2dVYUprWU1SUEIxWF9uMzE4QVhWelBUTktXcVgwT3RnT2xFdUtWYVNqNU5taGNqalVN?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#5</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">UN News</span>
+                    <span class="card-date">10-23 12:26</span>
+                </div>
+                <h3 class="card-title">AI安全术语表</h3>
+                <p class="card-title-en">A Security Lexicon for AI</p>
+                <p class="card-llm-summary">本文由联合国新闻发布，旨在为AI安全领域提供术语定义，对于理解AI安全标准和全球AI治理具有重要意义，间接反映了中美在AI安全领域的竞争态势。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及全球AI治理，间接关联中美AI竞争格局。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE5sUk5pTkNDbnZQTkZLSDd3cUtYaVpQaVk2ZU1tWnJhdUtodTN4WVhJdXEzV3djcWFOM25kb08ybFV1WEtGaE1BTHNwaTVwTVhFbmhQdUhyXzFuZ2c?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#6</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Goldman Sachs</span>
+                    <span class="card-date">10-24 00:59</span>
+                </div>
+                <h3 class="card-title">Why Investors Are Reducing AI Exposure</h3>
+                <p class="card-title-en">Why Investors Are Reducing AI Exposure</p>
+                <p class="card-llm-summary"></p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNLWdWQW1lODE5VFZEZUN1MXhlX0xRV3B2TjMzazBsckJCTk05UVY2Y1hiNExlV1FNNmtxalNJMHY5ZVZKZ0Q3dExGSlQ5YkY1Z2tYcnBwd3dsUks2bFcyX1ZxUGx3aENaaW8xeXU3dDVVUU01dXhpcjdGcHNZWWRaQ3B2b3JPeEV6d1dDTUZBOWU3QQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-10-24 01:00 UTC
+    </div>
+</body>
+</html>

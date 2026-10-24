@@ -1,0 +1,37 @@
+{
+  "https://news.google.com/rss/articles/CBMibkFVX3lxTFA2UW9aRl9KUUM0eE53dnVtODNyTEdEaFdmdDZqQ1MxQ05IdzFhdVc0RVNKRWpDLW80SE5HMk44OURNSjUzNXVJZlFiS211NW9TYTBkakR3WnMwZWRGX3N3Z1ZCLXJOMHlXRVlZMDNR?oc=5": {
+    "title_cn": "S.4214 - 119届国会（2025-2026年）：人工智能数据中心禁令法案",
+    "summary_cn": "该法案旨在对人工智能数据中心的建设实施禁令，可能反映出美国对人工智能基础设施建设的严格监管态度，这将对中美两国在人工智能领域的竞争产生间接影响，尤其是在数据中心技术方面。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策及国家安全战略，对全球AI竞赛格局有一定影响，但并非直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMic0FVX3lxTE52em5DZEc1RXUtUV9aanFLenBEMkVMamJ5MzM3UEhXYlNfQTl3WEVya3VGOG9HaHNyVHAtQ0Y1OGpCY1ptX1U0c3F2bk92M3hxdDJRdVNERmJBRFpGVXdxYnVBVXlEWUZhTmthcko5MmptdFE?oc=5": {
+    "title_cn": "H.R.9917 - 119届国会（2025-2026年）：AI终止开关法案",
+    "summary_cn": "该法案旨在为人工智能系统提供一种紧急停止机制，以防止潜在的安全风险。这反映了美国对AI安全性和治理的重视，可能对中美AI竞争格局产生间接影响，尤其是在AI安全标准和治理方面。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策与立法，对全球AI竞赛格局有间接影响。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMitwFBVV95cUxNR0NHSUtfSnZxMzEzMlVMdlRhd3hJeXZtZ3F6RDRPMEIwYWNrMy1LQ2tncVJvSWtPajZVQTdFeEpNYWxwenY2WHJkaE5OVjY3UGZzOURYVVZMSUsxMFVTNGtPRXdaNVVsZ2VjV2dOcnVsbmVaZVZSTF9saDlXdDZydFVwVEt3dmd0NUQ3Zmw5S0oza2NvZnRFNFRsRThHLVF2YzYxcms5Qmx4Y2pxQU50UTFGV1VLTDQ?oc=5": {
+    "title_cn": "信用市场寻找AI的薄弱环节",
+    "summary_cn": "摩根大通的研究报告关注信用市场对AI技术的评估，分析AI技术可能存在的风险和弱点，这反映了全球对AI技术安全性和可靠性的担忧，对中美AI竞争格局中的技术安全与风险管理具有重要意义。",
+    "importance_score": 7,
+    "score_reason": "涉及全球AI竞赛格局和AI技术安全议题，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQenVVdG11Wl9WSlhEbnpGajdxNjhsR3Q2REdsSENLZU5vaXR5THBSUmtBSEIyZGVnM3pZV0VlWW1rbDUzUXhBRjVSTmVrcUFLZDQ4VzFib2dVYUprWU1SUEIxWF9uMzE4QVhWelBUTktXcVgwT3RnT2xFdUtWYVNqNU5taGNqalVN?oc=5": {
+    "title_cn": "AI、儿童安全与法律",
+    "summary_cn": "该文章探讨了人工智能在儿童安全领域的应用和法律问题，涉及美国对AI技术的监管和立法，可能对中美AI竞争格局产生影响，尤其是在儿童隐私保护和AI伦理方面。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策与立法，对全球AI竞赛格局有间接影响。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5sUk5pTkNDbnZQTkZLSDd3cUtYaVpQaVk2ZU1tWnJhdUtodTN4WVhJdXEzV3djcWFOM25kb08ybFV1WEtGaE1BTHNwaTVwTVhFbmhQdUhyXzFuZ2c?oc=5": {
+    "title_cn": "AI安全术语表",
+    "summary_cn": "本文由联合国新闻发布，旨在为AI安全领域提供术语定义，对于理解AI安全标准和全球AI治理具有重要意义，间接反映了中美在AI安全领域的竞争态势。",
+    "importance_score": 7,
+    "score_reason": "涉及全球AI治理，间接关联中美AI竞争格局。",
+    "china_relevance": "中"
+  }
+}
