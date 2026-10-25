@@ -1,0 +1,23 @@
+{
+  "https://news.google.com/rss/articles/CBMilgFBVV95cUxNRGZGVWVLeHo1bktXNXhyT3ppaUk1NUxGQ2NLNWE3R2N2ZnRCU1g3NnMtRHNvNF9DeEZOd1ZzbjhsRG1zbkVwcl9xR1k0TGlPN0Z5UVZlWTNkaHJaMURuUnJudG82M054QkZYbEVmZl9GN3BTd2VXNGxLRWJnMFNtSC1HSUxyb0NPbEhpZy15SUgyYWtaMFE?oc=5": {
+    "title_cn": "活动 | 非洲经济简报：提升 AI 准备度",
+    "summary_cn": "世界银行发布的本期简报关注非洲国家在 AI 领域的准备度与基础设施建设，反映出全球南方正加速融入全球 AI 浪潮。非洲已成为中美数字科技影响力博弈的重要阵地，中国通过“数字丝绸之路”深耕当地 ICT 硬件基础设施，而西方多边机构则试图通过规则制定与能力建设引导其技术生态。该动态关乎未来中美 AI 大模型与数字服务在新兴市场的渗透率与软实力争夺。",
+    "importance_score": 3,
+    "score_reason": "该内容侧重于非洲区域性的数字不平等与 AI 基础建设，属于中美 AI 全球影响力博弈的间接边缘议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQenVVdG11Wl9WSlhEbnpGajdxNjhsR3Q2REdsSENLZU5vaXR5THBSUmtBSEIyZGVnM3pZV0VlWW1rbDUzUXhBRjVSTmVrcUFLZDQ4VzFib2dVYUprWU1SUEIxWF9uMzE4QVhWelBUTktXcVgwT3RnT2xFdUtWYVNqNU5taGNqalVN?oc=5": {
+    "title_cn": "人工智能、儿童安全与法律",
+    "summary_cn": "本文探讨了美国在人工智能技术快速演进背景下针对儿童安全保护的法律框架与立法挑战，重点关注生成式AI带来的安全隐患与平台法律责任界定。虽然该议题侧重于美国国内社会治理与科技合规，但相关监管政策的加码反映出美方在AI创新与安全伦理之间的拉锯，间接塑造着美国AI企业的合规成本与前沿模型部署节奏。",
+    "importance_score": 3,
+    "score_reason": "该文聚焦美国国内AI监管与儿童保护法律议题，属于特定领域的社会治理范畴，与中美地缘政治及核心科技竞争关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMikgFBVV95cUxPbTBvMWdhZGpMRFdkZC1hRWpEazZqWW9KNzNQZE1rRWMxb2NxRy1td0tZc2ZFaW0xX0lVRURPU2gwSnpwclRaWnlhZnZERkpRRzltWkVmdHJwakRGZUtCNXhRaEZqNlhlUUhCQTZLMW5Oc1BiRTIyLTBRdGx4U25GRXE1TjMxNDBfbjNSZzNjamFfUQ?oc=5": {
+    "title_cn": "AI Forge：国家安全关键 AI 挑战报告（第二周期）",
+    "summary_cn": "美国国防高级研究计划局（DARPA）发布的此份报告，旨在梳理并突破前沿 AI 技术在防务与国家安全场景应用中的核心瓶颈。在中美大国竞争加剧的背景下，该项目体现了美军通过 AI Forge 机制加速前沿技术向实战能力转化的战略意图。这表明美国正聚焦国防 AI 的关键短板进行精准攻关，企图在中美军事智能化博弈中保持绝对的技术代差优势。",
+    "importance_score": 8,
+    "score_reason": "该内容涉及美国顶级军工科研机构（DARPA）针对国家安全制定的 AI 研发战略，直接关系到中美军事 AI 竞争与前沿技术博弈。",
+    "china_relevance": "高"
+  }
+}

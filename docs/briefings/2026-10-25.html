@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年10月25日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年10月25日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">3</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">1</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">0</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">2</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-critical">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">DARPA</span>
+                    <span class="card-date">10-24 09:08</span>
+                </div>
+                <h3 class="card-title">AI Forge：国家安全关键 AI 挑战报告（第二周期）</h3>
+                <p class="card-title-en">AI Forge: Critical AI Challenges for National Security Report - Cycle 2</p>
+                <p class="card-llm-summary">美国国防高级研究计划局（DARPA）发布的此份报告，旨在梳理并突破前沿 AI 技术在防务与国家安全场景应用中的核心瓶颈。在中美大国竞争加剧的背景下，该项目体现了美军通过 AI Forge 机制加速前沿技术向实战能力转化的战略意图。这表明美国正聚焦国防 AI 的关键短板进行精准攻关，企图在中美军事智能化博弈中保持绝对的技术代差优势。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 8/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：该内容涉及美国顶级军工科研机构（DARPA）针对国家安全制定的 AI 研发战略，直接关系到中美军事 AI 竞争与前沿技术博弈。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPbTBvMWdhZGpMRFdkZC1hRWpEazZqWW9KNzNQZE1rRWMxb2NxRy1td0tZc2ZFaW0xX0lVRURPU2gwSnpwclRaWnlhZnZERkpRRzltWkVmdHJwakRGZUtCNXhRaEZqNlhlUUhCQTZLMW5Oc1BiRTIyLTBRdGx4U25GRXE1TjMxNDBfbjNSZzNjamFfUQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">World Bank</span>
+                    <span class="card-date">10-25 04:09</span>
+                </div>
+                <h3 class="card-title">活动 | 非洲经济简报：提升 AI 准备度</h3>
+                <p class="card-title-en">Event | Africa Economic Update: Building AI Readiness</p>
+                <p class="card-llm-summary">世界银行发布的本期简报关注非洲国家在 AI 领域的准备度与基础设施建设，反映出全球南方正加速融入全球 AI 浪潮。非洲已成为中美数字科技影响力博弈的重要阵地，中国通过“数字丝绸之路”深耕当地 ICT 硬件基础设施，而西方多边机构则试图通过规则制定与能力建设引导其技术生态。该动态关乎未来中美 AI 大模型与数字服务在新兴市场的渗透率与软实力争夺。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：该内容侧重于非洲区域性的数字不平等与 AI 基础建设，属于中美 AI 全球影响力博弈的间接边缘议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxNRGZGVWVLeHo1bktXNXhyT3ppaUk1NUxGQ2NLNWE3R2N2ZnRCU1g3NnMtRHNvNF9DeEZOd1ZzbjhsRG1zbkVwcl9xR1k0TGlPN0Z5UVZlWTNkaHJaMURuUnJudG82M054QkZYbEVmZl9GN3BTd2VXNGxLRWJnMFNtSC1HSUxyb0NPbEhpZy15SUgyYWtaMFE?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Lawfare</span>
+                    <span class="card-date">10-25 03:30</span>
+                </div>
+                <h3 class="card-title">人工智能、儿童安全与法律</h3>
+                <p class="card-title-en">AI, Child Safety, and the Law</p>
+                <p class="card-llm-summary">本文探讨了美国在人工智能技术快速演进背景下针对儿童安全保护的法律框架与立法挑战，重点关注生成式AI带来的安全隐患与平台法律责任界定。虽然该议题侧重于美国国内社会治理与科技合规，但相关监管政策的加码反映出美方在AI创新与安全伦理之间的拉锯，间接塑造着美国AI企业的合规成本与前沿模型部署节奏。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：该文聚焦美国国内AI监管与儿童保护法律议题，属于特定领域的社会治理范畴，与中美地缘政治及核心科技竞争关联度较低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQenVVdG11Wl9WSlhEbnpGajdxNjhsR3Q2REdsSENLZU5vaXR5THBSUmtBSEIyZGVnM3pZV0VlWW1rbDUzUXhBRjVSTmVrcUFLZDQ4VzFib2dVYUprWU1SUEIxWF9uMzE4QVhWelBUTktXcVgwT3RnT2xFdUtWYVNqNU5taGNqalVN?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-10-25 00:30 UTC
+    </div>
+</body>
+</html>
