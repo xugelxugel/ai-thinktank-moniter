@@ -1,0 +1,16 @@
+{
+  "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQenVVdG11Wl9WSlhEbnpGajdxNjhsR3Q2REdsSENLZU5vaXR5THBSUmtBSEIyZGVnM3pZV0VlWW1rbDUzUXhBRjVSTmVrcUFLZDQ4VzFib2dVYUprWU1SUEIxWF9uMzE4QVhWelBUTktXcVgwT3RnT2xFdUtWYVNqNU5taGNqalVN?oc=5": {
+    "title_cn": "AI、儿童安全与法律",
+    "summary_cn": "本文探讨了美国在人工智能时代面临的儿童安全立法、监管合规及平台法律责任问题。随着美国加速推出针对AI生成内容与儿童保护的法律框架，增加的合规成本可能对美国AI企业的研发迭代效率产生一定影响。在中美AI竞争背景下，这体现了美国在平衡科技创新速度与国内社会治理风险之间的政策博弈。",
+    "importance_score": 4,
+    "score_reason": "该议题侧重于美国国内的AI治理与儿童安全监管法律，与中美核心技术或国家安全竞争的关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://cms.hoover.org/research/zai-founders-worked-research-funded-china-institute-uk-tied-spies": {
+    "title_cn": "Z.AI 创始人曾参与英国指控与中国国安部相关研究所资助的 AI 研究项目",
+    "summary_cn": "据彭博社报道，中国 AI 初创公司 Z.AI 的四位创始人曾参与由与中国国安部密切相关的研究所资助的项目，研发社交媒体分析及人际关系网络构建等工具。这一情报披露反映出西方正加大对中国生成式 AI 核心团队历史背景与国家安全关联的审查力度。此类舆论与情报定性可能引发针对中国新兴 AI 独角兽的技术封锁与供应链制裁，进一步加剧中美 AI 脱钩。",
+    "importance_score": 8,
+    "score_reason": "事件涉及西方国家对中国 AI 顶尖创业团队国安背景的审查，直接影响中美 AI 供应链制裁与地缘科技博弈。",
+    "china_relevance": "高"
+  }
+}
