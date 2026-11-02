@@ -1,0 +1,16 @@
+{
+  "https://spectrum.ieee.org/ai-slop-trust-science": {
+    "title_cn": "守卫知识之门",
+    "summary_cn": "本文探讨了合成内容与“AI垃圾信息”（AI slop）对科学公信力和社会信任的侵蚀。从大国博弈下的认知安全视角来看，生成式AI引发的高频信息污染正重塑全球数字信息生态，对AI时代的科学数据真实性防线与公共信息空间治理提出了新挑战。",
+    "importance_score": 3,
+    "score_reason": "文章主要关注AI垃圾信息对科学传播与公共信任的负面影响，属于泛AI治理与社会影响范畴，与中美核心技术或地缘战略竞争关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://cms.hoover.org/research/nvidia-chief-seen-target-chinese-spy-plot": {
+    "title_cn": "英伟达CEO被视作中国间谍计划的目标",
+    "summary_cn": "胡佛研究所报告披露，新加坡某数据中心公司的中国籍高管涉嫌为北京收集情报，并与英伟达CEO黄仁勋保持密切关系，引发美方对敏感技术泄露的深切担忧。这一事件表明，在美国对华实施严厉AI芯片出口管制的背景下，针对全球算力龙头企业及其供应链节点的非传统情报渗透正在加剧。此举或将促使美方进一步升级对半导体及数据中心产业链的安全审查与地缘政治管控。",
+    "importance_score": 8,
+    "score_reason": "事件直接涉及全球AI芯片龙头英伟达CEO及数据中心供应链的安全风险，反映了中美AI竞争已延伸至情报与国家安全层面。",
+    "china_relevance": "高"
+  }
+}
