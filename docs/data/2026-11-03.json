@@ -1,0 +1,44 @@
+{
+  "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNZ0l3Vk54UkFnZi1vMnZ5TElfODhmUjc3Ti1LbUYwaDdydElxanNHVkpxTE5QTVJLdHladnRJX0dIT1pZci1YRXhYWHA4cEQxM2VTeFNFbzVqWnFDbkxpNDdWS2RMTTNkZzE2QXB5YU1NWWsyb3JsWHpUeUg2ZFBMdXJMNGY0dDJzTkJtZ1kwRTJQRFY2dEZBLTR3LVhVc0txUTVXOUlUbDVvNHQxcGhyNlhxQV80RHBO?oc=5": {
+    "title_cn": "中期选举临近，选举政策格局趋于稳定——第四部分：AI与选举",
+    "summary_cn": "本文探讨了美国中期选举前夕针对AI技术在选举中应用的政策与法规动态，重点聚焦深度伪造与选民误导等治理难题。尽管议题偏向美国国内政治生态，但在中美AI博弈大背景下，美国对生成式AI引发的信息操纵与国家安全风险的监管取向，将直接影响其应对外部认知战的政策防御能力。",
+    "importance_score": 4,
+    "score_reason": "文章主要关注美国国内AI与选举监管立法，属于AI治理与安全防范的间接相关议题。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMifkFVX3lxTFBsUWJ6WHQ0dzBJdUdPWXk0bDIxZmRvOGRiQjdYX21TcEl1N1d6THFqSDdkZTlmOUNDamhMS2lrcVhYbjItMXdvYldkMV9ydE5aMUdkZGl0clduYktVcEsxVE9VVzdUUm0tbnFzOGZ1UVRfOG54MGZCb3haS2Q4Zw?oc=5": {
+    "title_cn": "AI泡沫破裂如何让“巨头AI”变得更加庞大",
+    "summary_cn": "文章分析了AI投融资泡沫若破裂对产业格局的深远影响，指出资本寒冬将加速淘汰缺乏造血能力的中小初创企业，促使人才、资产与算力资源进一步向科技巨头集中。从中美竞争视角来看，这种“大者恒大”的垄断趋势虽然短期内可能削弱美国前端创新的多样性，但长期将强化美国超大规模企业（Hyperscalers）的算力壁垒与生态掌控力，加剧两国在AI底座能力上的非对称竞争。",
+    "importance_score": 6,
+    "score_reason": "文章深入剖析美国AI产业资本周期与市场集中度演变，间接反映了美国AI基础设施与竞争生态的潜在走势。",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/11/02/1147660/raising-the-quality-of-insights-in-agentic-analytics/": {
+    "title_cn": "提升智能体分析（Agentic Analytics）的洞察质量",
+    "summary_cn": "本文探讨了企业级生成式 AI 向智能体 AI（Agentic AI）演进的过程中，自动化工作流所面临的“洞察质量”瓶颈。当前中美 AI 竞争的焦点正逐步从底层大模型向应用落地与企业生产力变革转移，智能体分析的可靠性将直接影响商业化部署成效。解决智能体数据分析中的准确性与信任度问题，是两国企业在下一代数字化转型中构建效能壁垒的关键所在。",
+    "importance_score": 3,
+    "score_reason": "该文章聚焦于企业级智能体 AI 的具体应用与质量优化，属于通用技术落地与商业管理层面的讨论，与中美地缘政治及出口管制等直接博弈相关度较低。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiY0FVX3lxTE95UW51OXYtcTlnenFTTXBnTnZXZnU4dWVPQl9RR29vX2RjTmpBZlFPMk5tMTQ5VlZwSXNnRHVjREM0NlVBZ2VrbDViZU5RSFVTeWtmaENlekxTWl9wLUtRWnZzYw?oc=5": {
+    "title_cn": "AI 需要一个类似“农夫协进会”的基层协作机制",
+    "summary_cn": "文章借用19世纪美国“农夫协进会”（Grange）的民间自治经验，主张建立自下而上的社会协作组织，以推动AI技术在基层社会的普及应用、技能培训与去中心化治理。从竞争格局来看，该视角反映了美国智库试图通过增强国内社会基层对AI的接纳度与数字韧性来奠定长远竞争力基础，但其核心立足于国内社会治理而非对外地缘博弈。",
+    "importance_score": 3,
+    "score_reason": "文章侧重于美国国内AI技术的基层普及、数字不平等与民间治理模式，与中美芯片战或战略竞争议题关联度较远。",
+    "china_relevance": "低"
+  },
+  "https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/": {
+    "title_cn": "别再统计 Token，开始计算实际交付成果",
+    "summary_cn": "本文指出 AI 编程 Agent 在自主规划、运行测试和自动纠错的多轮循环中，单个任务消耗的 Token 可达传统对话的 10 至 50 倍，促使业内评估标准从单纯的算力消耗转向实际效能产出。从中美 AI 竞争视角来看，这一智能体（Agentic）范式的普及正在急剧推高推理端的算力成本与资源消耗，在中美芯片管制与算力约束背景下，如何在有限计算资源下提升 Agent 的推理效率与实际落地能力将成为工程竞争的关键。",
+    "importance_score": 3,
+    "score_reason": "文章主要探讨 AI 编程 Agent 的 Token 消耗特征与效能评估标准变革，属于应用层与工程化议题，与中美宏观战略竞争关系较远。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMicEFVX3lxTE9YQW5rSEdqaXBJVXRoeUdWQVNaVkJqVUZkSHdSTlAzRjQtcm4wcm9zRXpHUlJSSWMwN1hQU015ZnhNdTcwekJwY3diekdsTEUtbWV5NExWWU1veEYxcG1DdTF5TWlHaXo3aGhwbmo3QWg?oc=5": {
+    "title_cn": "生成式 AI：解锁金融服务的全新可能性",
+    "summary_cn": "花旗银行在此报告中探讨了生成式 AI 如何重塑金融服务业，通过自动化流程与风险管理推动商业落地。从中美 AI 竞争视角来看，该内容反映了美国大型金融机构在 AI 商业化与生产力提升方面的先发优势，是观察西方垂直领域 LLM 应用成熟度的重要样本。",
+    "importance_score": 2,
+    "score_reason": "本文聚焦于 AI 在金融领域的垂直行业应用，未直接涉及半导体管制、国家安全或中美 AI 政策博弈等战略竞争议题。",
+    "china_relevance": "低"
+  }
+}
