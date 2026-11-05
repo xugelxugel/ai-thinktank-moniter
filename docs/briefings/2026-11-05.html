@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年11月05日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年11月05日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">8</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">2</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">4</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">2</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-high">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Lawfare</span>
+                    <span class="card-date">11-04 23:27</span>
+                </div>
+                <h3 class="card-title">权重所在：开源权重 AI 模型治理的权衡之道</h3>
+                <p class="card-title-en">Where the Weight Lies: A Balancing Act for the Governance of Open-Weight AI Models</p>
+                <p class="card-llm-summary">本文探讨了开源权重 AI 模型的监管框架与政策权衡，核心在于评估开放模型的创新红利与潜在的国家安全及生物/网络安全扩散风险。在当前中美 AI 竞争格局下，开源模型已成为中国 AI 产业（如 DeepSeek、Qwen 等）实现快速迭代与赶超的关键支柱；美国对其监管政策的收紧或放宽，将直接影响中美间技术扩散的边界与全球 AI 生态主导权的分配。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章涉及美国对前沿开源 AI 模型的安全监管与政策评估，直接影响双用途技术扩散限制及中美 AI 开源生态博弈。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxPX0htWXpqQ1pTUmRhQ2NmS0taYjY5Wmh1R1ZudjhHbkxtazFWbk5MZDBveGxwRzJTOVJ1ZHd1cVd1YWRHQ1ZSbWZqOGdFU2EyTlFVbERESmNCOHpPSGwwa1pzZC1BS0tfa0hpNmdQcktvWEhZSmxiUzNpSnR2aXVGQ0NPT2JIbGdFY19qNzZGbGhfWUJ2QkZBVmhDTnFacnB4c25wUklLbmFJM3FEUUtlay1DZUNWUk56SjhF?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Hoover Institution</span>
+                    <span class="card-date">日期未知</span>
+                </div>
+                <h3 class="card-title">蓝熙·陈：AI 数据中心将成为美国中期选举及2028年总统大选的关键议题</h3>
+                <p class="card-title-en">Lanhee Chen: AI Data Centers Key To US Midterms And 2028 Presidential Elections</p>
+                <p class="card-llm-summary">胡佛研究所学者蓝熙·陈指出，AI数据中心政策及其引发的社会反弹正成为美国中期选举和2028年大选的核心政治议题。这一趋势表明，美国在扩张AI算力基础设施时面临着日益增长的国内政治阻力与能源供给瓶颈。在中美AI算力竞赛加剧的背景下，若美方因内部政治分歧与民众抵触延缓数据中心部署，可能将直接制约其前沿模型的训练效率与长期竞争优势。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：议题揭示了美国国内政治与基础设施阻力对AI算力扩建的制约，直接关系到美国在AI领域的国家战略部署与全球算力竞赛。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, data center</span>
+                    <a href="https://cms.hoover.org/research/lanhee-chen-ai-data-centers-key-us-midterms-and-2028-presidential-elections" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Brookings Institution</span>
+                    <span class="card-date">11-05 05:36</span>
+                </div>
+                <h3 class="card-title">2026年中期选举将如何重塑数据中心政策</h3>
+                <p class="card-title-en">How the 2026 midterms could reshape data center policy</p>
+                <p class="card-llm-summary">随着AI大模型对算力和能源需求的激增，数据中心建设已从技术议题升级为美国地方与联邦政治的核心博弈点。2026年中期选举可能导致环保审查、电网接入及税收激励等政策发生转向，进而改变美国AI基础设施的扩张节奏。在中美算力竞赛背景下，美国本土数据中心若因政治阻力面临建设延宕或能源瓶颈，将对其维持前沿AI算力优势产生潜在制约。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章探讨美国政治选举对数据中心及算力基础设施政策的影响，涉及美国国内AI算力底座的扩张瓶颈，对中美AI竞赛构成间接影响。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: data center</span>
+                    <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNVzJDUFNUU1dJNTI2WGRBSVljODhmZGMxYmF5VDg2NEVGZ0xiQVdMOUVvblplUXdQNDVXVzhERDJMOWVlbER6YUxrM0tLVktDN1dja0RXeUs2UGV6MWVWSWtTYnZYSFEybEoyN19BMHhvM0VwY0N5eTJtSnFnNWd1REF2eVozTTNiY0pseWY5aG5nbGlm?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">R Street Institute</span>
+                    <span class="card-date">11-05 05:14</span>
+                </div>
+                <h3 class="card-title">中期选举对科技与 AI 意味着什么</h3>
+                <p class="card-title-en">What the Midterms Mean for Technology and AI</p>
+                <p class="card-llm-summary">本文分析了美国中期选举对科技与 AI 政策的深远影响，重点探讨国会格局重组将如何重塑 AI 立法、数据隐私及技术监管议程。在美对华科技博弈常态化的背景下，美国两党在 AI 竞争与国家安全议题上的立法节奏，将直接影响其对华技术限制政策的持续性及本土 AI 创新生态的演进。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章探讨美国中期选举对科技及 AI 立法的影响，间接涉及美对华战略竞争及科技政策的延续性。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxNSkhOWi1MZnV6R0JFNm1DNVdMd0RyLUtodUhWcElDcTNvYVhrQlZNakFQOGo2dkdhY2hpcWpDNm1xYTFmVXdLck5BT0p2bXVOYW9jOVNzd2VZUlZmcG5PWEc0bjlZT2hLYm1KRXpfYTRsR2R4X0hOOUhiLUZmcEFnNC1zSjUwdDQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#5</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">MIT Technology Review</span>
+                    <span class="card-date">11-05 02:50</span>
+                </div>
+                <h3 class="card-title">得克萨斯州曾是 AI 数据中心建设的新中心，但这一地位可能要破灭了</h3>
+                <p class="card-title-en">Texas was the new epicenter of the AI data center buildout. That might be kaput.</p>
+                <p class="card-llm-summary">得克萨斯州作为美国科技巨头开展大规模 AI 数据中心建设的核心阵地，正因政局变化带来的政策转向而面临基建受阻的风险。这一政治变局可能引发电力审批延迟和基建阻力，进而拖慢美国本土超大规模算力集群的建设进程。在中美 AI 竞争日益依赖底层算力基础设施支撑的背景下，美国本土算力扩建受阻或将影响其算力优势的延续。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章探讨了美国本土政局变动对 AI 数据中心及算力基建的影响，属于间接影响美国总体算力扩张与全球竞争格局的议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, data center</span>
+                    <a href="https://www.technologyreview.com/2026/11/04/1148043/texas-was-the-new-epicenter-of-the-ai-data-center-buildout-that-might-be-kaput/" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#6</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Lawfare</span>
+                    <span class="card-date">11-05 02:06</span>
+                </div>
+                <h3 class="card-title">马斯克在明尼苏达州的深度伪造诉讼或将定义 AI 时代的宪法第一修正案</h3>
+                <p class="card-title-en">Musk’s Minnesota Deepfake Fight Could Define AI’s First Amendment</p>
+                <p class="card-llm-summary">本案围绕埃隆·马斯克对明尼苏达州限制选举 AI 深度伪造（Deepfake）法律发起的宪法挑战展开，探讨生成式 AI 内容是否受美国宪法第一修正案言论自由保护。该诉讼凸显了美国在试图立法遏制 AI 虚假信息时所面临的宪政困境；相较于中国通过中央集权快速确立深度合成监管标准，美式司法博弈可能导致美国在应对 AI 驱动的认知战与虚假信息威胁时面临更长期的治理滞后与制度摩擦。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：讨论美国国内深度伪造立法与宪法第一修正案的司法博弈，属于 AI 治理与前沿安全监管的间接相关议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, deepfake</span>
+                    <a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxOZWtwc3lOY0IxRVJ2V3dVRm1Zdm85WWRzYmJMbUJ1UW5tN29HMndmTmlHd01JZ191N3ltX29vV3lOVXB4aHc0Z3kxSWxhWjE0d0kyMkI0aFJmMFI5bkFBeklnLW12cUVHYmlEX0pLMWJoV0Vacmp0V1FDS3lhNHFIZE41SkdZcmZqVTlGc3UzTEtIbzBhQ1FHZVV1d2tDQWtyMW91Tg?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#7</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">MIT Technology Review</span>
+                    <span class="card-date">11-04 21:00</span>
+                </div>
+                <h3 class="card-title">通过数据血缘保障智能体企业的安全</h3>
+                <p class="card-title-en">Securing the agentic enterprise with data lineage</p>
+                <p class="card-llm-summary">本文探讨了多 AI Agent 在无人工干预下跨系统提取数据可能引发的数据泄露与合规风险，强调“数据血缘”对保障企业级智能体安全的关键作用。从中美 AI 竞争视角看，前沿 AI 的竞争已从单纯的模型能力扩展至企业级智能体（Agentic AI）的安全落地与治理基础设施，如何兼顾应用创新与数据安全将影响两国企业的 AI 生产力转化效率。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：该内容主要探讨企业内部 AI Agent 应用中的数据治理与安全风险，属于技术应用与组织管理范畴，与中美大国博弈及核心技术禁运等核心议题关联度较低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://www.technologyreview.com/2026/11/04/1147596/securing-the-agentic-enterprise-with-data-lineage/" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#8</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">World Economic Forum</span>
+                    <span class="card-date">11-04 20:04</span>
+                </div>
+                <h3 class="card-title">AI认知卸载：哪些思考应当保留，哪些应当委托</h3>
+                <p class="card-title-en">AI Cognitive Offloading: Which Thinking to Keep vs Delegate</p>
+                <p class="card-llm-summary">本文探讨了在生成式AI普及背景下，人类如何合理将认知任务“卸载”给AI以提升效率，同时保留核心决策与批判性思维的能力。从全球竞争视角看，该议题反映了AI竞赛正从单纯的模型能力比拼延伸至人机协同效率与劳动力技能重构的软实力层面。对于中美而言，如何平衡AI对生产力的赋能与对本土人才关键认知退化的风险，将成为决定AI产业最终落地效益的关键因素。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：本文主要讨论AI对个人与组织认知习惯及工作流程的影响，属于应用层面的劳动与管理议题，与中美AI国家战略和硬科技对抗关联度较低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxPd2tBaVF5Q0liVXUxdElZR25lVmlkeGFaendsU1N0ZkczbWFtUVZ1aFVpQkFCYlMtUXRXdFZtRmVPa0JFamItYmdPQ3VXSEhGY0doQzk0TkUtRVZFMnZOaDlzUzE2OU10OVBGUEV3Mnh6NVNIVy1lbXp3Qmx5MF8tRHZLdml6YmxOVE9wMHNiTUFVVlpmR3BJSFNGVTZQeXN6QjBF?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-11-05 02:45 UTC
+    </div>
+</body>
+</html>

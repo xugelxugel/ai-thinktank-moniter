@@ -1,0 +1,58 @@
+{
+  "https://news.google.com/rss/articles/CBMilAFBVV95cUxNVzJDUFNUU1dJNTI2WGRBSVljODhmZGMxYmF5VDg2NEVGZ0xiQVdMOUVvblplUXdQNDVXVzhERDJMOWVlbER6YUxrM0tLVktDN1dja0RXeUs2UGV6MWVWSWtTYnZYSFEybEoyN19BMHhvM0VwY0N5eTJtSnFnNWd1REF2eVozTTNiY0pseWY5aG5nbGlm?oc=5": {
+    "title_cn": "2026年中期选举将如何重塑数据中心政策",
+    "summary_cn": "随着AI大模型对算力和能源需求的激增，数据中心建设已从技术议题升级为美国地方与联邦政治的核心博弈点。2026年中期选举可能导致环保审查、电网接入及税收激励等政策发生转向，进而改变美国AI基础设施的扩张节奏。在中美算力竞赛背景下，美国本土数据中心若因政治阻力面临建设延宕或能源瓶颈，将对其维持前沿AI算力优势产生潜在制约。",
+    "importance_score": 6,
+    "score_reason": "文章探讨美国政治选举对数据中心及算力基础设施政策的影响，涉及美国国内AI算力底座的扩张瓶颈，对中美AI竞赛构成间接影响。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMihwFBVV95cUxNSkhOWi1MZnV6R0JFNm1DNVdMd0RyLUtodUhWcElDcTNvYVhrQlZNakFQOGo2dkdhY2hpcWpDNm1xYTFmVXdLck5BT0p2bXVOYW9jOVNzd2VZUlZmcG5PWEc0bjlZT2hLYm1KRXpfYTRsR2R4X0hOOUhiLUZmcEFnNC1zSjUwdDQ?oc=5": {
+    "title_cn": "中期选举对科技与 AI 意味着什么",
+    "summary_cn": "本文分析了美国中期选举对科技与 AI 政策的深远影响，重点探讨国会格局重组将如何重塑 AI 立法、数据隐私及技术监管议程。在美对华科技博弈常态化的背景下，美国两党在 AI 竞争与国家安全议题上的立法节奏，将直接影响其对华技术限制政策的持续性及本土 AI 创新生态的演进。",
+    "importance_score": 6,
+    "score_reason": "文章探讨美国中期选举对科技及 AI 立法的影响，间接涉及美对华战略竞争及科技政策的延续性。",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/11/04/1148043/texas-was-the-new-epicenter-of-the-ai-data-center-buildout-that-might-be-kaput/": {
+    "title_cn": "得克萨斯州曾是 AI 数据中心建设的新中心，但这一地位可能要破灭了",
+    "summary_cn": "得克萨斯州作为美国科技巨头开展大规模 AI 数据中心建设的核心阵地，正因政局变化带来的政策转向而面临基建受阻的风险。这一政治变局可能引发电力审批延迟和基建阻力，进而拖慢美国本土超大规模算力集群的建设进程。在中美 AI 竞争日益依赖底层算力基础设施支撑的背景下，美国本土算力扩建受阻或将影响其算力优势的延续。",
+    "importance_score": 6,
+    "score_reason": "文章探讨了美国本土政局变动对 AI 数据中心及算力基建的影响，属于间接影响美国总体算力扩张与全球竞争格局的议题。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZWtwc3lOY0IxRVJ2V3dVRm1Zdm85WWRzYmJMbUJ1UW5tN29HMndmTmlHd01JZ191N3ltX29vV3lOVXB4aHc0Z3kxSWxhWjE0d0kyMkI0aFJmMFI5bkFBeklnLW12cUVHYmlEX0pLMWJoV0Vacmp0V1FDS3lhNHFIZE41SkdZcmZqVTlGc3UzTEtIbzBhQ1FHZVV1d2tDQWtyMW91Tg?oc=5": {
+    "title_cn": "马斯克在明尼苏达州的深度伪造诉讼或将定义 AI 时代的宪法第一修正案",
+    "summary_cn": "本案围绕埃隆·马斯克对明尼苏达州限制选举 AI 深度伪造（Deepfake）法律发起的宪法挑战展开，探讨生成式 AI 内容是否受美国宪法第一修正案言论自由保护。该诉讼凸显了美国在试图立法遏制 AI 虚假信息时所面临的宪政困境；相较于中国通过中央集权快速确立深度合成监管标准，美式司法博弈可能导致美国在应对 AI 驱动的认知战与虚假信息威胁时面临更长期的治理滞后与制度摩擦。",
+    "importance_score": 5,
+    "score_reason": "讨论美国国内深度伪造立法与宪法第一修正案的司法博弈，属于 AI 治理与前沿安全监管的间接相关议题。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPX0htWXpqQ1pTUmRhQ2NmS0taYjY5Wmh1R1ZudjhHbkxtazFWbk5MZDBveGxwRzJTOVJ1ZHd1cVd1YWRHQ1ZSbWZqOGdFU2EyTlFVbERESmNCOHpPSGwwa1pzZC1BS0tfa0hpNmdQcktvWEhZSmxiUzNpSnR2aXVGQ0NPT2JIbGdFY19qNzZGbGhfWUJ2QkZBVmhDTnFacnB4c25wUklLbmFJM3FEUUtlay1DZUNWUk56SjhF?oc=5": {
+    "title_cn": "权重所在：开源权重 AI 模型治理的权衡之道",
+    "summary_cn": "本文探讨了开源权重 AI 模型的监管框架与政策权衡，核心在于评估开放模型的创新红利与潜在的国家安全及生物/网络安全扩散风险。在当前中美 AI 竞争格局下，开源模型已成为中国 AI 产业（如 DeepSeek、Qwen 等）实现快速迭代与赶超的关键支柱；美国对其监管政策的收紧或放宽，将直接影响中美间技术扩散的边界与全球 AI 生态主导权的分配。",
+    "importance_score": 7,
+    "score_reason": "文章涉及美国对前沿开源 AI 模型的安全监管与政策评估，直接影响双用途技术扩散限制及中美 AI 开源生态博弈。",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/11/04/1147596/securing-the-agentic-enterprise-with-data-lineage/": {
+    "title_cn": "通过数据血缘保障智能体企业的安全",
+    "summary_cn": "本文探讨了多 AI Agent 在无人工干预下跨系统提取数据可能引发的数据泄露与合规风险，强调“数据血缘”对保障企业级智能体安全的关键作用。从中美 AI 竞争视角看，前沿 AI 的竞争已从单纯的模型能力扩展至企业级智能体（Agentic AI）的安全落地与治理基础设施，如何兼顾应用创新与数据安全将影响两国企业的 AI 生产力转化效率。",
+    "importance_score": 3,
+    "score_reason": "该内容主要探讨企业内部 AI Agent 应用中的数据治理与安全风险，属于技术应用与组织管理范畴，与中美大国博弈及核心技术禁运等核心议题关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiowFBVV95cUxPd2tBaVF5Q0liVXUxdElZR25lVmlkeGFaendsU1N0ZkczbWFtUVZ1aFVpQkFCYlMtUXRXdFZtRmVPa0JFamItYmdPQ3VXSEhGY0doQzk0TkUtRVZFMnZOaDlzUzE2OU10OVBGUEV3Mnh6NVNIVy1lbXp3Qmx5MF8tRHZLdml6YmxOVE9wMHNiTUFVVlpmR3BJSFNGVTZQeXN6QjBF?oc=5": {
+    "title_cn": "AI认知卸载：哪些思考应当保留，哪些应当委托",
+    "summary_cn": "本文探讨了在生成式AI普及背景下，人类如何合理将认知任务“卸载”给AI以提升效率，同时保留核心决策与批判性思维的能力。从全球竞争视角看，该议题反映了AI竞赛正从单纯的模型能力比拼延伸至人机协同效率与劳动力技能重构的软实力层面。对于中美而言，如何平衡AI对生产力的赋能与对本土人才关键认知退化的风险，将成为决定AI产业最终落地效益的关键因素。",
+    "importance_score": 2,
+    "score_reason": "本文主要讨论AI对个人与组织认知习惯及工作流程的影响，属于应用层面的劳动与管理议题，与中美AI国家战略和硬科技对抗关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://cms.hoover.org/research/lanhee-chen-ai-data-centers-key-us-midterms-and-2028-presidential-elections": {
+    "title_cn": "蓝熙·陈：AI 数据中心将成为美国中期选举及2028年总统大选的关键议题",
+    "summary_cn": "胡佛研究所学者蓝熙·陈指出，AI数据中心政策及其引发的社会反弹正成为美国中期选举和2028年大选的核心政治议题。这一趋势表明，美国在扩张AI算力基础设施时面临着日益增长的国内政治阻力与能源供给瓶颈。在中美AI算力竞赛加剧的背景下，若美方因内部政治分歧与民众抵触延缓数据中心部署，可能将直接制约其前沿模型的训练效率与长期竞争优势。",
+    "importance_score": 7,
+    "score_reason": "议题揭示了美国国内政治与基础设施阻力对AI算力扩建的制约，直接关系到美国在AI领域的国家战略部署与全球算力竞赛。",
+    "china_relevance": "中"
+  }
+}
