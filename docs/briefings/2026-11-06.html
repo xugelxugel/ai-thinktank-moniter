@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年11月06日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年11月06日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">10</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">2</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">1</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">7</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-critical">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Lawfare</span>
+                    <span class="card-date">11-05 23:05</span>
+                </div>
+                <h3 class="card-title">主权财富规模化：评估美国政府持股 AI 企业的机制</h3>
+                <p class="card-title-en">Scaling Sovereign Wealth: Evaluating Mechanisms for the U.S. Government to Own Parts of AI Companies</p>
+                <p class="card-llm-summary">本文探讨了美国政府通过设立主权财富基金或股权让渡机制直接参股前沿 AI 企业的可行性与政策路径。这反映出在面对中国国家资本驱动的 AI 竞争压力下，美国政策圈正探索打破传统的自由市场模式，尝试通过国家资本深度绑定 AI 龙头企业，以保障战略资源供给并巩固美国在高端技术领域的绝对领先地位。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 8/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章探讨了美国通过政府持股与主权基金等重磅产业政策工具干预 AI 领域的可能性，直接关乎美国国家安全战略与中美 AI 基础设施竞争的长期走向。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxOMzNfMHV4eW9kN2ZIaHU2eFhudkx4bG5xOExmNlZBZlNwc2YtOU11VmhPb291ckZwOHZaWDhxN2JRdmFyMGFxQWlvYUpZLVJ3amxpSTBKc1NfQlM4UHUwdVk3WWNmVkR5ekNtekhudk1lVjk4Q19rREU3RkhBTVNfNDE0WnhIaU5BT0dNTHItdUMwN1hGbjBNZFVGOWVGQXRzZlQzaG5CcWRrbmQyQjRiTzQzQzRENWJHX0diSngwM2R3ek1UQkpsWjIwZmdodWlmalcw?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">CSIS</span>
+                    <span class="card-date">11-05 23:33</span>
+                </div>
+                <h3 class="card-title">美国首场 AI 大选？兼论 Sella Nevo 关于保护模型权重的思考</h3>
+                <p class="card-title-en">America&#x27;s First AI Election? Plus Sella Nevo on Securing Model Weights</p>
+                <p class="card-llm-summary">本内容探讨了 AI 对美国大选的影响以及前沿 AI 模型权重的安全防护策略。随着前沿大模型被提升至国家战略资产高度，保护模型权重免受外国敌对势力的技术盗窃与网络入侵，已成为美方维持技术领先地位的关键机制。模型权重安全防护正逐步从企业自律演变为中美 AI 博弈中的国家安全红线。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：议题涉及前沿模型权重安全防护，系美国防范敌对国家窃密、维持 AI 技术优势的核心国家安全战略之一。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxPVHlQXy1sMjd1eXFHZDFoM1UtUW9ka3dtLXBPZXM1ZGIyZ1VPcERVckhvNmtHVTdtSmxyemhfd2w5NVpXc244U1hmeTlGTXBIMkdwbEM5QUk3QVhucm1rMWdjelh3Y3RZVXdMOXNDTUJuYld6SUsxOFY1OVVJWmhJaDVBeHZGYmp0NTFZMV93MGpsRHBnT19PZVJvLXlvcmlub3VHMUdFS3diM05HQlBlWGE1TQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Hoover Institution</span>
+                    <span class="card-date">日期未知</span>
+                </div>
+                <h3 class="card-title">数据中心选址与社区反对</h3>
+                <p class="card-title-en">Data Center Siting And Community Opposition</p>
+                <p class="card-llm-summary">本文分析了支撑AI技术爆发式增长的数据中心选址问题，重点探讨了其引发的地方政治、经济与环境博弈以及社区反对因素。在算力即国力的竞争格局下，数据中心及其背后的能源供给已成为AI基础设施建设的核心瓶颈。美国本土在数据中心扩建中面临的法规与民意阻力，可能制约其算力规模的快速扩张，进而影响中美AI基础设施竞赛的相对优势。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章探讨了制约美国前沿AI算力基础设施扩张的本土社会与环境瓶颈，间接影响中美AI大模型算力竞赛的基础能力建设。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: artificial intelligence, AI, data center</span>
+                    <a href="https://cms.hoover.org/research/data-center-siting-and-community-opposition" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Center for Data Innovation</span>
+                    <span class="card-date">11-06 03:26</span>
+                </div>
+                <h3 class="card-title">需要更完善的联邦统计数据来理解 AI 对工作的影响</h3>
+                <p class="card-title-en">Better Federal Statistics Are Needed to Understand AI’s Impact on Work</p>
+                <p class="card-llm-summary">该报告指出美国政策制定者目前缺乏足够的技术与劳动力数据，难以全面评估 AI 对企业运营及就业市场的深远影响。从中美竞争视角看，精确的经济统计是美国制定前瞻性产业政策、优化人力资本配置以及保持生产力优势的基础。缺乏此类数据将削弱美国政府评估自身经济韧性及制定针对性 AI 战略的能力，间接影响其长期的综合国力竞逐。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：议题聚焦于美国国内联邦统计方法与劳动力市场数据治理，与中美直接的技术博弈或地缘竞争关联度较低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: artificial intelligence, AI</span>
+                    <a href="https://datainnovation.org/2026/11/better-federal-statistics-are-necessary-to-understand-how-ai-is-changing-work/" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#5</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Goldman Sachs</span>
+                    <span class="card-date">11-06 00:59</span>
+                </div>
+                <h3 class="card-title">Aaru如何利用高级AI模拟预测人类行为</h3>
+                <p class="card-title-en">How Aaru Uses Advanced AI Simulations to Predict Human Behavior</p>
+                <p class="card-llm-summary">本文探讨了初创公司Aaru利用先进AI大模型与多智能体仿真技术，对群体人类行为进行高精度预测的创新实践。该技术代表了美国AI产业链在“合成数据”与“预测性商业模拟”维度的前沿探索，展现出生成式AI从文本生成向复杂社会系统建模的演进。从中美竞争视角来看，此类高级仿真建模能力未来具有延伸至地缘政治博弈推演与认知战领域的潜力，反映了美国在AI前沿应用层面的先发优势。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：该内容侧重于美国企业在AI预测模拟领域的具体商业应用，与中美芯片战争、出口管制等核心竞争议题关联度较低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxPWTNoMzBITmhPYmlsdHYtZ3dRV3EyNVpRd3g0aEVUZ2JsT2FOT2hjYlVyejJia0JBd3Exbm8wSS1KYzVXOXdMVUgwYWxqQzh0QjBfX1dfY3FNeWVBOEhNRE5DbnpSRkQ4cm05UHRZekNva0U5anZJVVZKVU50bUU0clowaGoyVzhqLVdHeXJVLUZmeTFZcHlpam5fZTc5OWU2REJ2MEIxNl9Tbl96UTlKV0ctMi0?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#6</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">World Economic Forum</span>
+                    <span class="card-date">11-05 18:44</span>
+                </div>
+                <h3 class="card-title">AI债务投资：对冲基金与非洲信用评级动态</h3>
+                <p class="card-title-en">AI Debt Investment: Hedge Funds &amp; Africa Credit Rating News</p>
+                <p class="card-llm-summary">本文关注对冲基金通过债务资本向AI基础设施注入资金的最新资本市场趋势。算力扩张背后的海量资本投入是支撑美国科技巨头维持算力与技术领先的重要引擎。然而，该内容更偏向全球金融市场与宏观经济，对中美直接的技术禁令或AI战略博弈影响有限。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：侧重于AI基础设施的金融融资机制与全球宏观资本动态，与中美AI直接竞争及技术管制关联度较低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxPU0Uta3JtMEFqLXlvOHJVWVlOZzcwRDc5RHZwY2NhX1NwVnFpQWR1NUhCTVZzTHZoYjhrZlpGNTRJYmFCblptY0dhV1dldWh2dkg5ZFdPYXAxZTRFMHk4djBmWXZHdUhGdDV5Z0gwbmczOUdBd2Zna3VwTzBROUN4M0ZJcVVEMjh2ZkxhdnNoZmc?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#7</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Brookings Institution</span>
+                    <span class="card-date">11-05 13:00</span>
+                </div>
+                <h3 class="card-title">AI时代学生的新方向</h3>
+                <p class="card-title-en">A-New-Direction-for-Students-in-an-AI-World-FULL-REPORT.pdf - Brookings Institution</p>
+                <p class="card-llm-summary">布鲁金斯学会发布的这份报告探讨了在人工智能普及背景下，教育体系应如何重构以培养适应未来劳动力市场所需的学生核心能力。报告强调强化AI素养、批判性思维与人机协同能力的重要性。从中美AI竞争视角来看，尽管该报告侧重于美国国内教育与劳动力准备，但其反映出美国试图通过夯实基层人才梯队基础，来维持其在全球AI领域的长期战略竞争优势。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：该报告主要关注AI时代的基础教育转型与学生技能培养，属于国内教育政策范畴，与中美核心AI科技博弈和地缘竞争关系较远。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPMnNJZi1qMlJxbDRjdTMzUURyeUYzeGJtalowX0hHNkdHdl9yTDZBN0Q2YWYxcnRpQ09Ta1RGcDVuZmVSQjV6OVFhRUIyTFZKemlJOHlGdEJSRlIzOVFQVlotdGNrcm1Kc3Aza0N4cUl2bF8xZ3Z3Mmp0VExSX2lUaVVRR0xIcGFkU0hNbm45cXVyekVZSE5xTFQ3WV9ILUV0bmtISmpkYlpqc3Via0RUWkt3?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#8</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Federal Register - AI</span>
+                    <span class="card-date">11-05 13:00</span>
+                </div>
+                <h3 class="card-title">医疗器械；血液学和病理学器械：搭载 AI 算法的数字宫颈细胞学玻片成像系统分类</h3>
+                <p class="card-title-en">Medical Devices; Hematology and Pathology Devices; Classification of the Digital Cervical Cytology Slide Imaging System With Artificial Intelligence Algorithm</p>
+                <p class="card-llm-summary">美国 FDA 将搭载 AI 算法的数字宫颈细胞学玻片成像系统归类为 II 类医疗器械并实施特别管控，明确了该类病理诊断 AI 工具的准入与监管标准。此举反映出美国正加速推进 AI 在医疗垂直领域的合规化落地与监管框架建构。虽然这属于具体的临床医疗 AI 应用规范，但美国在医疗 AI 监管标准的制定经验，对全球及中国医疗 AI 企业的海外合规与市场竞争具有一定参考意义。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：该内容仅涉及美国 FDA 对特定医疗 AI 诊断设备的例行法规分类，属于垂直领域 AI 应用监管，与中美大国 AI 战略博弈和芯片管制等核心议题关系较远。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: artificial intelligence</span>
+                    <a href="https://www.federalregister.gov/documents/2026/11/05/2026-22593/medical-devices-hematology-and-pathology-devices-classification-of-the-digital-cervical-cytology" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#9</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">OECD</span>
+                    <span class="card-date">11-05 17:45</span>
+                </div>
+                <h3 class="card-title">OECD各国的 AI 应用正在加速，但企业与世代间的重大差距依然存在</h3>
+                <p class="card-title-en">AI adoption accelerates across the OECD, but major gaps persist among businesses and generations</p>
+                <p class="card-llm-summary">报告显示，经合组织（OECD）各国的 AI 采用率虽有所上升，但在不同规模企业和不同世代之间仍存在明显的应用鸿沟。从中美 AI 竞争视角来看，应用端的社会分化反映了西方经济体将前沿技术转化为全要素生产力时面临的扩散阻力。相比中国自上而下强力推进 AI 赋能千行百业的产业政策，西方在中小企业与老龄人口中的接纳滞后可能减缓其技术红利向整体经济竞争力的转化速度。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章主要讨论 OECD 国家内部的数字鸿沟与企业普及率，属于 AI 应用与社会学范畴，与中美地缘政治及技术竞争直接关联较低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxOVnYtMVV0ZlMyM1VIWW9KNHNTUHNXWmdNVnc3R21RS3ZWc2pvRnI5R2ZPQ3NMRzFHVklJaFJvVUt1aXNXUHBtZDJ1MHdIT0FHU0FtaC13anBTcy1ZS05MZVh0VW1pQnR4NXNvNEU4UVE3MWI4bEFkWmxucHBFYmZsbVdrWWJubk96SWwxZ2t3VkxURlRtbGZoNU5rZFFBaENyVzFjRHNsWDZucjVS?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#10</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Goldman Sachs</span>
+                    <span class="card-date">11-05 15:05</span>
+                </div>
+                <h3 class="card-title">高盛总裁约翰·瓦尔德隆谈GDP增长、AI与兼并收购前景</h3>
+                <p class="card-title-en">John Waldron on GDP Growth, AI, and the M&amp;A Outlook</p>
+                <p class="card-llm-summary">高盛总裁约翰·瓦尔德隆在访谈中分享了对宏观经济增长、AI技术对GDP和生产力提振作用，以及全球并购（M&amp;A）市场复苏的展望。报告侧重于华尔街资本市场视角，分析了AI资本支出与技术落地对美国企业盈利和经济韧性的支撑。虽然强劲的资本投入和商业化能力构成了美国AI竞争力的底层基础，但内容主要围绕泛经济与金融市场预测，未涉及中美技术博弈。 </p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章主要从华尔街视角探讨AI对宏观经济与并购活动的影响，属商业与资本市场泛化议题，与中美AI核心竞争关联度低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxQZ2N1NkR0TVNGV21PYlM0akZyMmVVOTBEZFVhSWFmTGlHSWlpSlNjb2ZwbFI0X1VnMC1kS19Oa2ppbkZuQWRWdjRzX0p4RlFzVDl0NTdUN0V3YWhZUWZRM0cwUVNiSUQ0ZjZsNlU0Um1qYmQ4amdmSUhMTGpISG5SSGpMUmdZdEdlbGdOS2hCTDJYYlBPaWhRTWVxM3NKanNJRGlrdGNCbzNBd0sxT3pWdA?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-11-06 02:48 UTC
+    </div>
+</body>
+</html>
