@@ -1,0 +1,44 @@
+{
+  "https://news.google.com/rss/articles/CBMirgFBVV95cUxQWnFzTEwzRkZpVFlaU2oyX2p6R2hYYWtiTmFIUk9OTmNjXzRlQVZVSGl5SFIzaE1WazVkVS1RMnU4dWJpWDRKVGhfVmJtYkdyN2lZYjBnb29zY05ZYnotOXo3Q05yNk84aHNuUDlMQXh3SjUzNEVBWl9LTEFVY1M4VlZMQ1lnOWN3VEFhUm9FdFRfdGFZaE9GcktldTc2NFVkbUx2TUI4a1owb0Rxd0E?oc=5": {
+    "title_cn": "嵌入式排放框架：AI与气候贸易政策",
+    "summary_cn": "本文探讨了在 AI 算力需求飙升背景下，如何建立碳排放核算框架并将其纳入国际气候贸易政策体系。随着美中大模型竞争引发全球数据中心与算力基础设施的急剧扩张，算力的能源消耗与碳足迹正逐渐演变为新兴的绿色贸易壁垒。该框架的制定将对美中两国的算力供应链合规成本及数据中心产业的全球竞争力产生深远影响。",
+    "importance_score": 5,
+    "score_reason": "该议题探讨 AI 算力与气候贸易政策的结合，属于美中 AI 算力基础设施竞争与绿色贸易规制的间接相关议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMijAFBVV95cUxQb0tpdEc3RTRtZklEbzBxanE5VmVOb1VOWWEyaHlmb29DMm5ZUXRfdmFNUFcwUjlYckwxNnE5cWotVzUyMTNnd3pTcHRyQk9TSVlELW9pQnVTcEZ2cUFmNFZZbWd0VTZrbEZJdTVyMjd0OTh0M2VTbVFYdXdCU0NMUTR1M0V2VzR6d3VNdA?oc=5": {
+    "title_cn": "资本正在向东倾斜：探秘亚洲 AI 淘金热",
+    "summary_cn": "文章揭示了全球资本加速流入亚洲人工智能领域的最新趋势。在中美 AI 科技战持续升级的背景下，以摩根大通为代表的西方金融资本仍高度关注亚洲在半导体供应链和应用落地方面的独特优势。这表明尽管美方加大技术与投资限制，亚洲依然是全球 AI 产业重组与资本博弈的核心赛场。",
+    "importance_score": 7,
+    "score_reason": "文章探讨了全球资本向亚洲 AI 产业生态流动的趋势，反映了中美 AI 竞争下全球产业链与资本格局的深刻调整。",
+    "china_relevance": "高"
+  },
+  "https://ainowinstitute.org/news/2026-election-breakdown-americans-vote-down-data-centers-ai-and-oligarchy": {
+    "title_cn": "2026年中期选举剖析：美国选民否决数据中心、AI与寡头政治",
+    "summary_cn": "本期研讨会探讨了美国选民对数据中心扩张及AI科技巨头的政治反弹。从中美AI竞争的角度来看，美国地方公众对数据中心在能耗、水资源占用等方面的抵触情绪，可能成为制约美国AI基础设施建设推进的国内社会政治瓶颈，进而间接影响美方大模型算力池的扩张速度。",
+    "importance_score": 5,
+    "score_reason": "议题涉及美国国内对AI数据中心基建与科技巨头的政治抵触，间接影响算力基础设施部署速度，但未直接讨论中美竞争或出口管制。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMitgFBVV95cUxQMlVpdGNxbmM3am5BaHpwVzJ1bzhSOGp3MnFLMlp1b2Y0WEZVLXZIUEVBbGtTT0d5bUUxbnFOSlBCbTZaVWw4djFQTTFiVVNlQ0g5QmthaFN5QjdRTUEza2MwTXRuNVdadUI0Vjcwc2V4Qzc4YzhYcGJQeHBBenV3Szl1R0hYTHlhMEtqZVRJdkdPRHQyVWdoVW5qUEw4dzVORXlqZEt4WHNQTDZ0dVhkU3hmekl1dw?oc=5": {
+    "title_cn": "ASEAN 能源基础设施：满足 AI 电力需求",
+    "summary_cn": "东南亚正迅速成为美中科技巨头争相建设 AI 数据中心的新高地，这也对当地电力供应与基础设施提出了严峻挑战。该议题凸显了算力竞争向能源与物理基础设施延伸的趋势，美中企业在东南亚数字底座领域的博弈将深度影响区域地缘格局与供应链生态。",
+    "importance_score": 6,
+    "score_reason": "关注东南亚 AI 算力底座与能源需求，反映了美中科技巨头在第三方市场争夺数字基础设施话语权的间接竞争。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMirAFBVV95cUxOV09oMUd6NHBSUkd6N3ozQkRTZ0x3a1lrUUNEQVdMS21UVVQ3cXhTRFYxS2lhSmtLNm5CRVlKNHNYby1mR1c0NFc2U2xXb2pGQzlJQko3cVVWc19GSEhmSVZzd0dRMXRZY0hXVm1LQWVnNW5XQklwT1RoMVV3Q1lGcWRQNXhmbVhBMEl3c1c5d3hXTUttM3dTSDM0aVhfU1ZFVWNZRHg5RTlfcTAt?oc=5": {
+    "title_cn": "印度的数据时刻：对话Saurabh Garg秘书，聚焦印度的AI就绪数据推进",
+    "summary_cn": "本文探讨了印度推动“AI就绪数据”（AI-Ready Data）基础设施建设的最新战略布局。随着中美在算法与算力领域的博弈日趋激烈，数据正成为重塑全球AI生态格局的核心要素，印度正试图凭借庞大的人口与数字基础设施建立自身的技术支点。这一趋势表明，美国及其盟友可能进一步强化与印度的科技合作，以在数据标准与AI供应链层面抵消中国的全球数字影响力。",
+    "importance_score": 5,
+    "score_reason": "本文聚焦印度的数据基础设施与AI战略，属于全球AI竞赛格局及第三国动态的间接相关议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRDMxd3BCa2czQTlXUFE2aTlnRlJFNmFBbWx1dnQzblFyVUdhUHEzODhOZXB1VnJvZGctYXVvWXlBdF8wZnpXbEFyUTh5bHBib3d5dHpSS29sTWw5bmMtQzdqWmM3bUNpTFdxa21SeURrNWtDU3ZyelhJa1l0TWs1TE9oa0tVdncwc3l0NEtGWVplbkk?oc=5": {
+    "title_cn": "美日半导体国家安全伙伴关系的新动态",
+    "summary_cn": "本报告分析了美日两国在国家安全框架下深化半导体同盟的战略动向。双方正加速在先进芯片制造、设备与材料供应链上的重组合作，并强化在对华半导体出口管制方面的政策协调。美日这一深度绑定将进一步重塑全球算力硬件格局，加剧对中国高阶AI芯片供应链的遏制与围堵。",
+    "importance_score": 8,
+    "score_reason": "美日半导体国家安全同盟直接涉及高阶芯片设备与技术的对华出口管制，是中美AI算力竞争的核心领域。",
+    "china_relevance": "高"
+  }
+}
