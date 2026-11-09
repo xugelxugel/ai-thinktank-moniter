@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年11月09日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年11月09日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">2</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">1</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">1</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">0</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-critical">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">CSIS</span>
+                    <span class="card-date">11-08 21:45</span>
+                </div>
+                <h3 class="card-title">美日国家安全半导体伙伴关系动态分析</h3>
+                <p class="card-title-en">Dynamics in U.S.-Japan Semiconductor Partnership For National Security</p>
+                <p class="card-llm-summary">本报告深入探讨了美日两国以国家安全为核心推进半导体供应链与关键技术合作的战略走向。美日在半导体制造设备、高端材料及先进封装领域的深度绑定，是美国构筑对华AI算力与先进制程“小院高墙”的重要抓手。此举将进一步加剧全球半导体供应链的阵营化，对中国自主可控算力生态建设及前沿AI模型演进带来持续严峻的外部挑战。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 8/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章涉及美日半导体出口管制与供应链协同，系美国遏制中国高端AI芯片及先进制程发展的核心战略环节。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: semiconductor</span>
+                    <a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNRDMxd3BCa2czQTlXUFE2aTlnRlJFNmFBbWx1dnQzblFyVUdhUHEzODhOZXB1VnJvZGctYXVvWXlBdF8wZnpXbEFyUTh5bHBib3d5dHpSS29sTWw5bmMtQzdqWmM3bUNpTFdxa21SeURrNWtDU3ZyelhJa1l0TWs1TE9oa0tVdncwc3l0NEtGWVplbkk?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">CSIS</span>
+                    <span class="card-date">11-08 23:56</span>
+                </div>
+                <h3 class="card-title">印度的数据时刻：对话Saurabh Garg秘书长，探讨印度面向AI的数据推进战略</h3>
+                <p class="card-title-en">India’s Data Moment: A Conversation with Secretary Saurabh Garg on India’s AI-Ready Data Push</p>
+                <p class="card-llm-summary">本文记录了美国智库CSIS与印度高官关于印度“AI就绪数据”推进战略的对话，探讨如何利用数字公共基础设施（DPI）释放数据潜能。在中美AI算力与算法激烈对峙的格局下，美方高度关注印度的庞大人口数据与市场资源，试图通过美印科技合作构建排他性的全球数据与AI联盟圈。印度的这一数据战略使其在中美科技博弈中成为关键的“第三方力量”，影响着全球AI产业链与数据治理规则的重塑。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：内容涉及印度数据战略及美印AI外交，属于中美大国竞争下第三方国家战略走向与数据联盟重组的间接相关议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxOV09oMUd6NHBSUkd6N3ozQkRTZ0x3a1lrUUNEQVdMS21UVVQ3cXhTRFYxS2lhSmtLNm5CRVlKNHNYby1mR1c0NFc2U2xXb2pGQzlJQko3cVVWc19GSEhmSVZzd0dRMXRZY0hXVm1LQWVnNW5XQklwT1RoMVV3Q1lGcWRQNXhmbVhBMEl3c1c5d3hXTUttM3dTSDM0aVhfU1ZFVWNZRHg5RTlfcTAt?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-11-09 01:55 UTC
+    </div>
+</body>
+</html>
