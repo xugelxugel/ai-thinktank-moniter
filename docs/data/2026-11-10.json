@@ -1,0 +1,58 @@
+{
+  "https://news.google.com/rss/articles/CBMiiwFBVV95cUxORF9wUUR6N2hBdkJObG9rNzE1WG1ESmZMdV9hVDJNQ3NUV1BGOTZCd1E1cWZkN0YydGtXdWpFSDJsVTM4aEFVSVBnMXhnV0oxa3E5R2RSbkd1Sm5XUVFnZ18xbnhWN2xzbjY4ay1LRkdEZzJXcnBoUzNqY0dUTlc3ZHVidElzZ3FPT1NF?oc=5": {
+    "title_cn": "NIST SP 2400-102e2026 初始公开草案：对抗性机器学习——攻击与缓解措施的分类法与术语",
+    "summary_cn": "美国国家标准与技术研究院（NIST）发布对抗性机器学习（AML）安全指南草案，系统梳理了数据投毒、提示词注入及模型抽取等前沿安全威胁与防御框架。作为美国落实AI行政令与构建安全可靠AI体系的技术基石，该标准将直接指导美政府及国防相关部门的AI采购与合规要求。在大国博弈从技术研发延伸至技术标准与治理话语权的背景下，NIST这一动作旨在锁定美方在国际AI安全规则制定中的主导权。",
+    "importance_score": 7,
+    "score_reason": "涉及美国官方AI安全与治理标准的制定，直接关联美国AI国家安全战略及全球技术标准话语权争夺。",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/11/09/1148194/the-backlash-about-data-centers-might-really-just-be-about-electricity/": {
+    "title_cn": "对数据中心的反弹浪潮，本质可能只是源于电力瓶颈",
+    "summary_cn": "文章探讨了美国“数据中心小巷”弗吉尼亚州等地对AI数据中心建造引发的民众抵制，指出冲突核心已从土地占用转向庞大的电力需求与电网承载力。在美中AI竞赛日趋依赖超大规模算力集群的背景下，能源供给正成为制约美国算力扩张的关键底层瓶颈。这一国内政治与环保阻力若无法化解，可能对美国维持算力基建领先地位产生不利影响。",
+    "importance_score": 6,
+    "score_reason": "文章聚焦美国AI算力基础设施扩张面临的电力与能源瓶颈，间接影响美中AI基建竞速与规模对比。",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/11/09/1148182/nancy-pelosis-replacement-is-ready-to-regulate-ai/": {
+    "title_cn": "佩洛西的接班人已准备好推动 AI 监管",
+    "summary_cn": "曾主导加州前沿 AI 安全法案（SB 1047）的州参议员史考特·维纳（Scott Wiener）赢得旧金山国会席位，即将进入美国国会重塑联邦层面的 AI 监管政策。维纳等强监管派议员的加入，可能推高硅谷科技巨头在前沿模型安全与合规方面的研发成本。这一政策走向将在保证前沿 AI 安全与维持美国对华技术领先优势之间产生微妙平衡，间接影响中美 AI 创新的竞速逻辑。",
+    "importance_score": 7,
+    "score_reason": "涉及美国国会关键议员推动联邦层面的前沿 AI 监管立法，直接影响美国 AI 产业政策与合规走向。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMioAFBVV95cUxOVEw1THpOODRVVTB6UlFlRkQxRUdYdnFldEw1V3hnVGNGWmhIU1lRSHpxa05XWWltT21QWWIwRjVVU0IwaF9Xek11OGxFZlAwNnh0UUphWFZvenc2cGtFajVOWm50QXJWNTlFNkhvd2Q1Tml6RnczOWszRy1xZ3ZDV2tYcUlMb3M4eU1PY05mSDAwVFFtcDdzeVJydnI4MjBR?oc=5": {
+    "title_cn": "AI时代的欧洲风险投资：集中度、选择性与主权顺风",
+    "summary_cn": "本报告探讨了在AI浪潮驱动下欧洲风险投资向头部企业高度集中及政府推动“主权AI”的趋势。在中美AI博弈加剧的背景下，欧洲正通过政策与资本扶持本土AI生态以提升“科技主权”，试图打破对美国技术巨头的绝对依赖并抵御外部竞争。这一动态揭示了全球AI产业格局中“第三极”力量的自立尝试及其在资本与算力上的局限性。",
+    "importance_score": 5,
+    "score_reason": "报告聚焦欧洲AI风投及主权AI政策，间接反映了中美AI竞争背景下全球第三方力量的战略定位与资本流向。",
+    "china_relevance": "低"
+  },
+  "https://spectrum.ieee.org/zero-trust-agentic-ai-architecture": {
+    "title_cn": "AI Agent 正在考验零信任安全的极限",
+    "summary_cn": "本文探讨了全球研发团队利用协调器管理的多 Agent 系统在风险评估与决策支持等场景的落地应用，并揭示了自主智能体对传统零信任安全体系带来的严峻挑战。随着 Agentic AI 在关键领域的演进，网络安全防护与自治系统的安全边界正成为前沿 AI 竞争的核心要素。中美等大国在下一代安全架构与 AI 治理上的突破，将直接决定自主系统的国家安全与防务应用壁垒。",
+    "importance_score": 4,
+    "score_reason": "本文讨论了自主 AI Agent 对零信任安全架构的技术挑战，属于前沿 AI 安全与网络防护技术范畴，与大国 AI 竞争间接相关。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMilwFBVV95cUxOOW56MktXN3cxNXRZckg5ZnRESzljX01RYXctWkwyRWhYRU1DeEJRSlp3WXktX3BXa29EcXRwVWdKYnkwdDRKVkp1YWRTLTloUlRBVlgwT18xR2JtQ1NLRzJ2TW40dnBmZmhWM0Fac09ya0tETUpyamhtaWVxcDZUZHZYcjZjU0V1dnhTYS04dFBoelZmTkhN?oc=5": {
+    "title_cn": "欧洲应主导建立全球 AI 安全事件通报机制协定",
+    "summary_cn": "本文主张欧洲应利用其监管优势，主导制定全球 AI 安全事件的通报机制协定。在前沿 AI 安全与治理成为全球议题的背景下，欧洲试图通过“布鲁塞尔效应”确立国际标准，这将间接塑造中美两国在 AI 规则制定上的博弈空间，影响未来前沿模型出海的国际合规门槛。",
+    "importance_score": 5,
+    "score_reason": "文章探讨全球 AI 安全治理与风险通报机制，属于中美 AI 规则博弈与标准争夺的间接相关议题。",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/11/09/1147654/innovating-with-ai-in-the-special-chemicals-industry/": {
+    "title_cn": "特种化学品行业的 AI 创新实践",
+    "summary_cn": "本文探讨了美国特种化学品企业路博润（Lubrizol）如何结合 AI、云计算及先进建模技术加速材料研发与产品落地。在 AI 赋能科学研究（AI4S）成为全球工业竞争新高地的背景下，此类传统重工业与前沿 AI 的深度融合体现了美国试图通过企业级数字转型固化高端制造优势。尽管文章偏向具体商业落地案例，但揭示了中美在高端化学与新材料领域竞争中，数据与科研专长结合的微观实操路径。",
+    "importance_score": 2,
+    "score_reason": "文章仅聚焦于美国具体化学企业的 AI 商业应用与研发提效实践，属于微观企业管理层面，与中美直接的 AI 政策、芯片博弈或战略对抗关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://www.technologyreview.com/2026/11/09/1148166/the-climate-case-for-ai-has-not-been-made/": {
+    "title_cn": "AI 助力气候行动的依据尚不充分",
+    "summary_cn": "文章指出联合国气候大会正在深入讨论 AI 的环境足迹，质疑科技行业关于“AI 赋能绿色转型”的宣称缺乏事实支持。在中美 AI 算力军备竞赛背景下，超大规模数据中心带来的巨大能耗与电力瓶颈，正逐渐从生态议题演变为约束两国算力扩张与全球 AI 治理主导权的硬约束。",
+    "importance_score": 4,
+    "score_reason": "探讨全球 AI 气候治理与能耗争议，触及算力基础设施扩张的能源瓶颈，属于间接相关的 AI 治理议题。",
+    "china_relevance": "中"
+  }
+}
