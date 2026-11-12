@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年11月12日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年11月12日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">6</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">2</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">2</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">2</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-critical">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Hudson Institute</span>
+                    <span class="card-date">11-12 01:36</span>
+                </div>
+                <h3 class="card-title">杠杆工具：保持美国及其盟友在半导体设备领域的领导地位</h3>
+                <p class="card-title-en">Tools of Leverage: Preserving US and Allied Leadership in Semiconductor Equipment</p>
+                <p class="card-llm-summary">本报告由哈德逊研究所发布，深入探讨了美国及其同盟体系如何利用在半导体制造设备（SME）领域的绝对垄断优势，构建遏制中国的战略杠杆。报告强调控制前沿芯片制造设备是阻断中国自主获取先进AI芯片能力的关键卡脖子枢纽，呼吁美日荷等国进一步强化多边出口管制与供应链协调。这一政策主张为美国在AI基础设施层面深化对华硬件封锁提供了智库战略蓝图，直接关乎中美前沿AI算力竞赛的底层格局。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 9/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：报告直接聚焦中美半导体芯片战与出口管制这一核心议题，探讨美盟如何利用芯片制造设备封锁遏制中国前沿AI算力发展。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: semiconductor</span>
+                    <a href="https://www.hudson.org/technology/tools-leverage-preserving-us-allied-leadership-semiconductor-equipment-jason-hsu" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Hoover Institution</span>
+                    <span class="card-date">日期未知</span>
+                </div>
+                <h3 class="card-title">利用斯坦福学者解决全球挑战指南</h3>
+                <p class="card-title-en">A Guide to Solving Global Challenges with Stanford Scholars</p>
+                <p class="card-llm-summary">该报告强调了生物技术前沿的安全保障需求，因为人工智能使得恶意行为者使生物武器复活的可能性和风险增加。同时，报告还提供了对伊朗冲突及其民主潜力的个人和学术见解。这些内容反映了美国对全球AI治理和生物技术安全的关注，与中美AI竞争格局密切相关。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 7/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及美国AI政策及全球AI竞赛格局，但未直接讨论中美AI竞争的核心议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://cms.hoover.org/research/guide-solving-global-challenges-stanford-scholars" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">JPMorgan Chase</span>
+                    <span class="card-date">11-12 10:00</span>
+                </div>
+                <h3 class="card-title">AI数据中心：下一步走向何方？</h3>
+                <p class="card-title-en">AI Data Centers - What comes next?</p>
+                <p class="card-llm-summary">摩根大通本报告探讨了AI算力需求剧增背景下，数据中心基础设施在电力供应、资本支出与集群建设上的下一阶段演进趋势。数据中心作为前沿大模型训练与推理的物理基石，其建设规模与交付效率已成为中美AI算力博弈的核心要素。美国科技巨头正通过大规模加码数据中心投资以确立算力优势，而物理基础设施瓶颈的破局将深刻影响中美AI竞赛的基座实力。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：报告聚焦AI算力基础设施与数据中心供应链动态，系影响中美前沿算力规模差距与AI工业化进程的间接核心议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxQRW5KNG1QNDJIM3pOdUJnbU9YZXRXamVXbFN5SGwwdWpvcUxlVmR2dmM3S3VQWFpvdDNydjNpZF9sT181NXRQNXRUWUNyN21uR3ZGRy1SeVNpUVpQc1d5YTM4UWNxZE8weURaRUhjMV8tcXFDV3pjS0NiSEhSUUxHT2tfYXIxUTg5MjBHTnZYcTdGSFZHVjFQN0dsZnVXU1ZzUzhZdTNkWlhXLUo0UXVpSXpBWllHb2FMWWx2NER3UUpJME1nSFowbW4xUklHUDJx?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">UN News</span>
+                    <span class="card-date">11-11 20:36</span>
+                </div>
+                <h3 class="card-title">负责任的 AI：属于全人类的变革 | 联合国大会</h3>
+                <p class="card-title-en">Responsible AI: A Transformation That Belongs to All | General Assembly of the United Nations</p>
+                <p class="card-llm-summary">本文关注联合国大会倡导的“负责任的AI”全球治理框架，强调AI发展的包容性与风险防控。从中美AI竞争视角来看，联合国等多边平台正成为两国争夺全球AI话语权与治理规则制定权的新战场。美国与中国各自通过在联合国提出AI治理决议来拉拢“全球南方”国家，使全球多边AI治理议程深度绑定了大国战略博弈。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章涉及联合国框架下的全球AI治理与多边规则制定，属于中美争夺国际AI标准与话语权的间接相关议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, responsible AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxQZm9pZ2dGeWYtTzR6YW5CWUgwNW0zOXRWQk9RQTdrdmluTW5JRzUxcWRIbnNSaDU1bU4xaE9OSU9VcmJNRkxRT3NBUmhXbk94STIzaUlrMUVSVmwtajRIdk95NmVzZ1hXZk1TenBwd2FFdXk5MUxlb2xKRWNJZjA0UVlRbGM?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#5</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Stanford HAI</span>
+                    <span class="card-date">11-12 02:22</span>
+                </div>
+                <h3 class="card-title">研究团队探索神经科学与 AI 的交叉领域</h3>
+                <p class="card-title-en">Research Teams Mine the Intersection of Neuroscience and AI</p>
+                <p class="card-llm-summary">斯坦福研究团队聚焦神经科学与 AI 的跨学科融合，试图通过模拟生物大脑机制推动新一代类脑计算架构的发展。在中美半导体制裁与 AI 算力能耗瓶颈加剧的背景下，类脑智能被视为突破传统硅基芯片极限与冯·诺依曼架构制约的前沿路径。美方在基础科学与颠覆性AI底层范式上的持续投入，意在巩固其在下一代人工智能技术演进中的长远领跑优势。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章主要关注美方学术界在类脑 AI 与神经科学领域的早期基础科研，暂未直接涉及中美政策博弈、出口管制或核心产业竞争。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxPS0s2S0RsWG9QNkx4MkwyXzFIMHVtcFVHaWEyOFBPYjVqb3Fkd3ZaaGxtMHVRdkFjUG1PSTZ6TUVZWGtsWWpFNzM4UmpfbkFUNzVpVHRhZXNSOURxUkxWMTNiWEIxdkwyM0xiME9sTDM4MU1USE9KWUNQTGZrTzU1Y2tELURCVWlSUmphUTNmZlI0MHM?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#6</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Foreign Affairs</span>
+                    <span class="card-date">11-11 17:00</span>
+                </div>
+                <h3 class="card-title">A New Kind of Foreign Agent</h3>
+                <p class="card-title-en">A New Kind of Foreign Agent</p>
+                <p class="card-llm-summary"></p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://www.foreignaffairs.com/china/new-kind-foreign-agent" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-11-12 03:19 UTC
+    </div>
+</body>
+</html>
