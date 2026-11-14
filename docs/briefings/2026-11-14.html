@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年11月14日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年11月14日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">14</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">4</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">5</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">5</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-critical">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">R Street Institute</span>
+                    <span class="card-date">11-14 05:25</span>
+                </div>
+                <h3 class="card-title">出口管制级联效应（第二部分）：构建攻击面</h3>
+                <p class="card-title-en">The Export Control Cascade Part 2: Building an Attack Surface</p>
+                <p class="card-llm-summary">本文分析了美国对华半导体与关键技术出口管制政策所引发的级联效应和深层安全隐患。文章指出，不断扩张和复杂的出口限制不仅未能彻底封堵技术外溢，反而扩大了美方在监管合规与供应链方面的“攻击面”，并间接刺激中国加速芯片与AI基础设施的自主替代。这表明单纯依赖行政管制手段难以在中美科技博弈中建立长期优势，反而可能带来政策反噬风险。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 9/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：该文直接探讨了美对华芯片及AI出口管制这一中美科技竞争的核心工具及其副作用与战略影响。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: export control</span>
+                    <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxQN2NlTGIzdWNoU2tnZ21mMWZjQzcxVFRQYm5XNTZHMTdObG5tLVM5bkdRSXhGT0JxaTY2QUlWQl9hWjBMMENQS2Q4NzdHMVZ5dTJWSmExRnVKY2VnUHc3VFZqZ3hKcFJ2SmZuTTROOWpZQVFnVVNxb2l1OGVlUF9nSEZscVAyNUhDTFozNVNwRzlaUm9wcDFmMmtPSXk?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-critical">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Atlantic Council</span>
+                    <span class="card-date">11-13 22:09</span>
+                </div>
+                <h3 class="card-title">利奇菲尔德接受彭博电视台采访，讨论英伟达领导力危机及中美 AI 竞争</h3>
+                <p class="card-title-en">Lichfield interviewed on Bloomberg TV to discuss Nvidia’s leadership crisis and the US – China AI competition</p>
+                <p class="card-llm-summary">大西洋理事会专家就英伟达面临的领导力危机及其在中美 AI 竞争中的角色接受彭博社采访。英伟达作为全球 AI 算力的关键引擎，其战略动向与市场稳定性直接关乎美国在半导体供应链和前沿 AI 领域的领先优势。该讨论深入分析了硬件核心企业如何在两国科技出口管制与霸权博弈中扮演枢纽角色。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 9/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：直接探讨了中美 AI 竞争以及算力核心企业英伟达的战略地位，属于科技博弈的核心议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://www.atlanticcouncil.org/insight-impact/in-the-news/tannebaum-quoted-in-the-new-york-times-on-us-unreliability-influencing-de-dollarization-efforts-4-9-5/" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-critical">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Hudson Institute</span>
+                    <span class="card-date">11-14 02:20</span>
+                </div>
+                <h3 class="card-title">遏制中国的AI威胁</h3>
+                <p class="card-title-en">Halting China’s AI Threat</p>
+                <p class="card-llm-summary">本文源自哈德逊研究所高级研究员在媒体上的访谈，重点探讨了如何遏制中国人工智能技术崛起对美国国家安全构成的威胁。该内容反映出华盛顿智库圈正积极推动将AI定位为中美地缘政治与国防博弈的核心战场，主张采取更加强硬的遏制策略以维持美方的科技优势。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 8/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：直接聚焦于遏制中国AI发展与美国国家安全战略，属于中美科技博弈的核心议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://www.hudson.org/technology/halting-chinas-ai-threat-rebeccah-heinrichs" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-critical">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">CSIS</span>
+                    <span class="card-date">11-13 22:30</span>
+                </div>
+                <h3 class="card-title">AI与经济安全</h3>
+                <p class="card-title-en">AI and Economic Security</p>
+                <p class="card-llm-summary">CSIS该报告深入探讨了人工智能在国家经济安全中的战略地位，重点关注技术优势维护、供应链韧性及关键技术出口管制等政策工具。分析指出，美国正加速将AI技术纳入国家安全与经济安保的整体框架，意在通过“小院高墙”策略限制高科技向竞争对手流动。这直接反映了中美AI竞争已从纯技术层面演化为综合国力与经济安全制度构建的深度博弈。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 8/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章来自华盛顿核心智库，探讨AI与经济安全的融合，直接触及美对华科技管制、供应链安全及国家安全策略构建等核心议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiekFVX3lxTFBYc0tOQWJDZldOaTNzTmsyNkcxeU5BcFdTZ3psR1l6d1VKYUJ5empWTmI1cWdZUVRNYXhTV1BCQ0lua3ZWam9WZWNSWUNFQUtjcEZUbTdQWWFFZnhBOTRVLW1fVzI1TVYxYndhb3lBZm9xa0JmRVdxd2Rn?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#5</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">JPMorgan Chase</span>
+                    <span class="card-date">11-14 08:18</span>
+                </div>
+                <h3 class="card-title">AI数据中心：下一步走向何方？</h3>
+                <p class="card-title-en">AI Data Centers - What comes next?</p>
+                <p class="card-llm-summary">摩根大通在此报告中探讨了AI数据中心在算力需求暴增下面临的电力供应、资本支出与基建升级等核心瓶颈。数据中心作为AI算力落地的物理承载者，其扩张速度与能源获取能力已成为决定中美大模型演进速度的关键要素。美方金融界对数据中心下一阶段趋势的研判，凸显出美企正试图通过重构算力与能源基建资源，来维系其在全球AI领域的绝对主导地位。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章探讨AI数据中心与算力基础设施的演进趋势，涉及算力供应链与能源瓶颈，与中美AI算力竞赛间接密切相关。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxNdWJGUkRkUkxHTlEwNjAzdFgxcDczRXYxQUxybWhLclhjWk1IRWllckE2MjZFVDZkRHFobXd5OFZLclZ1Tjg1eWFqUFpfSzB0Qkx3NndNQjM1ZjRjWTZnelR2eS1Sam1HbHl0VWVab1l0SEU2VHVCZFhfWnBESXNvMUp0T29IVUlHa09PcTZVTzRvdk52aTc3eTdoVUd1ZEJNN1IwWmpCdzdOVVR4cUd1azZlQ0EtZmhRQ0Q2ZlZuTzhOTFVhMjhUak55RHU0Sml5?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#6</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">AI Now Institute</span>
+                    <span class="card-date">11-14 00:57</span>
+                </div>
+                <h3 class="card-title">AI Now 研究所针对美国国会《两党美国可负担性与就业法案》（BAAJA）发表声明</h3>
+                <p class="card-title-en">AI Now Statement on the Bipartisan American Affordability and Jobs Act (BAAJA) to US Congress</p>
+                <p class="card-llm-summary">智库 AI Now 研究所批评美国国会提出的《两党美国可负担性与就业法案》（BAAJA）变相向 AI 行业提供“后门救助”，引发对政府过度倾斜资源推进 AI 基建的争议。这一现象反映出美国在旨在维持全球 AI 霸权的技术产业扶持政策上，面临国内社会与经济层面的内部政治阻力。美方在 AI 算力基建与补贴政策上的立法博弈，将间接影响其在美中 AI 竞逐中的资源调配效率与产能建设节奏。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及美国国内 AI 产业立法与基建补贴争端，反映美方技术扶持政策的内部阻力，对中美 AI 算力与基建竞争具有间接影响。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://ainowinstitute.org/news/announcement/ai-now-statement-on-the-bipartisan-american-affordability-and-jobs-act-baaja-to-us-congress" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#7</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Atlantic Council</span>
+                    <span class="card-date">11-13 21:59</span>
+                </div>
+                <h3 class="card-title">Tuteja 接受彭博科技专访，探讨中期选举对数据中心建设与 AI 监管的影响</h3>
+                <p class="card-title-en">Tuteja interviewed on Bloomberg Tech about the implications of the midterm elections for data center development and the AI regulation</p>
+                <p class="card-llm-summary">本专访聚焦美国中期选举政治走势对国内数据中心基础设施拓展及 AI 监管立法的深远影响。数据中心作为支撑大模型训练与算力扩张的核心底座，其建设速度与电力保障直接关系到美国能否维持对华算力领先优势。美国两党在 AI 治理与能源政策上的分歧与博弈，将进一步塑造未来美国 AI 算力基建的政策环境与推进节奏。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章探讨了美国中期选举对本土数据中心建设和 AI 监管立法的影响，属于间接关乎中美算力底座竞争的美国政策与基础设施议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, AI regulation, data center</span>
+                    <a href="https://www.atlanticcouncil.org/insight-impact/in-the-news/tannebaum-quoted-in-the-new-york-times-on-us-unreliability-influencing-de-dollarization-efforts-4-9-2/" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#8</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">CSIS</span>
+                    <span class="card-date">11-13 22:30</span>
+                </div>
+                <h3 class="card-title">CSIS 瓦德瓦尼 AI 与前沿技术中心</h3>
+                <p class="card-title-en">Wadhwani AI Center</p>
+                <p class="card-llm-summary">该内容指向美国智库战略与国际研究中心（CSIS）旗下的瓦德瓦尼 AI 与前沿技术中心（Wadhwani Center for AI and Advanced Technologies）。该机构专注于评估人工智能对美国国家安全与地缘政治竞争的影响，其产出的政策建议直接服务于美方在芯片管制及科技遏制方面的决策。这折射出美方正在强化智库力量以系统化应对中美 AI 及前沿科技领域的长期博弈。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及美国核心智库在 AI 与前沿技术政策领域的机构布局，间接影响美对华科技政策与国家安全战略制定。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE03WGNkdEw5VWtOUDJMZ1FuSmVvRV90TWs3VU5HT0NUTUxQMGxsY3p1MWlRdENncEF5MHlqSzBZamR0MUFRQjRfQVMxQkVReU04NHdkNV8zWUloSVBG?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#9</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">IEEE Spectrum</span>
+                    <span class="card-date">11-14 03:00</span>
+                </div>
+                <h3 class="card-title">微认证如何帮助工程师构建可信 AI</h3>
+                <p class="card-title-en">How Microcredentials Help Engineers Build Trustworthy AI</p>
+                <p class="card-llm-summary">本文探讨了工程团队在将高层 AI 伦理与治理标准转化为日常开发流程时面临的合规挑战，并指出“微认证”正成为弥合技术实操与监管要求鸿沟的重要途径。从中美竞争视角看，以 IEEE 为代表的西方专业机构正在通过推动可信 AI 标准与人才认证体系建设，试图在国际 AI 治理规则与工程规范中占据话语权。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 4/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章主要聚焦于 AI 治理落地与工程师合规认证，属于全球 AI 标准与治理体系构建的间接相关议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: artificial intelligence, AI, AI ethics</span>
+                    <a href="https://spectrum.ieee.org/microcredentials-trustworthy-ai" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#10</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Brookings Institution</span>
+                    <span class="card-date">11-14 07:21</span>
+                </div>
+                <h3 class="card-title">AI时代学生的新方向：布鲁金斯学会报告</h3>
+                <p class="card-title-en">A-New-Direction-for-Students-in-an-AI-World-FULL-REPORT.pdf - Brookings Institution</p>
+                <p class="card-llm-summary">本报告探讨了生成式AI对教育体系与学生技能发展的深远影响，提出了应对AI技术变革的教育转型路线图。从中美AI竞争视角来看，劳动力结构转型与AI人才梯队建设是两国长期科技博弈的底层支撑，反映了美国智库在劳动力供给侧应对AI冲击的政策思考。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：主要讨论AI对教育和学生技能培养的影响，属于AI社会化应用与教育政策议题，与中美核心技术对抗关系较远。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPMnNJZi1qMlJxbDRjdTMzUURyeUYzeGJtalowX0hHNkdHdl9yTDZBN0Q2YWYxcnRpQ09Ta1RGcDVuZmVSQjV6OVFhRUIyTFZKemlJOHlGdEJSRlIzOVFQVlotdGNrcm1Kc3Aza0N4cUl2bF8xZ3Z3Mmp0VExSX2lUaVVRR0xIcGFkU0hNbm45cXVyekVZSE5xTFQ3WV9ILUV0bmtISmpkYlpqc3Via0RUWkt3?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#11</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">UN News</span>
+                    <span class="card-date">11-13 20:06</span>
+                </div>
+                <h3 class="card-title">COP31：针对人工智能与可靠气候变化信息的新倡议</h3>
+                <p class="card-title-en">COP31: New initiative targets AI and reliable climate change information</p>
+                <p class="card-llm-summary">联合国推行针对人工智能与气候信息真实性的新倡议，旨在应对生成式AI传播气候虚假信息的风险并规范AI在环境数据中的应用。从大国博弈角度来看，该倡议属于全球AI软性治理与标准制定的多边尝试。尽管其侧重于环境与信息伦理，但中美两国在国际组织中的标准话语权争夺与绿色算力竞争，将隐性影响此类多边规则的落地进程。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：该议题聚焦于联合国框架下AI在气候信息治理与防范虚假信息方面的应用，属于一般性国际AI治理，与中美硬核技术对抗和地缘政治博弈关联度较低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE1yUWRNNGFVOHB2dEMtcGhhYk1CbFFybmdLdi1IS2o2cmVmNTdJSzRaSDIwcVM1cnF2MDZsNW5TMVlnVmxHYlVNLWhVRUNkV3pvN0MtbllTYw?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#12</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">UN News</span>
+                    <span class="card-date">11-14 04:07</span>
+                </div>
+                <h3 class="card-title">AI在农业食品系统中的整合与应用</h3>
+                <p class="card-title-en">AI Integration in Agrifood Systems</p>
+                <p class="card-llm-summary">联合国新闻关注将AI技术引入农业与食品体系，旨在通过智能化手段提升生产效率并应对全球粮食安全挑战。虽然智慧农业在中美向全球南方输出数字基础设施的布局中具备一定战略价值，但本文主要侧重联合国治理框架下的发展倡议。整体而言，该议题偏向AI行业应用，缺乏直接的中美硬科技博弈色彩。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：本文属于AI在特定产业（农业）的常规应用与联合国发展倡议，远离中美在高端芯片、前沿模型及出口管制等核心竞争议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxOM1U5QmUxRF9sQ0ZUUUlrS3FIZk45bUVwQ1l2R2x0aDA4U0lSd1dtM3JYcE5vY05QbkxOa0FWZlBEN0FlYlNSX2kyTFhOWGdua2ZWYU85Q0VubzhnZTFReVBQNU5hRTZMMmxBaGFSU2NRS3JFMGFKNGJHX1RhcFFmaWhZcVhSUQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#13</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">OECD</span>
+                    <span class="card-date">11-13 23:54</span>
+                </div>
+                <h3 class="card-title">人工智能与工作组织</h3>
+                <p class="card-title-en">Artificial intelligence and work organisation</p>
+                <p class="card-llm-summary">经合组织（OECD）本报告探讨了人工智能对企业工作流程与组织管理模式的重塑作用。从中美AI竞争视角来看，该内容侧重于微观经济层面的应用落地与劳动力适应性研究，虽有助于了解发达经济体中AI对生产力的赋能现状，但未涉及大国科技博弈、核心技术封锁或战略竞争等硬核议题。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：该文关注AI对企业微观组织与劳动管理的影响，属于常规经济与管理研究，与中美AI科技竞争及地缘政治博弈关联度较低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: artificial intelligence</span>
+                    <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxNeEdFMnFlVF9TdU5YUFVYU0YyRW1CdldUeTNTSXlnQ1RkVUxoX2VGcmVNNmc5RE5ySDk2SmdyUFh2Um9KM3VWTXNXN3lSdV93c01LdWVVZy1fbzhVemU0WXFLaW91eEhxak04U1RZX05zUTAyLVZuN0lNRnIybzdTSXg3M1NWb1ptMVlUQXU1VmJqOTRod0tBOVBRYnpDQVdC?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#14</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Hoover Institution</span>
+                    <span class="card-date">日期未知</span>
+                </div>
+                <h3 class="card-title">蒙田能否教会我们如何生活——以及 AI 能否帮助我们永生？</h3>
+                <p class="card-title-en">Can Montaigne Teach Us To Live—And AI Help Us Live Forever?</p>
+                <p class="card-llm-summary">著名经济学家泰勒·考恩依托法国思想家蒙田的哲学视角，探讨了在 AI 时代人类如何追求良好生活以及通过数字化遗产实现某种“永生”的可能性。该内容主要关注前沿科技对人类伦理、社会文化与个人存在的重塑，属于人文哲学层面的讨论。从美中 AI 竞争视角来看，此类智库讨论虽不直接涉及芯片战或政策封锁，但体现了美国在 AI 科技价值观与软实力话语权构建上的深层思考。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：该文章偏向 AI 伦理与哲学反思，未涉及中美 AI 政策、芯片出口管制或国家安全等核心竞争议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://cms.hoover.org/research/can-montaigne-teach-us-live-and-ai-help-us-live-forever" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-11-14 02:41 UTC
+    </div>
+</body>
+</html>
