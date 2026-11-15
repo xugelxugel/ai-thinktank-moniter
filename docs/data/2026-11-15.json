@@ -1,0 +1,23 @@
+{
+  "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNWnpCV3Z1TGN5SGRrZEx5VGI5SFl5cW1VM1NnRGs0dTBXN3otQVpuTEFXSjRHc1hTWC1DZWtGbVhYcWpzQ3Z2TkRGeU5UUnVDSTJNWVRsaGZzU1huWkdhbzFzMkt6NmJrWjRONlFDQ05rRWEyYTVJSEF0XzFXYV95d0QxeklhbjlPVVNlT09mS1Z3SWpwTHBoQlhQMDIteUtHUF9rVlVpaUZFdGtPY0prRnhXQWMtT19kVktlOUlWUFAyTEE?oc=5": {
+    "title_cn": "AI数据中心：下一步走向何方？",
+    "summary_cn": "摩根大通在此报告中探讨了AI数据中心在资本支出、电力供应及供应链瓶颈下的下一阶段发展趋势。AI基础设施是决定中美AI大模型算力规模的物理底层，随着美国科技巨头加速智算中心布局，电网负荷与硬件交付能力已成为限制算力扩张的核心变量，间接塑造着全球AI竞争格局。",
+    "importance_score": 6,
+    "score_reason": "报告剖析了作为AI算力承载体的智算中心与能源供给瓶颈，涉及支撑中美AI竞争的关键基础设施演进。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMigwJBVV95cUxOWElLYVd1S2tVM1VYamtJX2J0amR5bFEzZ296WU84bC1wNXRXT1ZYZk9SNDNCdTRjc2VTeGRQcUMwZ2VDYWxfdkRLaldnT2k4ejBBUWdaLURVa3RyZHNLblllc3Z0Z3BzTjBlOWhRSnFrQUJqemZpTlh3bXNxRXliN1BsdkxqckNsQy15eXQ2QkoxZjZCTDRMRUxsc214WXFXUXN2bDVYVmd4VTdYR0xtS3Z6VXNBWWNPNDhGMl9FWWdrM1RZSFpLYzctclhWMHV3NVZOZk5CNWYxaGxfdi1HRGRqaEUwQmxWLVVHUU1NWHhSaFIxWjdWcUtmS2Y3SG1sYk9N?oc=5": {
+    "title_cn": "CEO视角：AI驱动世界下的资产管理未来",
+    "summary_cn": "本文探讨了摩根大通等美资巨头在AI技术驱动下重构资产管理业务与投资策略的最新观察。虽然文章侧重于金融机构内部的智能化转型与效能提升，但也反映出美国资本市场正加速融合前沿AI能力以巩固其全球金融霸权。在华竞争层面，美资金融巨头对AI的高强度投入将进一步拉大中美在金融科技与数字化资本运作能力上的差距。",
+    "importance_score": 2,
+    "score_reason": "该内容主要聚焦于商业金融领域的AI应用与企业组织管理，与中美芯片战争、出口管制或国家安全战略等核心竞争议题关系较远。",
+    "china_relevance": "低"
+  },
+  "https://cms.hoover.org/research/can-montaigne-teach-us-live-and-ai-help-us-live-forever": {
+    "title_cn": "蒙田能教会我们如何生活——而 AI 能帮助我们永生吗？",
+    "summary_cn": "本文记录了经济学者泰勒·柯文基于蒙田哲学对 AI 时代人类生活与数字永生议题的探讨。从竞争情报视角看，该内容偏重于人文思辨与个人化技术应用，未涉及中美半导体战争、战略政策或大模型对抗等核心竞争领域。",
+    "importance_score": 2,
+    "score_reason": "文章聚焦于 AI 与人文哲学交叉领域的讨论，与中美地缘政治及硬科技竞争缺乏直接关联。",
+    "china_relevance": "低"
+  }
+}
