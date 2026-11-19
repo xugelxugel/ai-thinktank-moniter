@@ -1,0 +1,79 @@
+{
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTE55cWxYVFR4RHhpSHNkMnE3ZktHT2hESDBZa01JM0F4SUF5QWpzeXdtLU1la0R2UnlQWTJHdmJFS21ERVBkajVnZzRXZ0hMZy1yQXlHY2lIWQ?oc=5": {
+    "title_cn": "（开幕式及领导人炉边谈话）巴德奥人工智能安全特别峰会",
+    "summary_cn": "该峰会聚焦于人工智能安全议题，涉及全球AI竞赛格局，对中美AI竞争格局有一定影响，但未直接讨论中美AI竞争的核心议题，如出口管制、芯片战争等。",
+    "importance_score": 7,
+    "score_reason": "涉及全球AI竞赛格局，对中美AI竞争有一定影响，但非核心议题",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTFB4VEU4bjZ2SzIya0hlOVppNkJMLUl3OVpwNHd5d2JkaFM4WHZVWVM0a3c1WmpnajdGSEZHRVdYdW9BNmdLVXpQMExYaGJaNkFVNUV2Y21pWQ?oc=5": {
+    "title_cn": "联合国秘书长安东尼奥·古特雷斯在巴德奥特别峰会上的AI安全新闻发布会",
+    "summary_cn": "联合国秘书长古特雷斯在巴德奥特别峰会上就AI安全问题发表讲话，这表明国际社会对AI安全的关注日益增加，可能对中美AI竞争格局产生间接影响，尤其是在全球AI治理和标准制定方面。",
+    "importance_score": 7,
+    "score_reason": "涉及全球AI竞赛格局，但未直接讨论中美AI竞争的具体议题",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMigwFBVV95cUxPUVFCX3hpZFQwMjRfOXU3NmVVVGw4Wkl0b1FoTzRhM20wUkZnUnBKY214eG1LeW5JNzhkRWNudC1pcjgxVk1SMDQ4S0k1TDhleWFIYVNhMzFtQ19BWHozeWh0Q2dDYTBrRzFKeXJrVFhYUHU2T2FHaVFkSmFIVmNrS09xZw?oc=5": {
+    "title_cn": "如何正确运用身体摄像头AI技术",
+    "summary_cn": "本文探讨了美国地方执法部门如何有效利用AI技术于身体摄像头，涉及AI在执法领域的应用和监管问题，对中美AI在公共安全领域的竞争格局有一定影响。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI在公共安全领域的应用和监管，与全球AI竞赛格局相关，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMnZSODR4dHEyc0ZGWjB6UmhTZjNfRUd4bGdiSEdOOU5XRkVsNVBHdVp6R2ZadjUzcktFc2ZQbm5kQ1NpbUtUTndRVndLa05PTE9fZ0pzZ3pJYTE5STFUX2NxeGV4RWZCQUhSSk12a2lVY0ZDWm9oYW5rS3FOcDRmQ1ItcnBhVTczVjdzNmhKS0c2TTkzQWdlODV6YWpCU3NZUm50SXpoTGVTMmxObFR0QkZzV1c?oc=5": {
+    "title_cn": "新任州长和立法者如何为AI转型做好准备",
+    "summary_cn": "本文探讨了新任州长和立法者如何通过制定政策和立法来为AI转型做好准备，这对于中美AI竞争格局具有重要意义，因为它涉及到AI治理和州级政策制定，这可能会影响中美两国在AI领域的竞争态势。",
+    "importance_score": 7,
+    "score_reason": "文章讨论了AI治理和政策制定，虽然未直接涉及中美AI竞争的核心议题，但与全球AI竞赛格局和中美两国AI政策制定相关，因此给予中等重要性评分。",
+    "china_relevance": "中"
+  },
+  "https://ainowinstitute.org/news/press/union-nurses-tell-researchers-that-ai-can-make-their-jobs-harder": {
+    "title_cn": "美国护士工会向研究人员表示，人工智能可能使他们的工作变得更难",
+    "summary_cn": "该报告指出，医院迅速引入人工智能工具，却未告知护士相关变化，缺乏独立证据证明这些工具的效果，且在工具失败时责任归属不明确。这一现象反映了美国在AI应用和治理方面的挑战，可能对中美AI竞争格局产生影响。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策与治理，对全球AI竞赛格局有间接影响",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMingFBVV95cUxPMl9NSWUwMkJ6WlAyaHJTZEw4c2k3X3kwVjBUTUozN0c5emNUNERxS3BnMWZLSlBKTFRyN1dCcDNXR3NwNDFvNmpwbTNvdkhsM0NkQzdNODJuR3h0Uk1jSzdXRXI3aDg1SDNBT3RITlE0RWg0UE56TVNkQUVxSGw2T3dFRy1BcWtibFM1aFR2bmppb25ZMHBwOHJ1T3dNQQ?oc=5": {
+    "title_cn": "可疑的思绪：不可监控的AI削弱了问责制",
+    "summary_cn": "本文探讨了不可监控的AI技术对问责制的影响，这在中美AI竞争中是一个重要议题，因为透明度和可问责性是技术发展和社会接受度的关键因素。",
+    "importance_score": 7,
+    "score_reason": "文章讨论了AI的治理问题，虽然不直接涉及中美AI竞争的核心议题，但对于理解全球AI竞赛格局和各国AI政策有重要意义。",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMiakFVX3lxTE1fUmlvQmRRcC1qLTVCS0dUYlJoVEQ2S0ZiLTlBRzBEbmNNMWFOVGFyNXpnbTNtazFRWktjSkVhb0xiLVF6aVQtdm5Ec3VraVBzbWpTNWhhM2xWTXRnbm9YV3RqV2s5bUhzRGc?oc=5": {
+    "title_cn": "AI的未来仍是一个选择",
+    "summary_cn": "斯坦福以人为本AI研究院的研究表明，尽管AI技术发展迅速，但其未来走向仍取决于人类的选择和决策，这对中美AI竞争格局具有重要影响，尤其是在AI治理和伦理方面。",
+    "importance_score": 7,
+    "score_reason": "该内容涉及AI的未来走向和人类选择，与全球AI竞赛格局相关，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/11/18/1148816/smell-startup-osmo-ai-nose-good-as-humans/": {
+    "title_cn": "这家气味初创公司称其AI嗅觉与人类相当",
+    "summary_cn": "在纽约新泽西州纽瓦克机场附近的一个实验室里，一支约30人的经验丰富的嗅味团队正在逐步识别地球上每一种气味。他们的详细笔记与化学分析交叉对照，为AI初创公司Osmo所谓的全球首个气味基础数据库提供丰富的训练数据。这一进展表明，AI在嗅觉识别领域的应用正逐渐缩小与人类能力的差距，对中美两国在AI领域的竞争格局可能产生重要影响，尤其是在嗅觉识别和数据分析方面的高科技应用上。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI技术发展及其在嗅觉识别领域的应用，对全球AI竞赛格局有一定影响，但未直接涉及中美AI竞争的核心议题如出口管制、芯片战争等。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMi6AFBVV95cUxObFhTQlJrekpES2ZNb1FKWkh0Y2ZacnN2LVotYVNxVEdienFiUlNuWG1MME9GX2lfSGZLRmdiODUxRU9XZ2JjOW1qWmhuSl9ScGVRRUxyWjl5cFY0cUlKSXRQSEJfR0tUUElVSUZzOGYxYzdka3JfY2EzMVFLTTdiTjhmLUVxVGlxVFExdl9sSmdBaGp3YnM5WHEwQ051azJGeGpNZGRtdVdZTlBPSjZWZy1Od1hGdFQyb3ZHcU41dVdXM0s0NWthWVE4X2xHOGdlUHFtcXV0NHdNWE50RmQtQlJJZW9rQlZn?oc=5": {
+    "title_cn": "AI重塑数据景观，经合组织加强可信统计数据的安全保障",
+    "summary_cn": "经合组织（OECD）在AI技术快速发展的背景下，加强了对可信统计数据的安全保障措施，这反映了全球对AI技术应用的监管和治理需求日益增加。此举可能对中美AI竞争格局产生影响，特别是在数据安全和隐私保护方面，可能加剧中美在AI领域的竞争和合作动态。",
+    "importance_score": 7,
+    "score_reason": "涉及全球AI竞赛格局和AI治理议题，对中美AI竞争有一定间接影响",
+    "china_relevance": "中"
+  },
+  "https://www.foreignaffairs.com/united-states/americas-hidden-ai-advantage": {
+    "title_cn": "美国的隐形AI优势",
+    "summary_cn": "文章指出，美国在AI技术的扩散方面领先于中国，这表明美国在AI领域的战略布局和生态系统构建方面具有优势，对中美AI竞争格局具有重要影响。",
+    "importance_score": 7,
+    "score_reason": "文章虽未直接讨论中美AI竞争的核心议题，但涉及美国AI技术的扩散及其对全球AI竞赛格局的影响，与中美AI竞争间接相关。",
+    "china_relevance": "高"
+  },
+  "https://cms.hoover.org/research/should-ai-decide-what-you-pay": {
+    "title_cn": "AI是否应决定你的支付金额？",
+    "summary_cn": "人工智能驱动的定价挑战了公平性和经济效率的传统观念，这在中美AI竞争中引发了对AI治理和伦理的讨论，对全球AI竞赛格局具有重要影响。",
+    "importance_score": 7,
+    "score_reason": "涉及美国AI政策及全球AI竞赛格局，但未直接讨论中美AI竞争的核心议题。",
+    "china_relevance": "中"
+  }
+}
