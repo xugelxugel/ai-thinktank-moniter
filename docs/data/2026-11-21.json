@@ -1,0 +1,100 @@
+{
+  "https://news.google.com/rss/articles/CBMivwFBVV95cUxNeW5QRDdSQXZIOEZ0Q0NlQUU2a1dBRkwxZThraG5qVzhGZDFlU283bENGSk1aQVN3UGVfYTJJQ18zN1lHajVUTmZCMkJkUlpZZHYySC0ySDJ3MkoxaXZaLWh1Sl9GTFUxZTlHTmZpYjl2MnY2LXFzaHVZN0hFLUxPS04zLW1NWEVKWG53V01GNlYySjdCVkxpRzFMUGFpM2xUazhEZHB2WWVpNkh5b2R5OW1YOW5OLWlSZU5HcFlaaw?oc=5": {
+    "title_cn": "推动越南半导体生态系统的发展",
+    "summary_cn": "经合组织（OECD）发布的报告探讨了越南构建半导体生态系统的政策路径与发展潜力。在全球半导体供应链重组及美中技术脱钩背景下，越南正成为西方科技巨头实施“中国+1”战略和友岸外包的重要替代阵地。越南半导体能力的提升将影响全球芯片封测与制造环节的分布，进而间接重塑中美在AI硬件基础设施领域的竞争格局。",
+    "importance_score": 6,
+    "score_reason": "涉及全球半导体供应链多元化与东南亚替代阵地建设，与中美芯片战及硬件供应链安全间接相关。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbXJPV0pBcnk5T1pHOThtTXdrLXZBU2kzRGNteGgzN1Rkd01DaXI1VTFhT3NvRVpRQ1ZUd0FSN2VCQlNITTFMNnBocHNpSzAyTFdJc0YzNnUyOFQzTC1naWw2SndmZWlSZDJBYkZ3SGV3RnJ1cUUtVDNCRVF5emhQUklMZ082MzZJanBXTzRlVEUtNkVH?oc=5": {
+    "title_cn": "半导体封装技术",
+    "summary_cn": "经合组织（OECD）聚焦半导体封装技术，揭示了后摩尔时代先进封装作为提升AI芯片算力密度与系统集成的关键地位。在美国实施严苛的算力芯片与先进制程设备出口管制下，先进封装（如Chiplet等）已成为中国绕过制程限制、实现AI芯片性能突破的核心突围路径。该报告反映出全球半导体供应链竞争与安全审查正向中下游关键封装环节深度演进。",
+    "importance_score": 6,
+    "score_reason": "先进封装是后摩尔时代提升AI算力与绕过先进制程出口限制的关键技术，直接关联半导体供应链安全与科技博弈。",
+    "china_relevance": "高"
+  },
+  "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB5cEZTb296Rmp3cUk5bks4dktFb0ZJVHVjcktLa3o1T3c5LVN3QjM1eVIyMjJIYXBVNlVfQWQwYWZXRTlocDVaYjBWeWlfNVFUaHQ4aWFtTEdaaXJIYXBGSVk0SQ?oc=5": {
+    "title_cn": "联合国关于 AI 与和平安全新闻发布会",
+    "summary_cn": "联合国针对 AI 在和平与安全领域的应用与威胁召开专题新闻发布会，聚焦全球多边治理体系下的前沿 AI 安全规范。当前中美均力图在联合国框架下主导 AI 军事应用与安全治理的国际标准，此类多边会议反映出全球 AI 制度性话语权博弈的新动态。",
+    "importance_score": 5,
+    "score_reason": "涉及联合国框架下的 AI 多边安全治理与规则制定，属于中美竞争全球 AI 话语权的间接相关议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1mdkdEa1pVS1hyMXB3aE91VXg1TVVWRUdLM1JOV3Z6RVdnMGJSaG13dXV2eEhXckR6cVJ3QVZnbmE4ZGRUN3FDeWVGbnQwWVpITXQzZGtxSQ?oc=5": {
+    "title_cn": "布里奇敦AI峰会聚焦安全议题，风险应对能力面临挑战",
+    "summary_cn": "本次联合国相关布里奇敦AI峰会旨在应对AI风险增速超越监管能力的严峻挑战，推动全球多边安全治理框架的搭建。在中美AI竞争加剧的背景下，此类多边论坛已成为两大国争夺全球AI规则制定权与“全球南方”话语权的新战场。两国均试图通过参与全球AI安全议程，确立符合自身战略利益的技术标准与治理模式。",
+    "importance_score": 5,
+    "score_reason": "文章涉及联合国框架下的全球AI安全治理峰会，属于中美AI竞争中关于全球规则制定与多边治理的间接相关议题。",
+    "china_relevance": "中"
+  },
+  "https://datainnovation.org/2026/11/revealing-hidden-colors/": {
+    "title_cn": "揭示隐藏的色彩",
+    "summary_cn": "美国东北大学研究人员开发出新型计算机视觉模型，显著提升了AI系统在不同光照条件下识别色彩和物体的能力。该突破增强了AI在复杂真实环境下的底层感知鲁棒性，在无人驾驶、机器人及自动侦察等军民两用领域具有实际应用价值。这体现了美国学术界在基础视觉感知算法上的持续创新，为美国AI技术体系提供底层算法支撑。",
+    "importance_score": 2,
+    "score_reason": "该内容仅属于美国高校具体的计算机视觉学术成果更新，未直接涉及中美AI政策对决、芯片管制或竞争战略等核心议题。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMinwFBVV95cUxNZVljOG1jcjVHY1RON0R0Wk1xSFNWbmdxMnJLZExNZG9aUjdfbUJ2TXk5a0w5Nll1QTkxeXBCSDFja0Zad0VFZUdpXzZRbGVzVEtpLWduSVdxVlRUeDM4NEstQ3RVaEttQTFOWVdOcExpbW12cUJ1QkZoZUs1eFpndkdLLVg1aTN2OGtlOVllRkNEQ1BmNkZBVTVMdmhRbVk?oc=5": {
+    "title_cn": "AI驱动生物学时代的边境生物安全强化",
+    "summary_cn": "本文探讨了前沿AI与生物技术融合（AI+Bio）给国家安全带来的新型生物风险及边境防御应对策略。随着中美在AI合成生物学与基因数据领域的竞争加剧，美国正推动强化基因合成筛选与边境生物安全审查机制。这表明前沿AI模型的生物安全防线已从算法安全延伸至跨国供应链与实体物质管控，成为中美科技安全博弈的新前沿。",
+    "importance_score": 6,
+    "score_reason": "文章探讨AI与生物技术结合带来的国家安全与边境管控风险，属于美国前沿AI安全治理与风险防范的政策议题。",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/": {
+    "title_cn": "AI 领域最易被误读的图表迎来重大更新",
+    "summary_cn": "AI评估非营利机构 METR 更新了其标志性的能力时间跨度图表，指出 AI 模型在编程等技术能力上继续保持指数级增长，但在需要人类判断力的复杂任务上表现明显滞后。这一发现揭示了当前基于 Scaling Law 的模型演进在非结构化高阶认知任务上的瓶颈，直接影响中美双方对 AGI 突破时序及算力投入优先级的战略研判。随着前沿能力评估标准的演进，中美大模型竞争的焦聚正从基础代码能力对比加速转向复合推理与高阶决策能力攻坚。",
+    "importance_score": 5,
+    "score_reason": "文章聚焦前沿 AI 能力演进轨迹与评估基准的变化，属于间接影响中美大模型技术竞争及研发路径决策的议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMirAFBVV95cUxQS09EZndaZlhPM2dfMjNhTDIzbzV3X1dXd0drSncyS0RrOU1FaDg3Z3B3VVZqdEdQN2xXVlpHSjVfX2g0VnJScThHai0tZTlTWEkzOVVBSC1wZTFMcXUwdG11cHc2T2hmYUd3eUcxal9VbV8zdTVyZFNmdjRuRHAtWF90NDB4TDZ6UWtqNFBXbC1raGpQNS1la0daSjhUR1lreDRxTWlWNmpBSV9n?oc=5": {
+    "title_cn": "电动汽车充电网与AI数据中心的电网影响对比及能源需求分析",
+    "summary_cn": "本文探讨了电动汽车普及与AI数据中心扩张对全球电网负荷的累加效应与影响差异。随着大模型迭代引发算力爆发，能源与电力供给已成为限制生成式AI规模化部署的关键瓶颈。在美中AI长跑中，电网承载力与清洁能源供给速度正演变为算力基建竞赛的核心要素，中国的特高压电网与电力基础设施部署可能为其AI算力中心建设提供独特的底层支撑。",
+    "importance_score": 5,
+    "score_reason": "该内容探讨了AI算力扩张面临的电网与能源约束，属于影响美中AI算力基建可持续发展的关键底层议题。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZlU4NjR1WHU1X1FPalpDcmlPQmdYVGI1aGljM0NKc2N4MDJ4NVBBdHRINDRBYjlZcUREcHVaaEUtYUtuc25aNnNhdmJMR3k3a2MzNFQzZ191VVhCZFZuejRCXy1uM1VDeGQtdXFvbnVUY2hWTzJsOURleWw2WE96T2RpNG4?oc=5": {
+    "title_cn": "松了一口气！针对 AI 攻防研究的监管政策迎来缓和",
+    "summary_cn": "文章探讨了美国政府针对 AI 系统安全性测试与破解研究（Hacks）在监管政策上的适度松绑。这一调整为网络安全研究人员和红队演练减轻了合规负担，旨在促进 AI 系统的漏洞挖掘与防御能力提升。在中美 AI 竞争格局下，AI 系统的网络安全与红队攻防能力直接关系到前沿模型的国家安全底座，美国放宽安全研究限制有助于加速其 AI 攻防技术的演进。",
+    "importance_score": 5,
+    "score_reason": "该文章聚焦于美国对 AI 网络安全研究与破解演练的监管政策调整，属于前沿 AI 安全与治理的间接相关议题。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9vNTNXblNxcjVwQmdYdWVTdFE1TGFGV19sb1o2aW9TSnE2VEloME1qS0ZBMy1IbDZ2T2hiMU1nWUluZkNRN0hWLUJ4RVBMMVY3UmJpQlpWTWNEV0dMNHM3dw?oc=5": {
+    "title_cn": "联合国 / 巴巴多斯 AI 安全峰会新闻发布会",
+    "summary_cn": "本发布会聚焦联合国在巴巴多斯举办的 AI 安全峰会，意在推动全球南方国家参与 AI 治理与安全标准的制定。在中美争夺全球 AI 规则话语权的背景下，联合国主导的多边平台已成为两国开展软实力博弈和争取第三方支持的重要阵地。全球 AI 安全共识的推进，将间接影响中美前沿模型的合规输出与国际监管环境。",
+    "importance_score": 4,
+    "score_reason": "该内容涉及全球 AI 治理与多边安全框架建构，与中美 AI 技术与规则博弈间接相关。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMisgFBVV95cUxPMnNJZi1qMlJxbDRjdTMzUURyeUYzeGJtalowX0hHNkdHdl9yTDZBN0Q2YWYxcnRpQ09Ta1RGcDVuZmVSQjV6OVFhRUIyTFZKemlJOHlGdEJSRlIzOVFQVlotdGNrcm1Kc3Aza0N4cUl2bF8xZ3Z3Mmp0VExSX2lUaVVRR0xIcGFkU0hNbm45cXVyekVZSE5xTFQ3WV9ILUV0bmtISmpkYlpqc3Via0RUWkt3?oc=5": {
+    "title_cn": "AI时代学生的发展新方向",
+    "summary_cn": "该报告探讨了在生成式AI迅速普及的背景下，美国教育体系与学生能力培养的适应性转型路径。尽管内容侧重于本土教育政策与学生未来技能构建，但高素养AI人才梯队的培育正是美国维持长期科技竞争力的底层依托。这反映出美方试图通过教育变革应对AI对劳动力市场的重塑，以巩固其在AI人才领域的战略优势。",
+    "importance_score": 3,
+    "score_reason": "该报告主要聚焦于美国本土教育变革与学生AI技能提升，属于AI教育应用与人力资本准备，与中美直接的技术博弈关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNdVd1N3hneUZ2ZTRpbzRUYWJFVHNiOFp2UlpNSHp5OU1hd1RST3FtMTE5dmJWMXFTa2xrQmcxSjdNX3ZXR00xTW5oVUF4RU14QlpLTUxEOGliXzRfVzNvbmpDWDhzbmNBQ2tiWHB0aFFMT2RSZUwxcW0zVDg0WW1yRFF6ZmkxTGVkSzZqdHFWNkY4UV9zTmlDMHpQaG5Zb1J1dlFkZWpjNXJuWTA5TG5pSV9fNDVtOXloMTVORnRfeFFLRGtEMzhTZlJ3UUJwUlFpYjdhUUh0OG5YbnhyYlhBekE1X3dEMHYweUdCSQ?oc=5": {
+    "title_cn": "丹·艾夫斯探讨AI技术、$4万亿美元基础设施建设与半导体板块抛售",
+    "summary_cn": "华尔街知名科技分析师丹·艾夫斯针对全球预计达4万亿美元的AI基础设施建设潮及近期半导体板块的股价抛售发表了最新洞察。从中美AI竞争视角来看，这一巨额资本支出体现了美系科技巨头在算力与基础设施层面的激进扩张策略，而半导体市场的短期波动则反映出支撑前沿AI竞赛的硬件供应链面临投资回报率与周期性风险的考验。",
+    "importance_score": 5,
+    "score_reason": "该内容探讨半导体供应链与巨额算力基础设施投资，为评估中美AI硬件层面的竞争动力与市场风险提供了间接参考。",
+    "china_relevance": "中"
+  },
+  "https://cms.hoover.org/research/mike-kuiken-china-watchdog-leaders-warn-us-technology-could-inadvertently-fuel-beijings": {
+    "title_cn": "迈克·奎肯：对华监督机构领导人警告美国技术可能无意中助长北京的军事野心",
+    "summary_cn": "胡佛研究所研究员迈克·奎肯警告称，中国可能利用美国的芯片和AI技术来增强其军事实力。这一观点反映出美国智库与决策层对技术外溢和军民融合风险的高度警惕。在中美AI与半导体博弈加剧的背景下，此类警告将进一步推动美国加码对华关键技术的出口管制与安全审查。",
+    "importance_score": 8,
+    "score_reason": "该内容直接涉及中美AI与芯片出口管制、军民融合及国家安全等核心竞争议题。",
+    "china_relevance": "高"
+  },
+  "https://cms.hoover.org/research/anne-neuberger-ai-big-help-both-attackers-and-defenders-former-top-nsa-official-says": {
+    "title_cn": "前 NSA 高官 Anne Neuberger：AI 既是攻击者的得力助手，也是防御者的强大工具",
+    "summary_cn": "前美国白宫网络与新兴技术副国家安全顾问 Anne Neuberger 分析了近期重大技术中断事件及 AI 在网络安全中的双重用途。她指出 AI 正在重塑网络对抗格局，既降低了恶意攻击者的门槛，也强化了防御者的威胁侦测能力。从中美竞争视角看，AI 赋能的网络战与关键基础设施防御已成为大国博弈的核心战场，美方政策界正加速推动将前沿 AI 安全融入国家安全战略以防范潜在的国家级网络威胁。",
+    "importance_score": 6,
+    "score_reason": "涉及前美国国家安全官员对 AI 网络安全攻防双重特性的研判，属于前沿 AI 安全与国家安全政策间接相关议题。",
+    "china_relevance": "中"
+  }
+}

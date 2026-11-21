@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年11月21日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年11月21日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">14</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">1</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">11</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">2</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-critical">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Hoover Institution</span>
+                    <span class="card-date">日期未知</span>
+                </div>
+                <h3 class="card-title">迈克·奎肯：对华监督机构领导人警告美国技术可能无意中助长北京的军事野心</h3>
+                <p class="card-title-en">Mike Kuiken: China Watchdog Leaders Warn US Technology Could Inadvertently Fuel Beijing’s Military Ambitions</p>
+                <p class="card-llm-summary">胡佛研究所研究员迈克·奎肯警告称，中国可能利用美国的芯片和AI技术来增强其军事实力。这一观点反映出美国智库与决策层对技术外溢和军民融合风险的高度警惕。在中美AI与半导体博弈加剧的背景下，此类警告将进一步推动美国加码对华关键技术的出口管制与安全审查。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 8/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：该内容直接涉及中美AI与芯片出口管制、军民融合及国家安全等核心竞争议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://cms.hoover.org/research/mike-kuiken-china-watchdog-leaders-warn-us-technology-could-inadvertently-fuel-beijings" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">OECD</span>
+                    <span class="card-date">11-21 09:19</span>
+                </div>
+                <h3 class="card-title">推动越南半导体生态系统的发展</h3>
+                <p class="card-title-en">Promoting the Development of the Semiconductor Ecosystem in Viet Nam</p>
+                <p class="card-llm-summary">经合组织（OECD）发布的报告探讨了越南构建半导体生态系统的政策路径与发展潜力。在全球半导体供应链重组及美中技术脱钩背景下，越南正成为西方科技巨头实施“中国+1”战略和友岸外包的重要替代阵地。越南半导体能力的提升将影响全球芯片封测与制造环节的分布，进而间接重塑中美在AI硬件基础设施领域的竞争格局。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及全球半导体供应链多元化与东南亚替代阵地建设，与中美芯片战及硬件供应链安全间接相关。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: semiconductor</span>
+                    <a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxNeW5QRDdSQXZIOEZ0Q0NlQUU2a1dBRkwxZThraG5qVzhGZDFlU283bENGSk1aQVN3UGVfYTJJQ18zN1lHajVUTmZCMkJkUlpZZHYySC0ySDJ3MkoxaXZaLWh1Sl9GTFUxZTlHTmZpYjl2MnY2LXFzaHVZN0hFLUxPS04zLW1NWEVKWG53V01GNlYySjdCVkxpRzFMUGFpM2xUazhEZHB2WWVpNkh5b2R5OW1YOW5OLWlSZU5HcFlaaw?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">OECD</span>
+                    <span class="card-date">11-21 09:19</span>
+                </div>
+                <h3 class="card-title">半导体封装技术</h3>
+                <p class="card-title-en">Semiconductor Packaging Technologies</p>
+                <p class="card-llm-summary">经合组织（OECD）聚焦半导体封装技术，揭示了后摩尔时代先进封装作为提升AI芯片算力密度与系统集成的关键地位。在美国实施严苛的算力芯片与先进制程设备出口管制下，先进封装（如Chiplet等）已成为中国绕过制程限制、实现AI芯片性能突破的核心突围路径。该报告反映出全球半导体供应链竞争与安全审查正向中下游关键封装环节深度演进。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：先进封装是后摩尔时代提升AI算力与绕过先进制程出口限制的关键技术，直接关联半导体供应链安全与科技博弈。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: semiconductor</span>
+                    <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxQbXJPV0pBcnk5T1pHOThtTXdrLXZBU2kzRGNteGgzN1Rkd01DaXI1VTFhT3NvRVpRQ1ZUd0FSN2VCQlNITTFMNnBocHNpSzAyTFdJc0YzNnUyOFQzTC1naWw2SndmZWlSZDJBYkZ3SGV3RnJ1cUUtVDNCRVF5emhQUklMZ082MzZJanBXTzRlVEUtNkVH?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Lawfare</span>
+                    <span class="card-date">11-21 03:08</span>
+                </div>
+                <h3 class="card-title">AI驱动生物学时代的边境生物安全强化</h3>
+                <p class="card-title-en">Enhancing Border Biosecurity in the Age of AI-Enabled Biology</p>
+                <p class="card-llm-summary">本文探讨了前沿AI与生物技术融合（AI+Bio）给国家安全带来的新型生物风险及边境防御应对策略。随着中美在AI合成生物学与基因数据领域的竞争加剧，美国正推动强化基因合成筛选与边境生物安全审查机制。这表明前沿AI模型的生物安全防线已从算法安全延伸至跨国供应链与实体物质管控，成为中美科技安全博弈的新前沿。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章探讨AI与生物技术结合带来的国家安全与边境管控风险，属于美国前沿AI安全治理与风险防范的政策议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxNZVljOG1jcjVHY1RON0R0Wk1xSFNWbmdxMnJLZExNZG9aUjdfbUJ2TXk5a0w5Nll1QTkxeXBCSDFja0Zad0VFZUdpXzZRbGVzVEtpLWduSVdxVlRUeDM4NEstQ3RVaEttQTFOWVdOcExpbW12cUJ1QkZoZUs1eFpndkdLLVg1aTN2OGtlOVllRkNEQ1BmNkZBVTVMdmhRbVk?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#5</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Hoover Institution</span>
+                    <span class="card-date">日期未知</span>
+                </div>
+                <h3 class="card-title">前 NSA 高官 Anne Neuberger：AI 既是攻击者的得力助手，也是防御者的强大工具</h3>
+                <p class="card-title-en">Anne Neuberger: AI Is A Big Help To Both Attackers And Defenders, Former Top NSA Official Says</p>
+                <p class="card-llm-summary">前美国白宫网络与新兴技术副国家安全顾问 Anne Neuberger 分析了近期重大技术中断事件及 AI 在网络安全中的双重用途。她指出 AI 正在重塑网络对抗格局，既降低了恶意攻击者的门槛，也强化了防御者的威胁侦测能力。从中美竞争视角看，AI 赋能的网络战与关键基础设施防御已成为大国博弈的核心战场，美方政策界正加速推动将前沿 AI 安全融入国家安全战略以防范潜在的国家级网络威胁。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及前美国国家安全官员对 AI 网络安全攻防双重特性的研判，属于前沿 AI 安全与国家安全政策间接相关议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://cms.hoover.org/research/anne-neuberger-ai-big-help-both-attackers-and-defenders-former-top-nsa-official-says" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#6</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">UN News</span>
+                    <span class="card-date">11-21 09:10</span>
+                </div>
+                <h3 class="card-title">联合国关于 AI 与和平安全新闻发布会</h3>
+                <p class="card-title-en">UN / AI PEACE AND SECURITY PRESSER</p>
+                <p class="card-llm-summary">联合国针对 AI 在和平与安全领域的应用与威胁召开专题新闻发布会，聚焦全球多边治理体系下的前沿 AI 安全规范。当前中美均力图在联合国框架下主导 AI 军事应用与安全治理的国际标准，此类多边会议反映出全球 AI 制度性话语权博弈的新动态。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：涉及联合国框架下的 AI 多边安全治理与规则制定，属于中美竞争全球 AI 话语权的间接相关议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTFB5cEZTb296Rmp3cUk5bks4dktFb0ZJVHVjcktLa3o1T3c5LVN3QjM1eVIyMjJIYXBVNlVfQWQwYWZXRTlocDVaYjBWeWlfNVFUaHQ4aWFtTEdaaXJIYXBGSVk0SQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#7</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">UN News</span>
+                    <span class="card-date">11-21 05:29</span>
+                </div>
+                <h3 class="card-title">布里奇敦AI峰会聚焦安全议题，风险应对能力面临挑战</h3>
+                <p class="card-title-en">Bridgetown AI summit to tackle safety as risks outpace capacity to respond</p>
+                <p class="card-llm-summary">本次联合国相关布里奇敦AI峰会旨在应对AI风险增速超越监管能力的严峻挑战，推动全球多边安全治理框架的搭建。在中美AI竞争加剧的背景下，此类多边论坛已成为两大国争夺全球AI规则制定权与“全球南方”话语权的新战场。两国均试图通过参与全球AI安全议程，确立符合自身战略利益的技术标准与治理模式。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章涉及联合国框架下的全球AI安全治理峰会，属于中美AI竞争中关于全球规则制定与多边治理的间接相关议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE1mdkdEa1pVS1hyMXB3aE91VXg1TVVWRUdLM1JOV3Z6RVdnMGJSaG13dXV2eEhXckR6cVJ3QVZnbmE4ZGRUN3FDeWVGbnQwWVpITXQzZGtxSQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#8</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">MIT Technology Review</span>
+                    <span class="card-date">11-21 02:15</span>
+                </div>
+                <h3 class="card-title">AI 领域最易被误读的图表迎来重大更新</h3>
+                <p class="card-title-en">The most misunderstood graph in AI just got a major update</p>
+                <p class="card-llm-summary">AI评估非营利机构 METR 更新了其标志性的能力时间跨度图表，指出 AI 模型在编程等技术能力上继续保持指数级增长，但在需要人类判断力的复杂任务上表现明显滞后。这一发现揭示了当前基于 Scaling Law 的模型演进在非结构化高阶认知任务上的瓶颈，直接影响中美双方对 AGI 突破时序及算力投入优先级的战略研判。随着前沿能力评估标准的演进，中美大模型竞争的焦聚正从基础代码能力对比加速转向复合推理与高阶决策能力攻坚。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章聚焦前沿 AI 能力演进轨迹与评估基准的变化，属于间接影响中美大模型技术竞争及研发路径决策的议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#9</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">World Economic Forum</span>
+                    <span class="card-date">11-20 21:22</span>
+                </div>
+                <h3 class="card-title">电动汽车充电网与AI数据中心的电网影响对比及能源需求分析</h3>
+                <p class="card-title-en">EV Charging Grid Impact vs AI Data Centres | Energy Demand</p>
+                <p class="card-llm-summary">本文探讨了电动汽车普及与AI数据中心扩张对全球电网负荷的累加效应与影响差异。随着大模型迭代引发算力爆发，能源与电力供给已成为限制生成式AI规模化部署的关键瓶颈。在美中AI长跑中，电网承载力与清洁能源供给速度正演变为算力基建竞赛的核心要素，中国的特高压电网与电力基础设施部署可能为其AI算力中心建设提供独特的底层支撑。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：该内容探讨了AI算力扩张面临的电网与能源约束，属于影响美中AI算力基建可持续发展的关键底层议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQS09EZndaZlhPM2dfMjNhTDIzbzV3X1dXd0drSncyS0RrOU1FaDg3Z3B3VVZqdEdQN2xXVlpHSjVfX2g0VnJScThHai0tZTlTWEkzOVVBSC1wZTFMcXUwdG11cHc2T2hmYUd3eUcxal9VbV8zdTVyZFNmdjRuRHAtWF90NDB4TDZ6UWtqNFBXbC1raGpQNS1la0daSjhUR1lreDRxTWlWNmpBSV9n?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#10</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Lawfare</span>
+                    <span class="card-date">11-20 21:09</span>
+                </div>
+                <h3 class="card-title">松了一口气！针对 AI 攻防研究的监管政策迎来缓和</h3>
+                <p class="card-title-en">Phew! Some Regulatory Relief for AI Hacks</p>
+                <p class="card-llm-summary">文章探讨了美国政府针对 AI 系统安全性测试与破解研究（Hacks）在监管政策上的适度松绑。这一调整为网络安全研究人员和红队演练减轻了合规负担，旨在促进 AI 系统的漏洞挖掘与防御能力提升。在中美 AI 竞争格局下，AI 系统的网络安全与红队攻防能力直接关系到前沿模型的国家安全底座，美国放宽安全研究限制有助于加速其 AI 攻防技术的演进。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：该文章聚焦于美国对 AI 网络安全研究与破解演练的监管政策调整，属于前沿 AI 安全与治理的间接相关议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOZlU4NjR1WHU1X1FPalpDcmlPQmdYVGI1aGljM0NKc2N4MDJ4NVBBdHRINDRBYjlZcUREcHVaaEUtYUtuc25aNnNhdmJMR3k3a2MzNFQzZ191VVhCZFZuejRCXy1uM1VDeGQtdXFvbnVUY2hWTzJsOURleWw2WE96T2RpNG4?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#11</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">JPMorgan Chase</span>
+                    <span class="card-date">11-20 19:09</span>
+                </div>
+                <h3 class="card-title">丹·艾夫斯探讨AI技术、$4万亿美元基础设施建设与半导体板块抛售</h3>
+                <p class="card-title-en">Dan Ives on AI, the $4 trillion build-out and semis sell off</p>
+                <p class="card-llm-summary">华尔街知名科技分析师丹·艾夫斯针对全球预计达4万亿美元的AI基础设施建设潮及近期半导体板块的股价抛售发表了最新洞察。从中美AI竞争视角来看，这一巨额资本支出体现了美系科技巨头在算力与基础设施层面的激进扩张策略，而半导体市场的短期波动则反映出支撑前沿AI竞赛的硬件供应链面临投资回报率与周期性风险的考验。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：该内容探讨半导体供应链与巨额算力基础设施投资，为评估中美AI硬件层面的竞争动力与市场风险提供了间接参考。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMi7AFBVV95cUxNdVd1N3hneUZ2ZTRpbzRUYWJFVHNiOFp2UlpNSHp5OU1hd1RST3FtMTE5dmJWMXFTa2xrQmcxSjdNX3ZXR00xTW5oVUF4RU14QlpLTUxEOGliXzRfVzNvbmpDWDhzbmNBQ2tiWHB0aFFMT2RSZUwxcW0zVDg0WW1yRFF6ZmkxTGVkSzZqdHFWNkY4UV9zTmlDMHpQaG5Zb1J1dlFkZWpjNXJuWTA5TG5pSV9fNDVtOXloMTVORnRfeFFLRGtEMzhTZlJ3UUJwUlFpYjdhUUh0OG5YbnhyYlhBekE1X3dEMHYweUdCSQ?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#12</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">UN News</span>
+                    <span class="card-date">11-20 20:00</span>
+                </div>
+                <h3 class="card-title">联合国 / 巴巴多斯 AI 安全峰会新闻发布会</h3>
+                <p class="card-title-en">UN / AI SAFETY SUMMIT BARBADOS PRESSER</p>
+                <p class="card-llm-summary">本发布会聚焦联合国在巴巴多斯举办的 AI 安全峰会，意在推动全球南方国家参与 AI 治理与安全标准的制定。在中美争夺全球 AI 规则话语权的背景下，联合国主导的多边平台已成为两国开展软实力博弈和争取第三方支持的重要阵地。全球 AI 安全共识的推进，将间接影响中美前沿模型的合规输出与国际监管环境。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 4/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：该内容涉及全球 AI 治理与多边安全框架建构，与中美 AI 技术与规则博弈间接相关。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, AI safety</span>
+                    <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9vNTNXblNxcjVwQmdYdWVTdFE1TGFGV19sb1o2aW9TSnE2VEloME1qS0ZBMy1IbDZ2T2hiMU1nWUluZkNRN0hWLUJ4RVBMMVY3UmJpQlpWTWNEV0dMNHM3dw?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#13</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Brookings Institution</span>
+                    <span class="card-date">11-20 19:45</span>
+                </div>
+                <h3 class="card-title">AI时代学生的发展新方向</h3>
+                <p class="card-title-en">A-New-Direction-for-Students-in-an-AI-World-FULL-REPORT.pdf - Brookings Institution</p>
+                <p class="card-llm-summary">该报告探讨了在生成式AI迅速普及的背景下，美国教育体系与学生能力培养的适应性转型路径。尽管内容侧重于本土教育政策与学生未来技能构建，但高素养AI人才梯队的培育正是美国维持长期科技竞争力的底层依托。这反映出美方试图通过教育变革应对AI对劳动力市场的重塑，以巩固其在AI人才领域的战略优势。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：该报告主要聚焦于美国本土教育变革与学生AI技能提升，属于AI教育应用与人力资本准备，与中美直接的技术博弈关联度较低。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPMnNJZi1qMlJxbDRjdTMzUURyeUYzeGJtalowX0hHNkdHdl9yTDZBN0Q2YWYxcnRpQ09Ta1RGcDVuZmVSQjV6OVFhRUIyTFZKemlJOHlGdEJSRlIzOVFQVlotdGNrcm1Kc3Aza0N4cUl2bF8xZ3Z3Mmp0VExSX2lUaVVRR0xIcGFkU0hNbm45cXVyekVZSE5xTFQ3WV9ILUV0bmtISmpkYlpqc3Via0RUWkt3?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#14</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Center for Data Innovation</span>
+                    <span class="card-date">11-21 03:33</span>
+                </div>
+                <h3 class="card-title">揭示隐藏的色彩</h3>
+                <p class="card-title-en">Revealing Hidden Colors</p>
+                <p class="card-llm-summary">美国东北大学研究人员开发出新型计算机视觉模型，显著提升了AI系统在不同光照条件下识别色彩和物体的能力。该突破增强了AI在复杂真实环境下的底层感知鲁棒性，在无人驾驶、机器人及自动侦察等军民两用领域具有实际应用价值。这体现了美国学术界在基础视觉感知算法上的持续创新，为美国AI技术体系提供底层算法支撑。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：该内容仅属于美国高校具体的计算机视觉学术成果更新，未直接涉及中美AI政策对决、芯片管制或竞争战略等核心议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI, computer vision</span>
+                    <a href="https://datainnovation.org/2026/11/revealing-hidden-colors/" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-11-21 03:27 UTC
+    </div>
+</body>
+</html>
