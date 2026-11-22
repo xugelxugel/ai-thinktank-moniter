@@ -1,0 +1,23 @@
+{
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTFB4VEU4bjZ2SzIya0hlOVppNkJMLUl3OVpwNHd5d2JkaFM4WHZVWVM0a3c1WmpnajdGSEZHRVdYdW9BNmdLVXpQMExYaGJaNkFVNUV2Y21pWQ?oc=5": {
+    "title_cn": "联合国秘书长古特雷斯在布里奇敦 AI 安全特别峰会新闻发布会上的讲话",
+    "summary_cn": "联合国秘书长古特雷斯在布里奇敦 AI 安全特别峰会上呼吁建立包容性的全球 AI 治理机制，以应对前沿安全风险并弥合全球数字鸿沟。从中美竞争视角来看，联合国主导的多边治理平台已成为中美争取全球 AI 规则制定权和全球南方国家支持的重要赛场。中国一贯强调联合国在 AI 治理中的主导地位，而美国更倾向于通过盟友圈子塑造标准，双方在多边框架下的规制博弈将持续深化。",
+    "importance_score": 5,
+    "score_reason": "议题聚焦全球 AI 安全与联合国多边治理框架，属于中美 AI 规则与标准博弈的间接相关领域。",
+    "china_relevance": "中"
+  },
+  "https://cms.hoover.org/research/mike-kuiken-china-watchdog-leaders-warn-us-technology-could-inadvertently-fuel-beijings": {
+    "title_cn": "迈克·奎肯：对华监察领导人警告美国技术可能无意中助长北京的军事野心",
+    "summary_cn": "胡佛研究所学者迈克·奎肯警告称，中国可能利用美国的芯片和AI技术强化其军事实力。这一观点反映了美国智库及政界对核心技术外流与军民融合风险的深刻担忧，预示着美国将进一步收紧针对AI与半导体的出口管制和审查机制，推动中美AI竞争加速向军事与国家安全领域深度绑定。",
+    "importance_score": 9,
+    "score_reason": "该内容直接探讨了美国芯片和AI技术出口管制、中国军方利用前沿技术的风险，属于中美AI与科技博弈的核心安全议题。",
+    "china_relevance": "高"
+  },
+  "https://cms.hoover.org/research/anne-neuberger-ai-big-help-both-attackers-and-defenders-former-top-nsa-official-says": {
+    "title_cn": "前NSA高官安妮·纽伯格：AI对网络攻击者和防御者都大有裨益",
+    "summary_cn": "前美国国家安全局（NSA）高官安妮·纽伯格剖析了近期重大技术中断事件，并阐述了AI如何双向赋能网络攻防。此观点突显了前沿AI技术在国家安全领域的双重用途特性，反映出美方正密切评估AI对网络空间战略防御格局的深刻重塑，这对中美AI网络攻防与安全博弈具有重要指示意义。",
+    "importance_score": 6,
+    "score_reason": "内容涉及前沿AI在网络安全与攻防博弈中的双重用途，属于中美AI竞争与国家安全战略的间接相关议题。",
+    "china_relevance": "中"
+  }
+}
