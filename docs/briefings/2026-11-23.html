@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年11月23日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年11月23日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">4</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">2</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">1</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">1</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-critical">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Hoover Institution</span>
+                    <span class="card-date">日期未知</span>
+                </div>
+                <h3 class="card-title">谁在资助右翼网红推动英伟达对华芯片销售？</h3>
+                <p class="card-title-en">Who paid right-wing influencers to promote Nvidia chip sales to China?</p>
+                <p class="card-llm-summary">胡佛研究所的调查揭露了一起涉及80多名美国右翼网红的隐秘营销行动，旨在向公众渗透亲产业的AI观点并游说放宽对华芯片出口限制。该事件反映出科技企业与游说机构正试图通过塑造美国国内政治舆论，来对抗或软化白宫对华半导体出口管制政策。这表明中美AI与芯片博弈正进一步延伸至游说利益链与公共认知作战领域。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 9/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：直接涉及利益集团通过隐蔽舆论游说干预美国对华AI芯片出口管制这一中美竞争核心议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://cms.hoover.org/research/who-paid-right-wing-influencers-promote-nvidia-chip-sales-china" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-critical">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Hoover Institution</span>
+                    <span class="card-date">日期未知</span>
+                </div>
+                <h3 class="card-title">芯片制裁加剧之际，中国利用美国 AI 模型训练本土竞争对手</h3>
+                <p class="card-title-en">China Taps US AI Models to Train Homegrown Rivals as Chip Curbs Bite</p>
+                <p class="card-llm-summary">面对美国芯片出口管制，中国高校与企业正加速通过“知识蒸馏”技术提取美国顶尖 AI 模型的输出数据，用于训练本土轻量级模型。该策略帮助中国在算力受限背景下规避硬件瓶颈，推动低成本 AI 迅速向制造业等实体行业渗透。这表明利用美国前沿模型的数据资产补足本土短板，已成为中国在中美 AI 竞争中采取的重要不对称应对战术。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 9/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：直接揭示了中国如何利用“知识蒸馏”突破美国芯片出口管制，属于中美 AI 战术博弈与出口管制有效性的核心议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://cms.hoover.org/research/china-taps-us-ai-models-train-homegrown-rivals-chip-curbs-bite" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-high">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Stanford HAI</span>
+                    <span class="card-date">11-23 04:29</span>
+                </div>
+                <h3 class="card-title">AI 的未来仍取决于选择</h3>
+                <p class="card-title-en">AI’s Future Is Still a Choice</p>
+                <p class="card-llm-summary">斯坦福 HAI 探讨了 AI 技术演进与治理模式的可塑造性，强调政策制定者与产业界的当下抉择将决定技术发展的最终走向。文章反映了美国智库界试图通过前瞻性治理规范与伦理框架引导前沿 AI 发展的努力。在中美 AI 竞赛向软实力与标准制定延伸的背景下，此类关于治理路线图的探讨直接关系到西方能否在中美规则体系博弈中维持话语权。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ea580c">重要 6/10</span>
+                    <span class="rel-badge rel-mid">对华中度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章探讨了前沿 AI 治理与国家政策选择，属于中美 AI 竞赛中关于规则制定与技术范式的间接竞争议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1fUmlvQmRRcC1qLTVCS0dUYlJoVEQ2S0ZiLTlBRzBEbmNNMWFOVGFyNXpnbTNtazFRWktjSkVhb0xiLVF6aVQtdm5Ec3VraVBzbWpTNWhhM2xWTXRnbm9YV3RqV2s5bUhzRGc?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Brookings Institution</span>
+                    <span class="card-date">11-23 00:00</span>
+                </div>
+                <h3 class="card-title">AI时代学生的新方向：完整报告</h3>
+                <p class="card-title-en">A-New-Direction-for-Students-in-an-AI-World-FULL-REPORT.pdf - Brookings Institution</p>
+                <p class="card-llm-summary">该报告由布鲁金斯学会发布，探讨了生成式AI普及背景下教育体系与学生技能适应的重塑路径。从中美竞争视角来看，此类研究反映了美国正试图通过教育改革强化本土劳动力的人才储备，为其长期的AI创新提供底层人力资本支撑。虽然未直接涉及技术封锁或对抗，但高技能人才供给是决定中美AI中长期竞争格局的关键要素之一。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：报告主要关注AI对教育和人才培养的影响，属于AI应用与社会适应议题，与中美战略博弈核心焦点关联较远。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPMnNJZi1qMlJxbDRjdTMzUURyeUYzeGJtalowX0hHNkdHdl9yTDZBN0Q2YWYxcnRpQ09Ta1RGcDVuZmVSQjV6OVFhRUIyTFZKemlJOHlGdEJSRlIzOVFQVlotdGNrcm1Kc3Aza0N4cUl2bF8xZ3Z3Mmp0VExSX2lUaVVRR0xIcGFkU0hNbm45cXVyekVZSE5xTFQ3WV9ILUV0bmtISmpkYlpqc3Via0RUWkt3?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-11-23 03:04 UTC
+    </div>
+</body>
+</html>
