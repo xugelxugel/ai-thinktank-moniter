@@ -1,0 +1,51 @@
+{
+  "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOejBxcmE5NVlvMENqckkycWdCNHlTSUhZNnE4MVhlRTk4dXQ0a3JFSlV0Rk1idzR0RFAzRVFIOTVtRUNaM3NuOVZid25DdG5YazZqdDFueFEwMmY0cUdnRlpfU2NFcmQ2TXRlOTM2dGV3bkRIRDc2ZVJadjZmQWpfVWVub1FiVGstYlpGWUtXRW5oRS0yYkFDQkJKZWd1UDhoMDQ1clNPbnZDYUQ4Mzh0ckduaTJlM3lwcW9RR1B6ZHI1QjlTTExweFRjQlVpZEFZdXJMV2RZS01BQVlHNUhSYVo1Y3BZYkc1QWVZYkhWSk5jYTU2?oc=5": {
+    "title_cn": "如何重塑对 AI 概念股投资的信心？",
+    "summary_cn": "摩根大通本报告探讨了金融市场对当前超大规模 AI 资本支出（CapEx）与实际投资回报率（ROI）的疑虑，并分析了恢复市场信心的关键因素。从中美竞争视角来看，美国资本市场能否持续为科技巨头的高额 AI 基础设施投入注入信心，将直接决定美方能否在算力资本积累上维持对华代差优势。",
+    "importance_score": 5,
+    "score_reason": "探讨金融市场对 AI 资本支出与投资回报的预期，间接影响美国科技巨头在中美 AI 竞争中的资金筹措与算力投入持续性。",
+    "china_relevance": "中"
+  },
+  "https://www.technologyreview.com/2026/11/25/1149836/data-centers-gas-power-plants/": {
+    "title_cn": "数据中心如何推动美国天然气繁荣",
+    "summary_cn": "本文探讨了AI数据中心爆发式增长所引发的巨大用电需求，正迫使美国重新依赖天然气发电。电力基础设施保障已成为中美AI算力竞赛的核心瓶颈之一，美方试图通过快速扩建天然气基荷电力来弥补电力缺口，反映出AI竞争正深化为国家级基础设施保障能力的较量。",
+    "importance_score": 7,
+    "score_reason": "涉及前沿AI算力部署的关键瓶颈——能源基础设施供给，直接影响美国在AI竞赛中的算力扩张速度与持续领先能力。",
+    "china_relevance": "中"
+  },
+  "https://news.google.com/rss/articles/CBMisAFBVV95cUxOdDJGdVFRVWJsTFV5Y2o2aHhsUzQ5OE94OWFrWWxWelROa1JRdW45U2RQV3pLVFdDb3NxODBLOTducVpWcDZseVZabmxCbGV6anZWTlh1YjR0clpUbk9naFB6blI2MHBuT1FnTWJLalNUYVlQMHZPRlNUN1JlTG1nZkNNX2xaX2pTWjBCeWUzQm1Qb0NyUzlEQVB3ZmhmTTFOWkE3dElYS3VGOFVwODVfZA?oc=5": {
+    "title_cn": "与 Ben Buchanan 探讨白宫 AI 政策制定（Jensen 这么快又来了？）",
+    "summary_cn": "本期节目深度对话白宫核心 AI 幕僚 Ben Buchanan，解读美国 AI 行政命令及国家安全战略的制定幕后。白宫政策框架将前沿 AI 安全、算力基础设施与国家竞争优势紧密挂钩，构成了美方限制中国高科技获取的核心政策基石。此外，结合英伟达 CEO 黄仁勋等产业巨头与华盛顿的密切互动，展现出美政府在强化对华芯片出口管制与维持本国科技巨头全球市场主导地位之间的微妙博弈。",
+    "importance_score": 8,
+    "score_reason": "白宫核心 AI 政策制定者的访谈揭示了美政府维护 AI 领导地位、实施出口管制及制定国家安全规则的高层决策逻辑。",
+    "china_relevance": "高"
+  },
+  "https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/": {
+    "title_cn": "AI 正在使美国的政府信息公开系统不堪重负",
+    "summary_cn": "本文揭示了生成式 AI 与自动化工具的大量应用对美国地方政府公共记录（FOIA）申请系统造成的行政失衡与治理压力。从竞争视角看，这反映出技术快速扩散给美国基层数字化治理带来的体制性摩擦，突显出中美两国在应对 AI 引发的行政治理冲击时所面临的不同体制挑战与吸收能力差异。",
+    "importance_score": 2,
+    "score_reason": "该文章侧重于美国地方政府在 AI 普及下的行政管理压力与治理摩擦，属于应用层面的社会影响，与中美科技战或战略竞争关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNcG96VGFBdy1EQWJ3OUlyVjRSdnFWc2Eta1p1QmdMNEF1MXZHX0lVOUJib2U4c2pEZnlzdHJycUxqQ0tVWXE3SnRzekxQT216emZ3ek5yWnRha2JSUjRjRDVrbGdxVDdnODhHN1ZGRWMzeFprZk52Rk9mYlVIOVNkNDhwbkNhV0xYRnNua2xYbWRENnBNQzMzT3VpNzRWUVRyems1U1UtbFBlVUx5bndVU09KbEdndVJCZUo5V0N5US0?oc=5": {
+    "title_cn": "AI投资周期的持久性将由什么决定？",
+    "summary_cn": "高盛分析了决定当前全球巨额AI算力与基础设施投资能否维持的关键经济与技术变量。在中美AI竞争视角下，美国科技巨头资本支出（Capex）的持久性直接维系着其对华的硬件与算力领先优势，若投资周期因商业化回报不及预期而收缩，可能重塑中美前沿模型的算力对比格局。",
+    "importance_score": 5,
+    "score_reason": "文章聚焦全球AI基础设施资本支出的可持续性，间接影响中美算力竞赛的资金供给与半导体供应链生态。",
+    "china_relevance": "中"
+  },
+  "https://cms.hoover.org/research/raghuram-rajan-raises-corporate-governance-concerns-nvidia": {
+    "title_cn": "拉古拉姆·拉詹对英伟达公司治理与 AI 投资风险提出质疑",
+    "summary_cn": "著名经济学家拉古拉姆·拉詹警告称，政府过度干预、缺乏有效监管以及过度依赖债务融资的 AI 投资，正在为英伟达及整个科技行业积累系统性风险。从中美 AI 竞争视角来看，该警告揭示了美国算力产业链在资本过度膨胀下的潜在脆弱性；一旦算力龙头英伟达因治理或债务危机出现震荡，可能间接削弱美国在 AI 硬件基础设施上的领跑优势。",
+    "importance_score": 5,
+    "score_reason": "文章聚焦于英伟达的公司治理与金融债务风险，属于间接影响美国 AI 半导体供应链稳定性的议题。",
+    "china_relevance": "中"
+  },
+  "https://cms.hoover.org/research/education-exchange-ai-cheating-growing-risk-sats": {
+    "title_cn": "教育交流：AI作弊对SAT考试构成日益严峻的风险",
+    "summary_cn": "本期对话探讨了生成式AI对美国SAT标准化考试学术诚信构成的挑战，以及美国大学理事会（College Board）的应对策略。虽然讨论聚焦于美国国内教育场景下的AI治理与防作弊机制，但反映了前沿AI技术快速渗透对传统社会评估体系的冲击。从大国竞争视角看，此类制度应对经验折射出美方在AI社会伦理防范与基础设施调优层面的治理演进。",
+    "importance_score": 2,
+    "score_reason": "主要关注美国国内标准考试中的AI作弊及教育治理问题，属于AI社会伦理与应用风险范畴，与中美大国AI战略博弈或技术封锁关联度较低。",
+    "china_relevance": "低"
+  }
+}
