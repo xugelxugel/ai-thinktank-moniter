@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI海外动态监测简报（智能增强版） - 2026年11月27日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.7;
+            max-width: 920px; margin: 0 auto; padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff; padding: 30px; border-radius: 12px;
+            margin-bottom: 24px; text-align: center;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header .subtitle { font-size: 14px; color: #aab; }
+        .header .ai-tag {
+            display: inline-block; margin-top: 8px;
+            background: rgba(37,99,235,.3); border: 1px solid rgba(37,99,235,.5);
+            padding: 3px 12px; border-radius: 4px; font-size: 12px; color: #93c5fd;
+        }
+        .stats-bar {
+            display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+        }
+        .stat-box {
+            flex: 1; min-width: 100px; background: #fff; border-radius: 8px;
+            padding: 14px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        }
+        .stat-box .num { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat-box .num.critical { color: #dc2626; }
+        .stat-box .num.high { color: #ea580c; }
+        .stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+        .section-title {
+            font-size: 16px; margin: 24px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0; color: #1a1a2e;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card {
+            background: #fff; border-radius: 10px; margin-bottom: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: box-shadow .2s;
+            display: flex; overflow: hidden;
+        }
+        .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+        .card.score-critical { border-left: 4px solid #dc2626; }
+        .card.score-high { border-left: 4px solid #ea580c; }
+        .card.score-medium { border-left: 4px solid #ca8a04; }
+        .card.score-low { border-left: 4px solid #6b7280; }
+        .card-rank {
+            display: flex; align-items: center; justify-content: center;
+            min-width: 50px; font-size: 20px; font-weight: 700;
+            color: #cbd5e1; background: #f8fafc;
+        }
+        .card.score-critical .card-rank { color: #dc2626; background: #fef2f2; }
+        .card.score-high .card-rank { color: #ea580c; background: #fff7ed; }
+        .card.score-medium .card-rank { color: #ca8a04; background: #fefce8; }
+        .card-body { padding: 16px 20px; flex: 1; }
+        .card-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 6px;
+        }
+        .card-source { font-size: 13px; font-weight: 600; color: #2563eb; }
+        .card-date { font-size: 12px; color: #999; }
+        .card-title { font-size: 16px; margin-bottom: 2px; color: #1a1a2e; }
+        .card-title-en { font-size: 13px; color: #999; margin-bottom: 8px; font-style: italic; }
+        .card-llm-summary {
+            font-size: 14px; color: #444; margin-bottom: 10px;
+            padding: 8px 12px; background: #f0f7ff; border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        .card-meta {
+            display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;
+        }
+        .score-badge {
+            display: inline-block; color: #fff; font-size: 12px;
+            font-weight: 600; padding: 2px 10px; border-radius: 4px;
+        }
+        .rel-badge {
+            display: inline-block; font-size: 12px;
+            padding: 2px 10px; border-radius: 4px; font-weight: 500;
+        }
+        .rel-high { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .rel-mid { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+        .rel-low { background: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb; }
+        .score-reason {
+            font-size: 12px; color: #888; margin-bottom: 8px; font-style: italic;
+        }
+        .card-footer {
+            display: flex; justify-content: space-between;
+            align-items: center; font-size: 12px;
+        }
+        .card-keywords { color: #aaa; }
+        .card-link {
+            color: #2563eb; text-decoration: none; font-weight: 500;
+        }
+        .card-link:hover { text-decoration: underline; }
+        .empty { text-align: center; padding: 40px; color: #999; font-size: 16px; }
+        .footer {
+            text-align: center; margin-top: 30px; padding: 16px;
+            font-size: 12px; color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AI 海外动态监测简报</h1>
+        <div class="subtitle">2026年11月27日 · 监测范围: 最近 1 天 · 按中美AI竞争重要性排序</div>
+        <div class="ai-tag">⚡ 由大模型智能增强 · 深度摘要 + 重要性评分</div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-box"><div class="num">4</div><div class="label">AI相关条目</div></div>
+        <div class="stat-box"><div class="num critical">1</div><div class="label">关键+重要(≥7分)</div></div>
+        <div class="stat-box"><div class="num high">1</div><div class="label">一般(4-6分)</div></div>
+        <div class="stat-box"><div class="num">2</div><div class="label">次要(<4分)</div></div>
+    </div>
+    
+        <div class="card score-critical">
+            <div class="card-rank">#1</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">World Economic Forum</span>
+                    <span class="card-date">11-26 19:27</span>
+                </div>
+                <h3 class="card-title">中美AI竞争：超级智能与地缘政治</h3>
+                <p class="card-title-en">US-China AI Competition: Superintelligence &amp; Geopolitics</p>
+                <p class="card-llm-summary">本文聚焦中美两国在前沿超级智能研发领域的深度地缘政治博弈。随着技术加速演进，AI已超越单纯的产业竞争，成为决定未来全球霸权格局的核心战略力量，中美两国在规则制定、安全治理与技术主导权上的对抗将深刻重塑国际政治秩序。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#dc2626">关键 10/10</span>
+                    <span class="rel-badge rel-high">对华高度相关</span>
+                </div>
+                <p class="score-reason">评分理由：文章直接以“中美AI竞争”为核心议题，探讨超级智能对全球地缘政治格局的战略冲击。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPVDN2ZmFXTWNVRFh4cjRfSElnT0YxcFpMTHoyUmZad0ptdkc4Q1E5ekdmV0N6MmpCZWhpRXhWMGgyZkluMXZxVzUxd2loQmQxX1NDS1B4Y1ROdl9INmR5emZmeG5CXzBTYzZsQndLUV9jbU9Eb29JckdORjA5SnJ6SllzTVZvMUNvU2NBN2ZUcE1hRk5VdzlZM0kyMGNfYjZPWl9rWU9kcFF0b2czenc?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-medium">
+            <div class="card-rank">#2</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Hoover Institution</span>
+                    <span class="card-date">日期未知</span>
+                </div>
+                <h3 class="card-title">拉古拉姆·拉詹对英伟达公司治理与AI投资泡沫提出隐忧</h3>
+                <p class="card-title-en">Raghuram Rajan Raises Corporate Governance Concerns At Nvidia</p>
+                <p class="card-llm-summary">经济学家拉古拉姆·拉詹警告称，英伟达等科技巨头面临政府干预、监管缺失以及债务融资推动的AI过度投资风险，市场过度乐观可能引发系统性危机。作为支撑美国AI算力霸权的核心硬件支柱，英伟达的资本与治理风险隐患若爆发，将削弱美国科技领域的增长势头。这一资本层面的脆弱性可能间接影响美方在美中AI算力长跑中维持绝对领先地位的基础设施韧性。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#ca8a04">一般 5/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：该内容主要探讨英伟达的公司治理与AI算力投资泡沫等金融及市场风险，属于半导体产业链治理与市场风险的间接相关议题。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: artificial intelligence</span>
+                    <a href="https://cms.hoover.org/research/raghuram-rajan-raises-corporate-governance-concerns-nvidia" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#3</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">OECD</span>
+                    <span class="card-date">11-27 09:18</span>
+                </div>
+                <h3 class="card-title">AI对就业的影响</h3>
+                <p class="card-title-en">The employment impact of AI</p>
+                <p class="card-llm-summary">本报告由经合组织（OECD）发布，探讨了AI技术普及对全球劳动力市场、岗位替代及技能需求的深远影响。尽管研究侧重于发达经济体的内部社会治理，但AI驱动的劳动生产率变革是中美两国利用智能化转型弥补人口红利消退、抢占经济效率制高点的核心要素。两国在AI赋能产业升级与劳动力结构调控上的成效差异，将间接决定中美长期经济竞争力的消长。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 3/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：该报告聚焦于AI对劳动力市场和就业的宏观社会经济影响，属于AI应用与社会治理层面的议题，与中美直接的科技博弈和地缘地缘政治竞争距离较远。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRDNPMDNWS3pwTl9YalJGX3p3aFFYenhyeHNmd3hmaUJ4YWJSNFdQYU82bDZkNXVKSWN4UkhVOTZMRERMOWVQOHVGZ2pZbFhzLVpac2h0cFlMbjZDNGlscEVIWlMzMkRrM1VZa2xGQk5tRWR0aEJ3aGdmUGNEOGp3Y3JuX2RKaUJW?oc=5" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card score-low">
+            <div class="card-rank">#4</div>
+            <div class="card-body">
+                <div class="card-header">
+                    <span class="card-source">Hoover Institution</span>
+                    <span class="card-date">日期未知</span>
+                </div>
+                <h3 class="card-title">教育交流：AI 作弊对 SAT 考试构成的威胁日益增长</h3>
+                <p class="card-title-en">The Education Exchange: AI Cheating Is A Growing Risk To SATs</p>
+                <p class="card-llm-summary">该内容探讨了生成式 AI 技术在 SAT 等美国标准化考试中的作弊风险及大学理事会的应对举措。这反映了前沿 AI 普及给教育评估与人才选拔机制带来的信任危机与社会治理挑战。从中美竞争视角看，该议题侧重于 AI 在社会规范与教育安全领域的负外部性治理，虽间接关乎人才培养评估体系，但并非核心科技博弈。</p>
+                <div class="card-meta">
+                    <span class="score-badge" style="background:#6b7280">次要 2/10</span>
+                    <span class="rel-badge rel-low">对华低相关</span>
+                </div>
+                <p class="score-reason">评分理由：聚焦于 AI 在教育考试领域的合规风险与社会治理，与中美大模型对决、出口管制或半导体供应链等核心竞争议题关系较远。</p>
+                <div class="card-footer">
+                    <span class="card-keywords">关键词: AI</span>
+                    <a href="https://cms.hoover.org/research/education-exchange-ai-cheating-growing-risk-sats" target="_blank" rel="noopener" class="card-link">查看原文 →</a>
+                </div>
+            </div>
+        </div>
+        
+    <div class="footer">
+        由 AI 海外动态监测系统自动生成 · 大模型智能增强 · 2026-11-27 04:30 UTC
+    </div>
+</body>
+</html>
