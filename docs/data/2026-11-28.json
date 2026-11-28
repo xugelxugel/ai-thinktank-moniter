@@ -1,0 +1,30 @@
+{
+  "https://spectrum.ieee.org/clinical-ai-engineer-dinesh-rai": {
+    "title_cn": "这位急诊医生成为了某医院的首位临床 AI 工程师",
+    "summary_cn": "本文讲述了急诊医生 Dinesh Rai 跨界应聘波士顿儿童医院提示词工程师并成为首位临床 AI 工程师的案例，展示了美国医疗机构在生成式 AI 落地应用中的复合型人才创新实践。从竞争视角看，这体现了美国在“AI+医疗”垂直场景探索和交叉学科人才培养上的先发优势，也为中国大模型在临床医疗领域的应用演进提供了实践参考。",
+    "importance_score": 2,
+    "score_reason": "本文主要关注生成式 AI 在具体医疗机构的岗位创新与应用落地，属于组织管理与行业应用范畴，与中美核心科技博弈关联度较低。",
+    "china_relevance": "低"
+  },
+  "https://www.foreignaffairs.com/china/ai-us-china-endgame-tech-catastrophe-sheehan-singer": {
+    "title_cn": "中美 AI 终局之战：如何避免技术引发的灾难",
+    "summary_cn": "本文探讨了中美两国在前沿 AI 领域的战略竞争终局，警告双边技术对抗与军事化应用可能引发失控的重大安全灾难。作者提出，美中两国必须在激烈的博弈中构建危机管控机制与安全护栏，寻找防范极端技术风险的底线。这表明美国战略界在推进对华技术围堵的同时，开始高度关注军用 AI 擦枪走火的风险，并尝试寻找双边治理共识。",
+    "importance_score": 10,
+    "score_reason": "文章发表于顶级外交政策期刊，直接聚焦中美 AI 战略竞争终局、国家安全博弈与危机管控等核心议题。",
+    "china_relevance": "高"
+  },
+  "https://cms.hoover.org/research/raghuram-rajan-raises-corporate-governance-concerns-nvidia": {
+    "title_cn": "拉古拉姆·拉詹对英伟达公司治理提出担忧",
+    "summary_cn": "经济学家拉古拉姆·拉詹警告称，英伟达等科技巨头正面临政府干预、监管不足以及债务驱动型AI投资激增等多重隐患。资本市场的过度乐观与潜在系统性风险可能削弱美国科技行业的增长势头。从中美AI竞赛视角来看，英伟达作为美国算力霸权的核心载体，其治理缺陷与算力投资泡沫若引发系统性调整，将直接影响美国维持AI硬件基础设施绝对优势的持续性。",
+    "importance_score": 5,
+    "score_reason": "议题聚焦于英伟达这一核心半导体巨头的公司治理与AI投资风险，间接关乎美国算力产业链的稳定性与竞争可持续性。",
+    "china_relevance": "中"
+  },
+  "https://cms.hoover.org/research/education-exchange-ai-cheating-growing-risk-sats": {
+    "title_cn": "教育交流：AI 作弊正成为 SAT 考试面临的日益严重的风险",
+    "summary_cn": "本期胡佛研究所对话探讨了近期 SAT 考试中的作弊丑闻以及美国大学理事会应对生成式 AI 威胁的策略。该内容揭示了生成式 AI 的普及对美国高利害关系标准化考试和人才选拔机制带来的严峻挑战。虽然侧重于国内教育治理，但保障 AI 时代的人才选拔公平与学术诚信，间接影响着国家基础教育质量与长期科技人才储备。",
+    "importance_score": 2,
+    "score_reason": "该内容仅涉及美国国内教育领域的 AI 作弊与考试诚信治理，属于具体的社会应用风险，与中美 AI 技术竞争或国家安全战略直接关联度较低。",
+    "china_relevance": "低"
+  }
+}
